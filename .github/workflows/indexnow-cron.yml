@@ -1,0 +1,28 @@
+name: IndexNow Daily Ping
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Trigger IndexNow Ping
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "nexusplataforma.ia.br",
+              "key": "a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c",
+              "keyLocation": "https://nexusplataforma.ia.br/a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c.txt",
+              "urlList": [
+                "https://nexusplataforma.ia.br/",
+                "https://nexusplataforma.ia.br/growth/pt-br/us-new-york-nordvpn/ai-tech-coupons"
+              ]
+            }'

@@ -1,0 +1,37 @@
+{
+  "title": "Cupons de Tecnologia & IA em Nova York (2026) | Nexus",
+  "description": "Descubra as principais ofertas de cibersegurança, ferramentas de IA e servidores em nuvem para Nova York com descontos exclusivos.",
+  "canonical": "https://nexusplataforma.ia.br/growth/pt-br/us-new-york-nordvpn/ai-tech-coupons",
+  "locale": "pt-br",
+  "facet": "us-new-york-nordvpn",
+  "format": "ai-tech-coupons",
+  "affiliateHosts": [
+    "https://www.tkqlhce.com",
+    "https://www.dpbolvw.net",
+    "https://www.anrdoezrs.net"
+  ],
+  "offers": [
+    {
+      "brand": "NordVPN",
+      "title": "NordVPN Ultimate Security (Nova York Hub)",
+      "description": "Proteção criptografada com IP dedicado e 70% de desconto.",
+      "discount": "70% OFF",
+      "price": "3.19",
+      "currency": "USD",
+      "priceFormatted": "USD 3.19/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus&slot=ny_offer_1",
+      "cta": "Ativar Desconto"
+    },
+    {
+      "brand": "Surfshark",
+      "title": "Surfshark One Suite",
+      "description": "VPN ilimitada + Antivírus com servidores em US East.",
+      "discount": "82% OFF",
+      "price": "2.29",
+      "currency": "USD",
+      "priceFormatted": "USD 2.29/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=surfshark&site=nexus&slot=ny_offer_2",
+      "cta": "Obter Acesso"
+    }
+  ]
+}

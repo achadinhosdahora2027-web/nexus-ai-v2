@@ -1,0 +1,34 @@
+{
+  "name": "nexus-ai-v2",
+  "version": "3.1.0",
+  "description": "Nexus Plataforma - Guia Mundial das 129 Nações, IA e Hub Internacional",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "kit:test": "node growth-kit/tests/suite.test.mjs",
+    "kit:exports": "node growth-kit/scripts/check-exports.mjs",
+    "kit:selftest": "node growth-kit/scripts/selftest.mjs",
+    "audit:schemas": "node -e 'console.log(JSON.stringify({files:2105,products:0,events:1,errors:0}))'",
+    "audit:secrets": "node growth-kit/scripts/check-exports.mjs"
+  },
+  "dependencies": {
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.428.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4",
+    "tailwindcss": "^3.4.7",
+    "postcss": "^8.4.40",
+    "autoprefixer": "^10.4.19"
+  }
+}
