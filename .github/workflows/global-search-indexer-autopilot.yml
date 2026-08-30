@@ -1,4 +1,4 @@
-name: Global Search Engine Indexer & Multi-Country Ping Autopilot
+name: Omni-Search Global Multi-Country Indexing & Webmaster Ping Autopilot
 
 on:
   schedule:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  global-indexer:
+  omni-indexer:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -20,6 +20,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Execute Multi-Engine Global Search Pings
+      - name: Execute Full Omni-Search Multi-Engine Pings (195 Countries)
         run: |
-          node scripts/global-search-engine-ping.js || true
+          node scripts/global-omni-search-engine-ping.js || true

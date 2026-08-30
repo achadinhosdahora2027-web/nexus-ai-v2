@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nexus Platform - 16-Language Global Zodiac, World Clocks &amp; AI Radar</title>
+    <link>https://nexusplataforma.ia.br</link>
+    <description>Daily multilingual horoscope, Chinese Lunar Zodiac, real-time world clocks, and verified AI certifications.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Aug 2026 19:45:00 GMT</lastBuildDate>
+    <atom:link href="https://nexusplataforma.ia.br/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="hub" href="https://pubsubhubbub.superfeedr.com/" />
+
+    <item>
+      <title>Global Smart Entertainment: 16 Languages Western &amp; Lunar Zodiac</title>
+      <link>https://nexusplataforma.ia.br/entertainment</link>
+      <guid isPermaLink="true">https://nexusplataforma.ia.br/entertainment</guid>
+      <pubDate>Sun, 30 Aug 2026 08:00:00 GMT</pubDate>
+      <description>Experience daily quantum astrology, 3D Tarot divination, financial world clocks and global deals.</description>
+    </item>
+  </channel>
+</rss>
