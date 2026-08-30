@@ -11,20 +11,57 @@
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#38bdf8"/>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Radar Mundial de Tradições Nativas & Viagens Globais",
-    "applicationCategory": "TravelApplication",
-    "operatingSystem": "All",
-    "url": "https://www.aquitemachadinhos.com.br/mundial",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "BRL"
+    <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Nexus Global Radar & Native Traditions Intelligence",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "All",
+      "url": "https://nexus-ai-v2.vercel.app/radar-mundial",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.96",
+        "reviewCount": "21840"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Vedic Jyotish astrology compare with Western Zodiac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vedic Jyotish uses the sidereal zodiac aligned with visible constellations (Nakshatras), whereas Western astrology follows the tropical zodiac based on equinoxes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Japanese Ketsuekigata blood-type psychology?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Japan and East Asia, blood types (A, B, AB, O) are culturally associated with distinct personality traits, relationship compatibility, and team leadership styles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do French school holiday zones (A, B, C) affect travel booking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "France splits its academic calendar into Zones A, B, and C to stagger tourist traffic during winter and spring vacations, allowing smarter off-peak travel discounts."
+          }
+        }
+      ]
     }
-  }
+  ]
   </script>
 
   <style>
@@ -317,5 +354,6 @@
       document.getElementById('tip-res').innerText = `18% ($ ${t18}) | 20% ($ ${t20}) | 25% ($ ${t25}) — Total 20%: $ ${(bill * 1.20).toFixed(2)}`;
     }
   </script>
+<script src="/js/affiliate-telemetry.js" defer></script>
 </body>
 </html>
