@@ -1,0 +1,66 @@
+# ==============================================================================
+# GLOBAL UNIVERSAL ROBOTS CONFIGURATION - NEXUS PLATAFORMA
+# Optimized for 195 Countries, Regional Search Engines & Global AI Search Bots
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# ------------------------------------------------------------------------------
+# 1. MAJOR GLOBAL ENGINES
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
+User-agent: Google-InspectionTool
+User-agent: Bingbot
+User-agent: msnbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Bravebot
+User-agent: Qwantify
+User-agent: MojeekBot
+User-agent: SeznamBot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 2. ASIAN & REGIONAL SEARCH ENGINES
+# ------------------------------------------------------------------------------
+User-agent: Baiduspider
+User-agent: Sogou web spider
+User-agent: YisouSpider
+User-agent: Yeti
+User-agent: Daumoa
+User-agent: CocCocBot
+User-agent: PetalBot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 3. EASTERN EUROPEAN & CIS SEARCH ENGINES
+# ------------------------------------------------------------------------------
+User-agent: Yandex
+User-agent: YandexBot
+User-agent: Mail.Ru
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 4. AI SEARCH ENGINES & NEXT-GEN LLM AGENTS
+# ------------------------------------------------------------------------------
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: YouBot
+User-agent: cohere-ai
+User-agent: PhindBot
+User-agent: KagiBot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# SITEMAP DIRECTIVES
+# ------------------------------------------------------------------------------
+Sitemap: https://nexusplataforma.ia.br/sitemap.xml

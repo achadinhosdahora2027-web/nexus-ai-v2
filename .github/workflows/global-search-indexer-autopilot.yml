@@ -1,0 +1,25 @@
+name: Global Search Engine Indexer & Multi-Country Ping Autopilot
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  global-indexer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Execute Multi-Engine Global Search Pings
+        run: |
+          node scripts/global-search-engine-ping.js || true
