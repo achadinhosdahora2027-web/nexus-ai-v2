@@ -40,6 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <script src="https://quge5.com/88/tag.min.js" data-zone="274860" async data-cfasync="false"></script>
+      </head>
       <body className="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
         {children}
       </body>
