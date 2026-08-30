@@ -40,7 +40,6 @@ function getDataset(locale: string, tail: string[]) {
   const facet = tail[0] || '';
   const format = tail.slice(1).join('/') || 'index';
 
-  // 1. Try dataset in public/growth/datasets/{locale}/{facet}/{format}.json
   const datasetPath = path.join(process.cwd(), 'public', 'growth', 'datasets', locale.toLowerCase(), facet, `${format}.json`);
   if (fs.existsSync(datasetPath)) {
     try {
@@ -50,7 +49,6 @@ function getDataset(locale: string, tail: string[]) {
     }
   }
 
-  // 2. Legacy fallback in public/growth/{locale}/{facet}/{format}/index.html or .html
   const legacyHtmlPath = path.join(process.cwd(), 'public', 'growth', locale.toLowerCase(), ...tail, 'index.html');
   const legacyHtmlDirect = path.join(process.cwd(), 'public', 'growth', locale.toLowerCase(), `${tail.join('/')}.html`);
   const legacyPath = fs.existsSync(legacyHtmlPath) ? legacyHtmlPath : fs.existsSync(legacyHtmlDirect) ? legacyHtmlDirect : null;
@@ -138,6 +136,7 @@ export default async function GrowthPage({ params }: PageProps) {
   const { data } = resolved;
   const offers = Array.isArray(data.offers) ? data.offers : [];
   const datasetHosts = Array.isArray(data.affiliateHosts) ? data.affiliateHosts : [];
+  const hreflangs = data.hreflang || {};
 
   const jsonLdData = [
     {
@@ -187,6 +186,12 @@ export default async function GrowthPage({ params }: PageProps) {
 
   return (
     <main dir={isRtl ? 'rtl' : 'ltr'} className="min-h-screen bg-slate-950 text-slate-100 px-4 py-8 md:py-16">
+      {/* Explicit alternate hreflang meta links for full indexer compatibility */}
+      {Object.entries(hreflangs).map(([lang, href]) => (
+        <link key={lang} rel="alternate" hrefLang={lang} href={href as string} />
+      ))}
+      <link rel="canonical" href={data.canonical} />
+
       <AffiliateTracker datasetHosts={datasetHosts} site="nexus" slot="page" />
 
       {jsonLdData.map((schema, idx) => (

@@ -1,0 +1,16 @@
+{
+  "name": "Nexus Platform — Global AI & Trends Hub",
+  "short_name": "Nexus",
+  "start_url": "/entertainment",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#6366f1",
+  "description": "Daily quantum horoscope, world trends, and global certifications.",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
