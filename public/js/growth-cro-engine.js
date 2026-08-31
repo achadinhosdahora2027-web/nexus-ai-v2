@@ -1,10 +1,11 @@
 /**
- * Growth Hacker & CRO Acceleration Engine (2026)
+ * Growth Hacker, CRO Acceleration & ManyChat Conversational Engine (2026)
  * Implements:
  * 1. Viral Share Loops (WhatsApp, Telegram, WebShare API, Pinterest)
  * 2. Dynamic Real-Time Urgency & Scarcity Badges (Live countdowns & timestamps)
  * 3. High-Converting Mobile Sticky Bottom Bar (100% viewport retention)
  * 4. Micro-Engagement 3-Step Commitment Hooks (Cialdini Psychology)
+ * 5. ManyChat & WhatsApp 24/7 Conversational Automation Trigger
  */
 
 (function() {
@@ -17,7 +18,6 @@
     const url = customUrl || window.location.href;
     const text = encodeURIComponent(`${title}\n\n"${description}"\n\n👉 Veja o seu resultado completo aqui: ${url}`);
     
-    // Native Mobile Web Share if supported
     if (navigator.share && /mobile|iphone|android/i.test(navigator.userAgent)) {
       navigator.share({
         title: title,
@@ -27,7 +27,6 @@
       return;
     }
 
-    // WhatsApp Fallback
     const waUrl = `https://api.whatsapp.com/send?text=${text}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
@@ -53,12 +52,10 @@
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     
-    // Update live timestamp badges
     document.querySelectorAll('.live-timestamp').forEach(function(el) {
       el.innerText = `Hoje às ${hours}:${minutes}`;
     });
 
-    // Start 47-minute rolling countdown timers
     let totalSeconds = 47 * 60 + 18;
     function updateCountdowns() {
       totalSeconds--;
@@ -122,11 +119,45 @@
   }
 
   // --------------------------------------------------------------------------
+  // 4. MANYCHAT & WHATSAPP CONVERSATIONAL FLOATING TRIGGER
+  // --------------------------------------------------------------------------
+  function initManyChatTrigger() {
+    if (document.getElementById('manychat-smart-trigger')) return;
+
+    const userLang = (navigator.language || 'pt').substring(0, 2).toLowerCase();
+    const promptMsg = userLang === 'es' ? 'Hola! Quiero mi carta del Tarot y Cupones VIP' : (userLang === 'en' ? 'Hello! I want my Tarot Daily Card and VIP Deals' : 'Olá! Quero tirar minha Carta do Tarot e receber Cupons');
+    const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(promptMsg)}`;
+
+    const bubble = document.createElement('div');
+    bubble.id = 'manychat-smart-trigger';
+    bubble.style.cssText = `
+      position: fixed;
+      bottom: 64px;
+      right: 16px;
+      z-index: 99998;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: system-ui, -apple-system, sans-serif;
+    `;
+
+    bubble.innerHTML = `
+      <a href="${waLink}" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:6px;background:#25d366;color:#fff;font-size:0.78rem;font-weight:700;padding:7px 12px;border-radius:20px;text-decoration:none;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:transform 0.2s ease;">
+        <span>💬</span>
+        <span>Oráculo & Cupons</span>
+      </a>
+    `;
+
+    document.body.appendChild(bubble);
+  }
+
+  // --------------------------------------------------------------------------
   // INITIALIZATION ON DOM READY
   // --------------------------------------------------------------------------
   function initEngine() {
     initDynamicUrgency();
     initStickyBottomBar();
+    initManyChatTrigger();
   }
 
   if (document.readyState === 'loading') {
