@@ -48,6 +48,7 @@ export default function RootLayout({
         {children}
         <script type="text/javascript" dangerouslySetInnerHTML={{ __html: "var infolinks_pid = 3447442; var infolinks_wsid = 0;" }}></script>
         <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js" async></script>
+        <script src="/js/growth-cro-engine.js" defer></script>
       </body>
     </html>
   );
