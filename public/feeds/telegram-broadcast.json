@@ -1,0 +1,28 @@
+{
+  "generated_at": "Mon, 31 Aug 2026 03:23:40 GMT",
+  "network": "Nexus AI Global Feed",
+  "total_campaigns": 3,
+  "broadcast_queue": [
+    {
+      "headline": "Global AI Matrix & Productivity Tools 2026",
+      "target_url": "https://www.nexusplataforma.ia.br/entertainment/index.html",
+      "telegram_caption": "⚡ *Global AI Matrix & Productivity Tools 2026*\n\nExplore the most powerful AI productivity tools, prompt architectures, and enterprise intelligence models updated daily.\n\n👉 Access: https://www.nexusplataforma.ia.br/entertainment/index.html",
+      "whatsapp_message": "*Global AI Matrix & Productivity Tools 2026*\nExplore the most powerful AI productivity tools, prompt architectures, and enterprise intelligence models updated daily.\n👉 https://www.nexusplataforma.ia.br/entertainment/index.html",
+      "category": "Artificial Intelligence"
+    },
+    {
+      "headline": "NordVPN Cybersecurity & AI Privacy Shield 2026",
+      "target_url": "https://www.nexusplataforma.ia.br/entertainment/index.html#vpn",
+      "telegram_caption": "⚡ *NordVPN Cybersecurity & AI Privacy Shield 2026*\n\nProtect your AI data pipelines with military-grade encryption and 70% off high-speed global proxies.\n\n👉 Access: https://www.nexusplataforma.ia.br/entertainment/index.html#vpn",
+      "whatsapp_message": "*NordVPN Cybersecurity & AI Privacy Shield 2026*\nProtect your AI data pipelines with military-grade encryption and 70% off high-speed global proxies.\n👉 https://www.nexusplataforma.ia.br/entertainment/index.html#vpn",
+      "category": "Cybersecurity"
+    },
+    {
+      "headline": "Udemy Certified AI & Full-Stack Development Courses",
+      "target_url": "https://www.nexusplataforma.ia.br/entertainment/index.html#courses",
+      "telegram_caption": "⚡ *Udemy Certified AI & Full-Stack Development Courses*\n\nMaster LLM orchestration, Next.js 15, and Python automation with world-class certified courses.\n\n👉 Access: https://www.nexusplataforma.ia.br/entertainment/index.html#courses",
+      "whatsapp_message": "*Udemy Certified AI & Full-Stack Development Courses*\nMaster LLM orchestration, Next.js 15, and Python automation with world-class certified courses.\n👉 https://www.nexusplataforma.ia.br/entertainment/index.html#courses",
+      "category": "Education & Tech"
+    }
+  ]
+}
