@@ -1,4 +1,4 @@
-name: Instagram AI Autonomous Autopilot 24/7 (Feed, Reels & ManyChat)
+name: Instagram AI Autonomous Autopilot 24/7 (Multi-Language & ManyChat)
 
 on:
   schedule:
@@ -20,11 +20,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate AI Visual Cards & Viral Captions
+      - name: Generate AI National Visual Cards & Captions
         run: |
           node scripts/instagram-auto-creator.js || true
 
-      - name: Publish & Dispatch to Instagram API & Feeds
+      - name: Generate AI Multi-Language Visual Cards (195 Countries)
+        run: |
+          node scripts/instagram-auto-creator-multilang.js || true
+
+      - name: Publish & Dispatch to Meta Graph API & Feeds
         run: |
           node scripts/instagram-meta-graph-publisher.js || true
         env:
