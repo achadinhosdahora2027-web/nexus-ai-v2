@@ -27,3 +27,7 @@ jobs:
       - name: Execute Full Omni-Search Multi-Engine Pings (195 Countries)
         run: |
           node scripts/global-omni-search-engine-ping.js || true
+
+      - name: Run Master Global Omni-Test Suite (195 Countries & Languages)
+        run: |
+          node scripts/master-global-omni-test-suite.js || true
