@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12" />
+      <stop offset="50%" stop-color="#c2410c" />
+      <stop offset="100%" stop-color="#431407" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGrad)" />
+
+  <!-- Grid Decoration -->
+  <circle cx="540" cy="540" r="440" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+  <circle cx="540" cy="540" r="320" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="2" />
+
+  <!-- Card Container -->
+  <rect x="80" y="80" width="920" height="920" rx="40" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.15)" stroke-width="2" filter="url(#shadow)" />
+
+  <!-- Badge Top -->
+  <rect x="140" y="140" width="420" height="60" rx="30" fill="#fb923c" />
+  <text x="350" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="1">
+    🔥 ECONOMIA & CASHBACK
+  </text>
+
+  <!-- Brand Top Right -->
+  <text x="940" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#94a3b8" text-anchor="end">
+    @aquitemachadinhos
+  </text>
+
+  <!-- Main Headline -->
+  <text x="140" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="900" fill="#ffffff">
+    Radar de Cupons Secretos Shopee!
+  </text>
+  <text x="140" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#fb923c">
+    
+  </text>
+
+  <!-- Subheadline -->
+  <text x="140" y="550" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="500" fill="#e2e8f0">
+    Ofertas relâmpago com frete grátis verificadas hoje.
+  </text>
+
+  <!-- Dynamic ManyChat Comment Trigger Box -->
+  <rect x="140" y="660" width="800" height="180" rx="24" fill="rgba(255,255,255,0.08)" stroke="#fb923c" stroke-width="2" />
+  
+  <text x="540" y="730" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">
+    💬 COMENTE A PALAVRA-CHAVE ABAIXO:
+  </text>
+
+  <rect x="340" y="760" width="400" height="60" rx="30" fill="#fb923c" />
+  <text x="540" y="802" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="2">
+    "CUPOM"
+  </text>
+
+  <!-- Footer Indicator -->
+  <text x="540" y="940" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#94a3b8" text-anchor="middle">
+    ⚡ Envio 100% Automático via Direct (ManyChat AI Bot) • aquitemachadinhos.com.br
+  </text>
+</svg>
