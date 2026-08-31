@@ -1,4 +1,4 @@
-name: Instagram AI Autonomous Autopilot 24/7 (Multi-Language & ManyChat)
+name: Instagram AI Autonomous Autopilot 24/7 (Multi-Language & Comments AI)
 
 on:
   schedule:
@@ -27,6 +27,10 @@ jobs:
       - name: Generate AI Multi-Language Visual Cards (195 Countries)
         run: |
           node scripts/instagram-auto-creator-multilang.js || true
+
+      - name: Auto-Respond to Comments with CJ/Affiliate Links
+        run: |
+          node scripts/instagram-comments-auto-responder.js || true
 
       - name: Publish & Dispatch to Meta Graph API & Feeds
         run: |
