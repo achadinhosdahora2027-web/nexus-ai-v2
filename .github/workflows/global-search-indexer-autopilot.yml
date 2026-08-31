@@ -20,6 +20,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: Refresh Programmatic Tag SEO Landing Pages
+        run: |
+          node scripts/generate-tag-seo-pages.js || true
+
+      - name: Refresh Facebook Groups Syndication Posts
+        run: |
+          node scripts/facebook-group-syndication-engine.js || true
+
       - name: Refresh Automated Social Feeds & Syndication Channels
         run: |
           node scripts/generate-social-syndication-feeds.js || true
