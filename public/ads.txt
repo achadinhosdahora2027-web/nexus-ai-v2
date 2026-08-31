@@ -13,3 +13,6 @@ monetag.com, 11691043, DIRECT
 
 # 3. Adsterra Programmatic Network
 adsterra.com, DIRECT
+
+# 4. Infolinks Official Network
+infolinks.com, 3447442, DIRECT

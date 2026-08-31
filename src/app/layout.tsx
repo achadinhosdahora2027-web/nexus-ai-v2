@@ -46,6 +46,8 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
         {children}
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: "var infolinks_pid = 3447442; var infolinks_wsid = 0;" }}></script>
+        <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js" async></script>
       </body>
     </html>
   );
