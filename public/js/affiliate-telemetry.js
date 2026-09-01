@@ -4,6 +4,7 @@
  * - Browser Language (geo intent)
  * - Device Type (mobile / desktop / tablet)
  * - Referrer and Slot tracking
+ * - Real-time Pageview & Interaction Beacon to /api/telemetry/collect
  */
 (function() {
   'use strict';
@@ -21,6 +22,29 @@
     } catch(e) {
       return 'en';
     }
+  }
+
+  function sendPageviewBeacon() {
+    try {
+      const payload = JSON.stringify({
+        type: 'pageview',
+        path: window.location.pathname,
+        geo: getLanguage(),
+        dev: getDeviceType(),
+        ref: document.referrer || ''
+      });
+
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon('/api/telemetry/collect', payload);
+      } else {
+        fetch('/api/telemetry/collect', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true
+        }).catch(function() {});
+      }
+    } catch(e) {}
   }
 
   function decorateAffiliateLinks() {
@@ -43,8 +67,12 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', decorateAffiliateLinks);
+    document.addEventListener('DOMContentLoaded', function() {
+      sendPageviewBeacon();
+      decorateAffiliateLinks();
+    });
   } else {
+    sendPageviewBeacon();
     decorateAffiliateLinks();
   }
 })();
