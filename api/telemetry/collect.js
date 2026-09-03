@@ -72,7 +72,7 @@ function rolloverDailyMetricsIfNeeded(ledger) {
 
     // Initialize new day
     tracking.current_date = todayStr;
-    const basePv = Math.floor(1800 + Math.random() * 150); // Live base calibration for today
+    const basePv = 0; // AUDITORIA: sem analytics conectado -> nao fabricar pageviews
     const baseUv = Math.floor(basePv * 0.42);
 
     tracking.today_metrics = {

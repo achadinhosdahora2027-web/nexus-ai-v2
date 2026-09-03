@@ -126,34 +126,34 @@ async function runAutonomousDirectorAudit() {
       daily_target_pageviews: 4048,
       daily_revenue_progress_percent: 0.0,
       daily_pageviews_progress_percent: Number(((todayBasePv / 4048) * 100).toFixed(1)),
-      adsense_impressions: 3690,
-      adsense_est_brl: 14.02,
-      adsterra_impressions: 1845,
-      adsterra_earnings_usd: 2.12,
-      infolinks_impressions: 1530,
-      infolinks_earnings_usd: 1.23,
-      monetag_impressions: 1230,
-      monetag_earnings_usd: 1.62
+      adsense_impressions: 0,
+      adsense_est_brl: 0,
+      adsterra_impressions: 0,
+      adsterra_earnings_usd: 0,
+      infolinks_impressions: 0,
+      infolinks_earnings_usd: 0,
+      monetag_impressions: 0,
+      monetag_earnings_usd: 0
     };
   } else if (!tracking.today_metrics || !tracking.today_metrics.pageviews_today) {
     tracking.today_metrics = {
       date: todayStr,
-      pageviews_today: 1845,
-      unique_visitors_today: 790,
+      pageviews_today: 0,
+      unique_visitors_today: 0,
       sales_count_today: 0,
       commissions_today_brl: 0.00,
       daily_target_revenue_brl: 519.05,
       daily_target_pageviews: 4048,
       daily_revenue_progress_percent: 0.0,
       daily_pageviews_progress_percent: 45.6,
-      adsense_impressions: 3690,
-      adsense_est_brl: 14.02,
-      adsterra_impressions: 1845,
-      adsterra_earnings_usd: 2.12,
-      infolinks_impressions: 1530,
-      infolinks_earnings_usd: 1.23,
-      monetag_impressions: 1230,
-      monetag_earnings_usd: 1.62
+      adsense_impressions: 0,
+      adsense_est_brl: 0,
+      adsterra_impressions: 0,
+      adsterra_earnings_usd: 0,
+      infolinks_impressions: 0,
+      infolinks_earnings_usd: 0,
+      monetag_impressions: 0,
+      monetag_earnings_usd: 0
     };
   }
 

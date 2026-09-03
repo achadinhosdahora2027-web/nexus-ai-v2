@@ -244,7 +244,7 @@ async function notifyLiveExecutiveDigest(options = {}) {
   const infolinksEstUsd = Number(today.infolinks_earnings_usd || 1.23).toFixed(2);
   const infolinksEstBrl = (Number(infolinksEstUsd) * usdBrlRate).toFixed(2);
 
-  const monetagImpressions = (today.monetag_impressions || 1230).toLocaleString('pt-BR');
+  const monetagImpressions = (today.monetag_impressions || 0).toLocaleString('pt-BR');
   const monetagEstUsd = Number(today.monetag_earnings_usd || 1.62).toFixed(2);
   const monetagEstBrl = (Number(monetagEstUsd) * usdBrlRate).toFixed(2);
 
