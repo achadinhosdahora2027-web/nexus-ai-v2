@@ -1,0 +1,6 @@
+# api/ nunca esteve em producao (0 funcoes no deploy READY de 31/08) e nada a chama;
+# 23 funcoes excedem o limite de 12 do plano Hobby e bloqueavam TODO deploy (erro 03/09/2026).
+# Links de afiliado usam o gateway central achadinhos-ad-engine.vercel.app/api/ads/go.
+api/
+scripts/
+.github/
