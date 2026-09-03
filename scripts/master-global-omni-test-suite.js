@@ -69,7 +69,6 @@ async function runMasterAudit() {
       const content = fs.readFileSync(fullPath, 'utf8');
 
       const hasGrowth = content.includes('growth-cro-engine.js');
-      const hasMonetag = content.includes('8469089b876439517e6c5247573c6e21') || content.includes('quge5.com');
       const hasInfolinks = content.includes('infolinks_pid') || content.includes('infolinks');
 
       if (hasGrowth && hasMonetag && hasInfolinks) {
