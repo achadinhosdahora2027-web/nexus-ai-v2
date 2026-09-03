@@ -66,6 +66,8 @@
         cj_pid: CJ_PID
       });
 
+      // Rota /api/telemetry/collect so existe em www.aquitemachadinhos.com.br (nexus/solvegrid: 404).
+      if (!/aquitemachadinhos\.com\.br$/.test(window.location.hostname)) return;
       if (navigator.sendBeacon) {
         navigator.sendBeacon('/api/telemetry/collect', payload);
       } else {
