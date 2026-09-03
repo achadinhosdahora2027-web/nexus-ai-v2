@@ -67,14 +67,10 @@ Allow: /
 # ------------------------------------------------------------------------------
 # SITEMAP DIRECTIVES
 # ------------------------------------------------------------------------------
-Sitemap: https://nexus-ai-v2.vercel.app/sitemap-index.xml
-Sitemap: https://nexus-ai-v2.vercel.app/sitemap.xml
-Sitemap: https://nexus-ai-v2.vercel.app/sitemap-mundial-paises.xml
-Sitemap: https://nexusplataforma.ia.br/sitemap-index.xml
-Sitemap: https://nexusplataforma.ia.br/sitemap.xml
 
 # Block dynamic redirect query parameters to conserve Googlebot crawl budget
 Disallow: /api/ads/
 Disallow: /api/affiliate/
 Disallow: /*?*sid=
 Disallow: /*?*utm_
+Sitemap: https://nexusplataforma.ia.br/sitemap.xml

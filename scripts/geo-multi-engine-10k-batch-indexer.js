@@ -221,6 +221,11 @@ async function postIndexNowBatch(endpoint, urlList) {
  * Main Execution Function
  */
 async function runGeoMultiEngine10kIndexer() {
+  // DESATIVADO (auditoria 03/09/2026): fabricava ~40.000 URLs inexistentes (404) e as submetia via IndexNow.
+  if (process.env.ALLOW_SYNTHETIC_10K_URLS !== 'true') {
+    console.log('⛔ geo-multi-engine-10k-batch-indexer DESATIVADO: gerava URLs inexistentes. Nada foi gerado nem submetido.');
+    return { disabled: true };
+  }
   console.log('================================================================================');
   console.log('🚀 MOTOR GLOBAL MULTI-BUSCADORES: LOTES DE 10.000 PÁGINAS POR CLUSTER GEO (2026)');
   console.log('================================================================================\n');

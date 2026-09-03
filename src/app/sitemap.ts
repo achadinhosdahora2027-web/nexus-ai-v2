@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.8
-    }
+    },
+    { url: `${baseUrl}/entertainment`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/mundial`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
   ];
 }

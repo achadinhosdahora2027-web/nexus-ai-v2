@@ -8,8 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ['/api/']
     },
     sitemap: [
-      'https://nexusplataforma.ia.br/sitemap.xml',
-      'https://nexusplataforma.ia.br/growth/sitemaps/sitemap-index.xml'
+      'https://nexusplataforma.ia.br/sitemap.xml'
     ],
     host: 'https://nexusplataforma.ia.br'
   };
