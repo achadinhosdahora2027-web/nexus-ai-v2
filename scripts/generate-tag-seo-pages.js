@@ -58,8 +58,9 @@ const TAG_DEFINITIONS = [
     meta_desc: "Aprenda Inteligência Artificial, Engenharia de Prompt, Python e Full-Stack com cursos certificados e mais bem avaliados na Udemy.",
     h1: "🎓 Cursos de IA & Programação com Desconto na Udemy",
     brand: "udemy",
+    direct_url: "https://www.udemy.com/topic/artificial-intelligence/", // sem programa de afiliados na conta (auditoria 03/09/2026)
     badge: "💡 EDUCAÇÃO & CARREIRA",
-    cta_text: "Acessar Cursos da Udemy com Desconto ➔",
+    cta_text: "Acessar cursos na Udemy ➔",
     faq: [
       { q: "Os cursos da Udemy têm certificado reconhecido?", a: "Sim, todos os cursos concluídos emitem certificado oficial que pode ser adicionado ao LinkedIn e currículo." }
     ]
@@ -91,7 +92,8 @@ const TAG_DEFINITIONS = [
 ];
 
 function generateHtmlPage(tag) {
-  const affiliateUrl = `https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=${tag.brand}&site=tag_seo&slot=${tag.slug}`;
+  const affiliateUrl = tag.direct_url || `https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=${tag.brand}&site=tag_seo&slot=${tag.slug}`;
+  const relAttr = tag.direct_url ? 'nofollow noopener noreferrer' : 'sponsored noopener noreferrer nofollow';
   const canonicalUrl = `${DOMAIN}/tags/${tag.slug}.html`;
 
   return `<!DOCTYPE html>
@@ -153,7 +155,7 @@ function generateHtmlPage(tag) {
       </div>
       <p class="desc">${tag.meta_desc}</p>
       
-      <a href="${affiliateUrl}" target="_blank" rel="sponsored noopener noreferrer nofollow" class="cta-btn">
+      <a href="${affiliateUrl}" target="_blank" rel="${relAttr}" class="cta-btn">
         ${tag.cta_text}
       </a>
     </div>
