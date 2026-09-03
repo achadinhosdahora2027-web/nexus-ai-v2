@@ -101,7 +101,6 @@ function generateHtmlPage(tag) {
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
-  <meta name="monetag" content="8469089b876439517e6c5247573c6e21" />
   <title>${tag.title} | Aqui Tem Achadinhos</title>
   <meta name="description" content="${tag.meta_desc}"/>
   <link rel="canonical" href="${canonicalUrl}"/>
