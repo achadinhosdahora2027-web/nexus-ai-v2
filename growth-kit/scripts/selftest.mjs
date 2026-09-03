@@ -52,7 +52,7 @@ assert.strictEqual(guardOk.clean, true);
 console.log('7b. Guardian CID-as-PID / fake link IDs: PASS');
 
 // 8. Dynamic SID Injection
-const sidUrl = injectDynamicSid('https://www.anrdoezrs.net/click-101870639-12814527', 'nexus', 'rectangle');
+const sidUrl = injectDynamicSid('https://www.anrdoezrs.net/click-101870639-13914989', 'nexus', 'rectangle');
 assert.ok(sidUrl.includes('sid=nexus_rectangle'));
 console.log('8. Dynamic SID Injection: PASS');
 
