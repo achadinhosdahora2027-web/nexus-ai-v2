@@ -42,8 +42,17 @@ const guardProhibited = checkAffiliateCompliance({ text: 'prohibited 101143576' 
 assert.strictEqual(guardProhibited.clean, false);
 console.log('7. Guardian Forbidden PID Check: PASS');
 
+// 7b. Guardian: CID usado como PID e link IDs falsos devem ser bloqueados
+const guardCid = checkAffiliateCompliance('<a rel="sponsored" href="https://www.tkqlhce.com/click-8041957-17288448">x</a>');
+assert.strictEqual(guardCid.clean, false);
+const guardFake = checkAffiliateCompliance('<a rel="sponsored" href="https://www.tkqlhce.com/click-101859672-12884704">x</a>');
+assert.strictEqual(guardFake.clean, false);
+const guardOk = checkAffiliateCompliance('<a rel="sponsored" href="https://www.kqzyfj.com/click-101859672-17293138">x</a>');
+assert.strictEqual(guardOk.clean, true);
+console.log('7b. Guardian CID-as-PID / fake link IDs: PASS');
+
 // 8. Dynamic SID Injection
-const sidUrl = injectDynamicSid('https://tkqlhce.com/click-8041957', 'nexus', 'rectangle');
+const sidUrl = injectDynamicSid('https://www.anrdoezrs.net/click-101870639-12814527', 'nexus', 'rectangle');
 assert.ok(sidUrl.includes('sid=nexus_rectangle'));
 console.log('8. Dynamic SID Injection: PASS');
 
