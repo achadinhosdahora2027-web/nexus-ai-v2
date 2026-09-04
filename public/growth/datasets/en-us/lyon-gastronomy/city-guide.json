@@ -1,0 +1,219 @@
+{
+  "title": "Lyon — World Capital of Gastronomy | Complete Guide & Travel Deals 2026",
+  "description": "Cheap flights to Lyon 2026. Hotels up to 30% off, car rental, Lyon gastronomy (bouchons), free attractions, live exchange rate and full guide.",
+  "canonical": "https://nexusplataforma.ia.br/growth/en-us/lyon-gastronomy/city-guide",
+  "locale": "en-us",
+  "facet": "lyon-gastronomy",
+  "format": "city-guide",
+  "hreflang": {
+    "fr-fr": "https://nexusplataforma.ia.br/growth/fr-fr/lyon-gastronomy/city-guide",
+    "pt-br": "https://nexusplataforma.ia.br/growth/pt-br/lyon-gastronomy/city-guide",
+    "en-us": "https://nexusplataforma.ia.br/growth/en-us/lyon-gastronomy/city-guide",
+    "es-es": "https://nexusplataforma.ia.br/growth/es-es/lyon-gastronomy/city-guide",
+    "de-de": "https://nexusplataforma.ia.br/growth/de-de/lyon-gastronomy/city-guide",
+    "it-it": "https://nexusplataforma.ia.br/growth/it-it/lyon-gastronomy/city-guide",
+    "ja-jp": "https://nexusplataforma.ia.br/growth/ja-jp/lyon-gastronomy/city-guide",
+    "zh-cn": "https://nexusplataforma.ia.br/growth/zh-cn/lyon-gastronomy/city-guide",
+    "x-default": "https://nexusplataforma.ia.br/growth/fr-fr/lyon-gastronomy/city-guide"
+  },
+  "affiliateHosts": [
+    "https://achadinhos-ad-engine.vercel.app",
+    "https://www.ftjcfx.com",
+    "https://www.tqlkg.com",
+    "https://s.shopee.com.br",
+    "https://meli.la"
+  ],
+  "cityData": {
+    "name": "Lyon",
+    "country": "France",
+    "region": "Auvergne-Rhône-Alpes",
+    "iata": "LYS",
+    "airport": "Lyon-Saint Exupéry",
+    "timezone": "Europe/Paris",
+    "currency": "EUR",
+    "plugType": "E",
+    "voltage": "230V/50Hz",
+    "emergencyNumber": "112",
+    "population": "522250",
+    "metroPopulation": "2291000",
+    "coordinates": {
+      "lat": 45.764,
+      "lng": 4.8357
+    },
+    "gastronomy": [
+      {
+        "dish": "Quenelle de Brochet",
+        "desc": "Massa leve de pescada com molho Nantua (creme de lagostins)",
+        "price": "€14–18",
+        "restaurant": "Le Café du Peintre, Rue de Confort"
+      },
+      {
+        "dish": "Tablier de Sapeur",
+        "desc": "Tripa de boi empanada com molho gribiche",
+        "price": "€12–16",
+        "restaurant": "Le Tablier de Sapeur, Rue Burdeau"
+      },
+      {
+        "dish": "Salade Lyonnaise",
+        "desc": "Frisée, lardons, croutons e ovo pochê com vinagrete Dijon",
+        "price": "€10–14",
+        "restaurant": "Le Bouchon de Filles, Rue Major Martin"
+      },
+      {
+        "dish": "Tarte Praline",
+        "desc": "Torta de pralinas rosas (amêndoas coradas)",
+        "price": "€6–9",
+        "restaurant": "Pâtisserie Sève, Rue de la Charité"
+      }
+    ],
+    "attractions": [
+      {
+        "name": "Basilique de Fourvière",
+        "free": true,
+        "desc": "Vista panorâmica de Lyon e dos Alpes, acesso gratuito"
+      },
+      {
+        "name": "Musée des Beaux-Arts",
+        "free": "primeiro domingo do mês",
+        "desc": "2º maior museu de belas artes da França"
+      },
+      {
+        "name": "Traboules du Vieux Lyon",
+        "free": true,
+        "desc": "Passagens secretas renascentistas entre prédios"
+      },
+      {
+        "name": "Parc de la Tête d'Or",
+        "free": true,
+        "desc": "117 hectares com lago, zoológico e jardim botânico grátis"
+      },
+      {
+        "name": "Fresque des Lyonnais",
+        "free": true,
+        "desc": "Mural trompe-l'oeil com 30 personagens históricos"
+      }
+    ],
+    "transport": [
+      {
+        "mode": "Rhônexpress (Trem)",
+        "price": "€17 ida",
+        "time": "30 min ao centro"
+      },
+      {
+        "mode": "Tram T3 + Métro",
+        "price": "€2.10",
+        "time": "45 min ao centro"
+      },
+      {
+        "mode": "Táxi",
+        "price": "€45–55",
+        "time": "30 min ao centro"
+      },
+      {
+        "mode": "Uber/Bolt",
+        "price": "€35–45",
+        "time": "30 min ao centro"
+      }
+    ],
+    "scamAlerts": [
+      "Táxis piratas no saguão de chegadas",
+      "Assistência falsa com malas cobrando €20",
+      "Cartões de transporte falsos de vendedores ambulantes"
+    ],
+    "budgetEstimate": {
+      "currency": "BRL",
+      "min5days": 6130,
+      "max5days": 10550
+    }
+  },
+  "offers": [
+    {
+      "brand": "Booking.com",
+      "title": "Hotéis em Lyon — Até 30% OFF",
+      "description": "Reserve hotéis no centro de Lyon (Presqu'île, Vieux Lyon, Ainay) com cancelamento grátis.",
+      "discount": "30% OFF",
+      "price": "45",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €45/noite",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus&slot=lyon_hotels",
+      "cta": "Ver Hotéis em Lyon"
+    },
+    {
+      "brand": "Carla Car Rental",
+      "title": "Aluguel de Carro Lyon Aeroporto",
+      "description": "Compare 500+ locadoras no aeroporto LYS. Seguro e suporte 24h incluídos.",
+      "discount": "Tarifa Especial",
+      "price": "25",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €25/dia",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus&slot=lyon_rental",
+      "cta": "Comparar Carros em Lyon"
+    },
+    {
+      "brand": "NordVPN",
+      "title": "VPN Segura para Lyon",
+      "description": "Proteja seus dados no Wi-Fi público dos bares e aeroportos franceses. 70% OFF.",
+      "discount": "70% OFF",
+      "price": "3.19",
+      "currency": "USD",
+      "priceFormatted": "USD 3.19/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus&slot=lyon_vpn",
+      "cta": "Ativar NordVPN"
+    },
+    {
+      "brand": "Wise",
+      "title": "Cartão Wise — Câmbio Real EUR",
+      "description": "Pague em euros com taxa comercial. Economize até 8% vs cartão brasileiro.",
+      "discount": "Sem IOF de 4.38%",
+      "price": "0",
+      "currency": "BRL",
+      "priceFormatted": "Conta gratuita",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=wise&site=nexus&slot=lyon_wise",
+      "cta": "Abrir Conta Wise"
+    },
+    {
+      "brand": "TheFork",
+      "title": "Reservar Bouchons em Lyon",
+      "description": "Até 50% de desconto nos melhores restaurantes lyonnais com o TheFork.",
+      "discount": "50% OFF",
+      "price": "0",
+      "currency": "EUR",
+      "priceFormatted": "Reserva gratuita",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus&slot=lyon_thefork",
+      "cta": "Reservar Restaurante"
+    },
+    {
+      "brand": "SafetyWing",
+      "title": "Seguro Viagem França — Obrigatório",
+      "description": "Cobertura mínima €30.000 exigida pelo Tratado de Schengen. Aprovação na imigração.",
+      "discount": "Desde €4/mês",
+      "price": "4",
+      "currency": "EUR",
+      "priceFormatted": "€4/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus&slot=lyon_insurance",
+      "cta": "Contratar Seguro"
+    },
+    {
+      "brand": "Adaptador Shopee",
+      "title": "Adaptador Universal Tomada Tipo E",
+      "description": "Adaptador universal para tomada francesa tipo E. Compre antes de viajar.",
+      "discount": "Frete Grátis",
+      "price": "35",
+      "currency": "BRL",
+      "priceFormatted": "R$ 35,00",
+      "url": "https://s.shopee.com.br/30n7ohzzU6",
+      "cta": "Comprar na Shopee"
+    },
+    {
+      "brand": "Booking.com",
+      "title": "Passagens Aéreas para Lyon",
+      "description": "Compare vôos para LYS: Air France, TAP, KLM, LATAM e mais. Melhor preço garantido.",
+      "discount": "Até 40% OFF",
+      "price": "3200",
+      "currency": "BRL",
+      "priceFormatted": "a partir de R$3.200 ida e volta",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus&slot=lyon_flights",
+      "cta": "Comparar Vôos"
+    }
+  ]
+}
