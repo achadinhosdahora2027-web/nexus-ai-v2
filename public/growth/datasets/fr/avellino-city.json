@@ -1,0 +1,92 @@
+{
+  "city": {
+    "name": "Avellino",
+    "slug": "avellino",
+    "region": "Campania",
+    "country": "Itália",
+    "countryCode": "IT",
+    "latitude": 40.9142,
+    "longitude": 14.7906,
+    "airport": "Aeroporto Regionale",
+    "population": 0,
+    "currency": "EUR",
+    "timezone": "Europe/Rome"
+  },
+  "language": "fr",
+  "offers": [
+    {
+      "brand": "booking",
+      "title": "Hotels in Avellino",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus-ai-v2&slot=avellino_hotels_fr",
+      "type": "hotel"
+    },
+    {
+      "brand": "carla",
+      "title": "Car Rental Avellino",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus-ai-v2&slot=avellino_car_fr",
+      "type": "car_rental"
+    },
+    {
+      "brand": "nordvpn",
+      "title": "Secure VPN",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus-ai-v2&slot=avellino_vpn_fr",
+      "type": "vpn"
+    },
+    {
+      "brand": "safetywing",
+      "title": "Travel Insurance",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus-ai-v2&slot=avellino_insurance_fr",
+      "type": "insurance"
+    },
+    {
+      "brand": "thefork",
+      "title": "Restaurants",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus-ai-v2&slot=avellino_restaurants_fr",
+      "type": "restaurant"
+    },
+    {
+      "brand": "udemy",
+      "title": "Online Courses",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus-ai-v2&slot=avellino_courses_fr",
+      "type": "education"
+    },
+    {
+      "brand": "novakid",
+      "title": "Kids English",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=novakid&site=nexus-ai-v2&slot=avellino_novakid_fr",
+      "type": "education"
+    },
+    {
+      "brand": "switchbot",
+      "title": "Smart Home",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=switchbot&site=nexus-ai-v2&slot=avellino_switchbot_fr",
+      "type": "automation"
+    },
+    {
+      "brand": "amazon",
+      "title": "Amazon Store",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=amazon&site=nexus-ai-v2&slot=avellino_amazon_fr",
+      "type": "shopping"
+    }
+  ],
+  "ads": {
+    "adsense": "ca-pub-5604700207394147",
+    "infolinks": "3447442",
+    "cj_publisher_id": "101870639"
+  },
+  "metadata": {
+    "created": "2026-03-09",
+    "version": "2.0",
+    "multilingual": true,
+    "supported_languages": [
+      "it",
+      "pt-br",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ]
+  }
+}
