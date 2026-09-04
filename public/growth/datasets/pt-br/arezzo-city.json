@@ -1,0 +1,92 @@
+{
+  "city": {
+    "name": "Arezzo",
+    "slug": "arezzo",
+    "region": "Toscana",
+    "country": "Itália",
+    "countryCode": "IT",
+    "latitude": 43.4633,
+    "longitude": 11.8799,
+    "airport": "Aeroporto Regionale",
+    "population": 0,
+    "currency": "EUR",
+    "timezone": "Europe/Rome"
+  },
+  "language": "pt-br",
+  "offers": [
+    {
+      "brand": "booking",
+      "title": "Hotels in Arezzo",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus-ai-v2&slot=arezzo_hotels_pt-br",
+      "type": "hotel"
+    },
+    {
+      "brand": "carla",
+      "title": "Car Rental Arezzo",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus-ai-v2&slot=arezzo_car_pt-br",
+      "type": "car_rental"
+    },
+    {
+      "brand": "nordvpn",
+      "title": "Secure VPN",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus-ai-v2&slot=arezzo_vpn_pt-br",
+      "type": "vpn"
+    },
+    {
+      "brand": "safetywing",
+      "title": "Travel Insurance",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus-ai-v2&slot=arezzo_insurance_pt-br",
+      "type": "insurance"
+    },
+    {
+      "brand": "thefork",
+      "title": "Restaurants",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus-ai-v2&slot=arezzo_restaurants_pt-br",
+      "type": "restaurant"
+    },
+    {
+      "brand": "udemy",
+      "title": "Online Courses",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus-ai-v2&slot=arezzo_courses_pt-br",
+      "type": "education"
+    },
+    {
+      "brand": "novakid",
+      "title": "Kids English",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=novakid&site=nexus-ai-v2&slot=arezzo_novakid_pt-br",
+      "type": "education"
+    },
+    {
+      "brand": "switchbot",
+      "title": "Smart Home",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=switchbot&site=nexus-ai-v2&slot=arezzo_switchbot_pt-br",
+      "type": "automation"
+    },
+    {
+      "brand": "amazon",
+      "title": "Amazon Store",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=amazon&site=nexus-ai-v2&slot=arezzo_amazon_pt-br",
+      "type": "shopping"
+    }
+  ],
+  "ads": {
+    "adsense": "ca-pub-5604700207394147",
+    "infolinks": "3447442",
+    "cj_publisher_id": "101870639"
+  },
+  "metadata": {
+    "created": "2026-03-09",
+    "version": "2.0",
+    "multilingual": true,
+    "supported_languages": [
+      "it",
+      "pt-br",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ]
+  }
+}
