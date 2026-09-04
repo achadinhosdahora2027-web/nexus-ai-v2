@@ -1,0 +1,151 @@
+{
+  "title": "Pescara — Guida Completa & Offerte di Viaggio 2026 | Nexus",
+  "description": "Biglietti aerei economici per Pescara 2026. Hotel fino al 30% di sconto, noleggio auto, gastronomia abruzzese e attrazioni gratuite.",
+  "canonical": "https://nexusplataforma.ia.br/growth/it-it/pescara-city/city-guide",
+  "locale": "it-it",
+  "facet": "pescara-city",
+  "format": "city-guide",
+  "hreflang": {
+    "it-it": "https://nexusplataforma.ia.br/growth/it-it/pescara-city/city-guide",
+    "pt-br": "https://nexusplataforma.ia.br/growth/pt-br/pescara-city/city-guide",
+    "en-us": "https://nexusplataforma.ia.br/growth/en-us/pescara-city/city-guide",
+    "es-es": "https://nexusplataforma.ia.br/growth/es-es/pescara-city/city-guide",
+    "de-de": "https://nexusplataforma.ia.br/growth/de-de/pescara-city/city-guide",
+    "fr-fr": "https://nexusplataforma.ia.br/growth/fr-fr/pescara-city/city-guide",
+    "ja-jp": "https://nexusplataforma.ia.br/growth/ja-jp/pescara-city/city-guide",
+    "zh-cn": "https://nexusplataforma.ia.br/growth/zh-cn/pescara-city/city-guide",
+    "x-default": "https://nexusplataforma.ia.br/growth/it-it/pescara-city/city-guide"
+  },
+  "affiliateHosts": [
+    "https://achadinhos-ad-engine.vercel.app",
+    "https://www.ftjcfx.com",
+    "https://www.tqlkg.com",
+    "https://s.shopee.com.br",
+    "https://meli.la"
+  ],
+  "cityData": {
+    "name": "Pescara",
+    "country": "Italy",
+    "region": "Abruzzo",
+    "iata": "PSR",
+    "airport": "Aeroporto d'Abruzzo",
+    "timezone": "Europe/Rome",
+    "currency": "EUR",
+    "plugType": "L/F",
+    "voltage": "230V/50Hz",
+    "emergencyNumber": "112",
+    "population": "119400",
+    "metroPopulation": "350000",
+    "coordinates": {"lat": 42.4618, "lng": 14.2161},
+    "gastronomy": [
+      {"dish": "Brodetto alla Pescarese", "desc": "Zuppa di pesce con 13 tipi di pesce, pomodoro e peperoncino", "price": "€14–18", "restaurant": "Ristorante Il Brodetto, Lungomare Matteotti"},
+      {"dish": "Maccheroni alla Chitarra", "desc": "Pasta fresca con ragù di agnello o pallottine", "price": "€10–14", "restaurant": "Osteria del Mare, Via Napoli"},
+      {"dish": "Arrosticini", "desc": "Spiedini di carne di pecora grigliati", "price": "€1.50–2.00 cadauno", "restaurant": "L'Arrosto, Corso Umberto"},
+      {"dish": "Pecorino di Farindola", "desc": "Formaggio pecorino stagionato con caglio di suino", "price": "€5–8", "restaurant": "Caseificio Delimited, Mercato Coperto"}
+    ],
+    "attractions": [
+      {"name": "Lungomare Matteotti", "free": true, "desc": "Passeggiata sul mare di 3 km con negozi e bar"},
+      {"name": "Casa Natale di Gabriele D'Annunzio", "free": true, "desc": "Casa museo del poeta italiano più importante del '900"},
+      {"name": "Pescara Vecchia", "free": true, "desc": "Quartiere storico dei pescatori con case colorate"},
+      {"name": "Museo delle Genti d'Abruzzo", "free": "prima domenica del mese", "desc": "Museo sulla cultura abruzzese"},
+      {"name": "Parco Comunale Villa Sabucchi", "free": true, "desc": "Parco pubblico con giardini e aree giochi"}
+    ],
+    "transport": [
+      {"mode": "Bus Navetta PRONTOBUS", "price": "€1.50", "time": "15 min al centro"},
+      {"mode": "Taxi", "price": "€12–15", "time": "10 min al centro"},
+      {"mode": "Treno Regionale", "price": "€2.50–25", "time": "Rete Trenitalia"}
+    ],
+    "scamAlerts": ["Taxi non autorizzati con tariffe gonfiate", "Noleggio auto con assicurazione nascosta", "Cambivaluta con tassi sfavorevoli"],
+    "budgetEstimate": {"currency": "BRL", "min5days": 5380, "max5days": 9000}
+  },
+  "offers": [
+    {
+      "brand": "Booking.com",
+      "title": "Hotel a Pescara — Fino al 30% OFF",
+      "description": "Prenota hotel nel centro di Pescara con cancellazione gratuita.",
+      "discount": "30% OFF",
+      "price": "45",
+      "currency": "EUR",
+      "priceFormatted": "a partire da €45/notte",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus&slot=pescara_hotels",
+      "cta": "Vedi Hotel a Pescara"
+    },
+    {
+      "brand": "Carla Car Rental",
+      "title": "Noleggio Auto Pescara Aeroporto",
+      "description": "Confronta 500+ compagnie di noleggio all'aeroporto PSR. Assicurazione e supporto 24h inclusi.",
+      "discount": "Tariffa Speciale",
+      "price": "25",
+      "currency": "EUR",
+      "priceFormatted": "a partire da €25/giorno",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus&slot=pescara_rental",
+      "cta": "Confronta Auto a Pescara"
+    },
+    {
+      "brand": "NordVPN",
+      "title": "VPN Sicura per Pescara",
+      "description": "Proteggi i tuoi dati sul Wi-Fi pubblico di bar e aeroporti italiani. 70% OFF.",
+      "discount": "70% OFF",
+      "price": "3.19",
+      "currency": "USD",
+      "priceFormatted": "USD 3.19/mese",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus&slot=pescara_vpn",
+      "cta": "Attiva NordVPN"
+    },
+    {
+      "brand": "Wise",
+      "title": "Carta Wise — Cambio Reale EUR",
+      "description": "Paga in euro con tasso di cambio reale. Risparmia fino all'8% rispetto alle carte tradizionali.",
+      "discount": "Senza IOF 4.38%",
+      "price": "0",
+      "currency": "BRL",
+      "priceFormatted": "Conto gratuito",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=wise&site=nexus&slot=pescara_wise",
+      "cta": "Apri Conto Wise"
+    },
+    {
+      "brand": "TheFork",
+      "title": "Prenota Ristoranti a Pescara",
+      "description": "Fino al 50% di sconto nei migliori ristoranti abruzzesi con TheFork.",
+      "discount": "50% OFF",
+      "price": "0",
+      "currency": "EUR",
+      "priceFormatted": "Prenotazione gratuita",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus&slot=pescara_thefork",
+      "cta": "Prenota Ristorante"
+    },
+    {
+      "brand": "SafetyWing",
+      "title": "Assicurazione Viaggio Italia — Obbligatoria",
+      "description": "Copertura minima €30.000 richiesta dal Trattato di Schengen. Approvazione all'immigrazione.",
+      "discount": "Da €4/mese",
+      "price": "4",
+      "currency": "EUR",
+      "priceFormatted": "€4/mese",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus&slot=pescara_insurance",
+      "cta": "Contratta Assicurazione"
+    },
+    {
+      "brand": "Udemy",
+      "title": "Corsi di Italiano Online",
+      "description": "Impara le basi dell'italiano con corsi online da €9,90. Insegnanti madrelingua.",
+      "discount": "Da €9.90",
+      "price": "9.90",
+      "currency": "EUR",
+      "priceFormatted": "€9.90",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus&slot=pescara_udemy",
+      "cta": "Vedi Corsi"
+    },
+    {
+      "brand": "Shopee",
+      "title": "Adattatore Universale Tipo L/F",
+      "description": "Adattatore universale per presa italiana. Spedizione gratuita.",
+      "discount": "Spedizione Gratuita",
+      "price": "35",
+      "currency": "BRL",
+      "priceFormatted": "R$ 35,00",
+      "url": "https://s.shopee.com.br/30n7ohzzU6",
+      "cta": "Compra su Shopee"
+    }
+  ]
+}
