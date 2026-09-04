@@ -1,0 +1,109 @@
+{
+  "title": "Nîmes — Guia Completo & Passagens Baratas 2026 | Nexus",
+  "description": "Passagens aéreas baratas para Nîmes 2026. Hotéis com até 30% OFF, aluguel de carros, gastronomia e atrações gratuitas.",
+  "canonical": "https://nexusplataforma.ia.br/growth/pt-br/nimes-city/city-guide",
+  "locale": "pt-br",
+  "facet": "nimes-city",
+  "format": "city-guide",
+  "hreflang": {
+    "fr-fr": "https://nexusplataforma.ia.br/growth/fr-fr/nimes-city/city-guide",
+    "pt-br": "https://nexusplataforma.ia.br/growth/pt-br/nimes-city/city-guide",
+    "en-us": "https://nexusplataforma.ia.br/growth/en-us/nimes-city/city-guide",
+    "es-es": "https://nexusplataforma.ia.br/growth/es-es/nimes-city/city-guide",
+    "de-de": "https://nexusplataforma.ia.br/growth/de-de/nimes-city/city-guide",
+    "it-it": "https://nexusplataforma.ia.br/growth/it-it/nimes-city/city-guide",
+    "ja-jp": "https://nexusplataforma.ia.br/growth/ja-jp/nimes-city/city-guide",
+    "zh-cn": "https://nexusplataforma.ia.br/growth/zh-cn/nimes-city/city-guide",
+    "x-default": "https://nexusplataforma.ia.br/growth/en-us/nimes-city/city-guide"
+  },
+  "affiliateHosts": [
+    "https://achadinhos-ad-engine.vercel.app",
+    "https://www.ftjcfx.com",
+    "https://www.tqlkg.com",
+    "https://s.shopee.com.br",
+    "https://meli.la"
+  ],
+  "cityData": {
+    "name": "Nîmes",
+    "country": "France",
+    "region": "Occitanie",
+    "iata": "CDG",
+    "timezone": "Europe/Paris",
+    "currency": "EUR",
+    "plugType": "E",
+    "voltage": "230V/50Hz",
+    "emergencyNumber": "112",
+    "coordinates": {
+      "lat": 43.8367,
+      "lng": 4.3601
+    }
+  },
+  "offers": [
+    {
+      "brand": "Booking.com",
+      "title": "Hotéis em Nîmes — Até 30% OFF",
+      "description": "Reserve hotéis em Nîmes com cancelamento grátis.",
+      "discount": "30% OFF",
+      "price": "45",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €45/noite",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus&slot=nimes_hotels",
+      "cta": "Ver Hotéis"
+    },
+    {
+      "brand": "Carla Car Rental",
+      "title": "Aluguel de Carro Nîmes",
+      "description": "Compare 500+ locadoras em Nîmes.",
+      "discount": "Tarifa Especial",
+      "price": "25",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €25/dia",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus&slot=nimes_rental",
+      "cta": "Comparar Carros"
+    },
+    {
+      "brand": "NordVPN",
+      "title": "VPN Segura para Viagens",
+      "description": "Proteja seus dados em Wi-Fi público. 70% OFF.",
+      "discount": "70% OFF",
+      "price": "3.19",
+      "currency": "USD",
+      "priceFormatted": "USD 3.19/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus&slot=nimes_vpn",
+      "cta": "Ativar NordVPN"
+    },
+    {
+      "brand": "Wise",
+      "title": "Cartão Wise — Câmbio Real EUR",
+      "description": "Pague em euros com taxa comercial. Economize até 8%.",
+      "discount": "Sem IOF de 4.38%",
+      "price": "0",
+      "currency": "BRL",
+      "priceFormatted": "Conta gratuita",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=wise&site=nexus&slot=nimes_wise",
+      "cta": "Abrir Conta"
+    },
+    {
+      "brand": "SafetyWing",
+      "title": "Seguro Viagem — Obrigatório",
+      "description": "Cobertura mínima €30.000 exigida pelo Tratado de Schengen.",
+      "discount": "Desde €4/mês",
+      "price": "4",
+      "currency": "EUR",
+      "priceFormatted": "€4/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus&slot=nimes_insurance",
+      "cta": "Contratar Seguro"
+    },
+    {
+      "brand": "Adaptador Shopee",
+      "title": "Adaptador Universal Tipo E",
+      "description": "Adaptador para tomada francesa. Frete grátis.",
+      "discount": "Frete Grátis",
+      "price": "35",
+      "currency": "BRL",
+      "priceFormatted": "R$ 35,00",
+      "url": "https://s.shopee.com.br/30n7ohzzU6",
+      "cta": "Comprar"
+    }
+  ]
+}

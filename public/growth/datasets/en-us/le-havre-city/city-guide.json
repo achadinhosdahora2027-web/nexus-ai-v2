@@ -1,0 +1,109 @@
+{
+  "title": "Le Havre — Complete Travel Guide & Deals 2026 | Nexus",
+  "description": "Cheap flights to Le Havre 2026. Hotels up to 30% off, car rental, gastronomy and free attractions.",
+  "canonical": "https://nexusplataforma.ia.br/growth/en-us/le-havre-city/city-guide",
+  "locale": "en-us",
+  "facet": "le-havre-city",
+  "format": "city-guide",
+  "hreflang": {
+    "fr-fr": "https://nexusplataforma.ia.br/growth/fr-fr/le-havre-city/city-guide",
+    "pt-br": "https://nexusplataforma.ia.br/growth/pt-br/le-havre-city/city-guide",
+    "en-us": "https://nexusplataforma.ia.br/growth/en-us/le-havre-city/city-guide",
+    "es-es": "https://nexusplataforma.ia.br/growth/es-es/le-havre-city/city-guide",
+    "de-de": "https://nexusplataforma.ia.br/growth/de-de/le-havre-city/city-guide",
+    "it-it": "https://nexusplataforma.ia.br/growth/it-it/le-havre-city/city-guide",
+    "ja-jp": "https://nexusplataforma.ia.br/growth/ja-jp/le-havre-city/city-guide",
+    "zh-cn": "https://nexusplataforma.ia.br/growth/zh-cn/le-havre-city/city-guide",
+    "x-default": "https://nexusplataforma.ia.br/growth/en-us/le-havre-city/city-guide"
+  },
+  "affiliateHosts": [
+    "https://achadinhos-ad-engine.vercel.app",
+    "https://www.ftjcfx.com",
+    "https://www.tqlkg.com",
+    "https://s.shopee.com.br",
+    "https://meli.la"
+  ],
+  "cityData": {
+    "name": "Le Havre",
+    "country": "France",
+    "region": "Normandie",
+    "iata": "CDG",
+    "timezone": "Europe/Paris",
+    "currency": "EUR",
+    "plugType": "E",
+    "voltage": "230V/50Hz",
+    "emergencyNumber": "112",
+    "coordinates": {
+      "lat": 49.4944,
+      "lng": 0.1079
+    }
+  },
+  "offers": [
+    {
+      "brand": "Booking.com",
+      "title": "Hôtels à Le Havre — Jusqu'à 30% de réduction",
+      "description": "Réservez des hôtels à Le Havre avec annulation gratuite.",
+      "discount": "30% OFF",
+      "price": "45",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €45/noite",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus&slot=le-havre_hotels",
+      "cta": "Voir Hôtels"
+    },
+    {
+      "brand": "Carla Car Rental",
+      "title": "Location de voiture Le Havre",
+      "description": "Compare 500+ locadoras em Le Havre.",
+      "discount": "Tarifa Especial",
+      "price": "25",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €25/dia",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus&slot=le-havre_rental",
+      "cta": "Comparer Voitures"
+    },
+    {
+      "brand": "NordVPN",
+      "title": "VPN Sécurisé pour Voyages",
+      "description": "Protégez vos données sur Wi-Fi public. 70% OFF.",
+      "discount": "70% OFF",
+      "price": "3.19",
+      "currency": "USD",
+      "priceFormatted": "USD 3.19/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus&slot=le-havre_vpn",
+      "cta": "Ativar NordVPN"
+    },
+    {
+      "brand": "Wise",
+      "title": "Carte Wise — Taux Réel EUR",
+      "description": "Pague em euros com taxa comercial. Economize até 8%.",
+      "discount": "Sem IOF de 4.38%",
+      "price": "0",
+      "currency": "BRL",
+      "priceFormatted": "Conta gratuita",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=wise&site=nexus&slot=le-havre_wise",
+      "cta": "Ouvrir Compte"
+    },
+    {
+      "brand": "SafetyWing",
+      "title": "Assurance Voyage — Obligatoire",
+      "description": "Cobertura mínima €30.000 exigida pelo Tratado de Schengen.",
+      "discount": "Desde €4/mês",
+      "price": "4",
+      "currency": "EUR",
+      "priceFormatted": "€4/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus&slot=le-havre_insurance",
+      "cta": "Souscrire"
+    },
+    {
+      "brand": "Adaptador Shopee",
+      "title": "Adaptateur Universel Type E",
+      "description": "Adaptador para tomada francesa. Frete grátis.",
+      "discount": "Frete Grátis",
+      "price": "35",
+      "currency": "BRL",
+      "priceFormatted": "R$ 35,00",
+      "url": "https://s.shopee.com.br/30n7ohzzU6",
+      "cta": "Acheter"
+    }
+  ]
+}

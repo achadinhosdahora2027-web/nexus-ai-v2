@@ -1,0 +1,109 @@
+{
+  "title": "Strasbourg — Complete Travel Guide & Deals 2026 | Nexus",
+  "description": "Cheap flights to Strasbourg 2026. Hotels up to 30% off, car rental, gastronomy and free attractions.",
+  "canonical": "https://nexusplataforma.ia.br/growth/en-us/strasbourg-city/city-guide",
+  "locale": "en-us",
+  "facet": "strasbourg-city",
+  "format": "city-guide",
+  "hreflang": {
+    "fr-fr": "https://nexusplataforma.ia.br/growth/fr-fr/strasbourg-city/city-guide",
+    "pt-br": "https://nexusplataforma.ia.br/growth/pt-br/strasbourg-city/city-guide",
+    "en-us": "https://nexusplataforma.ia.br/growth/en-us/strasbourg-city/city-guide",
+    "es-es": "https://nexusplataforma.ia.br/growth/es-es/strasbourg-city/city-guide",
+    "de-de": "https://nexusplataforma.ia.br/growth/de-de/strasbourg-city/city-guide",
+    "it-it": "https://nexusplataforma.ia.br/growth/it-it/strasbourg-city/city-guide",
+    "ja-jp": "https://nexusplataforma.ia.br/growth/ja-jp/strasbourg-city/city-guide",
+    "zh-cn": "https://nexusplataforma.ia.br/growth/zh-cn/strasbourg-city/city-guide",
+    "x-default": "https://nexusplataforma.ia.br/growth/en-us/strasbourg-city/city-guide"
+  },
+  "affiliateHosts": [
+    "https://achadinhos-ad-engine.vercel.app",
+    "https://www.ftjcfx.com",
+    "https://www.tqlkg.com",
+    "https://s.shopee.com.br",
+    "https://meli.la"
+  ],
+  "cityData": {
+    "name": "Strasbourg",
+    "country": "France",
+    "region": "Grand Est",
+    "iata": "SXB",
+    "timezone": "Europe/Paris",
+    "currency": "EUR",
+    "plugType": "E",
+    "voltage": "230V/50Hz",
+    "emergencyNumber": "112",
+    "coordinates": {
+      "lat": 48.5734,
+      "lng": 7.7521
+    }
+  },
+  "offers": [
+    {
+      "brand": "Booking.com",
+      "title": "Hôtels à Strasbourg — Jusqu'à 30% de réduction",
+      "description": "Réservez des hôtels à Strasbourg avec annulation gratuite.",
+      "discount": "30% OFF",
+      "price": "45",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €45/noite",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus&slot=strasbourg_hotels",
+      "cta": "Voir Hôtels"
+    },
+    {
+      "brand": "Carla Car Rental",
+      "title": "Location de voiture Strasbourg",
+      "description": "Compare 500+ locadoras em Strasbourg.",
+      "discount": "Tarifa Especial",
+      "price": "25",
+      "currency": "EUR",
+      "priceFormatted": "a partir de €25/dia",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus&slot=strasbourg_rental",
+      "cta": "Comparer Voitures"
+    },
+    {
+      "brand": "NordVPN",
+      "title": "VPN Sécurisé pour Voyages",
+      "description": "Protégez vos données sur Wi-Fi public. 70% OFF.",
+      "discount": "70% OFF",
+      "price": "3.19",
+      "currency": "USD",
+      "priceFormatted": "USD 3.19/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus&slot=strasbourg_vpn",
+      "cta": "Ativar NordVPN"
+    },
+    {
+      "brand": "Wise",
+      "title": "Carte Wise — Taux Réel EUR",
+      "description": "Pague em euros com taxa comercial. Economize até 8%.",
+      "discount": "Sem IOF de 4.38%",
+      "price": "0",
+      "currency": "BRL",
+      "priceFormatted": "Conta gratuita",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=wise&site=nexus&slot=strasbourg_wise",
+      "cta": "Ouvrir Compte"
+    },
+    {
+      "brand": "SafetyWing",
+      "title": "Assurance Voyage — Obligatoire",
+      "description": "Cobertura mínima €30.000 exigida pelo Tratado de Schengen.",
+      "discount": "Desde €4/mês",
+      "price": "4",
+      "currency": "EUR",
+      "priceFormatted": "€4/mês",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus&slot=strasbourg_insurance",
+      "cta": "Souscrire"
+    },
+    {
+      "brand": "Adaptador Shopee",
+      "title": "Adaptateur Universel Type E",
+      "description": "Adaptador para tomada francesa. Frete grátis.",
+      "discount": "Frete Grátis",
+      "price": "35",
+      "currency": "BRL",
+      "priceFormatted": "R$ 35,00",
+      "url": "https://s.shopee.com.br/30n7ohzzU6",
+      "cta": "Acheter"
+    }
+  ]
+}
