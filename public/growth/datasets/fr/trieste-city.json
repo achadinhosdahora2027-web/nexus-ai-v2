@@ -1,0 +1,92 @@
+{
+  "city": {
+    "name": "Trieste",
+    "slug": "trieste",
+    "region": "Friuli-Venezia Giulia",
+    "country": "Itália",
+    "countryCode": "IT",
+    "latitude": 45.6495,
+    "longitude": 13.7768,
+    "airport": "Aeroporto Regionale",
+    "population": 0,
+    "currency": "EUR",
+    "timezone": "Europe/Rome"
+  },
+  "language": "fr",
+  "offers": [
+    {
+      "brand": "booking",
+      "title": "Hotels in Trieste",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus-ai-v2&slot=trieste_hotels_fr",
+      "type": "hotel"
+    },
+    {
+      "brand": "carla",
+      "title": "Car Rental Trieste",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus-ai-v2&slot=trieste_car_fr",
+      "type": "car_rental"
+    },
+    {
+      "brand": "nordvpn",
+      "title": "Secure VPN",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus-ai-v2&slot=trieste_vpn_fr",
+      "type": "vpn"
+    },
+    {
+      "brand": "safetywing",
+      "title": "Travel Insurance",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus-ai-v2&slot=trieste_insurance_fr",
+      "type": "insurance"
+    },
+    {
+      "brand": "thefork",
+      "title": "Restaurants",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus-ai-v2&slot=trieste_restaurants_fr",
+      "type": "restaurant"
+    },
+    {
+      "brand": "udemy",
+      "title": "Online Courses",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus-ai-v2&slot=trieste_courses_fr",
+      "type": "education"
+    },
+    {
+      "brand": "novakid",
+      "title": "Kids English",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=novakid&site=nexus-ai-v2&slot=trieste_novakid_fr",
+      "type": "education"
+    },
+    {
+      "brand": "switchbot",
+      "title": "Smart Home",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=switchbot&site=nexus-ai-v2&slot=trieste_switchbot_fr",
+      "type": "automation"
+    },
+    {
+      "brand": "amazon",
+      "title": "Amazon Store",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=amazon&site=nexus-ai-v2&slot=trieste_amazon_fr",
+      "type": "shopping"
+    }
+  ],
+  "ads": {
+    "adsense": "ca-pub-5604700207394147",
+    "infolinks": "3447442",
+    "cj_publisher_id": "101870639"
+  },
+  "metadata": {
+    "created": "2026-03-09",
+    "version": "2.0",
+    "multilingual": true,
+    "supported_languages": [
+      "it",
+      "pt-br",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ]
+  }
+}

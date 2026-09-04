@@ -1,0 +1,92 @@
+{
+  "city": {
+    "name": "Vicenza",
+    "slug": "vicenza",
+    "region": "Veneto",
+    "country": "Itália",
+    "countryCode": "IT",
+    "latitude": 45.5455,
+    "longitude": 11.5354,
+    "airport": "Aeroporto Regionale",
+    "population": 0,
+    "currency": "EUR",
+    "timezone": "Europe/Rome"
+  },
+  "language": "zh",
+  "offers": [
+    {
+      "brand": "booking",
+      "title": "Hotels in Vicenza",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus-ai-v2&slot=vicenza_hotels_zh",
+      "type": "hotel"
+    },
+    {
+      "brand": "carla",
+      "title": "Car Rental Vicenza",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus-ai-v2&slot=vicenza_car_zh",
+      "type": "car_rental"
+    },
+    {
+      "brand": "nordvpn",
+      "title": "Secure VPN",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus-ai-v2&slot=vicenza_vpn_zh",
+      "type": "vpn"
+    },
+    {
+      "brand": "safetywing",
+      "title": "Travel Insurance",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus-ai-v2&slot=vicenza_insurance_zh",
+      "type": "insurance"
+    },
+    {
+      "brand": "thefork",
+      "title": "Restaurants",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus-ai-v2&slot=vicenza_restaurants_zh",
+      "type": "restaurant"
+    },
+    {
+      "brand": "udemy",
+      "title": "Online Courses",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus-ai-v2&slot=vicenza_courses_zh",
+      "type": "education"
+    },
+    {
+      "brand": "novakid",
+      "title": "Kids English",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=novakid&site=nexus-ai-v2&slot=vicenza_novakid_zh",
+      "type": "education"
+    },
+    {
+      "brand": "switchbot",
+      "title": "Smart Home",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=switchbot&site=nexus-ai-v2&slot=vicenza_switchbot_zh",
+      "type": "automation"
+    },
+    {
+      "brand": "amazon",
+      "title": "Amazon Store",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=amazon&site=nexus-ai-v2&slot=vicenza_amazon_zh",
+      "type": "shopping"
+    }
+  ],
+  "ads": {
+    "adsense": "ca-pub-5604700207394147",
+    "infolinks": "3447442",
+    "cj_publisher_id": "101870639"
+  },
+  "metadata": {
+    "created": "2026-03-09",
+    "version": "2.0",
+    "multilingual": true,
+    "supported_languages": [
+      "it",
+      "pt-br",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ]
+  }
+}
