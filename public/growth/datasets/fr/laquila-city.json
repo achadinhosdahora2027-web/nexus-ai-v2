@@ -1,0 +1,92 @@
+{
+  "city": {
+    "name": "L'Aquila",
+    "slug": "laquila",
+    "region": "Abruzzo",
+    "country": "Itália",
+    "countryCode": "IT",
+    "latitude": 42.3498,
+    "longitude": 13.3995,
+    "airport": "Abruzzo Airport (PSR)",
+    "population": 69432,
+    "currency": "EUR",
+    "timezone": "Europe/Rome"
+  },
+  "language": "fr",
+  "offers": [
+    {
+      "brand": "booking",
+      "title": "Hôtels à L'Aquila",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus-ai-v2&slot=laquila_hotels_fr",
+      "type": "hotel"
+    },
+    {
+      "brand": "carla",
+      "title": "Location de voiture L'Aquila",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus-ai-v2&slot=laquila_car_fr",
+      "type": "car_rental"
+    },
+    {
+      "brand": "nordvpn",
+      "title": "VPN Sécurisée",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus-ai-v2&slot=laquila_vpn_fr",
+      "type": "vpn"
+    },
+    {
+      "brand": "safetywing",
+      "title": "Assurance Voyage",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus-ai-v2&slot=laquila_insurance_fr",
+      "type": "insurance"
+    },
+    {
+      "brand": "thefork",
+      "title": "Restaurants",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus-ai-v2&slot=laquila_restaurants_fr",
+      "type": "restaurant"
+    },
+    {
+      "brand": "udemy",
+      "title": "Cursos Online",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus-ai-v2&slot=laquila_courses_fr",
+      "type": "education"
+    },
+    {
+      "brand": "novakid",
+      "title": "Anglais pour Enfants",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=novakid&site=nexus-ai-v2&slot=laquila_novakid_fr",
+      "type": "education"
+    },
+    {
+      "brand": "switchbot",
+      "title": "Maison Intelligente",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=switchbot&site=nexus-ai-v2&slot=laquila_switchbot_fr",
+      "type": "automation"
+    },
+    {
+      "brand": "amazon",
+      "title": "Amazon Store",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=amazon&site=nexus-ai-v2&slot=laquila_amazon_fr",
+      "type": "shopping"
+    }
+  ],
+  "ads": {
+    "adsense": "ca-pub-5604700207394147",
+    "infolinks": "3447442",
+    "cj_publisher_id": "101870639"
+  },
+  "metadata": {
+    "created": "2026-03-09",
+    "version": "2.0",
+    "multilingual": true,
+    "supported_languages": [
+      "it",
+      "pt-br",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ]
+  }
+}
