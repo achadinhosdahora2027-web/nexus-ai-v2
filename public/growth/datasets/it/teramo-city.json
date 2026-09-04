@@ -1,0 +1,92 @@
+{
+  "city": {
+    "name": "Teramo",
+    "slug": "teramo",
+    "region": "Abruzzo",
+    "country": "Itália",
+    "countryCode": "IT",
+    "latitude": 42.6589,
+    "longitude": 13.7043,
+    "airport": "Abruzzo Airport (PSR)",
+    "population": 53802,
+    "currency": "EUR",
+    "timezone": "Europe/Rome"
+  },
+  "language": "it",
+  "offers": [
+    {
+      "brand": "booking",
+      "title": "Hotel en Teramo",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=booking&site=nexus-ai-v2&slot=teramo_hotels_it",
+      "type": "hotel"
+    },
+    {
+      "brand": "carla",
+      "title": "Noleggio Auto Teramo",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=carla&site=nexus-ai-v2&slot=teramo_car_it",
+      "type": "car_rental"
+    },
+    {
+      "brand": "nordvpn",
+      "title": "VPN Segura",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=nordvpn&site=nexus-ai-v2&slot=teramo_vpn_it",
+      "type": "vpn"
+    },
+    {
+      "brand": "safetywing",
+      "title": "Assicurazione Viaggio",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=safetywing&site=nexus-ai-v2&slot=teramo_insurance_it",
+      "type": "insurance"
+    },
+    {
+      "brand": "thefork",
+      "title": "Ristoranti",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=thefork&site=nexus-ai-v2&slot=teramo_restaurants_it",
+      "type": "restaurant"
+    },
+    {
+      "brand": "udemy",
+      "title": "Cursos Online",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=udemy&site=nexus-ai-v2&slot=teramo_courses_it",
+      "type": "education"
+    },
+    {
+      "brand": "novakid",
+      "title": "Inglese per Bambini",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=novakid&site=nexus-ai-v2&slot=teramo_novakid_it",
+      "type": "education"
+    },
+    {
+      "brand": "switchbot",
+      "title": "Casa Inteligente",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=switchbot&site=nexus-ai-v2&slot=teramo_switchbot_it",
+      "type": "automation"
+    },
+    {
+      "brand": "amazon",
+      "title": "Amazon Store",
+      "url": "https://achadinhos-ad-engine.vercel.app/api/ads/go?brand=amazon&site=nexus-ai-v2&slot=teramo_amazon_it",
+      "type": "shopping"
+    }
+  ],
+  "ads": {
+    "adsense": "ca-pub-5604700207394147",
+    "infolinks": "3447442",
+    "cj_publisher_id": "101870639"
+  },
+  "metadata": {
+    "created": "2026-03-09",
+    "version": "2.0",
+    "multilingual": true,
+    "supported_languages": [
+      "it",
+      "pt-br",
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ]
+  }
+}
