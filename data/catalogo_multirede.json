@@ -1,0 +1,426 @@
+{
+ "generated_at": "2026-09-05T19:34:25Z",
+ "metodo": "verificação ao vivo em 2 execuções independentes (curl -L, 10 hops); só entram anunciantes que resolvem no domínio do próprio anunciante",
+ "networks": {
+  "awin": {
+   "publisher_id": "3038165",
+   "subid_param": "clickref",
+   "subid_max_len": 50,
+   "advertisers": [
+    {
+     "network": "awin",
+     "advertiser_id": 38988,
+     "name": "CamaiBox",
+     "segment": "Casa & utilidades",
+     "countries": [
+      "br"
+     ],
+     "ued": "https://www.camainbox.com.br/",
+     "url": "https://www.awin1.com/cread.php?awinmid=38988&awinaffid=3038165&clickref=&ued=https%3A%2F%2Fwww.camainbox.com.br%2F",
+     "subid_param": "clickref",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.camainbox.com.br/?utm_source=awin&utm_medium=afiliados&utm_id=3038165_probe_clickref_ok&sv1=affiliate&sv_campaign_id=3038165&awc=38988_1788636865_93",
+     "estado": "ATIVO",
+     "clickref_no_cookie": true
+    },
+    {
+     "network": "awin",
+     "advertiser_id": 76888,
+     "name": "Doce Beleza",
+     "segment": "Beleza & cosméticos",
+     "countries": [
+      "br"
+     ],
+     "ued": "https://www.docebeleza.com.br/",
+     "url": "https://www.awin1.com/cread.php?awinmid=76888&awinaffid=3038165&clickref=&ued=https%3A%2F%2Fwww.docebeleza.com.br%2F",
+     "subid_param": "clickref",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.docebeleza.com.br/?utm_source=awin&utm_id=3038165_probe_clickref_ok&utm_campaign=affiliate&sv1=affiliate&sv_campaign_id=3038165&awc=76888_1788636874",
+     "estado": "ATIVO",
+     "clickref_no_cookie": true
+    },
+    {
+     "network": "awin",
+     "advertiser_id": 118977,
+     "name": "Laurie Sporte",
+     "segment": "Moda & esporte",
+     "countries": [
+      "br"
+     ],
+     "ued": "https://www.lauriesporte.com.br/",
+     "url": "https://www.awin1.com/cread.php?awinmid=118977&awinaffid=3038165&clickref=&ued=https%3A%2F%2Fwww.lauriesporte.com.br%2F",
+     "subid_param": "clickref",
+     "status_1": 403,
+     "status_2": 403,
+     "destino": "https://www.lauriesporte.com.br/?utm_source=awin&utm_id=3038165_probe_clickref_ok&utm_campaign=affiliate&awc=118977_1788636876_9abe7180886f746d443b1504fb98725d",
+     "estado": "BLOQUEIO_ANTIBOT",
+     "clickref_no_cookie": true
+    },
+    {
+     "network": "awin",
+     "advertiser_id": 107484,
+     "name": "SeaZone",
+     "segment": "Mergulho & náutica",
+     "countries": [
+      "br"
+     ],
+     "ued": "https://seazone.com.br/",
+     "url": "https://www.awin1.com/cread.php?awinmid=107484&awinaffid=3038165&clickref=&ued=https%3A%2F%2Fseazone.com.br%2F",
+     "subid_param": "clickref",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://seazone.com.br/?utm_source=awin&utm_id=3038165_probe_clickref_ok&utm_campaign=affiliate&sv1=affiliate&sv_campaign_id=3038165&awc=107484_1788636878_160d4",
+     "estado": "ATIVO",
+     "clickref_no_cookie": true
+    },
+    {
+     "network": "awin",
+     "advertiser_id": 120992,
+     "name": "Melhor Seguro",
+     "segment": "Seguro auto",
+     "countries": [
+      "br"
+     ],
+     "ued": "https://melhorseguro.com.br/",
+     "url": "https://www.awin1.com/cread.php?awinmid=120992&awinaffid=3038165&clickref=&ued=https%3A%2F%2Fmelhorseguro.com.br%2F",
+     "subid_param": "clickref",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://melhorseguro.com.br/?utm_source=awin&utm_id=3038165_probe_clickref_ok&utm_campaign=affiliate&sv1=affiliate&sv_campaign_id=3038165&awc=120992_1788636881_",
+     "estado": "ATIVO",
+     "clickref_no_cookie": true
+    },
+    {
+     "network": "awin",
+     "advertiser_id": 105615,
+     "name": "Leveros",
+     "segment": "Casa & eletrônicos",
+     "countries": [
+      "br"
+     ],
+     "ued": "https://www.leveros.com.br/",
+     "url": "https://www.awin1.com/cread.php?awinmid=105615&awinaffid=3038165&clickref=&ued=https%3A%2F%2Fwww.leveros.com.br%2F",
+     "subid_param": "clickref",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.leveros.com.br/?utm_source=awin&utm_id=3038165_probe_clickref_ok&utm_campaign=affiliate&sv1=affiliate&sv_campaign_id=3038165&awc=105615_1788636882_9",
+     "estado": "ATIVO",
+     "clickref_no_cookie": true
+    }
+   ]
+  },
+  "admitad": {
+   "publisher_id": "2565684",
+   "website_id": "2983664",
+   "advertisers": [
+    {
+     "network": "admitad",
+     "name": "AliExpress",
+     "segment": "Compras & importados",
+     "base": "https://rzekl.com/g/1e8d114494083fd78fe116525dc3e8/",
+     "url": "https://rzekl.com/g/1e8d114494083fd78fe116525dc3e8/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "global",
+     "countries": null,
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://best.aliexpress.com/?af=2565684&utm_campaign=2565684&utm_medium=cpa&afref=&dp=df13a74b98a81597b1d6277635c5e78d&aff_fcid=c8a8dd7d70c84e189b91dc9de52bf0c0",
+     "destino_host": "best.aliexpress.com",
+     "estado": "ATIVO"
+    },
+    {
+     "network": "admitad",
+     "name": "Movavi",
+     "segment": "Edição de vídeo",
+     "base": "https://bednari.com/g/mwr0f878b0083fd78fe10c91b13932/",
+     "url": "https://bednari.com/g/mwr0f878b0083fd78fe10c91b13932/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "global",
+     "countries": null,
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.movavi.com/?affid=6a9c6ed992c5cf0001b5f584&utm_source=1282&utm_medium=AFaffiliate&utm_campaign=2565684&redirect_to=&redirect_domain=&click_date=2026",
+     "destino_host": "www.movavi.com",
+     "estado": "ATIVO"
+    },
+    {
+     "network": "admitad",
+     "name": "TurboVPN",
+     "segment": "VPN & privacidade",
+     "base": "https://grfpr.com/g/exe221unkp083fd78fe1ddf84d4c0b/",
+     "url": "https://grfpr.com/g/exe221unkp083fd78fe1ddf84d4c0b/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "global",
+     "countries": null,
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://turbovpn.com/pt?admitad_uid=84d0ade3bf1c826d23641989668ac67b&utm_source=admitad&utm_medium=2983664&utm_campaign=2565684",
+     "destino_host": "turbovpn.com",
+     "estado": "ATIVO"
+    },
+    {
+     "network": "admitad",
+     "name": "DocHub",
+     "segment": "Documentos online",
+     "base": "https://lsuix.com/g/fsbaa03yh2083fd78fe16dd72211ce/",
+     "url": "https://lsuix.com/g/fsbaa03yh2083fd78fe16dd72211ce/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "global",
+     "countries": null,
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.dochub.com?irclickid=XxMTtoWtsxyZUNhSVz1AL2RlUkr2R7X3UwUcRM0&irmpname=Admitad%20-%201310690&irgwc=1&afsrc=1&irpid=1310690",
+     "destino_host": "www.dochub.com",
+     "estado": "ATIVO"
+    },
+    {
+     "network": "admitad",
+     "name": "MyHeritage DNA",
+     "segment": "Genealogia & DNA",
+     "base": "https://naiawork.com/g/kmz7w822uc083fd78fe1e403a0fd30/",
+     "url": "https://naiawork.com/g/kmz7w822uc083fd78fe1e403a0fd30/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "global",
+     "countries": null,
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.myheritage.com/dna/up?irclickid=XwKxBBWtsxyZUNhSVz1AL2RlUkr2R7XWUwUcRM0&tr_ad_group=313262&sharedid=2565684&irgwc=1&afsrc=1&utm_source=partner_impac",
+     "destino_host": "www.myheritage.com",
+     "estado": "ATIVO"
+    },
+    {
+     "network": "admitad",
+     "name": "CheapVuelos",
+     "segment": "Passagens aéreas",
+     "base": "https://yknhc.com/g/cmazc4pm8o083fd78fe1ce5f810ebf/",
+     "url": "https://yknhc.com/g/cmazc4pm8o083fd78fe1ce5f810ebf/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "latam",
+     "countries": [
+      "br",
+      "ar",
+      "mx",
+      "cl",
+      "co",
+      "pe",
+      "uy",
+      "py",
+      "ec",
+      "bo",
+      "ve",
+      "cr",
+      "pa",
+      "do",
+      "gt",
+      "pt",
+      "es"
+     ],
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.cheapvuelos.com/?utm_source=admitad&utm_medium=affiliate&utm_campaign=2565684&admitad_uid=54f6a6cd3f5e4ab5138ffc9969f7758a",
+     "destino_host": "www.cheapvuelos.com",
+     "estado": "ATIVO"
+    },
+    {
+     "network": "admitad",
+     "name": "Visa to Singapore",
+     "segment": "Visto de Singapura",
+     "base": "https://xqjeo.com/g/u2touyge2g083fd78fe1734610720c/",
+     "url": "https://xqjeo.com/g/u2touyge2g083fd78fe1734610720c/",
+     "subid_param": "subid",
+     "subid_extra": [
+      "subid1",
+      "subid2",
+      "subid3"
+     ],
+     "scope": "asia",
+     "countries": [
+      "sg",
+      "my",
+      "th",
+      "id",
+      "vn",
+      "kh",
+      "mm",
+      "la",
+      "bn",
+      "in",
+      "pk"
+     ],
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.visatosingapore.com/en/start?tagtag_uid=43c4c3bf030634068e1267a7475b1637&admitad_uid=43c4c3bf030634068e1267a7475b1637&utm_source=admitad",
+     "destino_host": "www.visatosingapore.com",
+     "estado": "ATIVO"
+    }
+   ]
+  },
+  "lomadee": {
+   "advertisers": [
+    {
+     "network": "lomadee",
+     "name": "Atacadaomaromba",
+     "host": "www.atacadaomaromba.com",
+     "offers": 12,
+     "url": "https://lmdee.link/ybEopyFc3tsl",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.atacadaomaromba.com/produto/100-creatine-300g-nutrify-153336?utm_source=lomadee&utm_medium=link_generator&utm_campaign=77bb49ec-d38c-49a6-",
+     "estado": "ATIVO",
+     "countries": [
+      "br"
+     ],
+     "subid_param": null
+    },
+    {
+     "network": "lomadee",
+     "name": "Toymania",
+     "host": "www.toymania.com.br",
+     "offers": 7,
+     "url": "https://lmdee.link/cgRxx6H4HiQe",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.toymania.com.br/-euqfiz-alphabeads-braceletes-hello-kitty--i9-brinquedos/p?utm_source=lomadee&utm_medium=link_generator&utm_campaign=2de41",
+     "estado": "ATIVO",
+     "countries": [
+      "br"
+     ],
+     "subid_param": null
+    },
+    {
+     "network": "lomadee",
+     "name": "Drogariarosario",
+     "host": "www.drogariarosario.com.br",
+     "offers": 4,
+     "url": "https://lmdee.link/XnPHd5SCuimV",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.drogariarosario.com.br/jean-paul-gaultier-la-belle-eau-de-parfum-perfume-feminino-z174597057vu13161e7459705q7131y6/p?utm_source=lomadee&ut",
+     "estado": "ATIVO",
+     "countries": [
+      "br"
+     ],
+     "subid_param": null
+    },
+    {
+     "network": "lomadee",
+     "name": "Drogasmil",
+     "host": "www.drogasmil.com.br",
+     "offers": 2,
+     "url": "https://lmdee.link/XZGY9FhrvBNo",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.drogasmil.com.br/paco-rabanne-one-million-royal-eau-de-parfum-perfume-masculino-1745970x7830en411745h970t783q041/p?utm_source=lomadee&utm_",
+     "estado": "ATIVO",
+     "countries": [
+      "br"
+     ],
+     "subid_param": null
+    },
+    {
+     "network": "lomadee",
+     "name": "Amoedo",
+     "host": "www.amoedo.com.br",
+     "offers": 1,
+     "url": "https://lmdee.link/ndmf5tdqWCYn",
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.amoedo.com.br/?utm_source=lomadee&utm_medium=link_generator&utm_campaign=6dfa6980-1aca-4f77-a7f9-4202965d6795_e198615b-4c17-4180-b06f-4337",
+     "estado": "ATIVO",
+     "countries": [
+      "br"
+     ],
+     "subid_param": null
+    }
+   ]
+  },
+  "shopee_meli": {
+   "advertisers": [
+    {
+     "network": "shopee",
+     "name": "Shopee Brasil",
+     "segment": "Compras & achadinhos",
+     "url": "https://s.shopee.com.br/30n7ohzzU6",
+     "countries": [
+      "br"
+     ],
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://shopee.com.br/opaanlp/1284769631/21099552315?__mobile__=1&exp_group=rollout&gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_",
+     "estado": "ATIVO",
+     "subid_param": null,
+     "obs": "sub-id NÃO propagado no redirect (testado: utm_content/subid são descartados) → não há como separar os 3 sites neste programa"
+    },
+    {
+     "network": "mercadolivre",
+     "name": "Mercado Livre",
+     "segment": "Ofertas & frete grátis",
+     "url": "https://meli.la/1U3rtgV",
+     "countries": [
+      "br"
+     ],
+     "status_1": 200,
+     "status_2": 200,
+     "destino": "https://www.mercadolivre.com.br/social/danielfsantos?matt_word=danielfsantos&matt_tool=56714869&forceInApp=true&ref=BKv%2Frq8VNAzoUDbvGnEdKSH8AXFa9joh",
+     "estado": "ATIVO",
+     "subid_param": null,
+     "obs": "sub-id NÃO propagado no redirect (testado: utm_content/subid são descartados) → não há como separar os 3 sites neste programa"
+    }
+   ]
+  }
+ },
+ "resumo": {
+  "awin": {
+   "total": 6,
+   "ativos": 5,
+   "antibot": 1
+  },
+  "admitad": {
+   "total": 7,
+   "ativos": 7,
+   "antibot": 0
+  },
+  "lomadee": {
+   "total": 5,
+   "ativos": 5,
+   "antibot": 0
+  },
+  "shopee_meli": {
+   "total": 2,
+   "ativos": 2,
+   "antibot": 0
+  }
+ }
+}
