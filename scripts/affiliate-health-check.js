@@ -99,7 +99,7 @@ function auditarArquivos() {
 
       if (!/<ol class="attrlist"><li>/.test(s)) { fatal.push(`${r}: <!-- city-attractions --> sem <ol class="attrlist"> preenchido`); }
       const itens = (s.match(/<ol class="attrlist">(.*?)<\/ol>/s) || ['', ''])[1].split('<li>').length - 1;
-      if (itens < 3) warn.push(`${r}: só ${itens} atrações`);
+      if (itens < 3) warn.push(`${r}: lista curta (${itens} atração(ões) reais — sem inventar preenchimento)`);
     }
     if (s.includes('<!-- visitor-langs -->') && !/<table[^>]*><thead>/.test(s)) fatal.push(`${r}: langbox sem tabela`);
     if (s.includes('<!-- visitor-langs -->')) b.langBox++;
@@ -129,7 +129,10 @@ function auditarArquivos() {
     if (/<!-- geo-multi -->/.test(s) && !/target="_blank"/.test(s)) warn.push(`${r}: bloco de ofertas sem target=_blank`);
     if (/<!-- ld-attractions -->/.test(s)) {
       const j = (s.match(/<!-- ld-attractions --><script type="application\/ld\+json">([\s\S]*?)<\/script>/) || [])[1];
-      try { const d = JSON.parse(j); if (!Array.isArray(d.itemListElement) || d.itemListElement.length < 3) fatal.push(`${r}: ItemList JSON-LD com menos de 3 itens`); }
+      try {
+        const d = JSON.parse(j);
+        if (!Array.isArray(d.itemListElement) || !d.itemListElement.length) fatal.push(`${r}: ItemList JSON-LD sem itens`);
+      }
       catch (e) { fatal.push(`${r}: JSON-LD de atrações inválido (${String(e.message).slice(0, 50)})`); }
     }
     const dm = noindex ? null : (s.match(/<meta name="description" content="([^"]*)"/) || [])[1];
