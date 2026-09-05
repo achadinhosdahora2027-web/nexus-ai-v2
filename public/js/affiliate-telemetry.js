@@ -3,27 +3,60 @@
  * ACHADINHOS FORENSIC TELEMETRY, CJ PIXEL BEACON & SID AUTO-DECORATOR 2026
  * Managed by: CQO (Auditoria Forense) & CTO (Engenharia de Software)
  * ==============================================================================
- * 1. Immediate High-Priority CJ Impression Pixel Beaconing (PID: 101870639).
+ * 1. CJ Impression Beacon com porta de política (PID: 101870639): só dispara quando o
+ *    criativo daquele anunciante está servido na página (zero impressão fantasma) e
+ *    exatamente uma vez por pageview (não duplica o pixel estático do watchdog).
  * 2. Auto-decorates all outbound affiliate links with forensic telemetry (SID, Geo, Device).
  * 3. Real-time Pageview Beacon to /api/telemetry/collect.
- * 4. Zero-delay firing ensuring 100% impression registration in CJ & Ad Networks.
  */
 
 (function() {
   'use strict';
 
   const CJ_PID = '101870639'; // PID do site (Promotional Property). CID 8041957 NÃO é PID.
+  // Política (Etapa 6): impressão = criativo daquele anunciante presente na página.
   const CJ_PIXELS = [
-    'https://www.ftjcfx.com/image-101870639-17288448', // Booking.com
-    'https://www.tqlkg.com/image-101870639-17075184'   // Carla Car Rental
+    { host: 'ftjcfx.com', linkId: '17288448', note: 'Booking.com' },
+    { host: 'tqlkg.com', linkId: '17075184', note: 'Carla Car Rental' }
   ];
 
-  // 1. FORENSIC CJ IMPRESSION BEACON (Fires immediately without waiting for scroll)
+  // 1. CJ IMPRESSION BEACON — com porta de política: só dispara com o criativo na página
+  function pageHasCjCreative(linkId) {
+    try {
+      const needle = '/click-' + CJ_PID + '-' + linkId;
+      const as = document.getElementsByTagName('a');
+      for (let i = 0; i < as.length; i++) {
+        const h = as[i].getAttribute('href') || '';
+        if (h.indexOf(needle) !== -1) return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function staticPixelAlreadyFired(linkId) {
+    try {
+      const needle = 'image-' + CJ_PID + '-' + linkId;
+      const imgs = document.getElementsByTagName('img');
+      for (let i = 0; i < imgs.length; i++) {
+        if ((imgs[i].getAttribute('src') || '').indexOf(needle) !== -1) return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+
   function fireCjImpressionBeacons() {
-    CJ_PIXELS.forEach(function(pixelUrl) {
+    CJ_PIXELS.forEach(function (pixel) {
       try {
+        // sem criativo servido na página => nenhuma impressão reportada à CJ
+        if (!pageHasCjCreative(pixel.linkId)) return;
+        // pixel estático já presente (injetado pelo watchdog) => não contar o pageview 2x
+        if (staticPixelAlreadyFired(pixel.linkId)) return;
         const img = new Image(1, 1);
-        img.src = `${pixelUrl}?_ts=${Date.now()}`;
+        img.src = `https://www.${pixel.host}/image-${CJ_PID}-${pixel.linkId}?_ts=${Date.now()}`;
         img.style.position = 'fixed';
         img.style.top = '0';
         img.style.left = '0';
@@ -101,16 +134,22 @@
     });
   }
 
-  // Execute immediately
-  fireCjImpressionBeacons();
+  // Execução: o pageview é imediato; a impressão só depois do DOM lido (é quando se sabe
+  // quais criativos foram servidos) e exatamente uma vez por pageview.
+  let impressionFired = false;
+  function fireOnce() {
+    if (impressionFired) return;
+    impressionFired = true;
+    fireCjImpressionBeacons();
+  }
   sendPageviewBeacon();
-
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      fireCjImpressionBeacons();
+    document.addEventListener('DOMContentLoaded', function () {
+      fireOnce();
       decorateAffiliateLinks();
-    });
+    }, { once: true });
   } else {
+    fireOnce();
     decorateAffiliateLinks();
   }
 })();

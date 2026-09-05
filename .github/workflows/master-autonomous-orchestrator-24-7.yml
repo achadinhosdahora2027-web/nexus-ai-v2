@@ -84,7 +84,7 @@ jobs:
 
       - name: 12. Run Canário Affiliate & Self-Healing Guard
         run: |
-          node scripts/affiliate-health-check.js || true
+          CHECK_LIVE=1 node scripts/affiliate-health-check.js
 
       - name: 13. Refresh Tag SEO & Intent Pages
         run: |
