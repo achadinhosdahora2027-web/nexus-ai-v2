@@ -1,0 +1,115 @@
+/**
+ * ============================================================================
+ * NEXUS — TELEGRAM ALERT NOTIFIER (Esteira 5 — Painel de controle 24/7)
+ * Arquivo: src/server/scheduler/telegram-notify.ts
+ * ============================================================================
+ * Envia alertas/relatórios de telemetria para o Telegram (custo zero).
+ *
+ * Dois caminhos complementares:
+ *   1. DATABASE-NATIVE (principal): trigger `trigger_telegram_telemetry_alert`
+ *      em public.nexus_cron_telemetry dispara via pg_net a cada job
+ *      google_indexation / ayrshare_outbox — ver supabase/migrations.
+ *   2. ESTE MÓDULO (resumo por run): os runners chamam sendTelegramReport()
+ *      ao final de cada execução para um resumo consolidado.
+ *
+ * Segurança:
+ *  - Allowlist estrita de host via COMMERCE_TELEGRAM_HOSTS (default
+ *    api.telegram.org); qualquer outro host é recusado.
+ *  - Credenciais só de env (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID) — nunca
+ *    logadas; mensagens passam por sanitização (redact de tokens/chaves).
+ *  - FAIL-CLOSED: qualquer falha (429/5xx/rede) é engolida com warn — nunca
+ *    quebra o run do cron, as rotas públicas ou os anúncios.
+ * ============================================================================
+ */
+
+const TELEGRAM_HOST = "api.telegram.org";
+
+/** Hosts permitidos (allowlist restrita; separados por vírgula). */
+function allowedHosts(): Set<string> {
+  const raw = process.env["COMMERCE_TELEGRAM_HOSTS"] ?? TELEGRAM_HOST;
+  return new Set(
+    raw
+      .split(",")
+      .map((h) => h.trim().toLowerCase())
+      .filter(Boolean),
+  );
+}
+
+function sanitize(text: string): string {
+  return text
+    .replace(/\b\d{8,10}:[A-Za-z0-9_-]{30,}\b/g, "<BOT_TOKEN_REDACTED>") // formato de token TG
+    .replace(/(key|token|code|client_secret|password|access_token)=[^&\s]+/gi, "$1=REDACTED")
+    .slice(0, 3500); // teto de segurança (limite TG: 4096)
+}
+
+async function telegramCall(
+  method: string,
+  body: Record<string, unknown>,
+): Promise<{ ok: boolean; status: number }> {
+  const token = process.env["TELEGRAM_BOT_TOKEN"];
+  if (!token) return { ok: false, status: 0 };
+  const url = new URL(`https://${TELEGRAM_HOST}/bot${token}/${method}`);
+  if (!allowedHosts().has(url.hostname.toLowerCase())) {
+    console.warn(`[telegram] host ${url.hostname} fora da allowlist — skip`);
+    return { ok: false, status: 0 };
+  }
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 15_000);
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+    if (res.status === 429) {
+      console.warn("[telegram] HTTP 429 (rate limit) — alerta descartado, run segue (fail-closed)");
+    } else if (!res.ok) {
+      console.warn(`[telegram] HTTP ${res.status} — alerta falhou, run segue (fail-closed)`);
+    }
+    return { ok: res.ok, status: res.status };
+  } catch (err) {
+    console.warn(
+      `[telegram] erro de rede (${err instanceof Error ? err.message : "?"}) — fail-closed`,
+    );
+    return { ok: false, status: 0 };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** Envia texto livre sanitizado (máx. 3500 chars) ao chat configurado. */
+export async function sendTelegramAlert(text: string): Promise<boolean> {
+  if ((process.env["TELEGRAM_ALERTS"] ?? "on").toLowerCase() === "off") return false;
+  const chatId = process.env["TELEGRAM_CHAT_ID"];
+  if (!chatId || !process.env["TELEGRAM_BOT_TOKEN"]) {
+    console.log("[telegram] credenciais ausentes — alerta local apenas (fail-closed)");
+    return false;
+  }
+  const out = await telegramCall("sendMessage", {
+    chat_id: chatId,
+    text: sanitize(text),
+  });
+  return out.ok;
+}
+
+/** Relatório padrão de fim de run (formato oficial da esteira 5). */
+export async function sendTelegramReport(input: {
+  job: string;
+  status: string;
+  itemsTotal: number;
+  itemsSent: number;
+  message?: string;
+  host?: string;
+}): Promise<boolean> {
+  const lines = [
+    "🛰️ PROJETO NEXUS - RELATÓRIO DE TELEMETRIA",
+    `Job Executado: ${input.job}`,
+    ...(input.host ? [`Host: ${input.host}`] : []),
+    `Status da Operação: ${input.status}`,
+    `Total de URLs na fila: ${input.itemsTotal}`,
+    `URLs processadas no dia: ${input.itemsSent}`,
+    `Mensagem do Servidor: ${(input.message ?? "-").slice(0, 100)}`,
+  ];
+  return sendTelegramAlert(lines.join("\n"));
+}
