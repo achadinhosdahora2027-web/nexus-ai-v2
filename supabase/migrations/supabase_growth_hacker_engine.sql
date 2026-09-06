@@ -620,6 +620,77 @@ revoke execute on function public.nexus_refund_index_quota(text,integer)
   from public, anon, authenticated;
 
 -- ============================================================================
+-- ESTEIRA 5 — ALERTA DE TELEMETRIA NATIVO VIA TELEGRAM (pg_net, custo zero)
+--   notify_telegram_cron_telemetry() + trigger_telegram_telemetry_alert
+--   Escopo: jobs google_indexation / ayrshare_outbox com status
+--   ok | error | rate_limited (sucesso/fracasso reais; 'skipped' nao alerta).
+--   Credenciais em nexus_growth_secrets (telegram_bot_token / telegram_chat_id /
+--   telegram_alerts_enabled). Timeout 20s (api.telegram.org e lento p/ sa-east-1).
+--   FAIL-CLOSED: excecao engolida (warning); NUNCA grava telemetry aqui
+--   (anti-recursao) nem bloqueia o insert que originou o alerta.
+-- ============================================================================
+create or replace function public.notify_telegram_cron_telemetry()
+returns trigger language plpgsql security definer set search_path = public as $fn$
+declare
+  v_token text; v_chat text; v_enabled text;
+  v_nl    text := chr(10);
+  v_text  text; v_url text;
+  v_jobs    constant text[] := array['google_indexation','ayrshare_outbox'];
+  v_status  constant text[] := array['ok','error','rate_limited'];
+begin
+  begin
+    if new.job is null or not (new.job = any(v_jobs)) then return new; end if;
+    if new.status is null or not (new.status = any(v_status)) then return new; end if;
+
+    select value into v_enabled from public.nexus_growth_secrets
+     where key='telegram_alerts_enabled';
+    if coalesce(v_enabled,'false') <> 'true' then return new; end if;
+
+    select value into v_token from public.nexus_growth_secrets where key='telegram_bot_token';
+    select value into v_chat  from public.nexus_growth_secrets where key='telegram_chat_id';
+    if v_token is null or v_chat is null or v_token like 'REPLACE%' then
+      raise warning 'telegram: credenciais ausentes (fail-closed)';
+      return new;
+    end if;
+
+    v_text :=
+        '🛰️ PROJETO NEXUS - RELATÓRIO DE TELEMETRIA' || v_nl ||
+        'Job Executado: '             || coalesce(new.job,'-') || v_nl ||
+        case when coalesce(new.target_host,'-') not in ('','-')
+             then 'Host: ' || new.target_host || v_nl else '' end ||
+        'Status da Operação: '        || coalesce(new.status,'-') || v_nl ||
+        'Total de URLs na fila: '     || coalesce(new.items_total,0)::text || v_nl ||
+        'URLs processadas no dia: '   || coalesce(new.items_sent,0)::text || v_nl ||
+        'Mensagem do Servidor: '      || left(coalesce(nullif(new.message,''),'-'),100);
+
+    v_url := 'https://api.telegram.org/bot' || v_token || '/sendMessage';
+    perform net.http_post(
+      url     := v_url,
+      body    := jsonb_build_object('chat_id', v_chat, 'text', v_text),
+      headers := '{"Content-Type":"application/json"}'::jsonb,
+      timeout_milliseconds := 20000);
+  exception when others then
+    raise warning 'telegram: falha fail-closed (%) — telemetria preservada', sqlerrm;
+  end;
+  return new;
+end
+$fn$;
+
+do $do$
+begin
+  drop trigger if exists trigger_telegram_telemetry_alert on public.nexus_cron_telemetry;
+  create trigger trigger_telegram_telemetry_alert
+    after insert on public.nexus_cron_telemetry
+    for each row execute function public.notify_telegram_cron_telemetry();
+  raise notice 'ESTEIRA 5: trigger_telegram_telemetry_alert ATIVO';
+exception when others then
+  raise warning 'ESTEIRA 5: gatilho nao criado: %', sqlerrm;
+end
+$do$;
+
+revoke execute on function public.notify_telegram_cron_telemetry() from public, anon, authenticated;
+
+-- ============================================================================
 -- ENDURECIMENTO: RLS nas tabelas novas + grants mínimos
 -- ============================================================================
 do $do$
