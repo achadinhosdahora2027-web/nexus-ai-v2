@@ -67,9 +67,9 @@ Princípio: estrutura igual, DADOS E ENTIDADES nunca iguais. Sem fonte primária
 ## 2. Ordem de execução (uma coisa de cada vez, sem parar)
 
 1. **8.0 Fundação** — regras, inventário, roadmap, toolchain versionada (este arquivo). ✅
-2. **8.1 Eventos: 6 stubs → conteúdo real único** — 7 arquivos isolados, fecha bug citado 2×, deploy barato. + validador anti-regressão + workflow CI. ✅ (commitado; deploy-pending token CF)
+2. **8.1 Eventos: 6 stubs → conteúdo real único** — 7 arquivos isolados, fecha bug citado 2×, deploy barato. + validador anti-regressão + workflow CI. ✅ PUBLICADO (aq `632e4e55` + IndexNow)
 3. **8.2 Clima** — ✅ clima.js v2 (vis+AQI+14d) + city-agora em 7.775 págs + harvester 5-campos validado;
-   ⏳ job mensal completo (~7h, retomável) + injector de tabelas + normalização sol ÷3600.
+   ✅ PUBLICADO (sg `7a62d4f6` · nx `d0a9a912` · aq `632e4e55` + IndexNow 7.782); ⏳ job mensal (~7h) + injector tabelas + normalização sol.
 4. **8.3 Fachada+** — DDD, fuso/UTC, moeda, idiomas, feriado municipal, distâncias.
 5. **8.4 OSM v2** — auditoria ao vivo + POI completo + categorias finas (1 arquivo JS = todas as cidades ganham).
 6. **8.5 Dinheiro ao vivo** — conversor client-side + moeda/país.
@@ -92,5 +92,4 @@ Mudanças **baked** (fachada, clima, guias…) = acumulam num ÚNICO injector `s
 
 ## 4. Bloqueador atual (2026-09-06)
 
-Tokens Cloudflare do Env (`...fdeb30`, `...b815b6`) = **401 Invalid** (testado 2×). GitHub ✅.
-Tudo segue até "deploy-ready"; publicação precisa de token CF novo (permissões Pages+read) ou deploy manual via Dashboard/`wrangler login`.
+Token novo `...cfcaca` (06/09, guardado em `work/.cloudfire` — NÃO apagar) ✅ Pages API OK. Nota: `/user/tokens/verify` retorna 401 p/ este token (irrelevante) e `per_page=20` é rejeitado no list projects (usar ≤10).

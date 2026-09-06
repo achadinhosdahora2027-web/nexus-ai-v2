@@ -58,9 +58,8 @@ Validação cruzada do harvester vs tabela baked (ad/andorra-a-velha):
    não duplicam.
 
 ## 4. Publicação
-- **GitHub**: commit `feat(etapa8.2)` + push nos 3 repos (hashes no log).
-- **Cloudflare**: ⏳ bloqueado (tokens 401). Deploy-ready: `public/` (7.775 html + clima.js/v2).
-  Pós-deploy: `verify_live` (city-agora + JSON clima.js bytes) + IndexNow das URLs alteradas.
+- **GitHub**: `solvegrid@4f23e7a` · `nexus-ai-v2@f8bc608` · `aquitemachadinhos@928329c`.
+- **Cloudflare**: ✅ PRODUÇÃO sg `7a62d4f6` · nx `d0a9a912` · aq `632e4e55` (06/09/2026, previews validados antes). Rollback Etapa 7: sg `daf74a97` · nx `02d0767d` · aq `2afccda0`. Verify_live PASS (bytes==repo, md5 clima.js, yandex 200, 404 real, sitemaps 3168/3168/2917, sids próprios). IndexNow: 7.782 URLs (HTTP 200 nos 2 endpoints × 3 sites).
 
 ## 5. Como retomar (ordem)
 ```bash

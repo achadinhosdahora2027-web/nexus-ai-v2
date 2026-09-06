@@ -55,14 +55,11 @@ sitemap íntegro + travas presentes. Falha o build em qualquer regressão.
 
 ## 4. Publicação
 
-- **GitHub (ponto de rollback)**: commit `feat(etapa8.1)` + push (este relatório registra o hash após o push).
-- **Cloudflare Pages**: ⏳ BLOQUEADO — tokens CF do Env retornam `401 Invalid` (testado 2× em 06/09).
-  Pacote deploy-ready: `public/` do aquitem (7 html + 2 sitemaps). Com token novo:
-  `cd repos/aquitemachadinhos/public && wrangler pages deploy . --project-name=aquitem --branch=main`
-  (rodar DE DENTRO de `public/` — guarda do `functions/`).
+- **GitHub (ponto de rollback)**: `aquitemachadinhos@5646fe9` (+docs `solvegrid@3e9f9b3`, `nexus-ai-v2@277e0e3`).
+- **Cloudflare Pages**: ✅ PRODUÇÃO `632e4e55` (branch main, 06/09/2026). Preview `preview-etapa8` validado antes (7/7 eventos byte a byte). Rollback: `2afccda0` (Etapa 7). Deploy via wrangler 4.86 DE DENTRO do repo (guarda `functions/` ✅, yandex 200).
 - **Teste de auto-deploy**: após o push, aguardar ~5 min e conferir o live; se o host canônico mudar,
   o projeto tem Git integration (deploy automático); se não, só via wrangler.
-- **Pós-deploy**: `verify_live` (7 URLs 200 + marcadores + JSON-LD), IndexNow das 7 URLs nos 2 endpoints.
+- **Pós-deploy**: verify_live PASS (7/7 bytes==repo, robots index, afiliados intactos) + IndexNow 2.442 URLs aquitem (HTTP 200 api+yandex).
 
 ## 5. Fontes (consultadas 05–06/09/2026)
 
