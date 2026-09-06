@@ -22,6 +22,8 @@
  * ============================================================================
  */
 
+import { sendTelegramAlert } from "./telegram-notify.js";
+
 const AYRSHARE_POST_ENDPOINT = "https://api.ayrshare.com/api/post";
 const REQUEST_TIMEOUT_MS = 20_000;
 const MAX_ATTEMPTS = 5;
@@ -311,6 +313,16 @@ export async function runAyrshareOutboxWorker(): Promise<{
     summary.claimed,
     summary.sent,
     `publicadas=${summary.sent} reenfileiradas=${summary.requeued} falhas=${summary.failed}`,
+  );
+  await sendTelegramAlert(
+    [
+      "🛰️ PROJETO NEXUS - RELATÓRIO DE TELEMETRIA",
+      "Job Executado: ayrshare_outbox (run consolidado)",
+      `Status da Operação: ok`,
+      `Total de URLs na fila: ${summary.claimed}`,
+      `URLs processadas no dia: ${summary.sent}`,
+      `Mensagem do Servidor: publicadas=${summary.sent} reenfileiradas=${summary.requeued} falhas=${summary.failed}`,
+    ].join("\n"),
   );
   return summary;
 }
