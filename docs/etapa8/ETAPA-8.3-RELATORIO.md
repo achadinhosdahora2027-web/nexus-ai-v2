@@ -1,4 +1,4 @@
-# ETAPA 8.3 — Fachada+ (PARCIAL: dados; injector na próxima rodada)
+# ETAPA 8.3 — Fachada+ (dados; injector em ETAPA-8.3-INJECTOR.md — LIVE 06/09/2026)
 
 Data: 2026-09-06 · Item do pedido: 1 (informações básicas) · Status: dados colhidos e validados, commitados; bloco `city-pais` + linhas novas a injetar.
 
