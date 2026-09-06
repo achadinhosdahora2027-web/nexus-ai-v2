@@ -1,0 +1,8478 @@
+{
+ "ad": {
+  "qid": "Q228",
+  "nome": "Andorra",
+  "iso2": "AD",
+  "nums": [
+   {
+    "n": "116",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ae": {
+  "qid": "Q878",
+  "nome": "Emirados Árabes Unidos",
+  "iso2": "AE",
+  "nums": [
+   {
+    "n": "998",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "997",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "af": {
+  "qid": "Q889",
+  "nome": "Afeganistão",
+  "iso2": "AF",
+  "nums": [
+   {
+    "n": "102",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "100",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ag": {
+  "qid": "Q781",
+  "nome": "Antígua e Barbuda",
+  "iso2": "AG",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "al": {
+  "qid": "Q222",
+  "nome": "Albânia",
+  "iso2": "AL",
+  "nums": [
+   {
+    "n": "127",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "128",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "129",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "am": {
+  "qid": "Q399",
+  "nome": "Armênia",
+  "iso2": "AM",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ao": {
+  "qid": "Q916",
+  "nome": "Angola",
+  "iso2": "AO",
+  "nums": [
+   {
+    "n": "116",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ar": {
+  "qid": "Q414",
+  "nome": "Argentina",
+  "iso2": "AR",
+  "nums": [
+   {
+    "n": "100",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "at": {
+  "qid": "Q40",
+  "nome": "Áustria",
+  "iso2": "AT",
+  "nums": [
+   {
+    "n": "123",
+    "use_qid": "Q784673",
+    "use_l10n": {
+     "pt": "Auto-, Motor- und Radfahrerbund Österreichs",
+     "en": "Auto-, Motor- und Radfahrerbund Österreichs",
+     "es": "Auto-, Motor- und Radfahrerbund Österreichs",
+     "fr": "Auto-, Motor- und Radfahrerbund Österreichs",
+     "it": "Auto-, Motor- und Radfahrerbund Österreichs",
+     "de": "Auto-, Motor- und Radfahrerbund Österreichs"
+    }
+   },
+   {
+    "n": "144",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "122",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "140",
+    "use_qid": "Q349967",
+    "use_l10n": {
+     "pt": "mountain rescue",
+     "en": "mountain rescue",
+     "es": "rescate en montaña",
+     "fr": "secours en montagne",
+     "it": "soccorso alpino",
+     "de": "Bergrettungsdienst"
+    }
+   },
+   {
+    "n": "133",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "120",
+    "use_qid": "Q306057",
+    "use_l10n": {
+     "pt": "ÖAMTC",
+     "en": "ÖAMTC",
+     "es": "ÖAMTC",
+     "fr": "ÖAMTC",
+     "it": "ÖAMTC",
+     "de": "Österreichischer Automobil-, Motorrad- und Touring Club"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "au": {
+  "qid": "Q408",
+  "nome": "Austrália",
+  "iso2": "AU",
+  "nums": [
+   {
+    "n": "000",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "106",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "az": {
+  "qid": "Q227",
+  "nome": "Azerbaijão",
+  "iso2": "AZ",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ba": {
+  "qid": "Q225",
+  "nome": "Bósnia e Herzegovina",
+  "iso2": "BA",
+  "nums": [
+   {
+    "n": "124",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "123",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "122",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bb": {
+  "qid": "Q244",
+  "nome": "Barbados",
+  "iso2": "BB",
+  "nums": [
+   {
+    "n": "511",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "311",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "211",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bd": {
+  "qid": "Q902",
+  "nome": "Bangladesh",
+  "iso2": "BD",
+  "nums": [
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "be": {
+  "qid": "Q31",
+  "nome": "Bélgica",
+  "iso2": "BE",
+  "nums": [
+   {
+    "n": "102",
+    "use_qid": "Q13432474",
+    "use_l10n": {
+     "pt": "Awel",
+     "en": "Awel",
+     "es": "Awel",
+     "fr": "Awel",
+     "it": "Awel",
+     "de": "Awel"
+    }
+   },
+   {
+    "n": "100",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bf": {
+  "qid": "Q965",
+  "nome": "Burquina Faso",
+  "iso2": "BF",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bg": {
+  "qid": "Q219",
+  "nome": "Bulgária",
+  "iso2": "BG",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bh": {
+  "qid": "Q398",
+  "nome": "Bahrein",
+  "iso2": "BH",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bi": {
+  "qid": "Q967",
+  "nome": "Burundi",
+  "iso2": "BI",
+  "nums": [
+   {
+    "n": "117",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bj": {
+  "qid": "Q962",
+  "nome": "Benim",
+  "iso2": "BJ",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bn": {
+  "qid": "Q921",
+  "nome": "Brunei",
+  "iso2": "BN",
+  "nums": [
+   {
+    "n": "991",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "995",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "993",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bo": {
+  "qid": "Q750",
+  "nome": "Bolívia",
+  "iso2": "BO",
+  "nums": [
+   {
+    "n": "160",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "br": {
+  "qid": "Q155",
+  "nome": "Brasil",
+  "iso2": "BR",
+  "nums": [
+   {
+    "n": "188",
+    "use_qid": "Q1414611",
+    "use_l10n": {
+     "pt": "Linha de crise",
+     "en": "crisis hotline",
+     "es": "línea directa de crisis",
+     "fr": "soutien téléphonique",
+     "it": "crisis hotline",
+     "de": "Telefonseelsorge"
+    }
+   },
+   {
+    "n": "192",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "193",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "190",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bs": {
+  "qid": "Q778",
+  "nome": "Bahamas",
+  "iso2": "BS",
+  "nums": [
+   {
+    "n": "919",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bt": {
+  "qid": "Q917",
+  "nome": "Butão",
+  "iso2": "BT",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bw": {
+  "qid": "Q963",
+  "nome": "Botsuana",
+  "iso2": "BW",
+  "nums": [
+   {
+    "n": "997",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "998",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "by": {
+  "qid": "Q184",
+  "nome": "Bielorrússia",
+  "iso2": "BY",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "bz": {
+  "qid": "Q242",
+  "nome": "Belize",
+  "iso2": "BZ",
+  "nums": [
+   {
+    "n": "90",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ca": {
+  "qid": "Q16",
+  "nome": "Canadá",
+  "iso2": "CA",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cd": {
+  "qid": "Q974",
+  "nome": "Congo-Kinshasa",
+  "iso2": "CD",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "114",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cf": {
+  "qid": "Q929",
+  "nome": "República Centro-Africana",
+  "iso2": "CF",
+  "nums": [
+   {
+    "n": "1220",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cg": {
+  "qid": "Q971",
+  "nome": "Congo-Brazzaville",
+  "iso2": "CG",
+  "nums": [
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ch": {
+  "qid": "Q39",
+  "nome": "Suíça",
+  "iso2": "CH",
+  "nums": [
+   {
+    "n": "144",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q814610",
+    "use_l10n": {
+     "pt": "Serviço de emergência",
+     "en": "emergency service",
+     "es": "servicio de emergencia",
+     "fr": "secours d'urgence",
+     "it": "servizio d'emergenza",
+     "de": "Behörden und Organisationen mit Sicherheitsaufgaben"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "1414",
+    "use_qid": "Q34486",
+    "use_l10n": {
+     "pt": "helicóptero",
+     "en": "helicopter",
+     "es": "helicóptero",
+     "fr": "hélicoptère",
+     "it": "elicottero",
+     "de": "Hubschrauber"
+    }
+   },
+   {
+    "n": "145",
+    "use_qid": "Q114953",
+    "use_l10n": {
+     "pt": "envenenamento",
+     "en": "poisoning",
+     "es": "envenenamiento",
+     "fr": "empoisonnement",
+     "it": "avvelenamento",
+     "de": "Vergiftung"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "140",
+    "use_qid": "Q337810",
+    "use_l10n": {
+     "pt": "roadside assistance",
+     "en": "roadside assistance",
+     "es": "asistencia vial",
+     "fr": "roadside assistance",
+     "it": "soccorso stradale",
+     "de": "Pannenhilfe"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ci": {
+  "qid": "Q1008",
+  "nome": "Costa do Marfim",
+  "iso2": "CI",
+  "nums": [
+   {
+    "n": "185",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "180",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "111",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "170",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cl": {
+  "qid": "Q298",
+  "nome": "Chile",
+  "iso2": "CL",
+  "nums": [
+   {
+    "n": "133",
+    "use_qid": "Q2317752",
+    "use_l10n": {
+     "pt": "Carabineiros do Chile",
+     "en": "Carabineros de Chile",
+     "es": "Carabineros de Chile",
+     "fr": "Carabiniers du Chili",
+     "it": "Carabineros de Chile",
+     "de": "Carabineros de Chile"
+    }
+   },
+   {
+    "n": "134",
+    "use_qid": "Q3176036",
+    "use_l10n": {
+     "pt": "Polícia de Investigações do Chile",
+     "en": "Investigations Police of Chile",
+     "es": "Policía de Investigaciones de Chile",
+     "fr": "Service d'enquêtes de la police",
+     "it": "Investigations Police of Chile",
+     "de": "Investigations Police of Chile"
+    }
+   },
+   {
+    "n": "131",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "132",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "130",
+    "use_qid": "Q169950",
+    "use_l10n": {
+     "pt": "incêndio de vegetação",
+     "en": "wildfire",
+     "es": "incendio de vegetación",
+     "fr": "feu de végétation",
+     "it": "incendio boschivo",
+     "de": "Lauffeuer"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cm": {
+  "qid": "Q1009",
+  "nome": "Camarões",
+  "iso2": "CM",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cn": {
+  "qid": "Q148",
+  "nome": "China",
+  "iso2": "CN",
+  "nums": [
+   {
+    "n": "120",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "co": {
+  "qid": "Q739",
+  "nome": "Colômbia",
+  "iso2": "CO",
+  "nums": [
+   {
+    "n": "123",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cr": {
+  "qid": "Q800",
+  "nome": "Costa Rica",
+  "iso2": "CR",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cu": {
+  "qid": "Q241",
+  "nome": "Cuba",
+  "iso2": "CU",
+  "nums": [
+   {
+    "n": "104",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "105",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "106",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cv": {
+  "qid": "Q1011",
+  "nome": "Cabo Verde",
+  "iso2": "CV",
+  "nums": [
+   {
+    "n": "130",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "131",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "132",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cy": {
+  "qid": "Q229",
+  "nome": "Chipre",
+  "iso2": "CY",
+  "nums": [
+   {
+    "n": "1400",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "199",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "cz": {
+  "qid": "Q213",
+  "nome": "República Checa",
+  "iso2": "CZ",
+  "nums": [
+   {
+    "n": "155",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "150",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "156",
+    "use_qid": "Q1758690",
+    "use_l10n": {
+     "pt": "polícia municipal",
+     "en": "municipal police",
+     "es": "policía municipal",
+     "fr": "police municipale",
+     "it": "polizia municipale",
+     "de": "Stadtpolizei"
+    }
+   },
+   {
+    "n": "158",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "de": {
+  "qid": "Q183",
+  "nome": "Alemanha",
+  "iso2": "DE",
+  "nums": [
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "dj": {
+  "qid": "Q977",
+  "nome": "Djibuti",
+  "iso2": "DJ",
+  "nums": [
+   {
+    "n": "19",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "dk": {
+  "qid": "Q35",
+  "nome": "Dinamarca",
+  "iso2": "DK",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "dm": {
+  "qid": "Q784",
+  "nome": "Dominica",
+  "iso2": "DM",
+  "nums": [
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "do": {
+  "qid": "Q786",
+  "nome": "República Dominicana",
+  "iso2": "DO",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "dz": {
+  "qid": "Q262",
+  "nome": "Argélia",
+  "iso2": "DZ",
+  "nums": [
+   {
+    "n": "14",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "1055",
+    "use_qid": "Q204310",
+    "use_l10n": {
+     "pt": "gendarmaria",
+     "en": "gendarmerie",
+     "es": "gendarmería",
+     "fr": "gendarmerie",
+     "it": "gendarmeria",
+     "de": "Gendarmerie"
+    }
+   },
+   {
+    "n": "1548",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ec": {
+  "qid": "Q736",
+  "nome": "Equador",
+  "iso2": "EC",
+  "nums": [
+   {
+    "n": "131",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ee": {
+  "qid": "Q191",
+  "nome": "Estônia",
+  "iso2": "EE",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "eg": {
+  "qid": "Q79",
+  "nome": "Egito",
+  "iso2": "EG",
+  "nums": [
+   {
+    "n": "123",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "180",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "122",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "er": {
+  "qid": "Q986",
+  "nome": "Eritreia",
+  "iso2": "ER",
+  "nums": [
+   {
+    "n": "114",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "116",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "es": {
+  "qid": "Q29",
+  "nome": "Espanha",
+  "iso2": "ES",
+  "nums": [
+   {
+    "n": "061",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "091",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "et": {
+  "qid": "Q115",
+  "nome": "Etiópia",
+  "iso2": "ET",
+  "nums": [
+   {
+    "n": "907",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "939",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "991",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "fi": {
+  "qid": "Q33",
+  "nome": "Finlândia",
+  "iso2": "FI",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "fj": {
+  "qid": "Q712",
+  "nome": "Fiji",
+  "iso2": "FJ",
+  "nums": [
+   {
+    "n": "919",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "000",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "fm": {
+  "qid": "Q702",
+  "nome": "Micronésia",
+  "iso2": "FM",
+  "nums": [
+   {
+    "n": "111",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "fr": {
+  "qid": "Q142",
+  "nome": "França",
+  "iso2": "FR",
+  "nums": [
+   {
+    "n": "114",
+    "use_qid": "Q25393960",
+    "use_l10n": {
+     "pt": "comunidade surda",
+     "en": "deaf community",
+     "es": "comunidad sorda",
+     "fr": "communauté sourde",
+     "it": "comunità sorda",
+     "de": "Gehörlosengemeinschaft"
+    }
+   },
+   {
+    "n": "15",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ga": {
+  "qid": "Q1000",
+  "nome": "Gabão",
+  "iso2": "GA",
+  "nums": [
+   {
+    "n": "1300",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "1722",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gb": {
+  "qid": "Q145",
+  "nome": "Reino Unido",
+  "iso2": "GB",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gd": {
+  "qid": "Q769",
+  "nome": "Granada",
+  "iso2": "GD",
+  "nums": [
+   {
+    "n": "434",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "724",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "774",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ge": {
+  "qid": "Q230",
+  "nome": "Geórgia",
+  "iso2": "GE",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "111",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "122",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gh": {
+  "qid": "Q117",
+  "nome": "Gana",
+  "iso2": "GH",
+  "nums": [
+   {
+    "n": "193",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "192",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "191",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gm": {
+  "qid": "Q1005",
+  "nome": "Gâmbia",
+  "iso2": "GM",
+  "nums": [
+   {
+    "n": "116",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gn": {
+  "qid": "Q1006",
+  "nome": "Guiné",
+  "iso2": "GN",
+  "nums": [
+   {
+    "n": "442-020",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gq": {
+  "qid": "Q983",
+  "nome": "Guiné Equatorial",
+  "iso2": "GQ",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "114",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gr": {
+  "qid": "Q41",
+  "nome": "Grécia",
+  "iso2": "GR",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q5070802",
+    "use_l10n": {
+     "pt": "emergency",
+     "en": "emergency",
+     "es": "emergencia",
+     "fr": "urgence",
+     "it": "emergenza",
+     "de": "Notfall"
+    }
+   },
+   {
+    "n": "166",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "199",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "100",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gt": {
+  "qid": "Q774",
+  "nome": "Guatemala",
+  "iso2": "GT",
+  "nums": [
+   {
+    "n": "128",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "123",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "120",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gw": {
+  "qid": "Q1007",
+  "nome": "Guiné-Bissau",
+  "iso2": "GW",
+  "nums": [
+   {
+    "n": "119",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "180",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "121",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "gy": {
+  "qid": "Q734",
+  "nome": "Guiana",
+  "iso2": "GY",
+  "nums": [
+   {
+    "n": "913",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "912",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "hn": {
+  "qid": "Q783",
+  "nome": "Honduras",
+  "iso2": "HN",
+  "nums": [
+   {
+    "n": "198",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "199",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "hr": {
+  "qid": "Q224",
+  "nome": "Croácia",
+  "iso2": "HR",
+  "nums": [
+   {
+    "n": "94",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "93",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "192",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ht": {
+  "qid": "Q790",
+  "nome": "Haiti",
+  "iso2": "HT",
+  "nums": [
+   {
+    "n": "116",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "114",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "122",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "hu": {
+  "qid": "Q28",
+  "nome": "Hungria",
+  "iso2": "HU",
+  "nums": [
+   {
+    "n": "104",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "105",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "107",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "id": {
+  "qid": "Q252",
+  "nome": "Indonésia",
+  "iso2": "ID",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ie": {
+  "qid": "Q27",
+  "nome": "Irlanda",
+  "iso2": "IE",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "il": {
+  "qid": "Q801",
+  "nome": "Israel",
+  "iso2": "IL",
+  "nums": [
+   {
+    "n": "102",
+    "use_qid": "Q1409931",
+    "use_l10n": {
+     "pt": "Israel Fire and Rescue Services",
+     "en": "Israel Fire and Rescue Services",
+     "es": "Servicio de Fuego y Rescate de Israel",
+     "fr": "Service d'incendie en Israël",
+     "it": "Israel Fire and Rescue Services",
+     "de": "Feuerwehr in Israel"
+    }
+   },
+   {
+    "n": "100",
+    "use_qid": "Q594444",
+    "use_l10n": {
+     "pt": "Polícia de Israel",
+     "en": "Israel Police",
+     "es": "Policía Israelí",
+     "fr": "Police d'Israël",
+     "it": "Polizia Israeliana",
+     "de": "Israelische Polizei"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q577902",
+    "use_l10n": {
+     "pt": "Magen David Adom",
+     "en": "Magen David Adom",
+     "es": "Maguén David Adom",
+     "fr": "Magen David Adom",
+     "it": "Magen David Adom",
+     "de": "Magen David Adom"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "in": {
+  "qid": "Q668",
+  "nome": "Índia",
+  "iso2": "IN",
+  "nums": [
+   {
+    "n": "108",
+    "use_qid": "Q5070802",
+    "use_l10n": {
+     "pt": "emergency",
+     "en": "emergency",
+     "es": "emergencia",
+     "fr": "urgence",
+     "it": "emergenza",
+     "de": "Notfall"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "100",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "iq": {
+  "qid": "Q796",
+  "nome": "Iraque",
+  "iso2": "IQ",
+  "nums": [
+   {
+    "n": "122",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "104",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ir": {
+  "qid": "Q794",
+  "nome": "Irã",
+  "iso2": "IR",
+  "nums": [
+   {
+    "n": "115",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "125",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "is": {
+  "qid": "Q189",
+  "nome": "Islândia",
+  "iso2": "IS",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "it": {
+  "qid": "Q38",
+  "nome": "Itália",
+  "iso2": "IT",
+  "nums": [
+   {
+    "n": "118",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "jm": {
+  "qid": "Q766",
+  "nome": "Jamaica",
+  "iso2": "JM",
+  "nums": [
+   {
+    "n": "110",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "jo": {
+  "qid": "Q810",
+  "nome": "Jordânia",
+  "iso2": "JO",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "jp": {
+  "qid": "Q17",
+  "nome": "Japão",
+  "iso2": "JP",
+  "nums": [
+   {
+    "n": "118",
+    "use_qid": "Q565418",
+    "use_l10n": {
+     "pt": "Guarda Costeira do Japão",
+     "en": "Japan Coast Guard",
+     "es": "Guardia Costera de Japón",
+     "fr": "Garde côtière du Japon",
+     "it": "Kaijō Ho'an-chō",
+     "de": "Kaijō Hoan-chō"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ke": {
+  "qid": "Q114",
+  "nome": "Quênia",
+  "iso2": "KE",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kg": {
+  "qid": "Q813",
+  "nome": "Quirguistão",
+  "iso2": "KG",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "161",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kh": {
+  "qid": "Q424",
+  "nome": "Camboja",
+  "iso2": "KH",
+  "nums": [
+   {
+    "n": "119",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ki": {
+  "qid": "Q710",
+  "nome": "Quiribati",
+  "iso2": "KI",
+  "nums": [
+   {
+    "n": "194",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "195",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "193",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "192",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "km": {
+  "qid": "Q970",
+  "nome": "Comores",
+  "iso2": "KM",
+  "nums": [
+   {
+    "n": "18",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "772-03-73",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kn": {
+  "qid": "Q763",
+  "nome": "São Cristóvão e Neves",
+  "iso2": "KN",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kp": {
+  "qid": "Q423",
+  "nome": "Coreia do Norte",
+  "iso2": "KP",
+  "nums": [],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kr": {
+  "qid": "Q884",
+  "nome": "Coreia do Sul",
+  "iso2": "KR",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q501700",
+    "use_l10n": {
+     "pt": "contraespionagem",
+     "en": "counterintelligence",
+     "es": "contraespionaje",
+     "fr": "contre-espionnage",
+     "it": "controspionaggio",
+     "de": "Spionageabwehr"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kw": {
+  "qid": "Q817",
+  "nome": "Kuwait",
+  "iso2": "KW",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "kz": {
+  "qid": "Q232",
+  "nome": "Cazaquistão",
+  "iso2": "KZ",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "la": {
+  "qid": "Q819",
+  "nome": "Laos",
+  "iso2": "LA",
+  "nums": [
+   {
+    "n": "195",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "190",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "191",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lb": {
+  "qid": "Q822",
+  "nome": "Líbano",
+  "iso2": "LB",
+  "nums": [
+   {
+    "n": "140",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "175",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "160",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lc": {
+  "qid": "Q760",
+  "nome": "Santa Lúcia",
+  "iso2": "LC",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "li": {
+  "qid": "Q347",
+  "nome": "Liechtenstein",
+  "iso2": "LI",
+  "nums": [
+   {
+    "n": "144",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lk": {
+  "qid": "Q854",
+  "nome": "Sri Lanka",
+  "iso2": "LK",
+  "nums": [
+   {
+    "n": "110",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lr": {
+  "qid": "Q1014",
+  "nome": "Libéria",
+  "iso2": "LR",
+  "nums": [
+   {
+    "n": "114",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ls": {
+  "qid": "Q1013",
+  "nome": "Lesoto",
+  "iso2": "LS",
+  "nums": [
+   {
+    "n": "114",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lt": {
+  "qid": "Q37",
+  "nome": "Lituânia",
+  "iso2": "LT",
+  "nums": [
+   {
+    "n": "02",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lu": {
+  "qid": "Q32",
+  "nome": "Luxemburgo",
+  "iso2": "LU",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "lv": {
+  "qid": "Q211",
+  "nome": "Letônia",
+  "iso2": "LV",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ly": {
+  "qid": "Q1016",
+  "nome": "Líbia",
+  "iso2": "LY",
+  "nums": [
+   {
+    "n": "191",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "190",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "193",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ma": {
+  "qid": "Q1028",
+  "nome": "Marrocos",
+  "iso2": "MA",
+  "nums": [
+   {
+    "n": "177",
+    "use_qid": "Q7374210",
+    "use_l10n": {
+     "pt": "Royal Gendarmerie",
+     "en": "Royal Gendarmerie",
+     "es": "Royal Gendarmerie",
+     "fr": "Royal Gendarmerie",
+     "it": "Royal Gendarmerie",
+     "de": "Royal Gendarmerie"
+    }
+   },
+   {
+    "n": "15",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "19",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mc": {
+  "qid": "Q235",
+  "nome": "Mônaco",
+  "iso2": "MC",
+  "nums": [
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "md": {
+  "qid": "Q217",
+  "nome": "Moldávia",
+  "iso2": "MD",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "me": {
+  "qid": "Q236",
+  "nome": "Montenegro",
+  "iso2": "ME",
+  "nums": [
+   {
+    "n": "124",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "123",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "122",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mg": {
+  "qid": "Q1019",
+  "nome": "Madagascar",
+  "iso2": "MG",
+  "nums": [
+   {
+    "n": "124",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mh": {
+  "qid": "Q709",
+  "nome": "Ilhas Marshall",
+  "iso2": "MH",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mk": {
+  "qid": "Q221",
+  "nome": "Macedônia do Norte",
+  "iso2": "MK",
+  "nums": [
+   {
+    "n": "194",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "193",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "192",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ml": {
+  "qid": "Q912",
+  "nome": "Mali",
+  "iso2": "ML",
+  "nums": [
+   {
+    "n": "15",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mm": {
+  "qid": "Q836",
+  "nome": "Mianmar",
+  "iso2": "MM",
+  "nums": [
+   {
+    "n": "192",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "191",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "199",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mn": {
+  "qid": "Q711",
+  "nome": "Mongólia",
+  "iso2": "MN",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "105",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mr": {
+  "qid": "Q1025",
+  "nome": "Mauritânia",
+  "iso2": "MR",
+  "nums": [
+   {
+    "n": "101",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mt": {
+  "qid": "Q233",
+  "nome": "Malta",
+  "iso2": "MT",
+  "nums": [
+   {
+    "n": "196",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "199",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "191",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mu": {
+  "qid": "Q1027",
+  "nome": "Maurício",
+  "iso2": "MU",
+  "nums": [
+   {
+    "n": "114",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "995",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mv": {
+  "qid": "Q826",
+  "nome": "Maldivas",
+  "iso2": "MV",
+  "nums": [
+   {
+    "n": "102",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mw": {
+  "qid": "Q1020",
+  "nome": "Malawi",
+  "iso2": "MW",
+  "nums": [
+   {
+    "n": "998",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "990",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "997",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mx": {
+  "qid": "Q96",
+  "nome": "México",
+  "iso2": "MX",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "my": {
+  "qid": "Q833",
+  "nome": "Malásia",
+  "iso2": "MY",
+  "nums": [
+   {
+    "n": "999",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "mz": {
+  "qid": "Q1029",
+  "nome": "Moçambique",
+  "iso2": "MZ",
+  "nums": [
+   {
+    "n": "198",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "na": {
+  "qid": "Q1030",
+  "nome": "Namíbia",
+  "iso2": "NA",
+  "nums": [
+   {
+    "n": "10111",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ne": {
+  "qid": "Q1032",
+  "nome": "Níger",
+  "iso2": "NE",
+  "nums": [
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ng": {
+  "qid": "Q1033",
+  "nome": "Nigéria",
+  "iso2": "NG",
+  "nums": [
+   {
+    "n": "199",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ni": {
+  "qid": "Q811",
+  "nome": "Nicarágua",
+  "iso2": "NI",
+  "nums": [
+   {
+    "n": "128",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "120",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "118",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "no": {
+  "qid": "Q20",
+  "nome": "Noruega",
+  "iso2": "NO",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "np": {
+  "qid": "Q837",
+  "nome": "Nepal",
+  "iso2": "NP",
+  "nums": [
+   {
+    "n": "102",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "100",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "nr": {
+  "qid": "Q697",
+  "nome": "Nauru",
+  "iso2": "NR",
+  "nums": [
+   {
+    "n": "111",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "nz": {
+  "qid": "Q664",
+  "nome": "Nova Zelândia",
+  "iso2": "NZ",
+  "nums": [
+   {
+    "n": "111",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "om": {
+  "qid": "Q842",
+  "nome": "Omã",
+  "iso2": "OM",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "968",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pa": {
+  "qid": "Q804",
+  "nome": "Panamá",
+  "iso2": "PA",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "104",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pe": {
+  "qid": "Q419",
+  "nome": "Peru",
+  "iso2": "PE",
+  "nums": [
+   {
+    "n": "106",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "116",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "105",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "111",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pg": {
+  "qid": "Q691",
+  "nome": "Papua-Nova Guiné",
+  "iso2": "PG",
+  "nums": [
+   {
+    "n": "111",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ph": {
+  "qid": "Q928",
+  "nome": "Filipinas",
+  "iso2": "PH",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pk": {
+  "qid": "Q843",
+  "nome": "Paquistão",
+  "iso2": "PK",
+  "nums": [
+   {
+    "n": "1122",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "16",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "15",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pl": {
+  "qid": "Q36",
+  "nome": "Polônia",
+  "iso2": "PL",
+  "nums": [
+   {
+    "n": "999",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "998",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "986",
+    "use_qid": "Q1758690",
+    "use_l10n": {
+     "pt": "polícia municipal",
+     "en": "municipal police",
+     "es": "policía municipal",
+     "fr": "police municipale",
+     "it": "polizia municipale",
+     "de": "Stadtpolizei"
+    }
+   },
+   {
+    "n": "997",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ps": {
+  "qid": "Q219060",
+  "nome": "Palestina",
+  "iso2": "PS",
+  "nums": [],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pt": {
+  "qid": "Q45",
+  "nome": "Portugal",
+  "iso2": "PT",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "pw": {
+  "qid": "Q695",
+  "nome": "Palau",
+  "iso2": "PW",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "py": {
+  "qid": "Q733",
+  "nome": "Paraguai",
+  "iso2": "PY",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "qa": {
+  "qid": "Q846",
+  "nome": "Catar",
+  "iso2": "QA",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ro": {
+  "qid": "Q218",
+  "nome": "Romênia",
+  "iso2": "RO",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "rs": {
+  "qid": "Q403",
+  "nome": "Sérvia",
+  "iso2": "RS",
+  "nums": [
+   {
+    "n": "194",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "94",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "193",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "93",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "192",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "92",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ru": {
+  "qid": "Q159",
+  "nome": "Rússia",
+  "iso2": "RU",
+  "nums": [
+   {
+    "n": "03",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "01",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "02",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "rw": {
+  "qid": "Q1037",
+  "nome": "Ruanda",
+  "iso2": "RW",
+  "nums": [
+   {
+    "n": "912",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sa": {
+  "qid": "Q851",
+  "nome": "Arábia Saudita",
+  "iso2": "SA",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sb": {
+  "qid": "Q685",
+  "nome": "Ilhas Salomão",
+  "iso2": "SB",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "988",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sc": {
+  "qid": "Q1042",
+  "nome": "Seicheles",
+  "iso2": "SC",
+  "nums": [
+   {
+    "n": "151",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "133",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sd": {
+  "qid": "Q1049",
+  "nome": "Sudão",
+  "iso2": "SD",
+  "nums": [
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "se": {
+  "qid": "Q34",
+  "nome": "Suécia",
+  "iso2": "SE",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sg": {
+  "qid": "Q334",
+  "nome": "Singapura",
+  "iso2": "SG",
+  "nums": [
+   {
+    "n": "995",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "si": {
+  "qid": "Q215",
+  "nome": "Eslovênia",
+  "iso2": "SI",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sk": {
+  "qid": "Q214",
+  "nome": "Eslováquia",
+  "iso2": "SK",
+  "nums": [
+   {
+    "n": "155",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "150",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "158",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sl": {
+  "qid": "Q1044",
+  "nome": "Serra Leoa",
+  "iso2": "SL",
+  "nums": [
+   {
+    "n": "999",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "019",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sm": {
+  "qid": "Q238",
+  "nome": "San Marino",
+  "iso2": "SM",
+  "nums": [
+   {
+    "n": "118",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sn": {
+  "qid": "Q1041",
+  "nome": "Senegal",
+  "iso2": "SN",
+  "nums": [
+   {
+    "n": "18",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "so": {
+  "qid": "Q1045",
+  "nome": "Somália",
+  "iso2": "SO",
+  "nums": [
+   {
+    "n": "555",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "888",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sr": {
+  "qid": "Q730",
+  "nome": "Suriname",
+  "iso2": "SR",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "110",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "111",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "115",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ss": {
+  "qid": "Q958",
+  "nome": "Sudão do Sul",
+  "iso2": "SS",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "st": {
+  "qid": "Q1039",
+  "nome": "São Tomé e Príncipe",
+  "iso2": "ST",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sv": {
+  "qid": "Q792",
+  "nome": "El Salvador",
+  "iso2": "SV",
+  "nums": [
+   {
+    "n": "913",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sy": {
+  "qid": "Q858",
+  "nome": "Síria",
+  "iso2": "SY",
+  "nums": [
+   {
+    "n": "110",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "sz": {
+  "qid": "Q1050",
+  "nome": "Eswatini (Suazilândia)",
+  "iso2": "SZ",
+  "nums": [
+   {
+    "n": "977",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "933",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "td": {
+  "qid": "Q657",
+  "nome": "Chade",
+  "iso2": "TD",
+  "nums": [
+   {
+    "n": "18",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "2251-4242",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "17",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tg": {
+  "qid": "Q945",
+  "nome": "Togo",
+  "iso2": "TG",
+  "nums": [
+   {
+    "n": "118",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "117",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "171",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "172",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "th": {
+  "qid": "Q869",
+  "nome": "Tailândia",
+  "iso2": "TH",
+  "nums": [
+   {
+    "n": "1669",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "199",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "191",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tj": {
+  "qid": "Q863",
+  "nome": "Tajiquistão",
+  "iso2": "TJ",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tl": {
+  "qid": "Q574",
+  "nome": "Timor-Leste",
+  "iso2": "TL",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tm": {
+  "qid": "Q874",
+  "nome": "Turcomenistão",
+  "iso2": "TM",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tn": {
+  "qid": "Q948",
+  "nome": "Tunísia",
+  "iso2": "TN",
+  "nums": [
+   {
+    "n": "193",
+    "use_qid": "Q242218",
+    "use_l10n": {
+     "pt": "National Guard",
+     "en": "National Guard",
+     "es": "Guardia Nacional",
+     "fr": "Garde nationale",
+     "it": "Guardia Nazionale",
+     "de": "Nationalgarde"
+    }
+   },
+   {
+    "n": "190",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "198",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "197",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "to": {
+  "qid": "Q678",
+  "nome": "Tonga",
+  "iso2": "TO",
+  "nums": [
+   {
+    "n": "933",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "927",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "928",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "922",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tr": {
+  "qid": "Q43",
+  "nome": "Turquia",
+  "iso2": "TR",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "177",
+    "use_qid": "Q169950",
+    "use_l10n": {
+     "pt": "incêndio de vegetação",
+     "en": "wildfire",
+     "es": "incendio de vegetación",
+     "fr": "feu de végétation",
+     "it": "incendio boschivo",
+     "de": "Lauffeuer"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tt": {
+  "qid": "Q754",
+  "nome": "Trinidad e Tobago",
+  "iso2": "TT",
+  "nums": [
+   {
+    "n": "811",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "990",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tv": {
+  "qid": "Q672",
+  "nome": "Tuvalu",
+  "iso2": "TV",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tw": {
+  "qid": "Q865",
+  "nome": "Taiwan",
+  "iso2": "TW",
+  "nums": [
+   {
+    "n": "110",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "119",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "tz": {
+  "qid": "Q924",
+  "nome": "Tanzânia",
+  "iso2": "TZ",
+  "nums": [
+   {
+    "n": "115",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "114",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ua": {
+  "qid": "Q212",
+  "nome": "Ucrânia",
+  "iso2": "UA",
+  "nums": [
+   {
+    "n": "103",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "101",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "102",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ug": {
+  "qid": "Q1036",
+  "nome": "Uganda",
+  "iso2": "UG",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "us": {
+  "qid": "Q30",
+  "nome": "Estados Unidos",
+  "iso2": "US",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "uy": {
+  "qid": "Q77",
+  "nome": "Uruguai",
+  "iso2": "UY",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "uz": {
+  "qid": "Q265",
+  "nome": "Uzbequistão",
+  "iso2": "UZ",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "vc": {
+  "qid": "Q757",
+  "nome": "São Vicente e Granadinas",
+  "iso2": "VC",
+  "nums": [
+   {
+    "n": "911",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ve": {
+  "qid": "Q717",
+  "nome": "Venezuela",
+  "iso2": "VE",
+  "nums": [
+   {
+    "n": "171",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "vn": {
+  "qid": "Q881",
+  "nome": "Vietnã",
+  "iso2": "VN",
+  "nums": [
+   {
+    "n": "115",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "114",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "113",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "vu": {
+  "qid": "Q686",
+  "nome": "Vanuatu",
+  "iso2": "VU",
+  "nums": [
+   {
+    "n": "113",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "11",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ws": {
+  "qid": "Q683",
+  "nome": "Samoa",
+  "iso2": "WS",
+  "nums": [
+   {
+    "n": "996",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "994",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "995",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "ye": {
+  "qid": "Q805",
+  "nome": "Iêmen",
+  "iso2": "YE",
+  "nums": [
+   {
+    "n": "199",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "za": {
+  "qid": "Q258",
+  "nome": "África do Sul",
+  "iso2": "ZA",
+  "nums": [
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "zm": {
+  "qid": "Q953",
+  "nome": "Zâmbia",
+  "iso2": "ZM",
+  "nums": [
+   {
+    "n": "992",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "993",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "112",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "911",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "991",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ },
+ "zw": {
+  "qid": "Q954",
+  "nome": "Zimbábue",
+  "iso2": "ZW",
+  "nums": [
+   {
+    "n": "994",
+    "use_qid": "Q860447",
+    "use_l10n": {
+     "pt": "serviços de emergência médica",
+     "en": "emergency medical services",
+     "es": "servicio de emergencia médica",
+     "fr": "aide médicale urgente",
+     "it": "soccorso sanitario",
+     "de": "Rettungsdienst"
+    }
+   },
+   {
+    "n": "993",
+    "use_qid": "Q6498663",
+    "use_l10n": {
+     "pt": "corpo de bombeiros",
+     "en": "fire department",
+     "es": "cuerpo de bomberos",
+     "fr": "corps de sapeurs-pompiers",
+     "it": "vigili del fuoco",
+     "de": "Feuerwehr"
+    }
+   },
+   {
+    "n": "995",
+    "use_qid": "Q35535",
+    "use_l10n": {
+     "pt": "polícia",
+     "en": "police",
+     "es": "policía",
+     "fr": "police",
+     "it": "polizia",
+     "de": "Polizei"
+    }
+   },
+   {
+    "n": "999",
+    "use_qid": null,
+    "use_l10n": {
+     "pt": null,
+     "en": null,
+     "es": null,
+     "fr": null,
+     "it": null,
+     "de": null
+    }
+   }
+  ],
+  "colhido": "2026-09-06",
+  "fonte": "Wikidata P2852 (números de emergência por país; uso via P366)"
+ }
+}
