@@ -69,6 +69,16 @@ export type AllowedHost = (typeof ALLOWED_HOSTS)[number];
 /** Rate limit corporativo: máximo de URLs inspecionadas por dia, por domínio. */
 export const DAILY_LIMIT_PER_HOST = 200;
 
+/** Orçamento de tempo do run inteiro (default 11 min) — excedente volta à fila. */
+export const RUN_TIME_BUDGET_MS =
+  Number.parseInt(process.env["NEXUS_TIME_BUDGET_MS"] ?? "", 10) || 11 * 60_000;
+
+/** Concorrência de inspeções (limite oficial: 600/min global, 200/min/propriedade). */
+const INSPECT_CONCURRENCY = Math.min(
+  Math.max(Number.parseInt(process.env["NEXUS_INSPECT_CONCURRENCY"] ?? "", 10) || 4, 1),
+  8,
+);
+
 const WEBMASTERS_BASE = "https://www.googleapis.com/webmasters/v3";
 const INSPECT_ENDPOINT =
   "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect";
@@ -616,6 +626,7 @@ export async function forceGoogleIndexation(
 
   const byHost = groupByHost(urls);
   const hostReports: HostReport[] = [];
+  const deadline = Date.now() + RUN_TIME_BUDGET_MS;
 
   for (const [host, hostUrls] of byHost) {
     const hr = emptyHostReport(host);
@@ -669,57 +680,87 @@ export async function forceGoogleIndexation(
       await setQueueStatus(overflow, "pending_google_crawl");
     }
 
-    // (3) Inspeção em lote (2.000/dia oficial; nosso teto: 200/dia/domínio)
+    // (3) Inspeção em lote com concorrência controlada + orçamento de tempo.
+    //     2.000/dia oficial; teto corporativo 200/dia/domínio; 4 em paralelo
+    //     (~120/min) respeita 600/min global e 200/min por propriedade.
     let halted = false;
-    for (const url of budget) {
-      if (halted) {
-        hr.pending += 1;
-        await updateQueueRow(url, "pending_google_crawl");
-        continue;
-      }
-      try {
-        const outcome = await inspectUrl(url, host, token);
-        hr.inspected += 1;
-        if (outcome.indexed) {
-          hr.indexed += 1;
-          await updateQueueRow(url, "indexed", outcome.status);
-        } else {
-          hr.pending += 1;
-          await updateQueueRow(url, "submitted", outcome.status);
+    let cursor = 0;
+    const worker = async (): Promise<void> => {
+      while (!halted && Date.now() < deadline) {
+        const i = cursor++;
+        if (i >= budget.length) return;
+        const url = budget[i] as string;
+        try {
+          const outcome = await inspectUrl(url, host, token);
+          hr.inspected += 1;
+          if (outcome.indexed) {
+            hr.indexed += 1;
+            await updateQueueRow(url, "indexed", outcome.status);
+          } else {
+            hr.pending += 1;
+            await updateQueueRow(url, "submitted", outcome.status);
+          }
+        } catch (err) {
+          if (
+            err instanceof GscError &&
+            (err.status === 429 || /rate|quota/i.test(err.reason))
+          ) {
+            hr.rateLimited = true;
+            hr.pending += 1;
+            await updateQueueRow(url, "pending_google_crawl");
+            halted = true; // resto do lote volta para a fila
+          } else if (err instanceof GscError && err.status === 403) {
+            hr.errors += 1;
+            hr.pending += 1;
+            await updateQueueRow(url, "pending_google_crawl");
+            halted = true;
+            await logTelemetry(
+              "google_indexation",
+              "error",
+              host,
+              403,
+              budget.length,
+              hr.inspected,
+              "403 na inspeção: service account sem permissão na propriedade — adicione-o no Search Console (Usuários e permissões)",
+            );
+          } else {
+            hr.errors += 1;
+            await updateQueueRow(
+              url,
+              "failed",
+              undefined,
+              err instanceof GscError ? `${err.status} ${err.reason}`.slice(0, 120) : "network",
+            );
+          }
         }
-      } catch (err) {
-        if (
-          err instanceof GscError &&
-          (err.status === 429 || /rate|quota/i.test(err.reason))
-        ) {
-          hr.rateLimited = true;
-          hr.pending += 1;
-          await updateQueueRow(url, "pending_google_crawl");
-          halted = true; // resto do lote volta para a fila
-        } else if (err instanceof GscError && err.status === 403) {
-          hr.errors += 1;
-          hr.pending += 1;
-          await updateQueueRow(url, "pending_google_crawl");
-          halted = true;
-          await logTelemetry(
-            "google_indexation",
-            "error",
-            host,
-            403,
-            budget.length,
-            hr.inspected,
-            "403 na inspeção: service account sem permissão na propriedade — adicione-o no Search Console (Usuários e permissões)",
-          );
-        } else {
-          hr.errors += 1;
-          await updateQueueRow(
-            url,
-            "failed",
-            undefined,
-            err instanceof GscError ? `${err.status} ${err.reason}`.slice(0, 120) : "network",
-          );
-        }
       }
+    };
+    await Promise.all(Array.from({ length: INSPECT_CONCURRENCY }, () => worker()));
+
+    // sobras (halt/deadline): devolve tudo que não foi processado à fila e
+    // REEMBOLSA a quota concedida mas não usada (nexus_refund_index_quota)
+    const processedMax = halted || Date.now() >= deadline ? cursor : budget.length;
+    const leftovers = budget.slice(processedMax);
+    for (const url of leftovers) {
+      hr.pending += 1;
+      await updateQueueRow(url, "pending_google_crawl");
+    }
+    if (leftovers.length > 0) {
+      await sbRpc<number>("nexus_refund_index_quota", {
+        p_host: host,
+        p_refund: leftovers.length,
+      });
+    }
+    if (Date.now() >= deadline && hr.inspected < budget.length) {
+      await logTelemetry(
+        "google_indexation",
+        "ok",
+        host,
+        null,
+        budget.length,
+        hr.inspected,
+        `orçamento de tempo do run atingido — ${budget.length - hr.inspected} URLs devolvidas a pending_google_crawl (próxima janela do cron segue)`,
+      );
     }
 
     await logTelemetry(
