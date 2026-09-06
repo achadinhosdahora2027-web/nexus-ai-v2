@@ -49,6 +49,9 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
           NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          COMMERCE_TELEGRAM_HOSTS: api.telegram.org
           NEXUS_MAX_URLS_PER_HOST: "200"
           NEXUS_CLAIM_LIMIT: "200"
           NEXUS_TIME_BUDGET_MS: "660000"   # 11 min — excedente volta à fila
@@ -80,4 +83,7 @@ jobs:
           NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
           NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
           AYRSHARE_BATCH: "10"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          COMMERCE_TELEGRAM_HOSTS: api.telegram.org
         run: npx tsx src/server/scheduler/ayrshare-outbox-worker.ts
