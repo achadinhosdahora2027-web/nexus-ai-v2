@@ -55,3 +55,5 @@ Cada etapa entrega um relatório `ETAPA-X-RELATORIO.md`: o que foi publicado (co
 ## 9. Incidentes viram regra (apêndice vivo)
 - 2026-09-06 (8.1): 3 edits paralelos no mesmo arquivo perderam 2 edits (last-write-wins silencioso).
   REGRA: edits no mesmo arquivo SEMPRE sequenciais (um bloco por vez) + re-ler e re-testar após editar.
+- 2026-09-06 (8.3): `cp orig dest1 dest2` NÃO copia para 2 destinos (sintaxe inválida, falha silenciosa parcial).
+  REGRA: um destino por comando `cp`/`mv` + verificar com md5/ls após sync entre repos.
