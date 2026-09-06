@@ -595,6 +595,30 @@ $fn$;
 revoke execute on function public.nexus_bump_index_quota(text,integer)
   from public, anon, authenticated;
 
+-- Reembolso de quota concedida e não usada (halt/deadline do engine TS)
+create or replace function public.nexus_refund_index_quota(p_host text, p_refund integer default 0)
+returns integer language plpgsql security invoker set search_path = public as $fn$
+declare v_used integer;
+begin
+  begin
+    if coalesce(p_refund,0) <= 0 then return 0; end if;
+    perform pg_advisory_xact_lock(hashtext('nexus_quota|' || coalesce(p_host,'?')));
+    select used into v_used from public.nexus_google_index_quota
+     where day=current_date and host=p_host for update;
+    if v_used is null then return 0; end if;
+    update public.nexus_google_index_quota
+       set used = greatest(v_used - p_refund, 0)
+     where day=current_date and host=p_host;
+    return least(p_refund, v_used);
+  exception when others then
+    raise warning 'quota refund fail-closed: %', sqlerrm;
+    return 0;
+  end;
+end
+$fn$;
+revoke execute on function public.nexus_refund_index_quota(text,integer)
+  from public, anon, authenticated;
+
 -- ============================================================================
 -- ENDURECIMENTO: RLS nas tabelas novas + grants mínimos
 -- ============================================================================
