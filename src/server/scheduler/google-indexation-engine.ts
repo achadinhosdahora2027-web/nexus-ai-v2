@@ -209,6 +209,11 @@ export async function getAccessToken(
  * Utilidades de URL (canonical apex sem barra final — padrão Etapa 5)
  * ------------------------------------------------------------------------- */
 
+/** Dominio registravel (sem www) — chave das propriedades sc-domain no GSC. */
+function registrableDomain(host: string): string {
+  return host.startsWith("www.") ? host.slice(4) : host;
+}
+
 function isAllowedHost(host: string): host is AllowedHost {
   return (ALLOWED_HOSTS as readonly string[]).includes(host);
 }
@@ -313,7 +318,7 @@ export async function submitSitemap(
   } catch {
     /* fail-closed: mantém URL canônica */
   }
-  const siteUrl = encodeURIComponent(`sc-domain:${host}`);
+  const siteUrl = encodeURIComponent(`sc-domain:${registrableDomain(host)}`);
   const feed = encodeURIComponent(feedUrl);
   await gscRequest<void>(
     `${WEBMASTERS_BASE}/sites/${siteUrl}/sitemaps/${feed}`,
@@ -335,7 +340,7 @@ export async function inspectUrl(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         inspectionUrl: url,
-        siteUrl: `sc-domain:${host}`,
+        siteUrl: `sc-domain:${registrableDomain(host)}`,
         languageCode: "pt-BR",
       }),
     },
