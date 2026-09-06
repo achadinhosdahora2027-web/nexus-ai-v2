@@ -40,10 +40,17 @@ def fmt_pop(n):
         return str(n)
 
 
+def norm(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", s or "")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
 def build(rec, nome):
     inicio = rec.get("inicio")
     pop = rec.get("populacao") or {}
-    caps = rec.get("capital_de") or []
+    caps = [c for c in (rec.get("capital_de") or []) if norm(c) and norm(c) != norm(nome)]
     if not any([inicio, pop, caps]):
         return None
     linhas = []
