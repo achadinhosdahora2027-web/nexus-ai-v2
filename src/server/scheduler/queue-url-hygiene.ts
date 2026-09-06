@@ -144,6 +144,7 @@ async function main(): Promise<void> {
   const worker = async (): Promise<void> => {
     while (cursor < urls.length) {
       const url = urls[cursor++];
+      if (url === undefined) return;
       results.push(await auditUrl(url));
       done++;
       if (done % 250 === 0) {
