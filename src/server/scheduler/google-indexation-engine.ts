@@ -347,10 +347,13 @@ export async function inspectUrl(
     token,
   );
   const index = res.inspectionResult?.indexStatusResult;
+  // Shape real da API: { verdict: PASS|NEUTRAL|PARTIAL|FAIL, coverageState, lastCrawlTime }
+  const verdict = index?.verdict ?? "UNKNOWN";
+  const coverage = index?.coverageState ?? "";
   return {
-    indexed: index?.status === "URL_IS_INDEXED",
-    status: index?.status ?? "UNKNOWN",
-    coverageState: index?.coverageState,
+    indexed: verdict === "PASS" || /indexada/i.test(coverage),
+    status: [verdict, coverage].filter(Boolean).join(" · "),
+    coverageState: coverage,
     lastCrawlTime: index?.lastCrawlTime,
   };
 }
