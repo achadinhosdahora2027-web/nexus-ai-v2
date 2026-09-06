@@ -1,0 +1,37 @@
+{
+ "concepts_removidos": [
+  "mc/cidade-estado-polo-financeiro-de-luxo-mundial",
+  "sg/cidade-estado-hub-financeiro-e-portuario-global",
+  "sg/singapura-cidade-estado-com-multiplos-distritos-como-bedok"
+ ],
+ "concepts_nao_encontrados": [],
+ "sitemap_blocos_removidos": 3,
+ "ancoras_removidas": [
+  "mc/la-condamine.html (1)",
+  "mc/monaco-ville.html (1)",
+  "mc/monte-carlo.html (1)",
+  "sg/singapura.html (1)"
+ ],
+ "intros_fixadas": [
+  "au/burnie",
+  "az/sumqayit",
+  "ba/tuzla",
+  "cy/nicosia",
+  "do/santo-domingo",
+  "ee/tartu",
+  "ge/tbilisi",
+  "ie/dublin",
+  "jo/zarqa",
+  "lk/sri-jayawardenepura-kotte",
+  "ly/tripoli",
+  "mm/yangon",
+  "no/oslo",
+  "pa/colon",
+  "sm/serravalle",
+  "tt/port-of-spain",
+  "uy/salto",
+  "ye/aden"
+ ],
+ "intros_pendentes": [],
+ "fachada_jsonl_removidos": 2
+}

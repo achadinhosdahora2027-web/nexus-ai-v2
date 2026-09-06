@@ -38,6 +38,11 @@ def label(ent):
     l = ent.get("labels", {})
     return l.get("pt", {}).get("value") or l.get("en", {}).get("value") or None
 
+# Fallback local para itens SEM label pt/en na fonte — valor = rótulo publicado no próprio
+# Wikidata em outro idioma (verificado via EntityData). Q11649941 = 銀圓券 (yuan de prata,
+# moeda histórica da República da China; só tem label zh/ja — fim +1992-08-05).
+LOCAL_LABELS = {"Q11649941": "銀圓券"}
+
 def main():
     d = json.load(open(ROOT / "out" / "etapa8_paises.json", encoding="utf-8"))
     afetados = set()
@@ -46,7 +51,7 @@ def main():
         for k in ("moedas", "idiomas", "capital", "fusos"):
             for it in v.get(k, []):
                 nm = it.get("nome") or ""
-                if nm == it.get("qid") or nm.startswith("Q") or not nm:
+                if nm == it.get("qid") or not nm:
                     ids.add(it["qid"]); afetados.add(cc)
         for c in v.get("continente", []):
             if isinstance(c, str) and c.startswith("Q"):
@@ -58,8 +63,8 @@ def main():
         for k in ("moedas", "idiomas", "capital", "fusos"):
             for it in v.get(k, []):
                 nm = it.get("nome") or ""
-                if nm == it.get("qid") or nm.startswith("Q") or not nm:
-                    L = label(labs.get(it["qid"], {}))
+                if nm == it.get("qid") or not nm:
+                    L = label(labs.get(it["qid"], {})) or LOCAL_LABELS.get(it["qid"])
                     if L:
                         it["nome"] = L; nfix += 1
         nc = []
@@ -79,7 +84,7 @@ def main():
         for k in ("moedas", "idiomas", "capital", "fusos"):
             for it in v.get(k, []):
                 nm = it.get("nome") or ""
-                if nm == it.get("qid") or nm.startswith("Q") or not nm:
+                if nm == it.get("qid") or not nm:
                     rest.append((cc, k, it["qid"]))
     print("restantes inválidos:", len(rest), rest[:8], flush=True)
     with open(ROOT / "out" / "etapa813_paises_afetados.json", "w") as f:

@@ -46,19 +46,16 @@ def city_qids():
     out = []
     for p in sorted(PUB.glob("*/*.html")):
         h = p.read_text(encoding="utf-8", errors="ignore")
-        m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h, re.S)
-        while m:
+        for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
             try:
                 d = json.loads(m.group(1))
             except Exception:
-                m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h[m.end():], re.S)
                 continue
             if isinstance(d, dict) and d.get("@type") == "City":
                 qids = [s.split("/wiki/")[-1] for s in (d.get("sameAs") or []) if "wikidata.org" in s]
                 if qids:
                     out.append((p.relative_to(PUB).as_posix()[:-5], qids[0]))
                 break
-            m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h[m.end():], re.S)
     return out
 
 def main():
@@ -84,7 +81,7 @@ def main():
     for i in range(0, len(uniq), CHUNK):
         chunk = uniq[i:i + CHUNK]
         vals = " ".join("wd:" + q for q, _ in chunk)
-        query = f"""SELECT ?item ?itemLabel ?inst ?instLabel WHERE {{
+        query = f"""SELECT ?city_eval ?item ?itemLabel ?inst ?instLabel WHERE {{
           VALUES ?city_eval {{ {vals} }}
           ?item wdt:P131 ?city_eval ; wdt:P31 ?inst .
           VALUES ?inst {{ wd:Q16917 wd:Q3918 wd:Q33506 wd:Q7075 wd:Q41754 wd:Q483110 }}

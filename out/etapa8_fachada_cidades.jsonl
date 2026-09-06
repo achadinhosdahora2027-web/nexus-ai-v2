@@ -1654,7 +1654,6 @@
 {"key": "ma/sale", "qid": "Q466046", "fusos": [], "ddd": [], "cep": ["11000"], "apelidos": []}
 {"key": "ma/tanger", "qid": "Q126148", "fusos": [], "ddd": ["5399"], "cep": ["90000", "90010", "90020", "90030", "90040", "90050", "90060", "90070", "90080", "90090", "90100"], "apelidos": []}
 {"key": "ma/tetouan", "qid": "Q185157", "fusos": [], "ddd": [], "cep": ["93000"], "apelidos": []}
-{"key": "mc/cidade-estado-polo-financeiro-de-luxo-mundial", "qid": "Q133442", "fusos": [], "ddd": [], "cep": [], "apelidos": []}
 {"key": "mc/la-condamine", "qid": "Q55095", "fusos": [], "ddd": ["+377"], "cep": ["98000"], "apelidos": []}
 {"key": "mc/monte-carlo", "qid": "Q45240", "fusos": [], "ddd": [], "cep": ["98000"], "apelidos": []}
 {"key": "md/chisinau", "qid": "Q21197", "fusos": [], "ddd": ["22", "32"], "cep": ["MD-20xx"], "apelidos": []}
@@ -2180,7 +2179,6 @@
 {"key": "se/uppsala", "qid": "Q25286", "fusos": [], "ddd": ["018"], "cep": ["751 70–757 59"], "apelidos": []}
 {"key": "se/vasteras", "qid": "Q25412", "fusos": [], "ddd": ["021"], "cep": ["72X XX"], "apelidos": []}
 {"key": "se/visby", "qid": "Q54757", "fusos": [], "ddd": ["0498"], "cep": ["621 00–621 99"], "apelidos": [{"text": "Rosornas stad", "lang": "sv"}, {"text": "The City of Roses", "lang": "en"}]}
-{"key": "sg/cidade-estado-hub-financeiro-e-portuario-global", "qid": "Q133442", "fusos": [], "ddd": [], "cep": [], "apelidos": []}
 {"key": "sg/jurong", "qid": "Q2383204", "fusos": [], "ddd": [], "cep": [], "apelidos": []}
 {"key": "sg/singapura", "qid": "Q334", "fusos": [{"qid": "Q6985", "nome": "UTC+8"}, {"qid": "Q3244578", "nome": "Singapore Standard Time"}, {"qid": "Q63285957", "nome": "Asia/Singapore"}], "ddd": [], "cep": [], "apelidos": [{"text": "Lion City", "lang": "en"}, {"text": "狮城", "lang": "zh"}]}
 {"key": "sg/woodlands", "qid": "Q5254438", "fusos": [], "ddd": [], "cep": [], "apelidos": []}
