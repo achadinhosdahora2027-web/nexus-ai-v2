@@ -20,8 +20,10 @@ import etapa8_plugin_fachada2 as fachada2
 
 ROOT = Path(__file__).resolve().parent.parent
 PUB = ROOT / "public"
-TETOS = {"agora": 3000, "pais": 5000}  # teto de crescimento por plugin (fachada2 é maior)
-TETO_BYTES = TETOS.get(sys.argv[1] if len(sys.argv) > 1 else "", 5000)
+# teto de crescimento por plugin; "" = rodada única com vários blocos novos
+# (8.11+: faq ~3,5 KB + roteiro ~2,5 KB + tabela clima ~3,5 KB ≈ 9,5 KB → 12 KB com folga)
+TETOS = {"agora": 3000, "pais": 5000, "": 12000}
+TETO_BYTES = TETOS.get(sys.argv[1] if len(sys.argv) > 1 else "", 12000)
 
 TITULOS = {"pt": "🌦️ Tempo agora", "fr": "🌦️ Météo actuelle", "it": "🌦️ Meteo adesso"}
 
@@ -122,13 +124,37 @@ def main():
                 continue
             old = r.stdout
             for marc in ("geo-offers", "geo-multi", "city-attractions", "city-fachada",
-                         "city-agora", "city-clima", "city-nomes", "city-mobilidade", "painel-osm"):
+                         "city-agora", "city-nomes", "city-mobilidade", "painel-osm"):
+                # city-clima sai da herança: a etapa 8.11 corrigiu "sol" (segundos->horas)
+                # e injeta tabelas novas — validado à parte abaixo (nunca 8.11: sol <= 24 h).
                 a = re.search(rf"<!-- {marc} -->(.*?)<!-- /{marc} -->", old, re.S)
                 b = re.search(rf"<!-- {marc} -->(.*?)<!-- /{marc} -->", h, re.S)
                 if (a is None) != (b is None):
                     errors.append(f"{rel}: bloco {marc} sumiu/apareceu!")
                 elif a and b and a.group(1) != b.group(1):
                     errors.append(f"{rel}: bloco {marc} ALTERADO pela injeção!")
+            # ---- city-clima: validações específicas da etapa 8.11 ----
+            if "<!-- city-clima -->" in h:
+                if h.count("<!-- city-clima -->") != h.count("<!-- /city-clima -->"):
+                    errors.append(f"{rel}: marcadores city-clima desemparelhados")
+                mcl = re.search(r"<!-- city-clima -->(.*?)<!-- /city-clima -->", h, re.S)
+                if mcl:
+                    # linha do sol: valores em horas (fix do bug de segundos)
+                    msol = re.search(r'<th scope="row"[^>]*>(sol[^<]*)</th>(.*?)</tr>', mcl.group(1), re.S)
+                    if msol:
+                        for v in re.findall(r"<td[^>]*>([^<]+)</td>", msol.group(2)):
+                            try:
+                                if float(v.replace(".", "").replace(",", ".")) > 24:
+                                    errors.append(f"{rel}: sol > 24 h (bug de segundos não corrigido: {v})")
+                            except ValueError:
+                                errors.append(f"{rel}: valor sol não numérico: {v}")
+                    # colunas de meses: 12 th na linha de cabeçalho + linhas máx/mín/chuva/sol
+                    ncols = len(re.findall(r'<th scope="col">', mcl.group(1)))
+                    if ncols != 12:
+                        errors.append(f"{rel}: tabela clima com {ncols} colunas (esperado 12)")
+                    # variante legada (6 páginas bg/*) não tem linha "sol": mínimo 5 linhas (thead+4)
+                    if mcl.group(1).count("<tr>") < 5:
+                        errors.append(f"{rel}: tabela clima incompleta ({mcl.group(1).count('<tr>')} linhas)")
             for token in ("kqzyfj.com", 'rel="sponsored', "8041957"):
                 if old.count(token) != h.count(token):
                     errors.append(f"{rel}: contagem '{token}' mudou {old.count(token)}->{h.count(token)}")

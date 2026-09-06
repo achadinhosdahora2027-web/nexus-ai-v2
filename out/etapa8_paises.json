@@ -3523,7 +3523,7 @@
   "moedas": [
    {
     "qid": "Q4594",
-    "nome": null,
+    "nome": "franco do Jibuti",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -3545,7 +3545,7 @@
   "capital": [
    {
     "qid": "Q3604",
-    "nome": null,
+    "nome": "Djibouti",
     "rank": "normal",
     "end": null
    }
@@ -3559,7 +3559,7 @@
    },
    {
     "qid": "Q4689490",
-    "nome": null,
+    "nome": "Africa/Djibouti",
     "rank": "normal",
     "end": null
    }
@@ -3584,7 +3584,7 @@
   "moedas": [
    {
     "qid": "Q25417",
-    "nome": null,
+    "nome": "coroa dinamarquesa",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -3594,14 +3594,14 @@
   "idiomas": [
    {
     "qid": "Q9035",
-    "nome": null,
+    "nome": "dinamarquês",
     "rank": "normal"
    }
   ],
   "capital": [
    {
     "qid": "Q1748",
-    "nome": null,
+    "nome": "Copenhaga",
     "rank": "normal",
     "end": null
    }
@@ -3627,7 +3627,7 @@
    },
    {
     "qid": "Q5412103",
-    "nome": null,
+    "nome": "Europe/Copenhagen",
     "rank": "normal",
     "end": null
    }
@@ -3669,7 +3669,7 @@
   "capital": [
    {
     "qid": "Q36281",
-    "nome": null,
+    "nome": "Roseau",
     "rank": "normal",
     "end": null
    }
@@ -3689,7 +3689,7 @@
    },
    {
     "qid": "Q109529721",
-    "nome": null,
+    "nome": "America/Dominica",
     "rank": "normal",
     "end": null
    }
@@ -3716,7 +3716,7 @@
   "moedas": [
    {
     "qid": "Q242922",
-    "nome": null,
+    "nome": "peso dominicano",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -3733,7 +3733,7 @@
   "capital": [
    {
     "qid": "Q34820",
-    "nome": null,
+    "nome": "São Domingos",
     "rank": "normal",
     "end": null
    }
@@ -3747,7 +3747,7 @@
    },
    {
     "qid": "Q63286061",
-    "nome": null,
+    "nome": "America/Santo Domingo",
     "rank": "normal",
     "end": null
    }
@@ -3772,7 +3772,7 @@
   "moedas": [
    {
     "qid": "Q199674",
-    "nome": null,
+    "nome": "dinar argelino",
     "iso": null,
     "simbolo": null,
     "rank": "preferred",
@@ -3780,7 +3780,7 @@
    },
    {
     "qid": "Q2629090",
-    "nome": null,
+    "nome": "Algerian franc",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -3795,7 +3795,7 @@
    },
    {
     "qid": "Q61053330",
-    "nome": null,
+    "nome": "Standard Algerian Berber",
     "rank": "normal"
    }
   ],
@@ -3816,7 +3816,7 @@
    },
    {
     "qid": "Q4689473",
-    "nome": null,
+    "nome": "Africa/Algiers",
     "rank": "normal",
     "end": null
    }
@@ -3849,7 +3849,7 @@
    },
    {
     "qid": "Q911562",
-    "nome": null,
+    "nome": "sucre",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -3857,7 +3857,7 @@
    },
    {
     "qid": "Q2893932",
-    "nome": null,
+    "nome": "Ecuadorian peso",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -3872,19 +3872,19 @@
    },
    {
     "qid": "Q1740805",
-    "nome": null,
+    "nome": "Língua quichua",
     "rank": "normal"
    },
    {
     "qid": "Q617291",
-    "nome": null,
+    "nome": "Língua shuar",
     "rank": "normal"
    }
   ],
   "capital": [
    {
     "qid": "Q2900",
-    "nome": null,
+    "nome": "Quito",
     "rank": "normal",
     "end": null
    }
@@ -3904,13 +3904,13 @@
    },
    {
     "qid": "Q63286095",
-    "nome": null,
+    "nome": "Pacific/Galapagos",
     "rank": "normal",
     "end": null
    },
    {
     "qid": "Q63286093",
-    "nome": null,
+    "nome": "America/Guayaquil",
     "rank": "normal",
     "end": null
    }
@@ -8473,7 +8473,7 @@
   "capital": [
    {
     "qid": "Q235",
-    "nome": null,
+    "nome": "Mónaco",
     "rank": "normal",
     "end": null
    }
@@ -12255,7 +12255,7 @@
   "capital": [
    {
     "qid": "Q334",
-    "nome": null,
+    "nome": "Singapura",
     "rank": "normal",
     "end": null
    }
@@ -13863,7 +13863,7 @@
    },
    {
     "qid": "Q11649941",
-    "nome": null,
+    "nome": "Q11649941",
     "iso": null,
     "simbolo": null,
     "rank": "normal",
@@ -15421,6 +15421,121 @@
     "nome": "África",
     "rank": "normal",
     "end": null
+   }
+  ]
+ },
+ "nl": {
+  "nome": "Países Baixos",
+  "qid": "Q55",
+  "iso2": "NL",
+  "iso3": "NLD",
+  "ddi": [
+   "+31",
+   "+599"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "rank": "preferred",
+    "end": null
+   },
+   {
+    "qid": "Q788472",
+    "nome": "florim neerlandês",
+    "iso": "NLG",
+    "simbolo": "ƒ",
+    "rank": "normal",
+    "end": 2002
+   },
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "rank": "normal",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7411",
+    "nome": "neerlandês",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q27175",
+    "nome": "frísio ocidental",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33856",
+    "nome": "Papiamento",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q2201099",
+    "nome": "língua de sinais neerlandesa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q727",
+    "nome": "Amesterdão",
+    "rank": "normal",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1",
+    "rank": "preferred",
+    "end": null
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2",
+    "rank": "preferred",
+    "end": null
+   },
+   {
+    "qid": "Q2085376",
+    "nome": "Horário Padrão do Atlântico",
+    "rank": "normal",
+    "end": null
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central",
+    "rank": "normal",
+    "end": null
+   },
+   {
+    "qid": "Q5412088",
+    "nome": "Europe/Amsterdam",
+    "rank": "normal",
+    "end": null
+   }
+  ],
+  "continente": [
+   {
+    "qid": "Q46",
+    "nome": "Europa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q27611",
+    "nome": "América Central",
+    "rank": "normal"
    }
   ]
  }
