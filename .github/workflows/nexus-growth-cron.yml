@@ -32,7 +32,7 @@ jobs:
   google-indexation:
     name: Google Search Console (sitemap + URL Inspection)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
     if: >-
       (github.event_name == 'schedule' && github.event.schedule == '0 */4 * * *')
       || (github.event_name == 'workflow_dispatch'
@@ -51,6 +51,8 @@ jobs:
           NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
           NEXUS_MAX_URLS_PER_HOST: "200"
           NEXUS_CLAIM_LIMIT: "200"
+          NEXUS_TIME_BUDGET_MS: "660000"   # 11 min — excedente volta à fila
+          NEXUS_INSPECT_CONCURRENCY: "4"   # ~120/min (limites: 600/min global)
           NEXUS_HUB_URLS: >-
             https://solvegrid.com.br,https://www.solvegrid.com.br,
             https://aquitemachadinhos.com.br,https://www.aquitemachadinhos.com.br,
@@ -60,7 +62,7 @@ jobs:
   ayrshare-outbox:
     name: Ayrshare Outbox (Instagram / Pinterest / TikTok)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
     if: >-
       (github.event_name == 'schedule' && github.event.schedule == '30 */6 * * *')
       || (github.event_name == 'workflow_dispatch'
