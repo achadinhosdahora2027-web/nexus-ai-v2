@@ -11,6 +11,7 @@ import {
   runGoogleIndexationPipeline,
   type IndexationReport,
 } from "./google-indexation-engine.js";
+import { sendTelegramAlert } from "./telegram-notify.js";
 
 function render(report: IndexationReport): string {
   const lines: string[] = [
@@ -33,8 +34,27 @@ function render(report: IndexationReport): string {
 }
 
 runGoogleIndexationPipeline()
-  .then((report) => {
+  .then(async (report) => {
     console.log(render(report));
+    // Esteira 5: resumo consolidado no Telegram (fail-closed, nunca quebra o run)
+    const totals = report.hosts.reduce(
+      (a, h) => ({
+        inspected: a.inspected + h.inspected,
+        indexed: a.indexed + h.indexed,
+        pending: a.pending + h.pending,
+      }),
+      { inspected: 0, indexed: 0, pending: 0 },
+    );
+    await sendTelegramAlert(
+      [
+        "🛰️ PROJETO NEXUS - RELATÓRIO DE TELEMETRIA",
+        `Job Executado: google_indexation (run consolidado)`,
+        `Status da Operação: ${report.ok ? "ok" : "skip"}${report.reason ? ` (${report.reason})` : ""}`,
+        `Total de URLs na fila: ${report.totalUrls}`,
+        `URLs processadas no dia: ${totals.inspected}`,
+        `Mensagem do Servidor: inspecionadas=${totals.inspected} indexadas=${totals.indexed} pendentes=${totals.pending} · ${report.hosts.map((h) => `${h.host}:sitemap=${h.sitemap}`).join(" | ")}`.slice(0, 100),
+      ].join("\n"),
+    );
     process.exit(report.reason === "missing_credentials" ? 2 : 0);
   })
   .catch((err: unknown) => {
