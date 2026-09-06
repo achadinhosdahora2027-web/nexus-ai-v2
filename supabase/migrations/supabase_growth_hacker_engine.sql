@@ -620,6 +620,30 @@ revoke execute on function public.nexus_refund_index_quota(text,integer)
   from public, anon, authenticated;
 
 -- ============================================================================
+-- ETAPA 6 — HIGIENE DE INDEXAÇÃO (baseada no GSC Page Indexing de 06/09/2026)
+--   Corpus vivo vem dos SITEMAPS (9.253 URLs HTTP 200); o inventario
+--   ads_seo_submissions estava 100% obsoleto (3.322 URLs em 404) e foi
+--   estacionado como 'excluded_stale_404'. Ferramenta:
+--   src/server/scheduler/queue-url-hygiene.ts (job semanal no cron).
+-- ============================================================================
+alter table public.nexus_google_index_queue
+  add column if not exists http_status integer,
+  add column if not exists final_url text,
+  add column if not exists canonical_tag text;
+
+create table if not exists public.nexus_url_audit (
+  url          text primary key,
+  final_url    text,
+  http_status  integer,
+  canonical    text,
+  redirect     boolean not null default false,
+  checked_at   timestamptz not null default now()
+);
+alter table public.nexus_url_audit enable row level security;
+revoke all on table public.nexus_url_audit from anon, authenticated;
+grant select,insert,update,delete on table public.nexus_url_audit to service_role;
+
+-- ============================================================================
 -- ESTEIRA 5 — ALERTA DE TELEMETRIA NATIVO VIA TELEGRAM (pg_net, custo zero)
 --   notify_telegram_cron_telemetry() + trigger_telegram_telemetry_alert
 --   Escopo: jobs google_indexation / ayrshare_outbox com status
