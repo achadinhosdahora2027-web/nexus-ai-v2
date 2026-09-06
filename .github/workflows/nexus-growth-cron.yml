@@ -1,0 +1,81 @@
+# ============================================================================
+# NEXUS GROWTH ENGINE — Cron de indexação acelerada + social outbox
+# - google-indexation: a cada 4h (sitemap incremental + URL Inspection com
+#   quota 200/dia/domínio; 429/403 fail-closed → fila pending_google_crawl)
+# - ayrshare-outbox: a cada 6h (high_priority_post primeiro; sem key devolve
+#   o lote à fila sem falhar)
+# Self-contained: não depende do package.json do repo.
+# Credenciais EXCLUSIVAMENTE de GitHub Secrets.
+# ============================================================================
+name: nexus-growth-cron
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"   # engine Google (janela 4h)
+    - cron: "30 */6 * * *"  # robô Ayrshare (janela 6h)
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Qual engine rodar"
+        type: choice
+        default: google
+        options: [google, social, both]
+
+concurrency:
+  group: nexus-growth-cron
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  google-indexation:
+    name: Google Search Console (sitemap + URL Inspection)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '0 */4 * * *')
+      || (github.event_name == 'workflow_dispatch'
+      && (inputs.job == 'google' || inputs.job == 'both'))
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Runtime do engine (isolado do package.json)
+        run: npm install --no-save google-auth-library@^9.14.0 tsx@^4.15.0
+      - name: Executar engine de indexação Google
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
+          NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+          NEXUS_MAX_URLS_PER_HOST: "200"
+          NEXUS_CLAIM_LIMIT: "200"
+          NEXUS_HUB_URLS: >-
+            https://solvegrid.com.br,https://www.solvegrid.com.br,
+            https://aquitemachadinhos.com.br,https://www.aquitemachadinhos.com.br,
+            https://nexusplataforma.ia.br,https://www.nexusplataforma.ia.br
+        run: npx tsx src/server/scheduler/run-google-indexation.ts
+
+  ayrshare-outbox:
+    name: Ayrshare Outbox (Instagram / Pinterest / TikTok)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '30 */6 * * *')
+      || (github.event_name == 'workflow_dispatch'
+      && (inputs.job == 'social' || inputs.job == 'both'))
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Runtime do engine (isolado do package.json)
+        run: npm install --no-save tsx@^4.15.0
+      - name: Consumir fila social (payload oficial primary)
+        env:
+          AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
+          NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
+          NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+          AYRSHARE_BATCH: "10"
+        run: npx tsx src/server/scheduler/ayrshare-outbox-worker.ts
