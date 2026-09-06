@@ -224,8 +224,27 @@ function registrableDomain(host: string): string {
   return host.startsWith("www.") ? host.slice(4) : host;
 }
 
+/** Domínios-base do ecossistema (propriedades sc-domain no GSC). */
+export const BASE_DOMAINS = [
+  "solvegrid.com.br",
+  "aquitemachadinhos.com.br",
+  "nexusplataforma.ia.br",
+] as const;
+
+function baseDomainOf(host: string): string | null {
+  for (const base of BASE_DOMAINS) {
+    if (host === base || host.endsWith(`.${base}`)) return base;
+  }
+  return null;
+}
+
+/** Aceita o host exato validado QUALQUER subdomínio dos domínios-base
+ *  (satélites de cidade: teresina.aquitemachadinhos.com.br etc.). */
 function isAllowedHost(host: string): host is AllowedHost {
-  return (ALLOWED_HOSTS as readonly string[]).includes(host);
+  return (
+    (ALLOWED_HOSTS as readonly string[]).includes(host) ||
+    baseDomainOf(host) !== null
+  );
 }
 
 /** Sanitiza 1 URL: só https, só hosts validados, sem query/fragment, apex sem barra. */
@@ -328,7 +347,11 @@ export async function submitSitemap(
   } catch {
     /* fail-closed: mantém URL canônica */
   }
-  const siteUrl = encodeURIComponent(`sc-domain:${registrableDomain(host)}`);
+  // propriedade GSC é sempre o domínio-base (sc-domain cobre subdomínios);
+  // o feed pode ser o sitemap do próprio subdomínio (satélites de cidade)
+  const siteUrl = encodeURIComponent(
+    `sc-domain:${baseDomainOf(host) ?? registrableDomain(host)}`,
+  );
   const feed = encodeURIComponent(feedUrl);
   await gscRequest<void>(
     `${WEBMASTERS_BASE}/sites/${siteUrl}/sitemaps/${feed}`,
@@ -350,7 +373,7 @@ export async function inspectUrl(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         inspectionUrl: url,
-        siteUrl: `sc-domain:${registrableDomain(host)}`,
+        siteUrl: `sc-domain:${baseDomainOf(host) ?? registrableDomain(host)}`,
         languageCode: "pt-BR",
       }),
     },
@@ -652,9 +675,10 @@ export async function forceGoogleIndexation(
       }
     }
 
-    // (2) Rate limit corporativo persistido (200/dia/domínio)
+    // (2) Rate limit por PROPRIEDADE GSC (200/dia no domínio registrável —
+    //     subdomínios de cidade compartilham o mesmo orçamento)
     const wanted = Math.min(hostUrls.length, maxPerHost);
-    const granted = await reserveQuota(host, wanted);
+    const granted = await reserveQuota(baseDomainOf(host) ?? host, wanted);
     hr.quotaGranted = granted;
 
     if (granted === 0) {
