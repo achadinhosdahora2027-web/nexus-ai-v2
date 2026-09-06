@@ -31,6 +31,7 @@ Integridade: **14.036 anúncios** e **3.334 submissions** intactos (DDL apenas a
 | Não encontrado (404) | 980 | `ads_seo_submissions` 100% obsoleto: 3.322/3.332 URLs em 404 | todas estacionadas em `excluded_stale_404` (com evidência em `nexus_url_audit`) |
 | Cópia sem canônica | 3.269 | páginas de campanha espelhadas (agora mortas) | corpus novo auditado: **canonical presente em 100%** das 9.259 vivas (4 cross-domain deliberadas) |
 | Rastreada, não indexada | 210 | qualidade/concorrência — exige conteúdo + tempo | fila viva será re-submetida pelo cron 4h até `PASS` |
+| Página alternativa com canônica adequada | 989 | validação "Falha 05/09" = páginas legacy dos satélites saíram do ar: **984/989 hoje em 404**; as 5 vivas têm canonical→www (saudável) | evidência integral em `nexus_url_audit`; 2 alvos canonical vivos semeados na fila; recomendação site: servir **410 Gone** nos legacy para expurgo acelerado |
 
 **Resultado:** fila Google ressemeada **dos sitemaps vivos** → 9.256 URLs pendentes, **100% HTTP 200 verificadas por GET real** (auditoria completa em `nexus_url_audit`). Job `url-hygiene` semanal (segundas 06:00 UTC) no workflow.
 
