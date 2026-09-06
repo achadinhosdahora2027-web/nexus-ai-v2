@@ -13,13 +13,14 @@ on:
   schedule:
     - cron: "0 */4 * * *"   # engine Google (janela 4h)
     - cron: "30 */6 * * *"  # robô Ayrshare (janela 6h)
+    - cron: "0 6 * * 1"     # higiene de URLs da fila (segundas 06:00 UTC)
   workflow_dispatch:
     inputs:
       job:
         description: "Qual engine rodar"
         type: choice
         default: google
-        options: [google, social, both]
+        options: [google, social, both, hygiene]
 
 concurrency:
   group: nexus-growth-cron
@@ -87,3 +88,24 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           COMMERCE_TELEGRAM_HOSTS: api.telegram.org
         run: npx tsx src/server/scheduler/ayrshare-outbox-worker.ts
+
+  url-hygiene:
+    name: URL Hygiene (auditoria viva da fila de indexação)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '0 6 * * 1')
+      || (github.event_name == 'workflow_dispatch' && inputs.job == 'hygiene')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Runtime do engine
+        run: npm install --no-save tsx@^4.15.0
+      - name: Auditar URLs vivas da fila (GET real, canonical, redirects)
+        env:
+          NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
+          NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+          HYGIENE_CONCURRENCY: "16"
+        run: npx tsx src/server/scheduler/queue-url-hygiene.ts
