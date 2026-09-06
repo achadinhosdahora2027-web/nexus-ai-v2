@@ -104,6 +104,9 @@ def pais_qids():
                 if x:
                     m[f.name] = {"nome": x.group(1), "qid": x.group(2)}
                     break
+    # cc SO = Somália (ISO 3166); a 1ª página alfabética (hargeisa) traz o QID da
+    # Somalilândia Q34754 (território não reconhecido) — override explícito e documentado.
+    m["so"] = {"nome": "Somália", "qid": "Q1045"}
     return m
 
 
@@ -185,7 +188,7 @@ def fase_pais():
                 se = refents.get(s["qid"], {})
                 sim_chars += str_vals(se.get("claims", {}), "P487")
             moedas_l.append({"qid": v["qid"], "nome": L(v["qid"]), "iso": iso[0] if iso else None,
-                             "simbolo": sim_chars[0] if sim_chars else None, "end": v["end"]})
+                             "simbolo": sim_chars[0] if sim_chars else None, "rank": v["rank"], "end": v["end"]})
         out[cc] = {
             "nome": info["nome"], "qid": info["qid"],
             "iso2": (str_vals(cl, "P297") or [None])[0],
@@ -193,9 +196,9 @@ def fase_pais():
             "ddi": str_vals(cl, "P474"),
             "moedas": moedas_l,
             "idiomas": [{"qid": v["qid"], "nome": L(v["qid"]), "rank": v["rank"]} for v in item_vals(cl, "P37")],
-            "capital": [{"qid": v["qid"], "nome": L(v["qid"]), "end": v["end"]} for v in item_vals(cl, "P36")],
-            "fusos": [{"qid": v["qid"], "nome": L(v["qid"])} for v in item_vals(cl, "P421")],
-            "continente": [L(v["qid"]) for v in item_vals(cl, "P30")],
+            "capital": [{"qid": v["qid"], "nome": L(v["qid"]), "rank": v["rank"], "end": v["end"]} for v in item_vals(cl, "P36")],
+            "fusos": [{"qid": v["qid"], "nome": L(v["qid"]), "rank": v["rank"], "end": v["end"]} for v in item_vals(cl, "P421")],
+            "continente": [{"qid": v["qid"], "nome": L(v["qid"]), "rank": v["rank"], "end": v["end"]} for v in item_vals(cl, "P30")],
         }
     (OUT / "etapa8_paises.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     # cobertura

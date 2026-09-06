@@ -15,9 +15,13 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import etapa8_plugin_fachada2 as fachada2
+
 ROOT = Path(__file__).resolve().parent.parent
 PUB = ROOT / "public"
-TETO_BYTES = 3000
+TETOS = {"agora": 3000, "pais": 5000}  # teto de crescimento por plugin (fachada2 é maior)
+TETO_BYTES = TETOS.get(sys.argv[1] if len(sys.argv) > 1 else "", 5000)
 
 TITULOS = {"pt": "🌦️ Tempo agora", "fr": "🌦️ Météo actuelle", "it": "🌦️ Meteo adesso"}
 
@@ -73,6 +77,38 @@ def main():
                     errors.append(f"{rel}: vazamento de português em página {lang}")
                 if lang == "it" and "Consultando o tempo agora" in bloco:
                     errors.append(f"{rel}: vazamento de português em página it")
+        # --- fachada2: regeneração determinística ---
+        ab2 = h.count("<!-- city-fachada2 -->")
+        fe2 = h.count("<!-- /city-fachada2 -->")
+        if ab2 != fe2:
+            errors.append(f"{rel}: marcadores city-fachada2 desemparelhados ({ab2}/{fe2})")
+        elif ab2 > 1:
+            errors.append(f"{rel}: city-fachada2 duplicado x{ab2}")
+        else:
+            mlang = re.search(r'<div class="p7-osm"[^>]*data-lang="([^"]*)"', h)
+            lang = ((mlang.group(1) if mlang else "pt") or "pt").split("-")[0]
+            key = rel.replace("public/", "")[:-5] if rel.startswith("public/") else rel[:-5]
+            try:
+                esperado = fachada2.build(h, key, lang)
+            except Exception as e:
+                errors.append(f"{rel}: build fachada2 lançou: {e}")
+                esperado = "ERRO"
+            if esperado != "ERRO":
+                if ab2 == 1:
+                    m = re.search(r"<!-- city-fachada2 -->(.*?)<!-- /city-fachada2 -->", h, re.S)
+                    me = re.search(r"<!-- city-fachada2 -->(.*?)<!-- /city-fachada2 -->", esperado, re.S)
+                    if not m or not m.group(1).strip():
+                        errors.append(f"{rel}: city-fachada2 vazio")
+                    elif not me or m.group(1) != me.group(1):
+                        errors.append(f"{rel}: city-fachada2 diverge da regeneração")
+                    if lang in ("fr", "it"):
+                        for pt_leak in ("Ficha do país e da cidade", "Códigos do país",
+                                        "consulte o site oficial", "Também chamada de"):
+                            if pt_leak in (m.group(1) if m else ""):
+                                errors.append(f"{rel}: vazamento pt em {lang}: {pt_leak}")
+                else:
+                    if esperado is not None and "<!-- city-fachada -->" in h and "noindex" not in head:
+                        errors.append(f"{rel}: deveria ter city-fachada2 (build gera bloco)")
         head = h.split("</head>")[0]
         tem_js = "/js/clima.js" in head
         if tem_js and not (tem_agora or tem_clima):
@@ -85,7 +121,8 @@ def main():
                 warns.append(f"{rel}: sem HEAD (arquivo novo?)")
                 continue
             old = r.stdout
-            for marc in ("geo-offers", "geo-multi", "city-attractions"):
+            for marc in ("geo-offers", "geo-multi", "city-attractions", "city-fachada",
+                         "city-agora", "city-clima", "city-nomes", "city-mobilidade", "painel-osm"):
                 a = re.search(rf"<!-- {marc} -->(.*?)<!-- /{marc} -->", old, re.S)
                 b = re.search(rf"<!-- {marc} -->(.*?)<!-- /{marc} -->", h, re.S)
                 if (a is None) != (b is None):
@@ -104,8 +141,16 @@ def main():
         print(f"AVISOS ({len(warns)}):")
         [print(" -", w) for w in warns[:20]]
     if errors:
+        from collections import Counter
+
+        def tipo(e):
+            m = e.split(": ", 1)
+            t = m[1] if len(m) > 1 else e
+            return t.split(" (")[0][:70]
         print(f"ERROS ({len(errors)}):")
-        [print(" -", e) for e in errors[:40]]
+        for t, n in Counter(tipo(e) for e in errors).most_common():
+            print(f"  [{n}x] {t}")
+        [print(" -", e) for e in errors[:10]]
         return 1
     print("ERROS: NENHUM ✅")
     return 0

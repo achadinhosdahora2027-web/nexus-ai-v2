@@ -17,6 +17,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import etapa8_plugin_fachada2 as fachada2
+
 ROOT = Path(__file__).resolve().parent.parent
 PUB = ROOT / "public"
 OUT = ROOT / "out"
@@ -106,7 +109,34 @@ def plugin_agora(html, page_rel):
     return html, "injetado", f"lat={lat} lon={lon} lang={lang}"
 
 
-PLUGINS = {"agora": plugin_agora}
+def plugin_pais(html, page_rel):
+    """Bloco city-fachada2 após <!-- /city-fachada --> (só se houver linhas)."""
+    if "<!-- city-fachada -->" not in html:
+        return html, "skip", "sem city-fachada"
+    tem_antigo = "<!-- city-fachada2 -->" in html
+    head = html.split("</head>")[0]
+    if is_noindex(head):
+        return html, "skip", "noindex"
+    key = page_rel.replace("public/", "")[:-5]
+    m = re.search(r'<div class="p7-osm"[^>]*data-lang="([^"]*)"', html)
+    lang = (m.group(1) if m else "pt").split("-")[0]
+    bloco = fachada2.build(html, key, lang)
+    if not bloco:
+        return html, "skip", "sem linhas (sem dados)"
+    anchor = "<!-- /city-fachada -->"
+    pre, post = html.split(anchor, 1)
+    if tem_antigo:
+        mantigo = re.search(r"\n?<!-- city-fachada2 -->.*?<!-- /city-fachada2 -->\n?", post, re.S)
+        if mantigo and mantigo.group(0) == bloco:
+            return html, "skip", "fachada2 inalterado"
+        post = re.sub(r"\n?<!-- city-fachada2 -->.*?<!-- /city-fachada2 -->\n?", "", post, count=1, flags=re.S)
+        html = pre + anchor + bloco + post.lstrip("\n")
+        return html, "atualizado", f"lang={lang}"
+    html = pre + anchor + bloco + post.lstrip("\n")
+    return html, "injetado", f"lang={lang}"
+
+
+PLUGINS = {"agora": plugin_agora, "pais": plugin_pais}
 
 
 def main():
@@ -134,7 +164,7 @@ def main():
                 acao, detalhe, novo = "erro", f"exceção: {e}", html
             counts[acao] = counts.get(acao, 0) + 1
             log.write(json.dumps({"arq": rel, "acao": acao, "detalhe": detalhe}, ensure_ascii=False) + "\n")
-            if apply and acao == "injetado":
+            if apply and acao in ("injetado", "atualizado"):
                 f.write_text(novo, encoding="utf-8")
     finally:
         log.close()
