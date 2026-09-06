@@ -68,3 +68,13 @@ Cada etapa entrega um relatório `ETAPA-X-RELATORIO.md`: o que foi publicado (co
 - 2026-09-06 (8.10): tel: URI só aceita dígitos/`+#*`; números oficiais podem ter hífen no Wikidata (Guiné 442-020, Comores 772-03-73).
   REGRA: exibir formatado, link `tel:` com `re.sub("[^0-9+#*]","",n)`.
 - 2026-09-06 (8.10): biblioteca `etapa8_paises.json` (8.3) não contém `nl` (Holanda) — re-harvest Q55 na 8.11.
+- 2026-09-06 (8.11–8.16): os 3 repos NÃO são byte-idênticos em public/ (cada um tem seus blocos
+  de afiliado/PID: 101870640 sg / 101870639 nx / 101859672 aq). Copiar arquivos entre repos
+  SOBRESCREVE bolos de herança (incidente: 2.889+2.564 arquivos restaurados).
+  REGRA: propagação de public/ NUNCA por cp/mv; sempre `git checkout HEAD -- <arquivos>` +
+  re-aplicar injetores idempotentes (marcador-based, não tocam herança). Os blocos NOVOS
+  (emergencia/faq/roteiro/clima/fachada2) são gerados por script e, portanto, idênticos.
+- 2026-09-06: WDQS (query.wikidata.org) em outage com rate-limit 1 req/min global → harvests
+  SPARQL ficam prontos mas pausados; não bloquear a fila por fonte externa (documentar).
+- 2026-09-06: Open-Meteo 429 em lote → backoff 480s ok; checkpoint `out/etapa8_clima_mensal.jsonl`
+  commitado = progresso durável entre sessões.
