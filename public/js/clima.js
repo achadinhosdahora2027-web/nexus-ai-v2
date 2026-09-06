@@ -1,4 +1,4 @@
-/* Etapa 7 — clima ao vivo. Fonte: Open-Meteo (sem chave). Cache 15 min por cidade.
+/* Etapa 8.2 — clima ao vivo (+visibilidade, +qualidade do ar AQI, 14 dias). Fonte: Open-Meteo (sem chave). Cache 15 min por cidade.
    Sem JavaScript, o bloco simplesmente não aparece: nada de texto mentiroso. */
 (function () {
   'use strict';
@@ -24,25 +24,37 @@
          77: 'grandini di neve', 80: 'rovesci deboli', 81: 'rovesci', 82: 'rovesci violenti', 85: 'rovesci di neve',
          86: 'forti rovesci di neve', 95: 'temporale', 96: 'temporale con grandine', 99: 'temporale violento con grandine'}
   };
+  var AQI_CATS = {
+    pt: [[50, 'bom'], [100, 'razoável'], [150, 'insalubre p/ sensíveis'], [200, 'insalubre'], [300, 'muito insalubre'], [9999, 'perigoso']],
+    fr: [[50, 'bon'], [100, 'modéré'], [150, 'mauvais pour les sensibles'], [200, 'mauvais'], [300, 'très mauvais'], [9999, 'dangereux']],
+    it: [[50, 'buono'], [100, 'moderato'], [150, 'insalubre per i sensibili'], [200, 'insalubre'], [300, 'molto insalubre'], [9999, 'pericoloso']],
+    en: [[50, 'good'], [100, 'moderate'], [150, 'unhealthy for sensitive'], [200, 'unhealthy'], [300, 'very unhealthy'], [9999, 'hazardous']]
+  };
+  function aqiCat(v, lang) {
+    if (v === null || v === undefined || isNaN(v)) return null;
+    var cats = AQI_CATS[lang] || AQI_CATS.en;
+    for (var i = 0; i < cats.length; i++) if (v <= cats[i][0]) return cats[i][1];
+    return null;
+  }
   var LB = {
     pt: { agora: 'Tempo agora em', sens: 'sensação', umidade: 'Umidade', chuva: 'Chuva agora',
           vento: 'Vento', press: 'Pressão (solo)', nuvens: 'Nuvens', nascer: 'Nascer do sol',
-          por: 'Pôr do sol', uv: 'UV máx. hoje', horas: 'Próximas horas', dias: 'Próximos 7 dias',
+          por: 'Pôr do sol', uv: 'UV máx. hoje', vis: 'Visibilidade', ar: 'Ar (AQI EUA)', horas: 'Próximas horas', dias: 'Próximos 14 dias',
           de: 'de', leitura: 'Leitura de', cache: 'cache de 15 min no seu navegador', ha: 'há',
           min: 'min', indis: 'Leitura ao vivo indisponível agora — a tabela acima é a média real do ano.' },
     fr: { agora: 'Temps à', sens: 'ressenti', umidade: 'Humidité', chuva: 'Pluie actuelle',
           vento: 'Vent', press: 'Pression (sol)', nuvens: 'Nuages', nascer: 'Lever du soleil',
-          por: 'Coucher du soleil', uv: 'UV max du jour', horas: 'Prochaines heures', dias: '7 prochains jours',
+          por: 'Coucher du soleil', uv: 'UV max du jour', vis: 'Visibilité', ar: 'Air (AQI US)', horas: 'Prochaines heures', dias: '14 prochains jours',
           de: 'sur', leitura: 'Lecture depuis', cache: 'conservé 15 min dans votre navigateur', ha: 'il y a',
           min: 'min', indis: 'Lecture en direct indisponible — le tableau ci-dessus est la moyenne réelle de l’année.' },
     it: { agora: 'Meteo a', sens: 'percepita', umidade: 'Umidità', chuva: 'Pioggia ora',
           vento: 'Vento', press: 'Pressione (suolo)', nuvens: 'Nuvole', nascer: 'Alba',
-          por: 'Tramonto', uv: 'UV max oggi', horas: 'Prossime ore', dias: 'Prossimi 7 giorni',
+          por: 'Tramonto', uv: 'UV max oggi', vis: 'Visibilità', ar: 'Aria (AQI USA)', horas: 'Prossime ore', dias: 'Prossimi 14 giorni',
           de: 'di', leitura: 'Lettura da', cache: 'cache di 15 min nel tuo browser', ha: 'di',
           min: 'min', indis: 'Lettura in diretta non disponibile ora — la tabella sopra è la media reale dell’anno.' },
     en: { agora: 'Weather in', sens: 'feels like', umidade: 'Humidity', chuva: 'Rain now',
           vento: 'Wind', press: 'Pressure (ground)', nuvens: 'Cloud', nascer: 'Sunrise',
-          por: 'Sunset', uv: 'UV max today', horas: 'Next hours', dias: 'Next 7 days',
+          por: 'Sunset', uv: 'UV max today', vis: 'Visibility', ar: 'Air (US AQI)', horas: 'Next hours', dias: 'Next 14 days',
           de: 'of', leitura: 'Read from', cache: 'cached 15 min in your browser', ha: '',
           min: 'min ago', indis: 'Live reading unavailable now — the table above is the yearly mean.' }
   };
@@ -71,10 +83,17 @@
       [T.vento, fmt(c.wind_speed_10m, 0) + ' km/h'],
       [T.press, fmt(c.surface_pressure, 0) + ' hPa'],
       [T.nuvens, fmt(c.cloud_cover) + ' %'],
+      [T.vis, (c.visibility === null || c.visibility === undefined) ? '—' : fmt(c.visibility / 1000, 1) + ' km'],
       [T.nascer, hhmm((dy.sunrise || [])[0])],
       [T.por, hhmm((dy.sunset || [])[0])],
       [T.uv, fmt((dy.uv_index_max || [])[0], 1)]
     ];
+    var aq = (d.aqi && d.aqi.current) || null;
+    if (aq && aq.us_aqi !== null && aq.us_aqi !== undefined) {
+      var cat = aqiCat(aq.us_aqi, lang);
+      linhas.push([T.ar, fmt(aq.us_aqi, 0) + (cat ? ' · ' + cat : '')
+        + ((aq.pm2_5 !== null && aq.pm2_5 !== undefined) ? ' · PM2.5 ' + fmt(aq.pm2_5, 1) : '')]);
+    }
     var dl = el('dl', {style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0 16px;margin:0;font-size:.86rem'});
     linhas.forEach(function (kv) {
       var d1 = el('div', {style: 'display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted #334155;padding:2px 0'});
@@ -98,7 +117,7 @@
     dias.appendChild(el('summary', {style: 'cursor:pointer;color:#a78bfa;font-size:.86rem'},
       T.dias + ' (' + T.de + ' ' + ((dy.time || []).length) + ')'));
     var tb = el('div', {style: 'font-size:.86rem;color:#cbd5e1;margin-top:6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:4px 14px'});
-    for (var j = 0; j < Math.min(7, (dy.time || []).length); j++) {
+    for (var j = 0; j < Math.min(14, (dy.time || []).length); j++) {
       var one = el('span', {});
       one.appendChild(el('b', {}, dy.time[j].slice(8, 10) + '/' + dy.time[j].slice(5, 7)));
       one.appendChild(document.createTextNode(' ' + fmt(dy.temperature_2m_max[j], 0) + '° / ' + fmt(dy.temperature_2m_min[j], 0)
@@ -123,7 +142,7 @@
       var lang = (box.getAttribute('data-lang') || 'pt').split('-')[0];
       var city = box.getAttribute('data-city') || '';
       var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + la + '&longitude=' + lo
-        + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,surface_pressure,cloud_cover'
+        + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,surface_pressure,cloud_cover,visibility'
         + '&hourly=temperature_2m,precipitation_probability,weather_code&forecast_hours=12'
         + '&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,uv_index_max,sunrise,sunset'
         + '&forecast_days=14&timezone=auto';
@@ -147,12 +166,30 @@
       if (!('fetch' in window)) { return; }
       var ctl = ('AbortController' in window) ? new AbortController() : null;
       if (ctl) setTimeout(function () { ctl.abort(); }, 20000);
+      var aqUrl = 'https://air-quality-api.open-meteo.com/v1/air-quality?latitude=' + la + '&longitude=' + lo
+        + '&current=us_aqi,pm2_5,pm10&timezone=auto';
+      var comAr = function (d) {
+        var ctl2 = ('AbortController' in window) ? new AbortController() : null;
+        var to2 = null;
+        if (ctl2) to2 = setTimeout(function () { ctl2.abort(); }, 8000);
+        var done = function (aq) {
+          if (to2) clearTimeout(to2);
+          d.aqi = aq || null;
+          try { sessionStorage.setItem(key, JSON.stringify({t: Date.now(), d: d})); } catch (e) {}
+          usar((LB[lang] || LB.pt).agora + ' ' + city + ':', d);
+        };
+        try {
+          fetch(aqUrl, ctl2 ? {signal: ctl2.signal} : undefined).then(function (r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+          }).then(function (aq) { done(aq); }).catch(function () { done(null); });
+        } catch (e) { done(null); }
+      };
       fetch(url, ctl ? {signal: ctl.signal} : undefined).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
       }).then(function (d) {
-        try { sessionStorage.setItem(key, JSON.stringify({t: Date.now(), d: d})); } catch (e) {}
-        usar((LB[lang] || LB.pt).agora + ' ' + city + ':', d);
+        comAr(d);
       }).catch(function () {
         box.innerHTML = '';
         var p = el('p', {style: 'margin:0;font-size:.86rem;color:#94a3b8'});
