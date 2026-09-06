@@ -1,0 +1,12425 @@
+{
+ "ad": {
+  "nome": "Andorra",
+  "qid": "Q228",
+  "iso2": "AD",
+  "iso3": "AND",
+  "ddi": [
+   "+376"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7026",
+    "nome": "língua catalã",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1863",
+    "nome": "Andorra-a-Velha",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q28148764",
+    "nome": "Europa/Andorra"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ae": {
+  "nome": "Emirados Árabes Unidos",
+  "qid": "Q878",
+  "iso2": "AE",
+  "iso3": "ARE",
+  "ddi": [
+   "+971"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200294",
+    "nome": "Dirham dos Emirados Árabes Unidos",
+    "iso": "AED",
+    "simbolo": "⃃",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1519",
+    "nome": "Abu Dhabi",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q22948941",
+    "nome": "Asia/Dubai"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "af": {
+  "nome": "Afeganistão",
+  "qid": "Q889",
+  "iso2": "AF",
+  "iso3": "AFG",
+  "ddi": [
+   "+93"
+  ],
+  "moedas": [
+   {
+    "qid": "Q199471",
+    "nome": "afegane",
+    "iso": "AFN",
+    "simbolo": "؋",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q58680",
+    "nome": "pastó",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q178440",
+    "nome": "Língua dari",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33049",
+    "nome": "Língua balúchi",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q161804",
+    "nome": "Nuristani",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1772864",
+    "nome": "línguas pamir",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36670",
+    "nome": "Pashayi",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9264",
+    "nome": "língua uzbeque",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9267",
+    "nome": "Língua turcomena",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q5838",
+    "nome": "Cabul",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6792",
+    "nome": "UTC+4:30"
+   },
+   {
+    "qid": "Q63285929",
+    "nome": "Asia/Kabul"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "ag": {
+  "nome": "Antígua e Barbuda",
+  "qid": "Q781",
+  "iso2": "AG",
+  "iso3": "ATG",
+  "ddi": [
+   "+1268"
+  ],
+  "moedas": [
+   {
+    "qid": "Q26365",
+    "nome": "Dólar do Caribe Oriental",
+    "iso": "XCD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q36262",
+    "nome": "São João",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q109529671",
+    "nome": "America/Antigua"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "al": {
+  "nome": "Albânia",
+  "qid": "Q222",
+  "iso2": "AL",
+  "iso3": "ALB",
+  "ddi": [
+   "+355"
+  ],
+  "moedas": [
+   {
+    "qid": "Q125999",
+    "nome": "lek",
+    "iso": "ALL",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q8748",
+    "nome": "língua albanesa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q19689",
+    "nome": "Tirana",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28148760",
+    "nome": "Europe/Tirane"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "am": {
+  "nome": "Armênia",
+  "qid": "Q399",
+  "iso2": "AM",
+  "iso3": "ARM",
+  "ddi": [
+   "+374"
+  ],
+  "moedas": [
+   {
+    "qid": "Q130498",
+    "nome": "dram arménio",
+    "iso": "AMD",
+    "simbolo": "֏",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q8785",
+    "nome": "língua arménia",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1953",
+    "nome": "Erevã",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q4127120",
+    "nome": "Armenia Time"
+   },
+   {
+    "qid": "Q4806317",
+    "nome": "Asia/Yerevan"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "ao": {
+  "nome": "Angola",
+  "qid": "Q916",
+  "iso2": "AO",
+  "iso3": "AGO",
+  "ddi": [
+   "+244"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200337",
+    "nome": "kwanza",
+    "iso": "AOA",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q542236",
+    "nome": "Escudo angolano",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q542238",
+    "nome": "Angolan real",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q542304",
+    "nome": "Angolar (moeda)",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3897",
+    "nome": "Luanda",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689506",
+    "nome": "Africa/Luanda"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ar": {
+  "nome": "Argentina",
+  "qid": "Q414",
+  "iso2": "AR",
+  "iso3": "ARG",
+  "ddi": [
+   "+54"
+  ],
+  "moedas": [
+   {
+    "qid": "Q961408",
+    "nome": "peso moneda nacional",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1969-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q3900745",
+    "nome": "peso ley argentino",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1983-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1640286",
+    "nome": "peso argentino",
+    "iso": "ARP",
+    "simbolo": "$",
+    "end": "+1985-06-14T00:00:00Z"
+   },
+   {
+    "qid": "Q781218",
+    "nome": "Austral (moeda)",
+    "iso": "ARA",
+    "simbolo": "₳",
+    "end": "+1992-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q199578",
+    "nome": "peso argentino",
+    "iso": "ARS",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1486",
+    "nome": "Buenos Aires",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "at": {
+  "nome": "Áustria",
+  "qid": "Q40",
+  "iso2": "AT",
+  "iso3": "AUT",
+  "ddi": [
+   "+43"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q208730",
+    "nome": "xelim austríaco",
+    "iso": "ATS",
+    "simbolo": null,
+    "end": "+2002-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q155009",
+    "nome": "reichsmark",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1945-11-30T00:00:00Z"
+   },
+   {
+    "qid": "Q208730",
+    "nome": "xelim austríaco",
+    "iso": "ATS",
+    "simbolo": null,
+    "end": "+1938-03-17T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q188",
+    "nome": "alemão",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36668",
+    "nome": "língua de sinais austríaca",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1741",
+    "nome": "Viena",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28148658",
+    "nome": "Europe/Vienna"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "au": {
+  "nome": "Austrália",
+  "qid": "Q408",
+  "iso2": "AU",
+  "iso3": "AUS",
+  "ddi": [
+   "+61"
+  ],
+  "moedas": [
+   {
+    "qid": "Q259502",
+    "nome": "Dólar australiano",
+    "iso": "AUD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q25224",
+    "nome": "libra esterlina",
+    "iso": "GBP",
+    "simbolo": "£",
+    "end": "+1910-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q783373",
+    "nome": "Australian pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1966-02-14T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q44679",
+    "nome": "inglês australiano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q29525",
+    "nome": "língua de sinais australiana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3114",
+    "nome": "Camberra",
+    "end": null
+   },
+   {
+    "qid": "Q3141",
+    "nome": "Melbourne",
+    "end": "+1927-05-09T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q6923",
+    "nome": "UTC+6:30"
+   },
+   {
+    "qid": "Q6940",
+    "nome": "UTC+7"
+   },
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q7048",
+    "nome": "UTC+9:30"
+   },
+   {
+    "qid": "Q7048",
+    "nome": "UTC+9:30"
+   },
+   {
+    "qid": "Q7056",
+    "nome": "UTC+10"
+   },
+   {
+    "qid": "Q7056",
+    "nome": "UTC+10"
+   },
+   {
+    "qid": "Q7065",
+    "nome": "UTC+10:30"
+   },
+   {
+    "qid": "Q7065",
+    "nome": "UTC+10:30"
+   },
+   {
+    "qid": "Q7069",
+    "nome": "UTC+11"
+   },
+   {
+    "qid": "Q7080",
+    "nome": "UTC+11:30"
+   },
+   {
+    "qid": "Q4771019",
+    "nome": "Antarctica/Mawson"
+   },
+   {
+    "qid": "Q63285963",
+    "nome": "Indian/Cocos"
+   },
+   {
+    "qid": "Q4771015",
+    "nome": "Antarctica/Davis"
+   },
+   {
+    "qid": "Q63285962",
+    "nome": "Indian/Christmas"
+   },
+   {
+    "qid": "Q4823535",
+    "nome": "Australia/Perth"
+   },
+   {
+    "qid": "Q4823529",
+    "nome": "Australia/Eucla"
+   },
+   {
+    "qid": "Q4823527",
+    "nome": "Australia/Darwin"
+   },
+   {
+    "qid": "Q4823522",
+    "nome": "Australia/Adelaide"
+   },
+   {
+    "qid": "Q4823524",
+    "nome": "Australia/Broken_Hill"
+   },
+   {
+    "qid": "Q4823531",
+    "nome": "Australia/Lindeman"
+   },
+   {
+    "qid": "Q4823523",
+    "nome": "Australia/Brisbane"
+   },
+   {
+    "qid": "Q4823534",
+    "nome": "Australia/Melbourne"
+   },
+   {
+    "qid": "Q4823530",
+    "nome": "Australia/Hobart"
+   },
+   {
+    "qid": "Q4823536",
+    "nome": "Australia/Sydney"
+   },
+   {
+    "qid": "Q4771017",
+    "nome": "Antarctica/Macquarie"
+   },
+   {
+    "qid": "Q4823533",
+    "nome": "Australia/Lord_Howe"
+   },
+   {
+    "qid": "Q4771014",
+    "nome": "Antarctica/Casey"
+   },
+   {
+    "qid": "Q63285981",
+    "nome": "Pacific/Norfolk"
+   },
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Austrália"
+  ]
+ },
+ "az": {
+  "nome": "Azerbaijão",
+  "qid": "Q227",
+  "iso2": "AZ",
+  "iso3": "AZE",
+  "ddi": [
+   "+994"
+  ],
+  "moedas": [
+   {
+    "qid": "Q483725",
+    "nome": "Manat azeri",
+    "iso": "AZN",
+    "simbolo": "₼",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9292",
+    "nome": "Língua azeri",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q55698568",
+    "nome": "Língua gestual azerbaijana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9248",
+    "nome": "Baku",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q63285931",
+    "nome": "Asia/Baku"
+   }
+  ],
+  "continente": [
+   "Ásia",
+   "Europa"
+  ]
+ },
+ "ba": {
+  "nome": "Bósnia e Herzegovina",
+  "qid": "Q225",
+  "iso2": "BA",
+  "iso3": "BIH",
+  "ddi": [
+   "+387"
+  ],
+  "moedas": [
+   {
+    "qid": "Q2538687",
+    "nome": "Bosnia and Herzegovina dinar",
+    "iso": "BAD",
+    "simbolo": null,
+    "end": "+1998-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q179620",
+    "nome": "marco conversível",
+    "iso": "BAM",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9303",
+    "nome": "Língua bósnia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q6654",
+    "nome": "croata",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9299",
+    "nome": "língua sérvia",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q11194",
+    "nome": "Sarajevo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28148751",
+    "nome": "Europe/Sarajevo"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "bb": {
+  "nome": "Barbados",
+  "qid": "Q244",
+  "iso2": "BB",
+  "iso3": "BRB",
+  "ddi": [
+   "+1246"
+  ],
+  "moedas": [
+   {
+    "qid": "Q194351",
+    "nome": "dólar barbadense",
+    "iso": "BBD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q2524014",
+    "nome": "Crioulo bajan",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q36168",
+    "nome": "Bridgetown",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q63286056",
+    "nome": "America/Barbados"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "bd": {
+  "nome": "Bangladesh",
+  "qid": "Q902",
+  "iso2": "BD",
+  "iso3": "BGD",
+  "ddi": [
+   "+880"
+  ],
+  "moedas": [
+   {
+    "qid": "Q194453",
+    "nome": "taka",
+    "iso": "BDT",
+    "simbolo": "৳",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9610",
+    "nome": "língua bangla",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1354",
+    "nome": "Daca",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q3248716",
+    "nome": "Bangladesh Standard Time"
+   },
+   {
+    "qid": "Q6906",
+    "nome": "UTC+6"
+   },
+   {
+    "qid": "Q16879288",
+    "nome": "Asia/Dhaka"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "be": {
+  "nome": "Bélgica",
+  "qid": "Q31",
+  "iso2": "BE",
+  "iso3": "BEL",
+  "ddi": [
+   "+32"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q232415",
+    "nome": "franco belga",
+    "iso": "BEF",
+    "simbolo": null,
+    "end": "+2002-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7411",
+    "nome": "neerlandês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q188",
+    "nome": "alemão",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q239",
+    "nome": "Bruxelas",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q207020",
+    "nome": "Horário de Verão da Europa Central"
+   },
+   {
+    "qid": "Q5412099",
+    "nome": "Europe/Brussels"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "bf": {
+  "nome": "Burquina Faso",
+  "qid": "Q965",
+  "iso2": "BF",
+  "iso3": "BFA",
+  "ddi": [
+   "+226"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q36096",
+    "nome": "Língua more",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q32934",
+    "nome": "Língua bissa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q32706",
+    "nome": "Língua dioula",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3777",
+    "nome": "Uagadugu",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689520",
+    "nome": "Africa/Ouagadougou"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "bg": {
+  "nome": "Bulgária",
+  "qid": "Q219",
+  "iso2": "BG",
+  "iso3": "BGR",
+  "ddi": [
+   "+359"
+  ],
+  "moedas": [
+   {
+    "qid": "Q172540",
+    "nome": "lev búlgaro",
+    "iso": "BGN",
+    "simbolo": null,
+    "end": "+2026-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7918",
+    "nome": "língua búlgara",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q472",
+    "nome": "Sófia",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q28148701",
+    "nome": "Europe/Sofia"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "bh": {
+  "nome": "Bahrein",
+  "qid": "Q398",
+  "iso2": "BH",
+  "iso3": "BHR",
+  "ddi": [
+   "+973"
+  ],
+  "moedas": [
+   {
+    "qid": "Q201871",
+    "nome": "dinar bareinita",
+    "iso": "BHD",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q476195",
+    "nome": "Gulf rupee",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1965-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3882",
+    "nome": "Manama",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q109526592",
+    "nome": "Asia/Bahrain"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "bi": {
+  "nome": "Burundi",
+  "qid": "Q967",
+  "iso2": "BI",
+  "iso3": "BDI",
+  "ddi": [
+   "+257"
+  ],
+  "moedas": [
+   {
+    "qid": "Q238007",
+    "nome": "Franco do Burúndi",
+    "iso": "BIF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33583",
+    "nome": "Língua kirundi",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3854",
+    "nome": "Bujumbura",
+    "end": "+2019-01-15T00:00:00Z"
+   },
+   {
+    "qid": "Q167551",
+    "nome": "Guitega",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689483",
+    "nome": "Africa/Bujumbura"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "bj": {
+  "nome": "Benim",
+  "qid": "Q962",
+  "iso2": "BJ",
+  "iso3": "BEN",
+  "ddi": [
+   "+229"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3799",
+    "nome": "Porto Novo",
+    "end": null
+   },
+   {
+    "qid": "Q43595",
+    "nome": "Cotonu",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689521",
+    "nome": "Africa/Porto-Novo"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "bn": {
+  "nome": "Brunei",
+  "qid": "Q921",
+  "iso2": "BN",
+  "iso3": "BRN",
+  "ddi": [
+   "+673"
+  ],
+  "moedas": [
+   {
+    "qid": "Q206319",
+    "nome": "Dólar de Brunei",
+    "iso": "BND",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9237",
+    "nome": "malaio",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7979",
+    "nome": "inglês britânico",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9279",
+    "nome": "Bandar Seri Begawan",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q63225362",
+    "nome": "Asia/Brunei"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "bo": {
+  "nome": "Bolívia",
+  "qid": "Q750",
+  "iso2": "BO",
+  "iso3": "BOL",
+  "ddi": [
+   "+591"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200737",
+    "nome": "Boliviano",
+    "iso": "BOB",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2414435",
+    "nome": "Peso boliviano (1963-1986)",
+    "iso": "BOP",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q834305",
+    "nome": "Bolivian sol",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q718101",
+    "nome": "Escudo boliviano",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q4627",
+    "nome": "Língua aymará",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5218",
+    "nome": "quíchua",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35876",
+    "nome": "língua guarani",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2907",
+    "nome": "Sucre",
+    "end": null
+   },
+   {
+    "qid": "Q1491",
+    "nome": "La Paz",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q63286077",
+    "nome": "America/La_Paz"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "br": {
+  "nome": "Brasil",
+  "qid": "Q155",
+  "iso2": "BR",
+  "iso3": "BRA",
+  "ddi": [
+   "+55"
+  ],
+  "moedas": [
+   {
+    "qid": "Q173117",
+    "nome": "real brasileiro",
+    "iso": "BRL",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q831578",
+    "nome": "cruzeiro real",
+    "iso": "BRR",
+    "simbolo": null,
+    "end": "+1994-06-30T00:00:00Z"
+   },
+   {
+    "qid": "Q10261896",
+    "nome": "cruzeiro",
+    "iso": "BRE",
+    "simbolo": null,
+    "end": "+1993-08-01T00:00:00Z"
+   },
+   {
+    "qid": "Q1764812",
+    "nome": "cruzado novo",
+    "iso": "BRN",
+    "simbolo": null,
+    "end": "+1990-03-15T00:00:00Z"
+   },
+   {
+    "qid": "Q926028",
+    "nome": "cruzado",
+    "iso": "BRC",
+    "simbolo": null,
+    "end": "+1989-01-15T00:00:00Z"
+   },
+   {
+    "qid": "Q44904",
+    "nome": "cruzeiro novo",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1970-05-14T00:00:00Z"
+   },
+   {
+    "qid": "Q8351983",
+    "nome": "cruzeiro",
+    "iso": null,
+    "simbolo": "₢",
+    "end": "+1967-02-12T00:00:00Z"
+   },
+   {
+    "qid": "Q10366257",
+    "nome": "real",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1942-10-31T00:00:00Z"
+   },
+   {
+    "qid": "Q10261894",
+    "nome": "cruzeiro",
+    "iso": "BRB",
+    "simbolo": null,
+    "end": "+1986-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q3436689",
+    "nome": "língua brasileira de sinais",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q8678",
+    "nome": "Rio de Janeiro",
+    "end": "+1960-04-22T00:00:00Z"
+   },
+   {
+    "qid": "Q2844",
+    "nome": "Brasília",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6536",
+    "nome": "UTC−2"
+   },
+   {
+    "qid": "Q6536",
+    "nome": "UTC−2"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "bs": {
+  "nome": "Bahamas",
+  "qid": "Q778",
+  "iso2": "BS",
+  "iso3": "BHS",
+  "ddi": [
+   "+1242"
+  ],
+  "moedas": [
+   {
+    "qid": "Q194339",
+    "nome": "dólar baamiano",
+    "iso": "BSD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2467",
+    "nome": "Nassau",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63230241",
+    "nome": "America/Nassau"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "bt": {
+  "nome": "Butão",
+  "qid": "Q917",
+  "iso2": "BT",
+  "iso3": "BTN",
+  "ddi": [
+   "+975"
+  ],
+  "moedas": [
+   {
+    "qid": "Q201799",
+    "nome": "ngultrum",
+    "iso": "BTN",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33081",
+    "nome": "língua butanesa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9270",
+    "nome": "Thimbu",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6906",
+    "nome": "UTC+6"
+   },
+   {
+    "qid": "Q1087393",
+    "nome": "Asia/Thimphu"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "bw": {
+  "nome": "Botsuana",
+  "qid": "Q963",
+  "iso2": "BW",
+  "iso3": "BWA",
+  "ddi": [
+   "+267"
+  ],
+  "moedas": [
+   {
+    "qid": "Q186794",
+    "nome": "pula",
+    "iso": "BWP",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3919",
+    "nome": "Gaborone",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q1053705",
+    "nome": "Horário da África Central"
+   },
+   {
+    "qid": "Q4689494",
+    "nome": "Africa/Gaborone"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "by": {
+  "nome": "Bielorrússia",
+  "qid": "Q184",
+  "iso2": "BY",
+  "iso3": "BLR",
+  "ddi": [
+   "+375"
+  ],
+  "moedas": [
+   {
+    "qid": "Q160680",
+    "nome": "rublo bielorrusso",
+    "iso": "BYR",
+    "simbolo": null,
+    "end": "+2016-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q21531507",
+    "nome": "Rublo bielorrusso",
+    "iso": "BYN",
+    "simbolo": "⃅",
+    "end": null
+   },
+   {
+    "qid": "Q108555034",
+    "nome": "Belarusian ruble",
+    "iso": "BYB",
+    "simbolo": null,
+    "end": "+2000-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9091",
+    "nome": "língua bielorrussa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7737",
+    "nome": "russo",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2280",
+    "nome": "Minsk",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q16886728",
+    "nome": "Europe/Minsk"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "bz": {
+  "nome": "Belize",
+  "qid": "Q242",
+  "iso2": "BZ",
+  "iso3": "BLZ",
+  "ddi": [
+   "+501"
+  ],
+  "moedas": [
+   {
+    "qid": "Q275112",
+    "nome": "Dólar de Belize",
+    "iso": "BZD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3043",
+    "nome": "Belmopan",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286058",
+    "nome": "America/Belize"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "ca": {
+  "nome": "Canadá",
+  "qid": "Q16",
+  "iso2": "CA",
+  "iso3": "CAN",
+  "ddi": [
+   "+1"
+  ],
+  "moedas": [
+   {
+    "qid": "Q1104069",
+    "nome": "dólar canadense",
+    "iso": "CAD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1930",
+    "nome": "Ottawa",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q60738798",
+    "nome": "Newfoundland Time Zone"
+   },
+   {
+    "qid": "Q2085376",
+    "nome": "Horário Padrão do Atlântico"
+   },
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q941023",
+    "nome": "Zona de Tempo Oriental"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q2086913",
+    "nome": "Horário Padrão Central"
+   },
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q3134980",
+    "nome": "Horário padrão da montanha"
+   },
+   {
+    "qid": "Q2212",
+    "nome": "UTC−7"
+   },
+   {
+    "qid": "Q2204",
+    "nome": "UTC−8"
+   },
+   {
+    "qid": "Q2183",
+    "nome": "UTC−9"
+   },
+   {
+    "qid": "Q12072821",
+    "nome": "UTC−01:30"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "cd": {
+  "nome": "Congo-Kinshasa",
+  "qid": "Q974",
+  "iso2": "CD",
+  "iso3": "COD",
+  "ddi": [
+   "+243"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4734",
+    "nome": "franco congolês",
+    "iso": "CDF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3838",
+    "nome": "Quinxassa",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "cf": {
+  "nome": "República Centro-Africana",
+  "qid": "Q929",
+  "iso2": "CF",
+  "iso3": "CAF",
+  "ddi": [
+   "+236"
+  ],
+  "moedas": [
+   {
+    "qid": "Q847739",
+    "nome": "franco",
+    "iso": "XAF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33954",
+    "nome": "Língua sango",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3832",
+    "nome": "Bangui",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689476",
+    "nome": "Africa/Bangui"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "cg": {
+  "nome": "Congo-Brazzaville",
+  "qid": "Q971",
+  "iso2": "CG",
+  "iso3": "COG",
+  "ddi": [
+   "+242"
+  ],
+  "moedas": [
+   {
+    "qid": "Q847739",
+    "nome": "franco",
+    "iso": "XAF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3844",
+    "nome": "Brazavile",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ch": {
+  "nome": "Suíça",
+  "qid": "Q39",
+  "iso2": "CH",
+  "iso3": "CHE",
+  "ddi": [
+   "+41"
+  ],
+  "moedas": [
+   {
+    "qid": "Q25344",
+    "nome": "Franco suíço",
+    "iso": "CHF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q188",
+    "nome": "alemão",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q652",
+    "nome": "italiano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13199",
+    "nome": "romanche",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q70",
+    "nome": "Berna",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q16919450",
+    "nome": "Europe/Zurich"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ci": {
+  "nome": "Costa do Marfim",
+  "qid": "Q1008",
+  "iso2": "CI",
+  "iso3": "CIV",
+  "ddi": [
+   "+225"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3768",
+    "nome": "Yamoussoukro",
+    "end": null
+   },
+   {
+    "qid": "Q1515",
+    "nome": "Abidjan",
+    "end": "+1983-03-01T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689469",
+    "nome": "Africa/Abidjan"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "cl": {
+  "nome": "Chile",
+  "qid": "Q298",
+  "iso2": "CL",
+  "iso3": "CHL",
+  "ddi": [
+   "+56"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200050",
+    "nome": "peso chileno",
+    "iso": "CLP",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q1573250",
+    "nome": "Unidad de Fomento",
+    "iso": "CLF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q603071",
+    "nome": "escudo chileno",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1975-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2887",
+    "nome": "Santiago",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   }
+  ],
+  "continente": [
+   "América do Sul",
+   "Oceania"
+  ]
+ },
+ "cm": {
+  "nome": "Camarões",
+  "qid": "Q1009",
+  "iso2": "CM",
+  "iso3": "CMR",
+  "ddi": [
+   "+237"
+  ],
+  "moedas": [
+   {
+    "qid": "Q847739",
+    "nome": "franco",
+    "iso": "XAF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3808",
+    "nome": "Iaundé",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q1773995",
+    "nome": "Horário da África Ocidental"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689491",
+    "nome": "Africa/Douala"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "cn": {
+  "nome": "China",
+  "qid": "Q148",
+  "iso2": "CN",
+  "iso3": "CHN",
+  "ddi": [
+   "+86"
+  ],
+  "moedas": [
+   {
+    "qid": "Q39099",
+    "nome": "yuan",
+    "iso": "CNY",
+    "simbolo": "¥",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q727694",
+    "nome": "mandarim padrão",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7850",
+    "nome": "língua chinesa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q835866",
+    "nome": "Línguas da China",
+    "rank": "deprecated"
+   },
+   {
+    "qid": "Q24841726",
+    "nome": "Putonghua",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q956",
+    "nome": "Pequim",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q1143153",
+    "nome": "fuso horário da China"
+   },
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q4806303",
+    "nome": "Asia/Shanghai"
+   },
+   {
+    "qid": "Q4806313",
+    "nome": "Asia/Urumqi"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "co": {
+  "nome": "Colômbia",
+  "qid": "Q739",
+  "iso2": "CO",
+  "iso3": "COL",
+  "ddi": [
+   "+57"
+  ],
+  "moedas": [
+   {
+    "qid": "Q244819",
+    "nome": "peso colombiano",
+    "iso": "COP",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2841",
+    "nome": "Bogotá",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63286092",
+    "nome": "America/Bogota"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "cr": {
+  "nome": "Costa Rica",
+  "qid": "Q800",
+  "iso2": "CR",
+  "iso3": "CRI",
+  "ddi": [
+   "+506"
+  ],
+  "moedas": [
+   {
+    "qid": "Q242915",
+    "nome": "Colón costa-riquenho",
+    "iso": "CRC",
+    "simbolo": "₡",
+    "end": null
+   },
+   {
+    "qid": "Q3900740",
+    "nome": "Costa Rican peso",
+    "iso": null,
+    "simbolo": "$",
+    "end": "+1896-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3070",
+    "nome": "San José",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286060",
+    "nome": "America/Costa_Rica"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "cu": {
+  "nome": "Cuba",
+  "qid": "Q241",
+  "iso2": "CU",
+  "iso3": "CUB",
+  "ddi": [
+   "+53"
+  ],
+  "moedas": [
+   {
+    "qid": "Q201505",
+    "nome": "peso cubano",
+    "iso": "CUP",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q731350",
+    "nome": "peso convertível",
+    "iso": "CUC",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1563",
+    "nome": "Havana",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63230233",
+    "nome": "America/Havana"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "cv": {
+  "nome": "Cabo Verde",
+  "qid": "Q1011",
+  "iso2": "CV",
+  "iso3": "CPV",
+  "ddi": [
+   "+238"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4591",
+    "nome": "escudo cabo-verdiano",
+    "iso": "CVE",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35963",
+    "nome": "crioulo cabo-verdiano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3751",
+    "nome": "Praia",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q3208688",
+    "nome": "Horário de Cabo Verde"
+   },
+   {
+    "qid": "Q6540",
+    "nome": "UTC−1"
+   },
+   {
+    "qid": "Q63285925",
+    "nome": "Atlantic/Cape_Verde"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "cy": {
+  "nome": "Chipre",
+  "qid": "Q229",
+  "iso2": "CY",
+  "iso3": "CYP",
+  "ddi": [
+   "+357"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q193716",
+    "nome": "libra cipriota",
+    "iso": "CYP",
+    "simbolo": "£",
+    "end": "+2008-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q6442872",
+    "nome": "All-Russian Classifier of Currencies",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q36510",
+    "nome": "grego moderno",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q256",
+    "nome": "língua turca",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3856",
+    "nome": "Nicósia",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   },
+   {
+    "qid": "Q63285935",
+    "nome": "Asia/Nicosia"
+   }
+  ],
+  "continente": [
+   "Ásia",
+   "Europa"
+  ]
+ },
+ "cz": {
+  "nome": "República Checa",
+  "qid": "Q213",
+  "iso2": "CZ",
+  "iso3": "CZE",
+  "ddi": [
+   "+420"
+  ],
+  "moedas": [
+   {
+    "qid": "Q131016",
+    "nome": "coroa checa",
+    "iso": "CZK",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q103219993",
+    "nome": "Coroa checoslovaca",
+    "iso": "CSK",
+    "simbolo": null,
+    "end": "+1993-02-07T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9056",
+    "nome": "checo",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1085",
+    "nome": "Praga",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q207020",
+    "nome": "Horário de Verão da Europa Central"
+   },
+   {
+    "qid": "Q28146068",
+    "nome": "Europe/Prague"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "de": {
+  "nome": "Alemanha",
+  "qid": "Q183",
+  "iso2": "DE",
+  "iso3": "DEU",
+  "ddi": [
+   "+49"
+  ],
+  "moedas": [
+   {
+    "qid": "Q16068",
+    "nome": "Marco alemão",
+    "iso": "DEM",
+    "simbolo": null,
+    "end": "+2001-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q188",
+    "nome": "alemão",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q64",
+    "nome": "Berlim",
+    "end": null
+   },
+   {
+    "qid": "Q586",
+    "nome": "Bona",
+    "end": "+1999-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q586",
+    "nome": "Bona",
+    "end": "+1990-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q64",
+    "nome": "Berlim",
+    "end": null
+   },
+   {
+    "qid": "Q64",
+    "nome": "Berlim",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5412096",
+    "nome": "Europe/Berlin"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q207020",
+    "nome": "Horário de Verão da Europa Central"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "dj": {
+  "nome": "Djibuti",
+  "qid": "Q977",
+  "iso2": "DJ",
+  "iso3": "DJI",
+  "ddi": [
+   "+253"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4594",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3604",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4689490",
+    "nome": null
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "dk": {
+  "nome": "Dinamarca",
+  "qid": "Q35",
+  "iso2": "DK",
+  "iso3": "DNK",
+  "ddi": [
+   "+45"
+  ],
+  "moedas": [
+   {
+    "qid": "Q25417",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9035",
+    "nome": null,
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1748",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q5412103",
+    "nome": null
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "dm": {
+  "nome": "Dominica",
+  "qid": "Q784",
+  "iso2": "DM",
+  "iso3": "DMA",
+  "ddi": [
+   "+1767"
+  ],
+  "moedas": [
+   {
+    "qid": "Q26365",
+    "nome": "Dólar do Caribe Oriental",
+    "iso": "XCD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q36281",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q2085376",
+    "nome": "Horário Padrão do Atlântico"
+   },
+   {
+    "qid": "Q109529721",
+    "nome": null
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "do": {
+  "nome": "República Dominicana",
+  "qid": "Q786",
+  "iso2": "DO",
+  "iso3": "DOM",
+  "ddi": [
+   "+1809",
+   "+1829",
+   "+1849"
+  ],
+  "moedas": [
+   {
+    "qid": "Q242922",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q34820",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q63286061",
+    "nome": null
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "dz": {
+  "nome": "Argélia",
+  "qid": "Q262",
+  "iso2": "DZ",
+  "iso3": "DZA",
+  "ddi": [
+   "+213"
+  ],
+  "moedas": [
+   {
+    "qid": "Q199674",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2629090",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": "+1964-03-31T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q61053330",
+    "nome": null,
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3561",
+    "nome": "Argel",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689473",
+    "nome": null
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ec": {
+  "nome": "Equador",
+  "qid": "Q736",
+  "iso2": "EC",
+  "iso3": "ECU",
+  "ddi": [
+   "+593"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q911562",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": "+2000-09-10T00:00:00Z"
+   },
+   {
+    "qid": "Q2893932",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": "+1884-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1740805",
+    "nome": null,
+    "rank": "normal"
+   },
+   {
+    "qid": "Q617291",
+    "nome": null,
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2900",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286095",
+    "nome": null
+   },
+   {
+    "qid": "Q63286093",
+    "nome": null
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "ee": {
+  "nome": "Estônia",
+  "qid": "Q191",
+  "iso2": "EE",
+  "iso3": "EST",
+  "ddi": [
+   "+372"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q129983",
+    "nome": "coroa estoniana",
+    "iso": "EEK",
+    "simbolo": null,
+    "end": "+2011-01-14T00:00:00Z"
+   },
+   {
+    "qid": "Q129983",
+    "nome": "coroa estoniana",
+    "iso": "EEK",
+    "simbolo": null,
+    "end": "+1941-03-25T00:00:00Z"
+   },
+   {
+    "qid": "Q967135",
+    "nome": "Estonian mark",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1927-12-31T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9072",
+    "nome": "estónio",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1770",
+    "nome": "Tallinn",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q28148648",
+    "nome": "Europe/Tallinn"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "eg": {
+  "nome": "Egito",
+  "qid": "Q79",
+  "iso2": "EG",
+  "iso3": "EGY",
+  "ddi": [
+   "+20"
+  ],
+  "moedas": [
+   {
+    "qid": "Q199462",
+    "nome": "libra egípcia",
+    "iso": "EGP",
+    "simbolo": "£",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q85",
+    "nome": "Cairo",
+    "end": null
+   },
+   {
+    "qid": "Q1153959",
+    "nome": "Thinis",
+    "end": "-2707-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q5715",
+    "nome": "Mênfis",
+    "end": "-2216-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4689484",
+    "nome": "Africa/Cairo"
+   }
+  ],
+  "continente": [
+   "África",
+   "Ásia"
+  ]
+ },
+ "er": {
+  "nome": "Eritreia",
+  "qid": "Q986",
+  "iso2": "ER",
+  "iso3": "ERI",
+  "ddi": [
+   "+291"
+  ],
+  "moedas": [
+   {
+    "qid": "Q171503",
+    "nome": "nakfa",
+    "iso": "ERN",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q34124",
+    "nome": "Língua tigrínia",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3642",
+    "nome": "Asmara",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4689472",
+    "nome": "Africa/Addis_Ababa"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "es": {
+  "nome": "Espanha",
+  "qid": "Q29",
+  "iso2": "ES",
+  "iso3": "ESP",
+  "ddi": [
+   "+34"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q189097",
+    "nome": "peseta",
+    "iso": "ESP",
+    "simbolo": "₧",
+    "end": "+2001-12-31T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q9307",
+    "nome": "galego",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8752",
+    "nome": "basco",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7026",
+    "nome": "língua catalã",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q14185",
+    "nome": "língua occitana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2807",
+    "nome": "Madrid",
+    "end": null
+   },
+   {
+    "qid": "Q31844059",
+    "nome": "Toledo",
+    "end": "+1561-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q116170766",
+    "nome": "Madrid city",
+    "end": "+1601-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q31925679",
+    "nome": "Valladolid",
+    "end": "+1606-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q5412114",
+    "nome": "Europe/Madrid"
+   }
+  ],
+  "continente": [
+   "Europa",
+   "África",
+   "América",
+   "Oceania"
+  ]
+ },
+ "et": {
+  "nome": "Etiópia",
+  "qid": "Q115",
+  "iso2": "ET",
+  "iso3": "ETH",
+  "ddi": [
+   "+251"
+  ],
+  "moedas": [
+   {
+    "qid": "Q206243",
+    "nome": "Birr etíope",
+    "iso": "ETB",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q28244",
+    "nome": "Língua amárica",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3624",
+    "nome": "Adis Abeba",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q1773949",
+    "nome": "Horário da África Oriental"
+   },
+   {
+    "qid": "Q4689474",
+    "nome": "Africa/Asmara"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "fi": {
+  "nome": "Finlândia",
+  "qid": "Q33",
+  "iso2": "FI",
+  "iso3": "FIN",
+  "ddi": [
+   "+358"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q203354",
+    "nome": "marco finlandês",
+    "iso": "FIM",
+    "simbolo": null,
+    "end": "+1998-12-31T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1412",
+    "nome": "finlandês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9027",
+    "nome": "língua sueca",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1757",
+    "nome": "Helsínquia",
+    "end": null
+   },
+   {
+    "qid": "Q38511",
+    "nome": "Turku",
+    "end": "+1812-04-08T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q5412105",
+    "nome": "Europe/Helsinki"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "fj": {
+  "nome": "Fiji",
+  "qid": "Q712",
+  "iso2": "FJ",
+  "iso3": "FJI",
+  "ddi": [
+   "+679"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4592",
+    "nome": "dólar de Fiji",
+    "iso": "FJD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q1411382",
+    "nome": "Fijian pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1969-01-15T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33295",
+    "nome": "Língua fidjiana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q46728",
+    "nome": "Hindi fijiano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q38807",
+    "nome": "Suva",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q63285964",
+    "nome": "Pacific/Fiji"
+   }
+  ],
+  "continente": [
+   "Oceania"
+  ]
+ },
+ "fm": {
+  "nome": "Micronésia",
+  "qid": "Q702",
+  "iso2": "FM",
+  "iso3": "FSM",
+  "ddi": [
+   "+691"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q42751",
+    "nome": "Paliquir",
+    "end": null
+   },
+   {
+    "qid": "Q514165",
+    "nome": "Kolonia",
+    "end": "+1989-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7056",
+    "nome": "UTC+10"
+   },
+   {
+    "qid": "Q7069",
+    "nome": "UTC+11"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "fr": {
+  "nome": "França Baratas",
+  "qid": "Q142",
+  "iso2": "FR",
+  "iso3": "FRA",
+  "ddi": [
+   "+33"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q214393",
+    "nome": "Franco CFP",
+    "iso": "XPF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q184172",
+    "nome": "franco francês",
+    "iso": "FRF",
+    "simbolo": "₣",
+    "end": "+1999-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q2670039",
+    "nome": "Libra tornesa",
+    "iso": null,
+    "simbolo": "₶",
+    "end": "+1795-04-06T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q90",
+    "nome": "Paris",
+    "end": null
+   },
+   {
+    "qid": "Q183910",
+    "nome": "Bayeux",
+    "end": "+1944-09-00T00:00:00Z"
+   },
+   {
+    "qid": "Q93351",
+    "nome": "Vichy",
+    "end": "+1944-08-20T00:00:00Z"
+   },
+   {
+    "qid": "Q3561",
+    "nome": "Argel",
+    "end": "+1944-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q84",
+    "nome": "Londres",
+    "end": "+1942-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q3844",
+    "nome": "Brazavile",
+    "end": "+1942-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1479",
+    "nome": "Bordéus",
+    "end": "+1940-06-28T00:00:00Z"
+   },
+   {
+    "qid": "Q288",
+    "nome": "Tours",
+    "end": "+1940-06-13T00:00:00Z"
+   },
+   {
+    "qid": "Q621",
+    "nome": "Versalhes",
+    "end": "+1879-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q621",
+    "nome": "Versalhes",
+    "end": "+1789-10-05T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q5412120",
+    "nome": "Europe/Paris"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q207020",
+    "nome": "Horário de Verão da Europa Central"
+   },
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q2163",
+    "nome": "UTC−10"
+   },
+   {
+    "qid": "Q7069",
+    "nome": "UTC+11"
+   },
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q6536",
+    "nome": "UTC−2"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   }
+  ],
+  "continente": [
+   "Europa",
+   "África",
+   "América",
+   "Oceania",
+   "Antártida"
+  ]
+ },
+ "ga": {
+  "nome": "Gabão",
+  "qid": "Q1000",
+  "iso2": "GA",
+  "iso3": "GAB",
+  "ddi": [
+   "+241"
+  ],
+  "moedas": [
+   {
+    "qid": "Q847739",
+    "nome": "franco",
+    "iso": "XAF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3825",
+    "nome": "Libreville",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q1773995",
+    "nome": "Horário da África Ocidental"
+   },
+   {
+    "qid": "Q4689504",
+    "nome": "Africa/Libreville"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "gb": {
+  "nome": "Reino Unido",
+  "qid": "Q145",
+  "iso2": "GB",
+  "iso3": "GBR",
+  "ddi": [
+   "+44"
+  ],
+  "moedas": [
+   {
+    "qid": "Q25224",
+    "nome": "libra esterlina",
+    "iso": "GBP",
+    "simbolo": "£",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q9309",
+    "nome": "galês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9314",
+    "nome": "Língua gaélica escocesa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q14549",
+    "nome": "Scots",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q25289",
+    "nome": "córnico",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9142",
+    "nome": "irlandês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q201966",
+    "nome": "scots de Ulster",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33000",
+    "nome": "língua de sinais britânica",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q84",
+    "nome": "Londres",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q30192",
+    "nome": "Greenwich Mean Time"
+   },
+   {
+    "qid": "Q843589",
+    "nome": "Horário da Europa Ocidental"
+   },
+   {
+    "qid": "Q16894228",
+    "nome": "Europe/London"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "gd": {
+  "nome": "Granada",
+  "qid": "Q769",
+  "iso2": "GD",
+  "iso3": "GRD",
+  "ddi": [
+   "+1473"
+  ],
+  "moedas": [
+   {
+    "qid": "Q26365",
+    "nome": "Dólar do Caribe Oriental",
+    "iso": "XCD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q4252500",
+    "nome": "Crioulo inglês de Granada",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q41547",
+    "nome": "São Jorge",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q109529664",
+    "nome": "America/Grenada"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "ge": {
+  "nome": "Geórgia",
+  "qid": "Q230",
+  "iso2": "GE",
+  "iso3": "GEO",
+  "ddi": [
+   "+995"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4608",
+    "nome": "lari",
+    "iso": "GEL",
+    "simbolo": "₾",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q8108",
+    "nome": "língua georgiana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5111",
+    "nome": "Língua abecásia",
+    "rank": "deprecated"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q994",
+    "nome": "Tiblíssi",
+    "end": null
+   },
+   {
+    "qid": "Q172415",
+    "nome": "Kutaisi",
+    "end": "+1122-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   }
+  ],
+  "continente": [
+   "Ásia",
+   "Europa"
+  ]
+ },
+ "gh": {
+  "nome": "Gana",
+  "qid": "Q117",
+  "iso2": "GH",
+  "iso3": "GHA",
+  "ddi": [
+   "+233"
+  ],
+  "moedas": [
+   {
+    "qid": "Q183530",
+    "nome": "cedi",
+    "iso": "GHS",
+    "simbolo": "₵",
+    "end": null
+   },
+   {
+    "qid": "Q1508175",
+    "nome": "Ghanaian pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1965-07-18T00:00:00Z"
+   },
+   {
+    "qid": "Q134397947",
+    "nome": "Ghana Pesewa",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3761",
+    "nome": "Acra",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689471",
+    "nome": "Africa/Accra"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "gm": {
+  "nome": "Gâmbia",
+  "qid": "Q1005",
+  "iso2": "GM",
+  "iso3": "GMB",
+  "ddi": [
+   "+220"
+  ],
+  "moedas": [
+   {
+    "qid": "Q202885",
+    "nome": "Dalasi",
+    "iso": "GMD",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1475316",
+    "nome": "Gambian pound",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1971-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3726",
+    "nome": "Banjul",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689477",
+    "nome": "Africa/Banjul"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "gn": {
+  "nome": "Guiné",
+  "qid": "Q1006",
+  "iso2": "GN",
+  "iso3": "GIN",
+  "ddi": [
+   "+224"
+  ],
+  "moedas": [
+   {
+    "qid": "Q213311",
+    "nome": "Franco da Guiné",
+    "iso": "GNF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q496938",
+    "nome": "Guinean syli",
+    "iso": "GNS",
+    "simbolo": null,
+    "end": "+1985-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1339026",
+    "nome": "languages of Guinea",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3733",
+    "nome": "Conacri",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689487",
+    "nome": "Africa/Conakry"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "gq": {
+  "nome": "Guiné Equatorial",
+  "qid": "Q983",
+  "iso2": "GQ",
+  "iso3": "GNQ",
+  "ddi": [
+   "+240"
+  ],
+  "moedas": [
+   {
+    "qid": "Q847739",
+    "nome": "franco",
+    "iso": "XAF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q971818",
+    "nome": "Ekwele guinéu-equatoriano",
+    "iso": "GQE",
+    "simbolo": null,
+    "end": "+1985-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q255726",
+    "nome": "Peseta guinéu-equatoriana",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1975-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3818",
+    "nome": "Malabo",
+    "end": "+2026-01-03T00:00:00Z"
+   },
+   {
+    "qid": "Q1140136",
+    "nome": "Ciudad de la Paz",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "gr": {
+  "nome": "Grécia",
+  "qid": "Q41",
+  "iso2": "GR",
+  "iso3": "GRC",
+  "ddi": [
+   "+30"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q1546443",
+    "nome": "dracma",
+    "iso": "GRD",
+    "simbolo": "₯",
+    "end": "+2002-02-28T00:00:00Z"
+   },
+   {
+    "qid": "Q1380156",
+    "nome": "Greek phoenix",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1833-02-08T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9129",
+    "nome": "grego",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35392",
+    "nome": "Grego demótico",
+    "rank": "deprecated"
+   },
+   {
+    "qid": "Q36510",
+    "nome": "grego moderno",
+    "rank": "deprecated"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1524",
+    "nome": "Atenas",
+    "end": null
+   },
+   {
+    "qid": "Q202337",
+    "nome": "Náuplia",
+    "end": "+1833-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q3720429",
+    "nome": "Aegina",
+    "end": "+1828-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1524",
+    "nome": "Atenas",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   },
+   {
+    "qid": "Q5412093",
+    "nome": "Europe/Athens"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "gt": {
+  "nome": "Guatemala",
+  "qid": "Q774",
+  "iso2": "GT",
+  "iso3": "GTM",
+  "ddi": [
+   "+502"
+  ],
+  "moedas": [
+   {
+    "qid": "Q207396",
+    "nome": "Quetzal",
+    "iso": "GTQ",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q81772",
+    "nome": "Guatemalan peso",
+    "iso": null,
+    "simbolo": "$",
+    "end": "+1925-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1555",
+    "nome": "Cidade da Guatemala",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286063",
+    "nome": "America/Guatemala"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "gw": {
+  "nome": "Guiné-Bissau",
+  "qid": "Q1007",
+  "iso2": "GW",
+  "iso3": "GNB",
+  "ddi": [
+   "+245"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1329465",
+    "nome": "Peso da Guiné Bissau",
+    "iso": "GWP",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3739",
+    "nome": "Bissau",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689478",
+    "nome": "Africa/Bissau"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "gy": {
+  "nome": "Guiana",
+  "qid": "Q734",
+  "iso2": "GY",
+  "iso3": "GUY",
+  "ddi": [
+   "+592"
+  ],
+  "moedas": [
+   {
+    "qid": "Q213005",
+    "nome": "Dólar da Guiana",
+    "iso": "GYD",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q10717",
+    "nome": "Georgetown",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q63225363",
+    "nome": "America/Guyana"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "hn": {
+  "nome": "Honduras",
+  "qid": "Q783",
+  "iso2": "HN",
+  "iso3": "HND",
+  "ddi": [
+   "+504"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4719",
+    "nome": "lempira",
+    "iso": "HNL",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q276688",
+    "nome": "Honduran peso",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1931-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3238",
+    "nome": "Tegucigalpa",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286065",
+    "nome": "America/Tegucigalpa"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "hr": {
+  "nome": "Croácia",
+  "qid": "Q224",
+  "iso2": "HR",
+  "iso3": "HRV",
+  "ddi": [
+   "+385"
+  ],
+  "moedas": [
+   {
+    "qid": "Q595634",
+    "nome": "Dinar croata",
+    "iso": "HRD",
+    "simbolo": null,
+    "end": "+1994-05-30T00:00:00Z"
+   },
+   {
+    "qid": "Q26360",
+    "nome": "kuna croata",
+    "iso": "HRK",
+    "simbolo": null,
+    "end": "+2022-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q6654",
+    "nome": "croata",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1435",
+    "nome": "Zagreb",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28157115",
+    "nome": "Europe/Zagreb"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ht": {
+  "nome": "Haiti",
+  "qid": "Q790",
+  "iso2": "HT",
+  "iso3": "HTI",
+  "ddi": [
+   "+509"
+  ],
+  "moedas": [
+   {
+    "qid": "Q203955",
+    "nome": "gourde",
+    "iso": "HTG",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q5639749",
+    "nome": "Haitian livre",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1813-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33491",
+    "nome": "crioulo haitiano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q34261",
+    "nome": "Porto Príncipe",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63286064",
+    "nome": "America/Port-au-Prince"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "hu": {
+  "nome": "Hungria",
+  "qid": "Q28",
+  "iso2": "HU",
+  "iso3": "HUN",
+  "ddi": [
+   "+36"
+  ],
+  "moedas": [
+   {
+    "qid": "Q47190",
+    "nome": "florim húngaro",
+    "iso": "HUF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9067",
+    "nome": "húngaro",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1781",
+    "nome": "Budapeste",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q5412101",
+    "nome": "Europe/Budapest"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "id": {
+  "nome": "Indonésia",
+  "qid": "Q252",
+  "iso2": "ID",
+  "iso3": "IDN",
+  "ddi": [
+   "+62"
+  ],
+  "moedas": [
+   {
+    "qid": "Q41588",
+    "nome": "rupia indonésia",
+    "iso": "IDR",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9240",
+    "nome": "língua indonésia",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3630",
+    "nome": "Jacarta",
+    "end": "+1946-01-04T00:00:00Z"
+   },
+   {
+    "qid": "Q7568",
+    "nome": "Joguejacarta",
+    "end": "+1948-12-22T00:00:00Z"
+   },
+   {
+    "qid": "Q7248",
+    "nome": "Bukittinggi",
+    "end": "+1950-08-17T00:00:00Z"
+   },
+   {
+    "qid": "Q3630",
+    "nome": "Jacarta",
+    "end": null
+   },
+   {
+    "qid": "Q110601629",
+    "nome": "Nusantara",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7458035",
+    "nome": "Indonesia Western Standard Time"
+   },
+   {
+    "qid": "Q7458046",
+    "nome": "Indonesia Central Standard Time"
+   },
+   {
+    "qid": "Q7458054",
+    "nome": "Indonesia Eastern Standard Time"
+   },
+   {
+    "qid": "Q4806285",
+    "nome": "Asia/Jakarta"
+   },
+   {
+    "qid": "Q4806298",
+    "nome": "Asia/Pontianak"
+   },
+   {
+    "qid": "Q4806294",
+    "nome": "Asia/Makassar"
+   },
+   {
+    "qid": "Q4806286",
+    "nome": "Asia/Jayapura"
+   }
+  ],
+  "continente": [
+   "Ásia",
+   "Oceania"
+  ]
+ },
+ "ie": {
+  "nome": "Irlanda",
+  "qid": "Q27",
+  "iso2": "IE",
+  "iso3": "IRL",
+  "ddi": [
+   "+353"
+  ],
+  "moedas": [
+   {
+    "qid": "Q270642",
+    "nome": "libra irlandesa",
+    "iso": "IEP",
+    "simbolo": "£",
+    "end": "+2002-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q274474",
+    "nome": "Moedas de euro irlandesas",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9142",
+    "nome": "irlandês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1761",
+    "nome": "Dublin",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q30192",
+    "nome": "Greenwich Mean Time"
+   },
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "il": {
+  "nome": "Israel",
+  "qid": "Q801",
+  "iso2": "IL",
+  "iso3": "ISR",
+  "ddi": [
+   "+972"
+  ],
+  "moedas": [
+   {
+    "qid": "Q131309",
+    "nome": "novo shekel israelense",
+    "iso": "ILS",
+    "simbolo": "₪",
+    "end": null
+   },
+   {
+    "qid": "Q2720762",
+    "nome": "Shekel israelense",
+    "iso": "ILR",
+    "simbolo": null,
+    "end": "+1985-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q3973271",
+    "nome": "Libra palestina",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1952-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q1674712",
+    "nome": "Lira israelense",
+    "iso": "ILP",
+    "simbolo": null,
+    "end": "+1980-02-23T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9288",
+    "nome": "hebraico",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1218",
+    "nome": "Jerusalém",
+    "end": null
+   },
+   {
+    "qid": "Q33935",
+    "nome": "Tel Aviv",
+    "end": "+1949-11-07T00:00:00Z"
+   },
+   {
+    "qid": "Q33935",
+    "nome": "Tel Aviv",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q2583609",
+    "nome": "Israel Standard Time"
+   },
+   {
+    "qid": "Q6087247",
+    "nome": "Israel Summer Time"
+   },
+   {
+    "qid": "Q63285940",
+    "nome": "Asia/Jerusalem"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "in": {
+  "nome": "Índia",
+  "qid": "Q668",
+  "iso2": "IN",
+  "iso3": "IND",
+  "ddi": [
+   "+91"
+  ],
+  "moedas": [
+   {
+    "qid": "Q80524",
+    "nome": "rupia indiana",
+    "iso": "INR",
+    "simbolo": "₹",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1568",
+    "nome": "língua hindi",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q987",
+    "nome": "Nova Deli",
+    "end": null
+   }
+  ],
+  "fusos": [],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "iq": {
+  "nome": "Iraque",
+  "qid": "Q796",
+  "iso2": "IQ",
+  "iso3": "IRQ",
+  "ddi": [
+   "+964"
+  ],
+  "moedas": [
+   {
+    "qid": "Q193094",
+    "nome": "dinar iraquiano",
+    "iso": "IQD",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36368",
+    "nome": "língua curda",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1530",
+    "nome": "Bagdá",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q63285939",
+    "nome": "Asia/Baghdad"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "ir": {
+  "nome": "Irã",
+  "qid": "Q794",
+  "iso2": "IR",
+  "iso3": "IRN",
+  "ddi": [
+   "+98"
+  ],
+  "moedas": [
+   {
+    "qid": "Q188608",
+    "nome": "rial iraniano",
+    "iso": "IRR",
+    "simbolo": "﷼",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9168",
+    "nome": "persa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3616",
+    "nome": "Teerão",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6773",
+    "nome": "UTC+3:30"
+   },
+   {
+    "qid": "Q2392297",
+    "nome": "Iran Standard Time Zone"
+   },
+   {
+    "qid": "Q4806307",
+    "nome": "Asia/Tehran"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "is": {
+  "nome": "Islândia",
+  "qid": "Q189",
+  "iso2": "IS",
+  "iso3": "ISL",
+  "ddi": [
+   "+354"
+  ],
+  "moedas": [
+   {
+    "qid": "Q131473",
+    "nome": "coroa islandesa",
+    "iso": "ISK",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q294",
+    "nome": "islandês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1764",
+    "nome": "Reykjavík",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q63286000",
+    "nome": "Atlantic/Reykjavik"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "it": {
+  "nome": "Itália",
+  "qid": "Q38",
+  "iso2": "IT",
+  "iso3": "ITA",
+  "ddi": [
+   "+39"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q204992",
+    "nome": "lira italiana",
+    "iso": "ITL",
+    "simbolo": "₤",
+    "end": "+2002-02-28T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q652",
+    "nome": "italiano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q220",
+    "nome": "Roma",
+    "end": null
+   },
+   {
+    "qid": "Q2044",
+    "nome": "Florença",
+    "end": "+1871-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q495",
+    "nome": "Turim",
+    "end": "+1865-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q5412122",
+    "nome": "Europa/Roma"
+   }
+  ],
+  "continente": [
+   "Europa",
+   "África"
+  ]
+ },
+ "jm": {
+  "nome": "Jamaica",
+  "qid": "Q766",
+  "iso2": "JM",
+  "iso3": "JAM",
+  "ddi": [
+   "+1876"
+  ],
+  "moedas": [
+   {
+    "qid": "Q209792",
+    "nome": "Dólar jamaicano",
+    "iso": "JMD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q4248884",
+    "nome": "Libra jamaicana",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1969-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q942092",
+    "nome": "British West Indies dollar",
+    "iso": null,
+    "simbolo": "$",
+    "end": "+1964-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35939",
+    "nome": "patoá jamaicano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q34692",
+    "nome": "Kingston",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63286066",
+    "nome": "America/Jamaica"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "jo": {
+  "nome": "Jordânia",
+  "qid": "Q810",
+  "iso2": "JO",
+  "iso3": "JOR",
+  "ddi": [
+   "+962"
+  ],
+  "moedas": [
+   {
+    "qid": "Q203722",
+    "nome": "dinar jordano",
+    "iso": "JOD",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3805",
+    "nome": "Amã",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4806274",
+    "nome": "Asia/Amman"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "jp": {
+  "nome": "Japão",
+  "qid": "Q17",
+  "iso2": "JP",
+  "iso3": "JPN",
+  "ddi": [
+   "+81"
+  ],
+  "moedas": [
+   {
+    "qid": "Q8146",
+    "nome": "iene",
+    "iso": "JPY",
+    "simbolo": "¥",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5287",
+    "nome": "japonês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q262438",
+    "nome": "Shigaraki Palace",
+    "end": "+0745-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q862509",
+    "nome": "Heijō-kyō",
+    "end": "+0784-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1052803",
+    "nome": "Nagaoka-kyō",
+    "end": "+0794-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q6031707",
+    "nome": "Fukuhara-kyō",
+    "end": "+1180-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q215646",
+    "nome": "Edo",
+    "end": "+1868-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q751907",
+    "nome": "Heian-Kyo",
+    "end": "+1869-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1189121",
+    "nome": "Tóquio",
+    "end": "+1943-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1207735",
+    "nome": "Cidade de Tóquio",
+    "end": "+1943-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q1490",
+    "nome": "Tóquio",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q909085",
+    "nome": "Horário padrão do Japão"
+   },
+   {
+    "qid": "Q63285941",
+    "nome": "Asia/Tokyo"
+   },
+   {
+    "qid": "Q7041",
+    "nome": "UTC+9"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "ke": {
+  "nome": "Quênia",
+  "qid": "Q114",
+  "iso2": "KE",
+  "iso3": "KEN",
+  "ddi": [
+   "+254"
+  ],
+  "moedas": [
+   {
+    "qid": "Q202882",
+    "nome": "Xelim queniano",
+    "iso": "KES",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7838",
+    "nome": "Língua suaíli",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3870",
+    "nome": "Nairóbi",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4689515",
+    "nome": "Africa/Nairobi"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "kg": {
+  "nome": "Quirguistão",
+  "qid": "Q813",
+  "iso2": "KG",
+  "iso3": "KGZ",
+  "ddi": [
+   "+996"
+  ],
+  "moedas": [
+   {
+    "qid": "Q35881",
+    "nome": "som",
+    "iso": "KGS",
+    "simbolo": "⃀",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7737",
+    "nome": "russo",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9255",
+    "nome": "quirguiz",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9361",
+    "nome": "Bisqueque",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6906",
+    "nome": "UTC+6"
+   },
+   {
+    "qid": "Q63285943",
+    "nome": "Asia/Bishkek"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "kh": {
+  "nome": "Camboja",
+  "qid": "Q424",
+  "iso2": "KH",
+  "iso3": "KHM",
+  "ddi": [
+   "+855"
+  ],
+  "moedas": [
+   {
+    "qid": "Q204737",
+    "nome": "riel cambojano",
+    "iso": "KHR",
+    "simbolo": "៛",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9205",
+    "nome": "Língua khmer",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1850",
+    "nome": "Phnom Penh",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6940",
+    "nome": "UTC+7"
+   },
+   {
+    "qid": "Q109527628",
+    "nome": "Asia/Phnom_Penh"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "ki": {
+  "nome": "Quiribati",
+  "qid": "Q710",
+  "iso2": "KI",
+  "iso3": "KIR",
+  "ddi": [
+   "+686"
+  ],
+  "moedas": [
+   {
+    "qid": "Q1049963",
+    "nome": "Dólar de Kiribati",
+    "iso": null,
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q259502",
+    "nome": "Dólar australiano",
+    "iso": "AUD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q30898",
+    "nome": "Gilbertês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q131233",
+    "nome": "Tarawa do Sul",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q7118",
+    "nome": "UTC+13"
+   },
+   {
+    "qid": "Q7130",
+    "nome": "UTC+14"
+   },
+   {
+    "qid": "Q63285968",
+    "nome": "Pacific/Tarawa"
+   },
+   {
+    "qid": "Q109531307",
+    "nome": "Pacific/Kanton"
+   },
+   {
+    "qid": "Q7122270",
+    "nome": "Pacific/Kiritimati"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "km": {
+  "nome": "Comores",
+  "qid": "Q970",
+  "iso2": "KM",
+  "iso3": "COM",
+  "ddi": [
+   "+269"
+  ],
+  "moedas": [
+   {
+    "qid": "Q267264",
+    "nome": "Franco comoriano",
+    "iso": "KMF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33077",
+    "nome": "Língua comoriana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3901",
+    "nome": "Moroni",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q109520536",
+    "nome": "Indian/Comoro"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "kn": {
+  "nome": "São Cristóvão e Neves",
+  "qid": "Q763",
+  "iso2": "KN",
+  "iso3": "KNA",
+  "ddi": [
+   "+1869"
+  ],
+  "moedas": [
+   {
+    "qid": "Q26365",
+    "nome": "Dólar do Caribe Oriental",
+    "iso": "XCD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q41295",
+    "nome": "Basseterre",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q28145653",
+    "nome": "America/St_Kitts"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "kp": {
+  "nome": "Coreia do Norte",
+  "qid": "Q423",
+  "iso2": "KP",
+  "iso3": "PRK",
+  "ddi": [
+   "+850"
+  ],
+  "moedas": [
+   {
+    "qid": "Q106720",
+    "nome": "won norte-coreano",
+    "iso": "KPW",
+    "simbolo": "₩",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q18784",
+    "nome": "Munhwaŏ",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9176",
+    "nome": "coreano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q18808",
+    "nome": "Pyongyang",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7041",
+    "nome": "UTC+9"
+   },
+   {
+    "qid": "Q7023",
+    "nome": "UTC+8:30"
+   },
+   {
+    "qid": "Q7041",
+    "nome": "UTC+9"
+   },
+   {
+    "qid": "Q63285945",
+    "nome": "Asia/Pyongyang"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "kr": {
+  "nome": "Coreia do Sul",
+  "qid": "Q884",
+  "iso2": "KR",
+  "iso3": "KOR",
+  "ddi": [
+   "+82"
+  ],
+  "moedas": [
+   {
+    "qid": "Q202040",
+    "nome": "Won sul-coreano",
+    "iso": "KRW",
+    "simbolo": "₩",
+    "end": null
+   },
+   {
+    "qid": "Q3867091",
+    "nome": "Mun coreano",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1892-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9176",
+    "nome": "coreano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q3073428",
+    "nome": "língua de sinais coreana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q8684",
+    "nome": "Seul",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q76133",
+    "nome": "Horário na Coreia do Sul"
+   },
+   {
+    "qid": "Q7041",
+    "nome": "UTC+9"
+   },
+   {
+    "qid": "Q27963524",
+    "nome": "Asia/Seoul"
+   },
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q7023",
+    "nome": "UTC+8:30"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "kw": {
+  "nome": "Kuwait",
+  "qid": "Q817",
+  "iso2": "KW",
+  "iso3": "KWT",
+  "ddi": [
+   "+965"
+  ],
+  "moedas": [
+   {
+    "qid": "Q193098",
+    "nome": "dinar kuwaitiano",
+    "iso": "KWD",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q476195",
+    "nome": "Gulf rupee",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1966-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q35178",
+    "nome": "Kuwait",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q109528856",
+    "nome": "Asia/Kuwait"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "kz": {
+  "nome": "Cazaquistão",
+  "qid": "Q232",
+  "iso2": "KZ",
+  "iso3": "KAZ",
+  "ddi": [
+   "+7",
+   "+997"
+  ],
+  "moedas": [
+   {
+    "qid": "Q173751",
+    "nome": "tenge",
+    "iso": "KZT",
+    "simbolo": "₸",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9252",
+    "nome": "língua cazaque",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7737",
+    "nome": "russo",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1520",
+    "nome": "Astana",
+    "end": null
+   },
+   {
+    "qid": "Q35493",
+    "nome": "Almaty",
+    "end": "+1997-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q6906",
+    "nome": "UTC+6"
+   }
+  ],
+  "continente": [
+   "Europa",
+   "Ásia"
+  ]
+ },
+ "la": {
+  "nome": "Laos",
+  "qid": "Q819",
+  "iso2": "LA",
+  "iso3": "LAO",
+  "ddi": [
+   "+856"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200055",
+    "nome": "Kip",
+    "iso": "LAK",
+    "simbolo": "₭",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9211",
+    "nome": "Língua laociana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9326",
+    "nome": "Vienciana",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6940",
+    "nome": "UTC+7"
+   },
+   {
+    "qid": "Q109528882",
+    "nome": "Asia/Vientiane"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "lb": {
+  "nome": "Líbano",
+  "qid": "Q822",
+  "iso2": "LB",
+  "iso3": "LBN",
+  "ddi": [
+   "+961"
+  ],
+  "moedas": [
+   {
+    "qid": "Q201880",
+    "nome": "libra libanesa",
+    "iso": "LBP",
+    "simbolo": "£",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3820",
+    "nome": "Beirute",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   },
+   {
+    "qid": "Q63285946",
+    "nome": "Asia/Beirut"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "lc": {
+  "nome": "Santa Lúcia",
+  "qid": "Q760",
+  "iso2": "LC",
+  "iso3": "LCA",
+  "ddi": [
+   "+1758"
+  ],
+  "moedas": [
+   {
+    "qid": "Q26365",
+    "nome": "Dólar do Caribe Oriental",
+    "iso": "XCD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q41699",
+    "nome": "Castries",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q109529611",
+    "nome": "America/St_Lucia"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "li": {
+  "nome": "Liechtenstein",
+  "qid": "Q347",
+  "iso2": "LI",
+  "iso3": "LIE",
+  "ddi": [
+   "+423"
+  ],
+  "moedas": [
+   {
+    "qid": "Q25344",
+    "nome": "Franco suíço",
+    "iso": "CHF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2329625",
+    "nome": "Austrian krone",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1924-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q188",
+    "nome": "alemão",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1844",
+    "nome": "Vaduz",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q109521480",
+    "nome": "Europe/Vaduz"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "lk": {
+  "nome": "Sri Lanka",
+  "qid": "Q854",
+  "iso2": "LK",
+  "iso3": "LKA",
+  "ddi": [
+   "+94"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4596",
+    "nome": "rúpia do Sri Lanka",
+    "iso": "LKR",
+    "simbolo": "₨",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13267",
+    "nome": "cingalês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5885",
+    "nome": "Língua tâmil",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q41963",
+    "nome": "Kotte",
+    "end": null
+   },
+   {
+    "qid": "Q35381",
+    "nome": "Colombo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6828",
+    "nome": "UTC+5:30"
+   },
+   {
+    "qid": "Q63230234",
+    "nome": "Asia/Colombo"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "lr": {
+  "nome": "Libéria",
+  "qid": "Q1014",
+  "iso2": "LR",
+  "iso3": "LBR",
+  "ddi": [
+   "+231"
+  ],
+  "moedas": [
+   {
+    "qid": "Q242988",
+    "nome": "Dólar liberiano",
+    "iso": "LRD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q743823",
+    "nome": "British West African pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1943-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q242988",
+    "nome": "Dólar liberiano",
+    "iso": "LRD",
+    "simbolo": "$",
+    "end": "+1907-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3748",
+    "nome": "Monróvia",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689514",
+    "nome": "Africa/Monrovia"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ls": {
+  "nome": "Lesoto",
+  "qid": "Q1013",
+  "iso2": "LS",
+  "iso3": "LSO",
+  "ddi": [
+   "+266"
+  ],
+  "moedas": [
+   {
+    "qid": "Q208039",
+    "nome": "Loti",
+    "iso": "LSL",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q181907",
+    "nome": "rand",
+    "iso": "ZAR",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34340",
+    "nome": "língua soto do sul",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3909",
+    "nome": "Maseru",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689510",
+    "nome": "Africa/Maseru"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "lt": {
+  "nome": "Lituânia",
+  "qid": "Q37",
+  "iso2": "LT",
+  "iso3": "LTU",
+  "ddi": [
+   "+370"
+  ],
+  "moedas": [
+   {
+    "qid": "Q25627",
+    "nome": "litas lituano",
+    "iso": "LTL",
+    "simbolo": null,
+    "end": "+2014-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q1130620",
+    "nome": "Lithuanian talonas",
+    "iso": "LTT",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9083",
+    "nome": "língua lituana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q216",
+    "nome": "Vilnius",
+    "end": null
+   },
+   {
+    "qid": "Q4115712",
+    "nome": "Kaunas",
+    "end": "+1939-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q28148652",
+    "nome": "Europe/Vilnius"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "lu": {
+  "nome": "Luxemburgo",
+  "qid": "Q32",
+  "iso2": "LU",
+  "iso3": "LUX",
+  "ddi": [
+   "+352"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q213940",
+    "nome": "franco luxemburguês",
+    "iso": "LUF",
+    "simbolo": null,
+    "end": "+2002-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9051",
+    "nome": "língua luxemburguesa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q188",
+    "nome": "alemão",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1842",
+    "nome": "Luxemburgo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28148670",
+    "nome": "Europe/Luxembourg"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "lv": {
+  "nome": "Letônia",
+  "qid": "Q211",
+  "iso2": "LV",
+  "iso3": "LVA",
+  "ddi": [
+   "+371"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q133011",
+    "nome": "lats letão",
+    "iso": "LVL",
+    "simbolo": null,
+    "end": "+2013-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q2472225",
+    "nome": "Latvian rublis",
+    "iso": "LVR",
+    "simbolo": null,
+    "end": "+1993-03-05T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9078",
+    "nome": "língua letã",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1773",
+    "nome": "Riga",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ly": {
+  "nome": "Líbia",
+  "qid": "Q1016",
+  "iso2": "LY",
+  "iso3": "LBY",
+  "ddi": [
+   "+218"
+  ],
+  "moedas": [
+   {
+    "qid": "Q190699",
+    "nome": "dinar líbio",
+    "iso": "LYD",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q60950",
+    "nome": "Libyan pound",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1971-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q56467",
+    "nome": "árabe moderno padrão",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3579",
+    "nome": "Trípoli",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q4689523",
+    "nome": "Africa/Tripoli"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ma": {
+  "nome": "Marrocos",
+  "qid": "Q1028",
+  "iso2": "MA",
+  "iso3": "MAR",
+  "ddi": [
+   "+212"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200192",
+    "nome": "Dirham marroquino",
+    "iso": "MAD",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7598268",
+    "nome": "Standard Moroccan Tamazight",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3551",
+    "nome": "Rabat",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689485",
+    "nome": "Africa/Casablanca"
+   },
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "mc": {
+  "nome": "Mônaco",
+  "qid": "Q235",
+  "iso2": "MC",
+  "iso3": "MCO",
+  "ddi": [
+   "+377"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q1047040",
+    "nome": "franco monegasco",
+    "iso": null,
+    "simbolo": null,
+    "end": "+2002-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q235",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q63286002",
+    "nome": "Europe/Monaco"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "md": {
+  "nome": "Moldávia",
+  "qid": "Q217",
+  "iso2": "MD",
+  "iso3": "MDA",
+  "ddi": [
+   "+373"
+  ],
+  "moedas": [
+   {
+    "qid": "Q181129",
+    "nome": "leu moldávio",
+    "iso": "MDL",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q36392",
+    "nome": "língua moldávia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36392",
+    "nome": "língua moldávia",
+    "rank": "deprecated"
+   },
+   {
+    "qid": "Q7913",
+    "nome": "língua romena",
+    "rank": "preferred"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q21197",
+    "nome": "Chișinău",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q63286001",
+    "nome": "Europe/Chisinau"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "me": {
+  "nome": "Montenegro",
+  "qid": "Q236",
+  "iso2": "ME",
+  "iso3": "MNE",
+  "ddi": [
+   "+382"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q8821",
+    "nome": "língua montenegrina",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q9299",
+    "nome": "língua sérvia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q6654",
+    "nome": "croata",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9303",
+    "nome": "Língua bósnia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8748",
+    "nome": "língua albanesa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q23564",
+    "nome": "Podgorica",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28148759",
+    "nome": "Europe/Podgorica"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "mg": {
+  "nome": "Madagascar",
+  "qid": "Q1019",
+  "iso2": "MG",
+  "iso3": "MDG",
+  "ddi": [
+   "+261"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4584",
+    "nome": "ariary malgaxe",
+    "iso": "MGA",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1440737",
+    "nome": "Malagasy franc",
+    "iso": "MGF",
+    "simbolo": null,
+    "end": "+2005-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7930",
+    "nome": "Língua malgaxe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3915",
+    "nome": "Antananarivo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q109520398",
+    "nome": "Indian/Antananarivo"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "mh": {
+  "nome": "Ilhas Marshall",
+  "qid": "Q709",
+  "iso2": "MH",
+  "iso3": "MHL",
+  "ddi": [
+   "+692"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q96051466",
+    "nome": "SOV",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36280",
+    "nome": "Língua marshalesa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q12919",
+    "nome": "Majuro",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q63285971",
+    "nome": "Pacific/Kwajalein"
+   },
+   {
+    "qid": "Q63285970",
+    "nome": "Pacific/Majuro"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "mk": {
+  "nome": "Macedônia do Norte",
+  "qid": "Q221",
+  "iso2": "MK",
+  "iso3": "MKD",
+  "ddi": [
+   "+389"
+  ],
+  "moedas": [
+   {
+    "qid": "Q177875",
+    "nome": "dinar macedónio",
+    "iso": "MKD",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9296",
+    "nome": "língua macedônia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8748",
+    "nome": "língua albanesa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q384",
+    "nome": "Skopje",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q207020",
+    "nome": "Horário de Verão da Europa Central"
+   },
+   {
+    "qid": "Q28148762",
+    "nome": "Europe/Skopje"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ml": {
+  "nome": "Mali",
+  "qid": "Q912",
+  "iso2": "ML",
+  "iso3": "MLI",
+  "ddi": [
+   "+223"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2629054",
+    "nome": "Franco maliano",
+    "iso": "MLF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33243",
+    "nome": "Língua bambara",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q12628055",
+    "nome": "Bobo",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35021",
+    "nome": "Bozo",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1234776",
+    "nome": "Línguas dogon",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33454",
+    "nome": "Língua fula",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q56231",
+    "nome": "Árabe hassani",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36905",
+    "nome": "Kassonke",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36186",
+    "nome": "Línguas maninkas",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36187",
+    "nome": "Minyanka",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33795",
+    "nome": "Senufo",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q505198",
+    "nome": "Línguas songai",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36660",
+    "nome": "Língua soninquê",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q4670066",
+    "nome": "Tamasheq",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3703",
+    "nome": "Bamako",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689475",
+    "nome": "Africa/Bamako"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "mm": {
+  "nome": "Mianmar",
+  "qid": "Q836",
+  "iso2": "MM",
+  "iso3": "MMR",
+  "ddi": [
+   "+95"
+  ],
+  "moedas": [
+   {
+    "qid": "Q201875",
+    "nome": "Quiate",
+    "iso": "MMK",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2341354",
+    "nome": "Burmese rupee",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1952-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q2341354",
+    "nome": "Burmese rupee",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1942-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9228",
+    "nome": "birmanês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q37400",
+    "nome": "Naypyidaw",
+    "end": null
+   },
+   {
+    "qid": "Q37995",
+    "nome": "Rangum",
+    "end": "+2005-11-06T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6923",
+    "nome": "UTC+6:30"
+   },
+   {
+    "qid": "Q29692762",
+    "nome": "Asia/Yangon"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "mn": {
+  "nome": "Mongólia",
+  "qid": "Q711",
+  "iso2": "MN",
+  "iso3": "MNG",
+  "ddi": [
+   "+976"
+  ],
+  "moedas": [
+   {
+    "qid": "Q183435",
+    "nome": "tugrik",
+    "iso": "MNT",
+    "simbolo": "₮",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9246",
+    "nome": "Língua mongol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q23430",
+    "nome": "Ulã Bator",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q4806283",
+    "nome": "Asia/Hovd"
+   },
+   {
+    "qid": "Q4806310",
+    "nome": "Asia/Ulaanbaatar"
+   },
+   {
+    "qid": "Q4806280",
+    "nome": "Asia/Choibalsan"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "mr": {
+  "nome": "Mauritânia",
+  "qid": "Q1025",
+  "iso2": "MR",
+  "iso3": "MRT",
+  "ddi": [
+   "+222"
+  ],
+  "moedas": [
+   {
+    "qid": "Q56302633",
+    "nome": "Ouguiya",
+    "iso": "MRO",
+    "simbolo": null,
+    "end": "+2018-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q207024",
+    "nome": "Uguia",
+    "iso": "MRU",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3688",
+    "nome": "Nouakchott",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689519",
+    "nome": "Africa/Nouakchott"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "mt": {
+  "nome": "Malta",
+  "qid": "Q233",
+  "iso2": "MT",
+  "iso3": "MLT",
+  "ddi": [
+   "+356"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q174467",
+    "nome": "lira maltesa",
+    "iso": "MTL",
+    "simbolo": "₤",
+    "end": "+2008-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9166",
+    "nome": "Maltês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q23800",
+    "nome": "Valeta",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q5412115",
+    "nome": "Europe/Malta"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "mu": {
+  "nome": "Maurício",
+  "qid": "Q1027",
+  "iso2": "MU",
+  "iso3": "MUS",
+  "ddi": [
+   "+230"
+  ],
+  "moedas": [
+   {
+    "qid": "Q212967",
+    "nome": "Rupia mauriciana",
+    "iso": "MUR",
+    "simbolo": "₨",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3929",
+    "nome": "Port Louis",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q63224579",
+    "nome": "Indian/Mauritius"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "mv": {
+  "nome": "Maldivas",
+  "qid": "Q826",
+  "iso2": "MV",
+  "iso3": "MDV",
+  "ddi": [
+   "+960"
+  ],
+  "moedas": [
+   {
+    "qid": "Q206600",
+    "nome": "Rupia maldívia",
+    "iso": "MVR",
+    "simbolo": "⃂",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q32656",
+    "nome": "Língua divehi",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9347",
+    "nome": "Malé",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q63285949",
+    "nome": "Indian/Maldives"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "mw": {
+  "nome": "Malawi",
+  "qid": "Q1020",
+  "iso2": "MW",
+  "iso3": "MWI",
+  "ddi": [
+   "+265"
+  ],
+  "moedas": [
+   {
+    "qid": "Q211694",
+    "nome": "Kwacha do Maláui",
+    "iso": "MWK",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2616615",
+    "nome": "Malawian pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1971-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33273",
+    "nome": "língua nianja",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34138",
+    "nome": "Língua tumbuka",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3876",
+    "nome": "Lilongué",
+    "end": null
+   },
+   {
+    "qid": "Q219117",
+    "nome": "Zomba",
+    "end": "+1975-01-01T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689479",
+    "nome": "Africa/Blantyre"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "mx": {
+  "nome": "México",
+  "qid": "Q96",
+  "iso2": "MX",
+  "iso3": "MEX",
+  "ddi": [
+   "+52"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4730",
+    "nome": "peso mexicano",
+    "iso": "MXN",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13300",
+    "nome": "nauatle",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13354",
+    "nome": "Iucateque",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1489",
+    "nome": "Cidade do México",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q2086913",
+    "nome": "Horário Padrão Central"
+   },
+   {
+    "qid": "Q3134980",
+    "nome": "Horário padrão da montanha"
+   },
+   {
+    "qid": "Q847142",
+    "nome": "Pacific Time Zone"
+   },
+   {
+    "qid": "Q941023",
+    "nome": "Zona de Tempo Oriental"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "my": {
+  "nome": "Malásia",
+  "qid": "Q833",
+  "iso2": "MY",
+  "iso3": "MYS",
+  "ddi": [
+   "+60"
+  ],
+  "moedas": [
+   {
+    "qid": "Q163712",
+    "nome": "ringgit malaio",
+    "iso": "MYR",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9237",
+    "nome": "malaio",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1865",
+    "nome": "Kuala Lumpur",
+    "end": null
+   },
+   {
+    "qid": "Q182378",
+    "nome": "Putrajaya",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q63285947",
+    "nome": "Asia/Kuala_Lumpur"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "mz": {
+  "nome": "Moçambique",
+  "qid": "Q1029",
+  "iso2": "MZ",
+  "iso3": "MOZ",
+  "ddi": [
+   "+258"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200753",
+    "nome": "Metical",
+    "iso": "MZN",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q600213",
+    "nome": "Escudo de Moçambique",
+    "iso": "MZE",
+    "simbolo": null,
+    "end": "+1980-06-16T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3889",
+    "nome": "Maputo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689511",
+    "nome": "Africa/Maputo"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "na": {
+  "nome": "Namíbia",
+  "qid": "Q1030",
+  "iso2": "NA",
+  "iso3": "NAM",
+  "ddi": [
+   "+264"
+  ],
+  "moedas": [
+   {
+    "qid": "Q202462",
+    "nome": "Dólar da Namíbia",
+    "iso": "NAD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q181907",
+    "nome": "rand",
+    "iso": "ZAR",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3935",
+    "nome": "Windhoek",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689525",
+    "nome": "Africa/Windhoek"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ne": {
+  "nome": "Níger",
+  "qid": "Q1032",
+  "iso2": "NE",
+  "iso3": "NER",
+  "ddi": [
+   "+227"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q56475",
+    "nome": "Língua haúça",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3674",
+    "nome": "Niamey",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689518",
+    "nome": "Africa/Niamey"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ng": {
+  "nome": "Nigéria",
+  "qid": "Q1033",
+  "iso2": "NG",
+  "iso3": "NGA",
+  "ddi": [
+   "+234"
+  ],
+  "moedas": [
+   {
+    "qid": "Q203567",
+    "nome": "Naira",
+    "iso": "NGN",
+    "simbolo": "₦",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3787",
+    "nome": "Abuja",
+    "end": null
+   },
+   {
+    "qid": "Q8673",
+    "nome": "Lagos",
+    "end": "+1991-12-12T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689502",
+    "nome": "Africa/Lagos"
+   },
+   {
+    "qid": "Q1773995",
+    "nome": "Horário da África Ocidental"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ni": {
+  "nome": "Nicarágua",
+  "qid": "Q811",
+  "iso2": "NI",
+  "iso3": "NIC",
+  "ddi": [
+   "+505"
+  ],
+  "moedas": [
+   {
+    "qid": "Q207312",
+    "nome": "Córdoba",
+    "iso": "NIO",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1618872",
+    "nome": "Nicaraguan peso",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1912-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3274",
+    "nome": "Managua",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286068",
+    "nome": "America/Managua"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "no": {
+  "nome": "Noruega",
+  "qid": "Q20",
+  "iso2": "NO",
+  "iso3": "NOR",
+  "ddi": [
+   "+47"
+  ],
+  "moedas": [
+   {
+    "qid": "Q132643",
+    "nome": "coroa norueguesa",
+    "iso": "NOK",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q25167",
+    "nome": "bokmål",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q56463",
+    "nome": "línguas sami",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q25164",
+    "nome": "novo norueguês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9043",
+    "nome": "norueguês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q585",
+    "nome": "Oslo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q5412119",
+    "nome": "Europe/Oslo"
+   }
+  ],
+  "continente": [
+   "Europa",
+   "Antártida"
+  ]
+ },
+ "np": {
+  "nome": "Nepal",
+  "qid": "Q837",
+  "iso2": "NP",
+  "iso3": "NPL",
+  "ddi": [
+   "+977"
+  ],
+  "moedas": [
+   {
+    "qid": "Q202895",
+    "nome": "Rupia nepalesa",
+    "iso": "NPR",
+    "simbolo": "₨",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33823",
+    "nome": "língua nepali",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3037",
+    "nome": "Catmandu",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6890",
+    "nome": "UTC+5:45"
+   },
+   {
+    "qid": "Q3297477",
+    "nome": "Horário do Nepal"
+   },
+   {
+    "qid": "Q63285950",
+    "nome": "Asia/Kathmandu"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "nr": {
+  "nome": "Nauru",
+  "qid": "Q697",
+  "iso2": "NR",
+  "iso3": "NRU",
+  "ddi": [
+   "+674"
+  ],
+  "moedas": [
+   {
+    "qid": "Q259502",
+    "nome": "Dólar australiano",
+    "iso": "AUD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13307",
+    "nome": "Língua nauruana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q31026",
+    "nome": "Yaren",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q63285974",
+    "nome": "Pacific/Nauru"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "nz": {
+  "nome": "Nova Zelândia",
+  "qid": "Q664",
+  "iso2": "NZ",
+  "iso3": "NZL",
+  "ddi": [
+   "+64"
+  ],
+  "moedas": [
+   {
+    "qid": "Q1472704",
+    "nome": "dólar neozelandês",
+    "iso": "NZD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q1887019",
+    "nome": "New Zealand pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1967-07-09T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q36451",
+    "nome": "língua maori",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36239",
+    "nome": "língua de sinais da Nova Zelândia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q23661",
+    "nome": "Wellington",
+    "end": null
+   },
+   {
+    "qid": "Q37100",
+    "nome": "Auckland",
+    "end": "+1865-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q7081990",
+    "nome": "Okiato",
+    "end": "+1841-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7127",
+    "nome": "UTC+13:45"
+   },
+   {
+    "qid": "Q7118",
+    "nome": "UTC+13"
+   },
+   {
+    "qid": "Q7110",
+    "nome": "UTC+12:45"
+   },
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q2163",
+    "nome": "UTC−10"
+   },
+   {
+    "qid": "Q2154",
+    "nome": "UTC−11"
+   },
+   {
+    "qid": "Q63285976",
+    "nome": "Pacific/Auckland"
+   },
+   {
+    "qid": "Q63285977",
+    "nome": "Pacific/Chatham"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania",
+   "Austrália"
+  ]
+ },
+ "om": {
+  "nome": "Omã",
+  "qid": "Q842",
+  "iso2": "OM",
+  "iso3": "OMN",
+  "ddi": [
+   "+968"
+  ],
+  "moedas": [
+   {
+    "qid": "Q272290",
+    "nome": "Rial omanense",
+    "iso": "OMR",
+    "simbolo": "⃄",
+    "end": null
+   },
+   {
+    "qid": "Q4405126",
+    "nome": "Said rial",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1974-03-00T00:00:00Z"
+   },
+   {
+    "qid": "Q476195",
+    "nome": "Gulf rupee",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1970-05-07T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3826",
+    "nome": "Mascate",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q109529041",
+    "nome": "Asia/Muscat"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "pa": {
+  "nome": "Panamá",
+  "qid": "Q804",
+  "iso2": "PA",
+  "iso3": "PAN",
+  "ddi": [
+   "+507"
+  ],
+  "moedas": [
+   {
+    "qid": "Q210472",
+    "nome": "Balboa",
+    "iso": "PAB",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3306",
+    "nome": "Cidade do Panamá",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63286069",
+    "nome": "America/Panama"
+   }
+  ],
+  "continente": [
+   "América Central",
+   "América do Sul",
+   "América do Norte e América Central"
+  ]
+ },
+ "pe": {
+  "nome": "Peru",
+  "qid": "Q419",
+  "iso2": "PE",
+  "iso3": "PER",
+  "ddi": [
+   "+51"
+  ],
+  "moedas": [
+   {
+    "qid": "Q204656",
+    "nome": "Sol novo",
+    "iso": "PEN",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1531048",
+    "nome": "Inti",
+    "iso": "PEI",
+    "simbolo": null,
+    "end": "+1991-07-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q4627",
+    "nome": "Língua aymará",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5218",
+    "nome": "quíchua",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2868",
+    "nome": "Lima",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7805356",
+    "nome": "Time in Peru"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q63286099",
+    "nome": "America/Lima"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "pg": {
+  "nome": "Papua-Nova Guiné",
+  "qid": "Q691",
+  "iso2": "PG",
+  "iso3": "PNG",
+  "ddi": [
+   "+675"
+  ],
+  "moedas": [
+   {
+    "qid": "Q200759",
+    "nome": "Kina",
+    "iso": "PGK",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34159",
+    "nome": "Tok Pisin",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33617",
+    "nome": "Língua hiri motu",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q25044405",
+    "nome": "Língua de sinais da Papua-Nova Guiné",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q36526",
+    "nome": "Port Moresby",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7056",
+    "nome": "UTC+10"
+   },
+   {
+    "qid": "Q7069",
+    "nome": "UTC+11"
+   },
+   {
+    "qid": "Q63285983",
+    "nome": "Pacific/Port_Moresby"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "ph": {
+  "nome": "Filipinas",
+  "qid": "Q928",
+  "iso2": "PH",
+  "iso3": "PHL",
+  "ddi": [
+   "+63"
+  ],
+  "moedas": [
+   {
+    "qid": "Q17193",
+    "nome": "peso filipino",
+    "iso": "PHP",
+    "simbolo": "₱",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33298",
+    "nome": "filipino",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q2530387",
+    "nome": "Taglish",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1461",
+    "nome": "Manila",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q3543509",
+    "nome": "Philippine Standard Time"
+   },
+   {
+    "qid": "Q63285954",
+    "nome": "Asia/Manila"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "pk": {
+  "nome": "Paquistão",
+  "qid": "Q843",
+  "iso2": "PK",
+  "iso3": "PAK",
+  "ddi": [
+   "+92"
+  ],
+  "moedas": [
+   {
+    "qid": "Q188289",
+    "nome": "Rupia do Paquistão",
+    "iso": "PKR",
+    "simbolo": "₨",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1617",
+    "nome": "urdu",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1362",
+    "nome": "Islamabad",
+    "end": null
+   },
+   {
+    "qid": "Q93230",
+    "nome": "Rawalpindi",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q4806288",
+    "nome": "Asia/Karachi"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "pl": {
+  "nome": "Polônia",
+  "qid": "Q36",
+  "iso2": "PL",
+  "iso3": "POL",
+  "ddi": [
+   "+48"
+  ],
+  "moedas": [
+   {
+    "qid": "Q123213",
+    "nome": "złoty",
+    "iso": "PLN",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1779554",
+    "nome": "Polish marka",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1924-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q809",
+    "nome": "polaco",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q9091",
+    "nome": "língua bielorrussa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q30319",
+    "nome": "silesiano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33690",
+    "nome": "cassúbio",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q270",
+    "nome": "Varsóvia",
+    "end": null
+   },
+   {
+    "qid": "Q51432",
+    "nome": "Gniezno",
+    "end": "+1038-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q31487",
+    "nome": "Cracóvia",
+    "end": "+1795-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q207020",
+    "nome": "Horário de Verão da Europa Central"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ps": {
+  "nome": "Palestina",
+  "qid": "Q219060",
+  "iso2": "PS",
+  "iso3": "PSE",
+  "ddi": [
+   "+970"
+  ],
+  "moedas": [
+   {
+    "qid": "Q203722",
+    "nome": "dinar jordano",
+    "iso": "JOD",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q131309",
+    "nome": "novo shekel israelense",
+    "iso": "ILS",
+    "simbolo": "₪",
+    "end": null
+   },
+   {
+    "qid": "Q199462",
+    "nome": "libra egípcia",
+    "iso": "EGP",
+    "simbolo": "£",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q212938",
+    "nome": "Jerusalém Oriental",
+    "end": null
+   },
+   {
+    "qid": "Q158119",
+    "nome": "Ramallah",
+    "end": null
+   },
+   {
+    "qid": "Q1218",
+    "nome": "Jerusalém",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q63285940",
+    "nome": "Asia/Jerusalem"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "pt": {
+  "nome": "Portugal",
+  "qid": "Q45",
+  "iso2": "PT",
+  "iso3": "PRT",
+  "ddi": [
+   "+351"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q468474",
+    "nome": "escudo português",
+    "iso": "PTE",
+    "simbolo": null,
+    "end": "+2002-02-28T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13330",
+    "nome": "mirandês",
+    "rank": "deprecated"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q597",
+    "nome": "Lisboa",
+    "end": null
+   },
+   {
+    "qid": "Q45412",
+    "nome": "Coimbra",
+    "end": "+1255-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q843589",
+    "nome": "Horário da Europa Ocidental"
+   },
+   {
+    "qid": "Q7987828",
+    "nome": "Horário de Verão da Europa Ocidental"
+   },
+   {
+    "qid": "Q6540",
+    "nome": "UTC−1"
+   },
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q5412108",
+    "nome": "Europe/Lisbon"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "pw": {
+  "nome": "Palau",
+  "qid": "Q695",
+  "iso2": "PW",
+  "iso3": "PLW",
+  "ddi": [
+   "+680"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33776",
+    "nome": "palauense",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5287",
+    "nome": "japonês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q515229",
+    "nome": "Ngerulmud",
+    "end": null
+   },
+   {
+    "qid": "Q527748",
+    "nome": "Koror",
+    "end": "+2006-10-06T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7041",
+    "nome": "UTC+9"
+   },
+   {
+    "qid": "Q63285982",
+    "nome": "Pacific/Palau"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "py": {
+  "nome": "Paraguai",
+  "qid": "Q733",
+  "iso2": "PY",
+  "iso3": "PRY",
+  "ddi": [
+   "+595"
+  ],
+  "moedas": [
+   {
+    "qid": "Q207514",
+    "nome": "Guarani",
+    "iso": "PYG",
+    "simbolo": "₲",
+    "end": null
+   },
+   {
+    "qid": "Q2346646",
+    "nome": "Paraguayan peso",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1944-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q607532",
+    "nome": "Paraguayan real",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1856-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35876",
+    "nome": "língua guarani",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2933",
+    "nome": "Assunção",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q63286098",
+    "nome": "America/Asuncion"
+   },
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "qa": {
+  "nome": "Catar",
+  "qid": "Q846",
+  "iso2": "QA",
+  "iso3": "QAT",
+  "ddi": [
+   "+974"
+  ],
+  "moedas": [
+   {
+    "qid": "Q206386",
+    "nome": "Rial catarense",
+    "iso": "QAR",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q476195",
+    "nome": "Gulf rupee",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1966-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q4395040",
+    "nome": "riyal of Qatar and Dubai",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1973-05-18T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3861",
+    "nome": "Doha",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q63285955",
+    "nome": "Asia/Qatar"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "ro": {
+  "nome": "Romênia",
+  "qid": "Q218",
+  "iso2": "RO",
+  "iso3": "ROU",
+  "ddi": [
+   "+40"
+  ],
+  "moedas": [
+   {
+    "qid": "Q131645",
+    "nome": "leu romeno",
+    "iso": "RON",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7913",
+    "nome": "língua romena",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q19660",
+    "nome": "Bucareste",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q5412100",
+    "nome": "Europe/Bucharest"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q1109976",
+    "nome": "Horário de Verão do Leste Europeu"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "rs": {
+  "nome": "Sérvia",
+  "qid": "Q403",
+  "iso2": "RS",
+  "iso3": "SRB",
+  "ddi": [
+   "+381"
+  ],
+  "moedas": [
+   {
+    "qid": "Q172524",
+    "nome": "dinar sérvio",
+    "iso": "RSD",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9299",
+    "nome": "língua sérvia",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3711",
+    "nome": "Belgrado",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q5412095",
+    "nome": "Europe/Belgrade"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ru": {
+  "nome": "Rússia",
+  "qid": "Q159",
+  "iso2": "RU",
+  "iso3": "RUS",
+  "ddi": [
+   "+7"
+  ],
+  "moedas": [
+   {
+    "qid": "Q41044",
+    "nome": "rublo russo",
+    "iso": "RUB",
+    "simbolo": "₽",
+    "end": null
+   },
+   {
+    "qid": "Q615640",
+    "nome": "Rublo soviético",
+    "iso": "SUR",
+    "simbolo": null,
+    "end": "+1999-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7737",
+    "nome": "russo",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q27567",
+    "nome": "Língua abaza",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q27776",
+    "nome": "língua adigue",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1991779",
+    "nome": "Southern Altai",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13389",
+    "nome": "Língua bashkir",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33120",
+    "nome": "Língua buriata",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33509",
+    "nome": "língua inguche",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33522",
+    "nome": "Língua cabardiana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33634",
+    "nome": "calmuco",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33714",
+    "nome": "Língua carachaio-bálcara",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36126",
+    "nome": "língua cómi",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33357",
+    "nome": "tártaro da Crimeia",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q973685",
+    "nome": "língua mari",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13343",
+    "nome": "moksha",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33871",
+    "nome": "Língua nogai",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33968",
+    "nome": "Língua osseta",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q25285",
+    "nome": "tártaro",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34119",
+    "nome": "Língua tuviniana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13238",
+    "nome": "Língua udmurte",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8798",
+    "nome": "ucraniano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33575",
+    "nome": "Língua khakas",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33350",
+    "nome": "checheno",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33348",
+    "nome": "tchuvache",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q29952",
+    "nome": "Língua erzya",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34299",
+    "nome": "Língua iacuta",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q29561",
+    "nome": "Língua ávara",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36498",
+    "nome": "Língua agul",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9292",
+    "nome": "Língua azeri",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q32332",
+    "nome": "Língua dargínica",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36209",
+    "nome": "Língua kumyk",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36206",
+    "nome": "Língua lak",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q31746",
+    "nome": "Língua lezgui",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33871",
+    "nome": "Língua nogai",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36757",
+    "nome": "Língua rutul",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34079",
+    "nome": "Língua tabassarã",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q56489",
+    "nome": "Língua tat",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36853",
+    "nome": "Língua tsakhur",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q649",
+    "nome": "Moscovo",
+    "end": null
+   },
+   {
+    "qid": "Q656",
+    "nome": "São Petersburgo",
+    "end": "+1918-03-11T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q842320",
+    "nome": "Horário de Moscovo"
+   },
+   {
+    "qid": "Q2350893",
+    "nome": "Horário de Samara"
+   },
+   {
+    "qid": "Q2332010",
+    "nome": "Horário de Ecaterimburgo"
+   },
+   {
+    "qid": "Q1322118",
+    "nome": "Horário de Omsk"
+   },
+   {
+    "qid": "Q2351310",
+    "nome": "Horário de Krasnoiarsk"
+   },
+   {
+    "qid": "Q2347353",
+    "nome": "Horário de Irkutsk"
+   },
+   {
+    "qid": "Q2351250",
+    "nome": "Horário de Yakutsk"
+   },
+   {
+    "qid": "Q2620414",
+    "nome": "Horário de Kamchatka"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q632994",
+    "nome": "Vladivostok Time"
+   },
+   {
+    "qid": "Q18392530",
+    "nome": "Srednekolymsk Time"
+   },
+   {
+    "qid": "Q385504",
+    "nome": "Magadan Time"
+   },
+   {
+    "qid": "Q2356448",
+    "nome": "Horário de Kaliningrado"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   }
+  ],
+  "continente": [
+   "Europa",
+   "Ásia",
+   "Eurásia"
+  ]
+ },
+ "rw": {
+  "nome": "Ruanda",
+  "qid": "Q1037",
+  "iso2": "RW",
+  "iso3": "RWA",
+  "ddi": [
+   "+250"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4741",
+    "nome": "franco ruandês",
+    "iso": "RWF",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q1072248",
+    "nome": "Rwanda and Burundi franc",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1964-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q33573",
+    "nome": "Língua kinyarwanda",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7838",
+    "nome": "Língua suaíli",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3859",
+    "nome": "Quigali",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689501",
+    "nome": "Africa/Kigali"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "sa": {
+  "nome": "Arábia Saudita",
+  "qid": "Q851",
+  "iso2": "SA",
+  "iso3": "SAU",
+  "ddi": [
+   "+966"
+  ],
+  "moedas": [
+   {
+    "qid": "Q199857",
+    "nome": "Riyal",
+    "iso": "SAR",
+    "simbolo": "⃁",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3692",
+    "nome": "Riade",
+    "end": null
+   },
+   {
+    "qid": "Q277505",
+    "nome": "Al-Diriyah",
+    "end": "+1818-00-00T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q63285956",
+    "nome": "Asia/Riyadh"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "sb": {
+  "nome": "Ilhas Salomão",
+  "qid": "Q685",
+  "iso2": "SB",
+  "iso3": "SLB",
+  "ddi": [
+   "+677"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4597",
+    "nome": "Dólar das Ilhas Salomão",
+    "iso": "SBD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q4493464",
+    "nome": "Solomon Islands pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1966-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q40921",
+    "nome": "Honiara",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7069",
+    "nome": "UTC+11"
+   },
+   {
+    "qid": "Q63285988",
+    "nome": "Pacific/Guadalcanal"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "sc": {
+  "nome": "Seicheles",
+  "qid": "Q1042",
+  "iso2": "SC",
+  "iso3": "SYC",
+  "ddi": [
+   "+248"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4595",
+    "nome": "rupia das Seicheles",
+    "iso": "SCR",
+    "simbolo": "₨",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34015",
+    "nome": "Crioulo de Seychelles",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3940",
+    "nome": "Victoria",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6779",
+    "nome": "UTC+4"
+   },
+   {
+    "qid": "Q63285927",
+    "nome": "Indian/Mahe"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "sd": {
+  "nome": "Sudão",
+  "qid": "Q1049",
+  "iso2": "SD",
+  "iso3": "SDN",
+  "ddi": [
+   "+249"
+  ],
+  "moedas": [
+   {
+    "qid": "Q271206",
+    "nome": "Libra sudanesa",
+    "iso": "SDG",
+    "simbolo": "£",
+    "end": null
+   },
+   {
+    "qid": "Q1511773",
+    "nome": "dinar sudanês",
+    "iso": "SDD",
+    "simbolo": null,
+    "end": "+2007-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1963",
+    "nome": "Cartum",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689499",
+    "nome": "Africa/Khartoum"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "se": {
+  "nome": "Suécia",
+  "qid": "Q34",
+  "iso2": "SE",
+  "iso3": "SWE",
+  "ddi": [
+   "+46"
+  ],
+  "moedas": [
+   {
+    "qid": "Q122922",
+    "nome": "coroa sueca",
+    "iso": "SEK",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9027",
+    "nome": "língua sueca",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q56463",
+    "nome": "línguas sami",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1412",
+    "nome": "finlandês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13357",
+    "nome": "Língua meänkieli",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13201",
+    "nome": "Romani",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8641",
+    "nome": "língua iídiche",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1754",
+    "nome": "Estocolmo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q28146208",
+    "nome": "Europe/Stockholm"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "sg": {
+  "nome": "Singapura",
+  "qid": "Q334",
+  "iso2": "SG",
+  "iso3": "SGP",
+  "ddi": [
+   "+65"
+  ],
+  "moedas": [
+   {
+    "qid": "Q190951",
+    "nome": "dólar de Singapura",
+    "iso": "SGD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9237",
+    "nome": "malaio",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q727694",
+    "nome": "mandarim padrão",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q5885",
+    "nome": "Língua tâmil",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q334",
+    "nome": null,
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q3244578",
+    "nome": "Singapore Standard Time"
+   },
+   {
+    "qid": "Q63285957",
+    "nome": "Asia/Singapore"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "si": {
+  "nome": "Eslovênia",
+  "qid": "Q215",
+  "iso2": "SI",
+  "iso3": "SVN",
+  "ddi": [
+   "+386"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q208133",
+    "nome": "tolar",
+    "iso": "SIT",
+    "simbolo": null,
+    "end": "+2007-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9063",
+    "nome": "língua eslovena",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q652",
+    "nome": "italiano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q9067",
+    "nome": "húngaro",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q437",
+    "nome": "Liubliana",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q5412110",
+    "nome": "Europe/Ljubljana"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "sk": {
+  "nome": "Eslováquia",
+  "qid": "Q214",
+  "iso2": "SK",
+  "iso3": "SVK",
+  "ddi": [
+   "+421"
+  ],
+  "moedas": [
+   {
+    "qid": "Q178874",
+    "nome": "coroa eslovaca",
+    "iso": "SKK",
+    "simbolo": null,
+    "end": "+2009-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9058",
+    "nome": "eslovaco",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1780",
+    "nome": "Bratislava",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q16891899",
+    "nome": "Europe/Bratislava"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "sl": {
+  "nome": "Serra Leoa",
+  "qid": "Q1044",
+  "iso2": "SL",
+  "iso3": "SLE",
+  "ddi": [
+   "+232"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4587",
+    "nome": "leone",
+    "iso": "SLL",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35744",
+    "nome": "Língua krio",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3780",
+    "nome": "Freetown",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689493",
+    "nome": "Africa/Freetown"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "sm": {
+  "nome": "San Marino",
+  "qid": "Q238",
+  "iso2": "SM",
+  "iso3": "SMR",
+  "ddi": [
+   "+378",
+   "+390549"
+  ],
+  "moedas": [
+   {
+    "qid": "Q1063029",
+    "nome": "Lira de São Marino",
+    "iso": "SML",
+    "simbolo": "₤",
+    "end": "+2002-01-01T00:00:00Z"
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q652",
+    "nome": "italiano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1848",
+    "nome": "San Marino",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q106899452",
+    "nome": "Europe/San_Marino"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "sn": {
+  "nome": "Senegal",
+  "qid": "Q1041",
+  "iso2": "SN",
+  "iso3": "SEN",
+  "ddi": [
+   "+221"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34257",
+    "nome": "Língua uolofe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35095",
+    "nome": "Badyara",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35006",
+    "nome": "Língua balanta",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3718",
+    "nome": "Dacar",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689488",
+    "nome": "Africa/Dakar"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "so": {
+  "nome": "Somália",
+  "qid": "Q34754",
+  "iso2": null,
+  "iso3": null,
+  "ddi": [
+   "+252"
+  ],
+  "moedas": [
+   {
+    "qid": "Q737384",
+    "nome": "Xelim somalilandês",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q24302270",
+    "nome": "ZAAD",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13275",
+    "nome": "Língua somali",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q168652",
+    "nome": "JHHargeisa",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "sr": {
+  "nome": "Suriname",
+  "qid": "Q730",
+  "iso2": "SR",
+  "iso3": "SUR",
+  "ddi": [
+   "+597"
+  ],
+  "moedas": [
+   {
+    "qid": "Q202036",
+    "nome": "Dólar do Suriname",
+    "iso": "SRD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q2192949",
+    "nome": "Surinamese guilder",
+    "iso": "SRG",
+    "simbolo": "ƒ",
+    "end": "+2004-01-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7411",
+    "nome": "neerlandês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3001",
+    "nome": "Paramaribo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q63286102",
+    "nome": "America/Paramaribo"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "ss": {
+  "nome": "Sudão do Sul",
+  "qid": "Q958",
+  "iso2": "SS",
+  "iso3": "SSD",
+  "ddi": [
+   "+211"
+  ],
+  "moedas": [
+   {
+    "qid": "Q244366",
+    "nome": "libra sul-sudanesa",
+    "iso": "SSP",
+    "simbolo": "£",
+    "end": null
+   },
+   {
+    "qid": "Q271206",
+    "nome": "Libra sudanesa",
+    "iso": "SDG",
+    "simbolo": "£",
+    "end": "+2011-07-18T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1947",
+    "nome": "Juba",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q15936666",
+    "nome": "Africa/Juba"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "st": {
+  "nome": "São Tomé e Príncipe",
+  "qid": "Q1039",
+  "iso2": "ST",
+  "iso3": "STP",
+  "ddi": [
+   "+239"
+  ],
+  "moedas": [
+   {
+    "qid": "Q193712",
+    "nome": "dobra",
+    "iso": "STN",
+    "simbolo": "₡",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3932",
+    "nome": "São Tomé",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689522",
+    "nome": "Africa/Sao_Tome"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "sv": {
+  "nome": "El Salvador",
+  "qid": "Q792",
+  "iso2": "SV",
+  "iso3": "SLV",
+  "ddi": [
+   "+503"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q829043",
+    "nome": "Colón do Salvador",
+    "iso": "SVC",
+    "simbolo": "₡",
+    "end": "+2001-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q356550",
+    "nome": "Salvadoran real",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1877-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q131723",
+    "nome": "Bitcoin",
+    "iso": null,
+    "simbolo": "₿",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3110",
+    "nome": "San Salvador",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q63286062",
+    "nome": "America/El_Salvador"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "sy": {
+  "nome": "Síria",
+  "qid": "Q858",
+  "iso2": "SY",
+  "iso3": "SYR",
+  "ddi": [
+   "+963"
+  ],
+  "moedas": [
+   {
+    "qid": "Q240468",
+    "nome": "libra síria",
+    "iso": "SYP",
+    "simbolo": "£",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3766",
+    "nome": "Damasco",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q63285958",
+    "nome": "Asia/Damascus"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "sz": {
+  "nome": "Eswatini (Suazilândia)",
+  "qid": "Q1050",
+  "iso2": "SZ",
+  "iso3": "SWZ",
+  "ddi": [
+   "+268"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4823",
+    "nome": "Lilangeni suázi",
+    "iso": "SZL",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34014",
+    "nome": "língua suázi",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q101418",
+    "nome": "Lobamba",
+    "end": null
+   },
+   {
+    "qid": "Q3904",
+    "nome": "Mebabane",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q770321",
+    "nome": "Horário Padrão da África do Sul"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689512",
+    "nome": "Africa/Mbabane"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "td": {
+  "nome": "Chade",
+  "qid": "Q657",
+  "iso2": "TD",
+  "iso3": "TCD",
+  "ddi": [
+   "+235"
+  ],
+  "moedas": [
+   {
+    "qid": "Q847739",
+    "nome": "franco",
+    "iso": "XAF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3659",
+    "nome": "Jamena",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q4689517",
+    "nome": "Africa/Ndjamena"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "tg": {
+  "nome": "Togo",
+  "qid": "Q945",
+  "iso2": "TG",
+  "iso3": "TGO",
+  "ddi": [
+   "+228"
+  ],
+  "moedas": [
+   {
+    "qid": "Q861690",
+    "nome": "franco CFA da África Ocidental",
+    "iso": "XOF",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3792",
+    "nome": "Lomé",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6574",
+    "nome": "UTC+0"
+   },
+   {
+    "qid": "Q4689505",
+    "nome": "Africa/Lome"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "th": {
+  "nome": "Tailândia",
+  "qid": "Q869",
+  "iso2": "TH",
+  "iso3": "THA",
+  "ddi": [
+   "+66"
+  ],
+  "moedas": [
+   {
+    "qid": "Q177882",
+    "nome": "baht",
+    "iso": "THB",
+    "simbolo": "฿",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9217",
+    "nome": "tailandês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1861",
+    "nome": "Banguecoque",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6940",
+    "nome": "UTC+7"
+   },
+   {
+    "qid": "Q4806279",
+    "nome": "Asia/Bangkok"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "tj": {
+  "nome": "Tajiquistão",
+  "qid": "Q863",
+  "iso2": "TJ",
+  "iso3": "TJK",
+  "ddi": [
+   "+992"
+  ],
+  "moedas": [
+   {
+    "qid": "Q199886",
+    "nome": "Somoni",
+    "iso": "TJS",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q2423956",
+    "nome": "Tajikistani ruble",
+    "iso": "TJR",
+    "simbolo": null,
+    "end": "+2000-10-29T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9260",
+    "nome": "tadjique",
+    "rank": "preferred"
+   },
+   {
+    "qid": "Q7737",
+    "nome": "russo",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9365",
+    "nome": "Duchambe",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q63285959",
+    "nome": "Asia/Dushanbe"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "tl": {
+  "nome": "Timor-Leste",
+  "qid": "Q574",
+  "iso2": "TL",
+  "iso3": "TLS",
+  "ddi": [
+   "+670"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q572213",
+    "nome": "moedas de centavo do Timor-Leste",
+    "iso": null,
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q5146",
+    "nome": "português",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34125",
+    "nome": "língua tétum",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q9310",
+    "nome": "Díli",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7041",
+    "nome": "UTC+9"
+   },
+   {
+    "qid": "Q63285938",
+    "nome": "Asia/Dili"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "tm": {
+  "nome": "Turcomenistão",
+  "qid": "Q874",
+  "iso2": "TM",
+  "iso3": "TKM",
+  "ddi": [
+   "+993"
+  ],
+  "moedas": [
+   {
+    "qid": "Q486637",
+    "nome": "Manate do Turcomenistão",
+    "iso": "TMT",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9267",
+    "nome": "Língua turcomena",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q23438",
+    "nome": "Asgabate",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q4806278",
+    "nome": "Asia/Ashgabat"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "tn": {
+  "nome": "Tunísia",
+  "qid": "Q948",
+  "iso2": "TN",
+  "iso3": "TUN",
+  "ddi": [
+   "+216"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4602",
+    "nome": "dinar tunisiano",
+    "iso": "TND",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3572",
+    "nome": "Tunes",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6655",
+    "nome": "UTC+1"
+   },
+   {
+    "qid": "Q25989",
+    "nome": "Horário da Europa Central"
+   },
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689524",
+    "nome": "Africa/Tunis"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "to": {
+  "nome": "Tonga",
+  "qid": "Q678",
+  "iso2": "TO",
+  "iso3": "TON",
+  "ddi": [
+   "+676"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4613",
+    "nome": "pa'anga",
+    "iso": "TOP",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q34094",
+    "nome": "Língua tonganesa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q38834",
+    "nome": "Nuku'alofa",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7118",
+    "nome": "UTC+13"
+   },
+   {
+    "qid": "Q7122271",
+    "nome": "Pacific/Tongatapu"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "tr": {
+  "nome": "Turquia",
+  "qid": "Q43",
+  "iso2": "TR",
+  "iso3": "TUR",
+  "ddi": [
+   "+90",
+   "+36"
+  ],
+  "moedas": [
+   {
+    "qid": "Q172872",
+    "nome": "lira turca",
+    "iso": "TRY",
+    "simbolo": "₺",
+    "end": null
+   },
+   {
+    "qid": "Q14961002",
+    "nome": "New Turkish lira",
+    "iso": "TRY",
+    "simbolo": null,
+    "end": "+2008-12-31T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q256",
+    "nome": "língua turca",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3640",
+    "nome": "Ancara",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q16837414",
+    "nome": "Europe/Istanbul"
+   },
+   {
+    "qid": "Q109521557",
+    "nome": "Asia/Istanbul"
+   }
+  ],
+  "continente": [
+   "Ásia",
+   "Europa"
+  ]
+ },
+ "tt": {
+  "nome": "Trinidad e Tobago",
+  "qid": "Q754",
+  "iso2": "TT",
+  "iso3": "TTO",
+  "ddi": [
+   "+1868"
+  ],
+  "moedas": [
+   {
+    "qid": "Q242890",
+    "nome": "Dólar de Trinidad e Tobago",
+    "iso": "TTD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q942092",
+    "nome": "British West Indies dollar",
+    "iso": null,
+    "simbolo": "$",
+    "end": "+1964-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q39178",
+    "nome": "Port of Spain",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q63286103",
+    "nome": "America/Port_of_Spain"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "tv": {
+  "nome": "Tuvalu",
+  "qid": "Q672",
+  "iso2": "TV",
+  "iso3": "TUV",
+  "ddi": [
+   "+688"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4406",
+    "nome": "dólar tuvaluano",
+    "iso": null,
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q259502",
+    "nome": "Dólar australiano",
+    "iso": "AUD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q34055",
+    "nome": "língua tuvaluana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q34126",
+    "nome": "Funafuti",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q63285989",
+    "nome": "Pacific/Funafuti"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "tw": {
+  "nome": "Taiwan",
+  "qid": "Q865",
+  "iso2": "TW",
+  "iso3": "TWN",
+  "ddi": [
+   "+886"
+  ],
+  "moedas": [
+   {
+    "qid": "Q208526",
+    "nome": "novo dólar taiwanês",
+    "iso": "TWD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q718954",
+    "nome": "Old Taiwan dollar",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1949-06-14T00:00:00Z"
+   },
+   {
+    "qid": "Q11143517",
+    "nome": "法幣",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1948-00-00T00:00:00Z"
+   },
+   {
+    "qid": "Q11646480",
+    "nome": "Chinese gold yuan",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1949-07-03T00:00:00Z"
+   },
+   {
+    "qid": "Q11649941",
+    "nome": null,
+    "iso": null,
+    "simbolo": null,
+    "end": "+1992-08-05T00:00:00Z"
+   },
+   {
+    "qid": "Q106898738",
+    "nome": "Chinese silver coin",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1935-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q262828",
+    "nome": "mandarim taiwanês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q2391532",
+    "nome": "Taiwanese Hakka",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36778",
+    "nome": "Língua taiwanesa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35132",
+    "nome": "amis",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q715755",
+    "nome": "Língua paiwan",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q56278342",
+    "nome": "金門話",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q61055662",
+    "nome": "Wuqiu dialect",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q19599280",
+    "nome": "Matsu dialect",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34019",
+    "nome": "língua de sinais de Taiwan",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q716695",
+    "nome": "Língua saisiyat",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q716690",
+    "nome": "Língua puyuma",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q715766",
+    "nome": "Língua atayal",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q716681",
+    "nome": "Língua tsou",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q56505",
+    "nome": "Língua bunun",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q49232",
+    "nome": "Língua rukai",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q11071864",
+    "nome": "Truku",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q716686",
+    "nome": "Língua seediq",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q718269",
+    "nome": "Língua sakisaya",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q715760",
+    "nome": "Língua yami",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q716627",
+    "nome": "Língua kavalan",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q172244",
+    "nome": "língua kanakanavu",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q716599",
+    "nome": "Língua saaroa",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1867",
+    "nome": "Taipé",
+    "end": null
+   },
+   {
+    "qid": "Q46452338",
+    "nome": "Kuang-chou",
+    "end": "+1949-10-13T00:00:00Z"
+   },
+   {
+    "qid": "Q46451169",
+    "nome": "Ch'ung-ch'ing",
+    "end": "+1949-11-29T00:00:00Z"
+   },
+   {
+    "qid": "Q10906766",
+    "nome": "Nanquim",
+    "end": "+1949-01-16T00:00:00Z"
+   },
+   {
+    "qid": "Q30002",
+    "nome": "Chengdu",
+    "end": "+1949-12-07T00:00:00Z"
+   },
+   {
+    "qid": "Q10906766",
+    "nome": "Nanquim",
+    "end": "+1937-11-21T00:00:00Z"
+   },
+   {
+    "qid": "Q4164068",
+    "nome": "Jingzhao",
+    "end": "+1928-06-00T00:00:00Z"
+   },
+   {
+    "qid": "Q46451169",
+    "nome": "Ch'ung-ch'ing",
+    "end": "+1949-11-29T00:00:00Z"
+   },
+   {
+    "qid": "Q24841127",
+    "nome": "Nanjing Fu",
+    "end": "+1912-04-02T00:00:00Z"
+   },
+   {
+    "qid": "Q7334692",
+    "nome": "Shuntian Fu",
+    "end": "+1914-10-04T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6985",
+    "nome": "UTC+8"
+   },
+   {
+    "qid": "Q4806305",
+    "nome": "Asia/Taipei"
+   },
+   {
+    "qid": "Q712168",
+    "nome": "Taiwan time"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "tz": {
+  "nome": "Tanzânia",
+  "qid": "Q924",
+  "iso2": "TZ",
+  "iso3": "TZA",
+  "ddi": [
+   "+255"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4589",
+    "nome": "xelim tanzaniano",
+    "iso": "TZS",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q7838",
+    "nome": "Língua suaíli",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3866",
+    "nome": "Dodoma",
+    "end": null
+   },
+   {
+    "qid": "Q1960",
+    "nome": "Dar es Salaam",
+    "end": "+1996-02-01T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q1773949",
+    "nome": "Horário da África Oriental"
+   },
+   {
+    "qid": "Q4689489",
+    "nome": "Africa/Dar_es_Salaam"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "ua": {
+  "nome": "Ucrânia",
+  "qid": "Q212",
+  "iso2": "UA",
+  "iso3": "UKR",
+  "ddi": [
+   "+380"
+  ],
+  "moedas": [
+   {
+    "qid": "Q81893",
+    "nome": "hryvnia",
+    "iso": "UAH",
+    "simbolo": "₴",
+    "end": null
+   },
+   {
+    "qid": "Q308765",
+    "nome": "Karbovanets",
+    "iso": "UAK",
+    "simbolo": null,
+    "end": "+1996-09-02T00:00:00Z"
+   },
+   {
+    "qid": "Q615640",
+    "nome": "Rublo soviético",
+    "iso": "SUR",
+    "simbolo": null,
+    "end": "+1992-01-10T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q8798",
+    "nome": "ucraniano",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1899",
+    "nome": "Kiev",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q190252",
+    "nome": "Horário do Leste Europeu"
+   },
+   {
+    "qid": "Q63286014",
+    "nome": "Europe/Kyiv"
+   }
+  ],
+  "continente": [
+   "Europa"
+  ]
+ },
+ "ug": {
+  "nome": "Uganda",
+  "qid": "Q1036",
+  "iso2": "UG",
+  "iso3": "UGA",
+  "ddi": [
+   "+256"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4598",
+    "nome": "xelim Ugandês",
+    "iso": "UGX",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q7838",
+    "nome": "Língua suaíli",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3894",
+    "nome": "Campala",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4689498",
+    "nome": "Africa/Kampala"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "us": {
+  "nome": "Estados Unidos",
+  "qid": "Q30",
+  "iso2": "US",
+  "iso3": "USA",
+  "ddi": [
+   "+1"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "deprecated"
+   },
+   {
+    "qid": "Q33569",
+    "nome": "havaiano",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34011",
+    "nome": "Língua samoana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33262",
+    "nome": "Língua chamorro",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q28427",
+    "nome": "Língua caroliniana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q61",
+    "nome": "Washington, D.C.",
+    "end": null
+   },
+   {
+    "qid": "Q1345",
+    "nome": "Filadélfia",
+    "end": "+1800-05-14T00:00:00Z"
+   },
+   {
+    "qid": "Q60",
+    "nome": "Nova Iorque",
+    "end": "+1790-12-05T00:00:00Z"
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q2146",
+    "nome": "UTC−12"
+   },
+   {
+    "qid": "Q2154",
+    "nome": "UTC−11"
+   },
+   {
+    "qid": "Q2183",
+    "nome": "UTC−9"
+   },
+   {
+    "qid": "Q2204",
+    "nome": "UTC−8"
+   },
+   {
+    "qid": "Q2212",
+    "nome": "UTC−7"
+   },
+   {
+    "qid": "Q5385",
+    "nome": "UTC−6"
+   },
+   {
+    "qid": "Q5390",
+    "nome": "UTC−5"
+   },
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q7056",
+    "nome": "UTC+10"
+   },
+   {
+    "qid": "Q7105",
+    "nome": "UTC+12"
+   },
+   {
+    "qid": "Q4816926",
+    "nome": "Samoa Time Zone"
+   },
+   {
+    "qid": "Q2085376",
+    "nome": "Horário Padrão do Atlântico"
+   },
+   {
+    "qid": "Q2086913",
+    "nome": "Horário Padrão Central"
+   },
+   {
+    "qid": "Q3238805",
+    "nome": "Alaska Time Zone"
+   },
+   {
+    "qid": "Q3134980",
+    "nome": "Horário padrão da montanha"
+   },
+   {
+    "qid": "Q3446496",
+    "nome": "Chamorro Time Zone"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central",
+   "Oceania",
+   "Ásia"
+  ]
+ },
+ "uy": {
+  "nome": "Uruguai",
+  "qid": "Q77",
+  "iso2": "UY",
+  "iso3": "URY",
+  "ddi": [
+   "+598"
+  ],
+  "moedas": [
+   {
+    "qid": "Q209272",
+    "nome": "peso uruguaio",
+    "iso": "UYU",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q25712645",
+    "nome": "nuevo peso",
+    "iso": "UYN",
+    "simbolo": null,
+    "end": "+1994-00-00T00:00:00Z"
+   }
+  ],
+  "idiomas": [],
+  "capital": [
+   {
+    "qid": "Q1335",
+    "nome": "Montevidéu",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6513",
+    "nome": "UTC−3"
+   },
+   {
+    "qid": "Q6536",
+    "nome": "UTC−2"
+   },
+   {
+    "qid": "Q63286104",
+    "nome": "America/Montevideo"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "uz": {
+  "nome": "Uzbequistão",
+  "qid": "Q265",
+  "iso2": "UZ",
+  "iso3": "UZB",
+  "ddi": [
+   "+998"
+  ],
+  "moedas": [
+   {
+    "qid": "Q487888",
+    "nome": "som usbeque",
+    "iso": "UZS",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q4445920",
+    "nome": "Som-cupom",
+    "iso": null,
+    "simbolo": null,
+    "end": "+1994-07-01T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9264",
+    "nome": "língua uzbeque",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q269",
+    "nome": "Tasquente",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6806",
+    "nome": "UTC+5"
+   },
+   {
+    "qid": "Q63285960",
+    "nome": "Asia/Samarkand"
+   },
+   {
+    "qid": "Q4806306",
+    "nome": "Asia/Tashkent"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "vc": {
+  "nome": "São Vicente e Granadinas",
+  "qid": "Q757",
+  "iso2": "VC",
+  "iso3": "VCT",
+  "ddi": [
+   "+1784"
+  ],
+  "moedas": [
+   {
+    "qid": "Q26365",
+    "nome": "Dólar do Caribe Oriental",
+    "iso": "XCD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q41474",
+    "nome": "Kingstown",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q109529581",
+    "nome": "America/St_Vincent"
+   }
+  ],
+  "continente": [
+   "América do Norte e América Central"
+  ]
+ },
+ "ve": {
+  "nome": "Venezuela",
+  "qid": "Q717",
+  "iso2": "VE",
+  "iso3": "VEN",
+  "ddi": [
+   "+58"
+  ],
+  "moedas": [
+   {
+    "qid": "Q203757",
+    "nome": "Bolívar venezuelano",
+    "iso": "VEB",
+    "simbolo": null,
+    "end": "+2007-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q114000593",
+    "nome": "hard bolívar",
+    "iso": "VEF",
+    "simbolo": null,
+    "end": "+2018-08-20T00:00:00Z"
+   },
+   {
+    "qid": "Q56349362",
+    "nome": "Bolívar soberano",
+    "iso": "VES",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1321",
+    "nome": "espanhol",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q3322064",
+    "nome": "Língua de Sinais Venezuelana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1533",
+    "nome": "Caracas",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q5762",
+    "nome": "UTC−04:00"
+   },
+   {
+    "qid": "Q44380220",
+    "nome": "America/Caracas"
+   }
+  ],
+  "continente": [
+   "América do Sul"
+  ]
+ },
+ "vn": {
+  "nome": "Vietnã",
+  "qid": "Q881",
+  "iso2": "VN",
+  "iso3": "VNM",
+  "ddi": [
+   "+84"
+  ],
+  "moedas": [
+   {
+    "qid": "Q192090",
+    "nome": "dong",
+    "iso": "VND",
+    "simbolo": "₫",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q9199",
+    "nome": "vietnamita",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q1858",
+    "nome": "Hanói",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6940",
+    "nome": "UTC+7"
+   },
+   {
+    "qid": "Q63285961",
+    "nome": "Asia/Ho_Chi_Minh"
+   }
+  ],
+  "continente": [
+   "Ásia"
+  ]
+ },
+ "vu": {
+  "nome": "Vanuatu",
+  "qid": "Q686",
+  "iso2": "VU",
+  "iso3": "VUT",
+  "ddi": [
+   "+678"
+  ],
+  "moedas": [
+   {
+    "qid": "Q207523",
+    "nome": "Vatu",
+    "iso": "VUV",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q35452",
+    "nome": "Língua bislamá",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q150",
+    "nome": "francês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q37806",
+    "nome": "Porto Vila",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7069",
+    "nome": "UTC+11"
+   },
+   {
+    "qid": "Q63285991",
+    "nome": "Pacific/Efate"
+   }
+  ],
+  "continente": [
+   "Oceania"
+  ]
+ },
+ "ws": {
+  "nome": "Samoa",
+  "qid": "Q683",
+  "iso2": "WS",
+  "iso3": "WSM",
+  "ddi": [
+   "+685"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4588",
+    "nome": "tala",
+    "iso": "WST",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q1322918",
+    "nome": "Western Samoan pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1967-07-10T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34011",
+    "nome": "Língua samoana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q36260",
+    "nome": "Apia",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q7118",
+    "nome": "UTC+13"
+   },
+   {
+    "qid": "Q63285987",
+    "nome": "Pacific/Apia"
+   }
+  ],
+  "continente": [
+   "Oceania",
+   "Oceania"
+  ]
+ },
+ "ye": {
+  "nome": "Iêmen",
+  "qid": "Q805",
+  "iso2": "YE",
+  "iso3": "YEM",
+  "ddi": [
+   "+967"
+  ],
+  "moedas": [
+   {
+    "qid": "Q240512",
+    "nome": "Rial iemenita",
+    "iso": "YER",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q13955",
+    "nome": "árabe",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q2471",
+    "nome": "Sana",
+    "end": null
+   },
+   {
+    "qid": "Q131694",
+    "nome": "Áden",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4806272",
+    "nome": "Asia/Aden"
+   }
+  ],
+  "continente": [
+   "Ásia",
+   "África"
+  ]
+ },
+ "za": {
+  "nome": "África do Sul",
+  "qid": "Q258",
+  "iso2": "ZA",
+  "iso3": "ZAF",
+  "ddi": [
+   "+27"
+  ],
+  "moedas": [
+   {
+    "qid": "Q181907",
+    "nome": "rand",
+    "iso": "ZAR",
+    "simbolo": null,
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q14196",
+    "nome": "língua africâner",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q36785",
+    "nome": "língua ndebele",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33890",
+    "nome": "língua soto do norte",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34340",
+    "nome": "língua soto do sul",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34014",
+    "nome": "língua suázi",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34327",
+    "nome": "língua tsonga",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34137",
+    "nome": "língua tswana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q32704",
+    "nome": "língua venda",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13218",
+    "nome": "língua xhosa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q10179",
+    "nome": "língua zulu",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q3322093",
+    "nome": "língua gestual sul-africana",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3926",
+    "nome": "Pretória",
+    "end": null
+   },
+   {
+    "qid": "Q37701",
+    "nome": "Bloemfontein",
+    "end": null
+   },
+   {
+    "qid": "Q5465",
+    "nome": "Cidade do Cabo",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q6760",
+    "nome": "UTC+3"
+   },
+   {
+    "qid": "Q4689497",
+    "nome": "Africa/Johannesburg"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "zm": {
+  "nome": "Zâmbia",
+  "qid": "Q953",
+  "iso2": "ZM",
+  "iso3": "ZMB",
+  "ddi": [
+   "+260"
+  ],
+  "moedas": [
+   {
+    "qid": "Q73408",
+    "nome": "kwacha zambiano",
+    "iso": "ZMW",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q21596813",
+    "nome": "Old Zambia kwacha",
+    "iso": "ZMK",
+    "simbolo": null,
+    "end": "+2012-12-31T00:00:00Z"
+   },
+   {
+    "qid": "Q2297968",
+    "nome": "Zambian pound",
+    "iso": null,
+    "simbolo": "£",
+    "end": "+1974-01-31T00:00:00Z"
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3881",
+    "nome": "Lusaca",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689508",
+    "nome": "Africa/Lusaka"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ },
+ "zw": {
+  "nome": "Zimbábue",
+  "qid": "Q954",
+  "iso2": "ZW",
+  "iso3": "ZWE",
+  "ddi": [
+   "+263"
+  ],
+  "moedas": [
+   {
+    "qid": "Q4917",
+    "nome": "dólar americano",
+    "iso": "USD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q125352135",
+    "nome": "Ouro do Zimbábue",
+    "iso": "ZWG",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q25224",
+    "nome": "libra esterlina",
+    "iso": "GBP",
+    "simbolo": "£",
+    "end": null
+   },
+   {
+    "qid": "Q259502",
+    "nome": "Dólar australiano",
+    "iso": "AUD",
+    "simbolo": "$",
+    "end": null
+   },
+   {
+    "qid": "Q4916",
+    "nome": "euro",
+    "iso": "EUR",
+    "simbolo": "€",
+    "end": null
+   },
+   {
+    "qid": "Q181907",
+    "nome": "rand",
+    "iso": "ZAR",
+    "simbolo": null,
+    "end": null
+   },
+   {
+    "qid": "Q8146",
+    "nome": "iene",
+    "iso": "JPY",
+    "simbolo": "¥",
+    "end": null
+   },
+   {
+    "qid": "Q39099",
+    "nome": "yuan",
+    "iso": "CNY",
+    "simbolo": "¥",
+    "end": null
+   },
+   {
+    "qid": "Q80524",
+    "nome": "rupia indiana",
+    "iso": "INR",
+    "simbolo": "₹",
+    "end": null
+   },
+   {
+    "qid": "Q182803",
+    "nome": "dólar do Zimbábue",
+    "iso": "ZWD",
+    "simbolo": "$",
+    "end": null
+   }
+  ],
+  "idiomas": [
+   {
+    "qid": "Q1860",
+    "nome": "inglês",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34004",
+    "nome": "Língua chona",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q35613",
+    "nome": "língua ndebele do norte",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33273",
+    "nome": "língua nianja",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8826802",
+    "nome": "Barwe",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33672",
+    "nome": "Língua calanga",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q33614",
+    "nome": "Línguas khoisan",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13311",
+    "nome": "Língua ndau",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34327",
+    "nome": "língua tsonga",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q8072097",
+    "nome": "Língua de Sinais do Zimbábue",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34340",
+    "nome": "língua soto do sul",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34101",
+    "nome": "Língua tonga",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q34137",
+    "nome": "língua tswana",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q32704",
+    "nome": "língua venda",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q13218",
+    "nome": "língua xhosa",
+    "rank": "normal"
+   },
+   {
+    "qid": "Q3553981",
+    "nome": "Nambya",
+    "rank": "normal"
+   }
+  ],
+  "capital": [
+   {
+    "qid": "Q3921",
+    "nome": "Harare",
+    "end": null
+   }
+  ],
+  "fusos": [
+   {
+    "qid": "Q6723",
+    "nome": "UTC+2"
+   },
+   {
+    "qid": "Q4689495",
+    "nome": "Africa/Harare"
+   }
+  ],
+  "continente": [
+   "África"
+  ]
+ }
+}
