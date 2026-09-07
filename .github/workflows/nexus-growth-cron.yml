@@ -16,13 +16,14 @@ on:
     - cron: "0 6 * * 1"     # higiene de URLs da fila (segundas 06:00 UTC)
     - cron: "5 */4 * * *"   # clima Open-Meteo (10min antes do cluster matrix)
     - cron: "15 */4 * * *"  # matrix agent cluster (4h, defasado 15min do Google)
+    - cron: "45 */4 * * *"  # malha global de indexação (100+ endpoints)
   workflow_dispatch:
     inputs:
       job:
         description: "Qual engine rodar"
         type: choice
         default: google
-        options: [google, social, both, hygiene, matrix, weather]
+        options: [google, social, both, hygiene, matrix, weather, mesh]
 
 concurrency:
   group: nexus-growth-cron
@@ -182,3 +183,30 @@ jobs:
             000) echo "::warning::timeout de rede — próximo ciclo refaz"; exit 0;;
             *)   echo "::error::weather respondeu $CODE"; exit 1;;
           esac
+
+  # ==========================================================================
+  # GLOBAL INDEXATION MESH — 100+ endpoints de submissão/sindicação no-auth:
+  # IndexNow ×6 (api/bing/yandex/naver/seznam/qwant, chave do cofre em
+  # nexus_growth_secrets) + pings XML-RPC ×21 + agregadores sitemap/RSS ×40.
+  # Claim atômico SKIP LOCKED (≤100 URLs/run). Concorrência 5. O engine
+  # Google (job acima) segue dono único do GSC e da quota 200/dia/host.
+  # Fail-closed: falha por endpoint → telemetria + próximo; cron nunca quebra.
+  # ==========================================================================
+  global-indexation-mesh:
+    name: Global Indexation Mesh (IndexNow + XML-RPC + Agregadores)
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '45 */4 * * *')
+      || (github.event_name == 'workflow_dispatch' && inputs.job == 'mesh')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Runtime do mesh (isolado do package.json)
+        run: npm install --no-save tsx@^4.15.0
+      - name: Disparar malha multi-engines (fail-closed)
+        env:
+          NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
+          NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+        run: npx tsx src/server/scheduler/global-indexation-mesh.ts
