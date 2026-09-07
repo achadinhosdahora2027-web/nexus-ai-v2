@@ -14,13 +14,14 @@ on:
     - cron: "0 */4 * * *"   # engine Google (janela 4h)
     - cron: "30 */6 * * *"  # robô Ayrshare (janela 6h)
     - cron: "0 6 * * 1"     # higiene de URLs da fila (segundas 06:00 UTC)
+    - cron: "15 */4 * * *"  # matrix agent cluster (4h, defasado 15min do Google)
   workflow_dispatch:
     inputs:
       job:
         description: "Qual engine rodar"
         type: choice
         default: google
-        options: [google, social, both, hygiene]
+        options: [google, social, both, hygiene, matrix]
 
 concurrency:
   group: nexus-growth-cron
@@ -109,3 +110,40 @@ jobs:
           NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
           HYGIENE_CONCURRENCY: "16"
         run: npx tsx src/server/scheduler/queue-url-hygiene.ts
+
+  # ==========================================================================
+  # MATRIX AGENT CLUSTER — orquestrador central em Edge Function Supabase
+  # (supabase/functions/nexus-matrix-orchester). 216 agentes especialistas em
+  # public.nexus_agents; execuções agendadas em nexus_agent_tasks_queue.
+  # Fail-closed ponta a ponta: sem NEXUS_MATRIX_SECRET → warning + skip;
+  # falha de agente individual → telemetria + próxima tarefa (nunca trava
+  # anúncios, rotas SolveGrid, Google engine ou Ayrshare).
+  # ==========================================================================
+  matrix-agents:
+    name: Matrix Agent Cluster (Edge Function orquestradora)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '15 */4 * * *')
+      || (github.event_name == 'workflow_dispatch' && inputs.job == 'matrix')
+    steps:
+      - name: Despachar lote do cluster (fail-closed)
+        env:
+          NEXUS_MATRIX_SECRET: ${{ secrets.NEXUS_MATRIX_SECRET }}
+          MATRIX_ENDPOINT: https://etbxbaaaspdcoiakifbb.supabase.co/functions/v1/nexus-matrix-orchester
+          MATRIX_BATCH: "8"
+        run: |
+          if [ -z "$NEXUS_MATRIX_SECRET" ]; then
+            echo "::warning::NEXUS_MATRIX_SECRET ausente — cluster em fail-closed (nenhum agente despachado)"
+            exit 0
+          fi
+          CODE=$(curl -sS -o /tmp/matrix.json -w '%{http_code}' --max-time 540 \
+            -X POST "$MATRIX_ENDPOINT?batch=$MATRIX_BATCH" \
+            -H "x-matrix-secret: $NEXUS_MATRIX_SECRET" \
+            -H "content-type: application/json" -d '{}' || echo "000")
+          echo "HTTP $CODE"; cat /tmp/matrix.json 2>/dev/null || true; echo
+          case "$CODE" in
+            200) echo "✔ lote concluído"; exit 0;;
+            000) echo "::warning::timeout de rede — tarefas voltam por reentrega (SKIP LOCKED)"; exit 0;;
+            *)   echo "::error::orquestrador respondeu $CODE"; exit 1;;
+          esac
