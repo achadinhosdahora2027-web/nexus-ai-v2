@@ -164,7 +164,7 @@ async function groupIndexNow(urlsByHost: Map<string, string[]>, key: string, c: 
             headers: { prefer: "return=minimal" },
             body: JSON.stringify({ host, endpoint: ep, request_id: 0, url_count: urls.length, status: `http_${r.status}`, message: ok ? "aceito" : "recusado (fail-closed)" }),
           });
-        } catch { /* log best-effort */ }
+        } catch (e) { await telemetry("indexnow_log_error", `${ep}: ${String(e instanceof Error ? e.message : e).slice(0, 160)}`); }
         if (!ok) await telemetry("indexnow_rejected", `${ep} → ${r.status} (${host}) — keyLocation válido?`, urls.length);
       } catch (err) {
         c.fail++;
@@ -247,7 +247,11 @@ async function main(): Promise<void> {
         body: JSON.stringify({ p_url: b.url, p_bing_yahoo: "done", p_yandex: "done", p_message: null }),
       });
       finalized++;
-    } catch { /* finalize isolado por URL */ }
+    } catch (e) {
+      if (finalized === 0 && (e instanceof Error)) {
+        await telemetry("finalize_error", `${b.url}: ${e.message.slice(0, 180)}`);
+      }
+    }
   });
 
   // histórico por engine (site_search_engine_submissions)
