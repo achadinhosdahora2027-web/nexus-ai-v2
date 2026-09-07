@@ -5,15 +5,30 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout aquitemachadinhos (fonte do site)
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           repository: achadinhosdahora2027-web/aquitemachadinhos
           token: ${{ secrets.ROTATION_PAT }}
-          path: site
-      - name: Deploy public/ → CF Pages projeto aquitem (www.aquitemachadinhos.com.br)
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 6f0b265228c514158b20be2e5ea3ec96
-          command: pages deploy site/public --project-name=aquitem --branch=main --commit-dirty=true
+          path: aq
+      - name: Recon CF + Deploy www.aq com function /go 302
+        env:
+          CF: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACC: 6f0b265228c514158b20be2e5ea3ec96
+          ZONES: ${{ secrets.CLOUDFLARE_ZONE_IDS }}
+        run: |
+          export CLOUDFLARE_API_TOKEN="$CF" CLOUDFLARE_ACCOUNT_ID="$ACC"
+          echo "=== PAGES PROJECTS (recon) ==="
+          npx -y wrangler@latest pages project list 2>&1 | tee /tmp/proj.txt | head -30
+          echo "=== WORKERS (recon) ==="
+          curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts" | python3 -c "import json,sys;d=json.load(sys.stdin);print('workers:',[s.get('id') for s in d.get('result') or []])"
+          for Z in $(echo "$ZONES" | tr ',' ' '); do
+            echo "=== ROUTES zona $Z (recon) ==="
+            curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/zones/$Z/workers/routes" | python3 -c "import json,sys;d=json.load(sys.stdin);[print(' rota:',r.get('pattern'),'->',r.get('script')) for r in d.get('result') or []]"
+          done
+          echo "=== DEPLOY aquitem (www.aq + functions/go 302) ==="
+          cp -r aq/functions aq/public/functions
+          npx -y wrangler@latest pages deploy aq/public --project-name=aquitem --branch=main --commit-dirty=true 2>&1 | tail -6
+          echo "=== VERIFICAÇÃO /go ==="
+          sleep 5
+          curl -s -o /dev/null -m 20 -D /tmp/go.h "https://www.aquitemachadinhos.com.br/go?marca=nike"
+          grep -iE "^HTTP|location|x-robots" /tmp/go.h || echo "(sem resposta)"
