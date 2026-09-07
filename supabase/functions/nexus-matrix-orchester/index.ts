@@ -93,6 +93,56 @@ function makeTelemetry(sb: ReturnType<typeof createClient>): Telemetry {
   };
 }
 
+// ── malha de dados ilimitados (APIs no-auth) — cache read-through ──────────
+// Fluxo fail-closed: cache fresco → usa local (zero ms, zero carga externa);
+// expirado → fetch nativo (User-Agent: NexusGlobalBot/2.0) → upsert; falha
+// (rede/timeout/429/5xx) → telemetria em nexus_cron_telemetry + null (o
+// contexto autodeclara a ausência amigável para o agente).
+const NEXUS_BOT_UA = "NexusGlobalBot/2.0";
+
+async function cachedExternal(
+  sb: ReturnType<typeof createClient>,
+  provider: string,
+  key: string,
+  url: string,
+  ttlSeconds: number,
+  validate?: (p: Record<string, unknown>) => boolean,
+): Promise<Record<string, unknown> | null> {
+  // 1) CACHE LOCAL PRIMEIRO
+  try {
+    const { data } = await sb
+      .from("nexus_external_data_cache")
+      .select("payload_response")
+      .eq("query_key", key)
+      .gt("expires_at", new Date().toISOString())
+      .maybeSingle();
+    if (data) return data.payload_response as Record<string, unknown>;
+  } catch { /* cache indisponível → segue para o fetch (fail-closed) */ }
+
+  // 2) MISS/EXPIRADO → FETCH EXTERNO + ATUALIZA O RESERVATÓRIO
+  try {
+    const r = await fetchT(url, { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, 8_000);
+    if (!r.ok) throw new Error(`http ${r.status}`);
+    const payload = (await r.json()) as Record<string, unknown>;
+    if (validate && !validate(payload)) throw new Error("payload recusado pela validação (shape inesperado)");
+    const { error: upErr } = await sb.from("nexus_external_data_cache").upsert({
+      provider_slug: provider, query_key: key, payload_response: payload,
+      fetched_at: new Date().toISOString(),
+      expires_at: new Date(Date.now() + ttlSeconds * 1000).toISOString(),
+    }, { onConflict: "query_key" });
+    if (upErr) throw new Error(`upsert: ${String(upErr).slice(0, 100)}`);
+    return payload;
+  } catch (err) {
+    try {
+      await sb.rpc("nexus_cron_telemetry_log", {
+        p_job: RUN_JOB, p_status: "external_api_error", p_host: provider,
+        p_message: `${provider}/${key}: ${String(err instanceof Error ? err.message : err).slice(0, 160)}`,
+      });
+    } catch { /* telemetria best-effort */ }
+    return null;
+  }
+}
+
 // ── contexto de dados (sitemap/conversões) — read-only, cada item fail-closed
 type Ctx = Record<string, unknown>;
 async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
@@ -140,6 +190,88 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
   } catch (e) {
     ctx.clima_erro = String(e instanceof Error ? e.message : e).slice(0, 160);
   }
+
+  // 4) MALHA DE DADOS ILIMITADOS (no-auth · cache-first em
+  //    nexus_external_data_cache · UA NexusGlobalBot/2.0 · TTL por provedor)
+  const [wikiPeao, wikiBarretos, wikiUber] = await Promise.all([
+    cachedExternal(sb, "wikipedia", "wikipedia:pt:festa-do-peao-barretos",
+      `https://pt.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent("Festa do Peão de Barretos")}`, 604_800), // 7 d
+    cachedExternal(sb, "wikipedia", "wikipedia:pt:barretos",
+      `https://pt.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent("Barretos")}`, 604_800),
+    cachedExternal(sb, "wikipedia", "wikipedia:pt:uberlandia",
+      `https://pt.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent("Uberlândia")}`, 604_800),
+  ]);
+
+  // câmbio 24/7 → agente currency-fx-hedging: AwesomeAPI (tempo real) e,
+  // se cota/quota esgotar (429), Frankfurter/ECB — ambas no-auth.
+  let fx = await cachedExternal(sb, "awesomeapi", "awesomeapi:usd-eur-brl",
+    "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL", 1800,
+    (p) => !!p.USDBRL || !!p.EURBRL);
+  let fxFonte = "awesomeapi";
+  if (!fx) {
+    const [fUsd, fEur] = await Promise.all([
+      cachedExternal(sb, "frankfurter", "frankfurter:usd-brl",
+        "https://api.frankfurter.app/latest?from=USD&to=BRL", 1800, (p) => !!(p as any)?.rates?.BRL),
+      cachedExternal(sb, "frankfurter", "frankfurter:eur-brl",
+        "https://api.frankfurter.app/latest?from=EUR&to=BRL", 1800, (p) => !!(p as any)?.rates?.BRL),
+    ]);
+    if (fUsd || fEur) {
+      fx = { USDBRL: fUsd ? { bid: (fUsd as any).rates.BRL } : null,
+             EURBRL: fEur ? { bid: (fEur as any).rates.BRL } : null };
+      fxFonte = "frankfurter (ECB)";
+    }
+  }
+  const usd = (fx?.USDBRL ?? null) as Record<string, unknown> | null;
+  const eur = (fx?.EURBRL ?? null) as Record<string, unknown> | null;
+  if (usd || eur) {
+    ctx.cambio = {
+      fonte: fxFonte,
+      usd_brl: usd ? Number(usd.bid) : null,
+      eur_brl: eur ? Number(eur.bid) : null,
+      variacao_24h_pct: { usd: usd?.pctChange != null ? Number(usd.pctChange) : null,
+                          eur: eur?.pctChange != null ? Number(eur.pctChange) : null },
+    };
+  } else ctx.cambio_indisponivel = "cotação indisponível neste run (fail-closed — awesomeapi e frankfurter)";
+
+  // geopolítica → labels: RestCountries (v3.2); se recusado/deprecado, deriva
+  // do dataset no-auth mledoze/countries (CDN jsDelivr, 1 linha p/ todos)
+  const RC = (cc: string) => cachedExternal(sb, "restcountries", `restcountries:${cc.toLowerCase()}`,
+    `https://restcountries.com/v3.2/alpha/${cc}?fields=name,capital,currencies,languages,cca2`, 2_592_000,
+    (p) => Array.isArray(p));
+  const geoOf = (c: Record<string, unknown> | null) => {
+    const e = Array.isArray(c) ? (c[0] as Record<string, any>) : (c as Record<string, any>);
+    if (!e) return null;
+    return { nome: e.name?.common, capital: e.capital?.[0] ?? null,
+      moedas: Object.keys(e.currencies ?? {}), idiomas: Object.values(e.languages ?? {}) };
+  };
+  const [rcBr, rcUs, rcPt] = await Promise.all([RC("BR"), RC("US"), RC("PT")]);
+  let geo = { br: geoOf(rcBr), us: geoOf(rcUs), pt: geoOf(rcPt) };
+  if (!geo.br && !geo.us && !geo.pt) {
+    const all = await cachedExternal(sb, "mledoze", "mledoze:countries-all",
+      "https://cdn.jsdelivr.net/gh/mledoze/countries@master/countries.json", 2_592_000,
+      (p) => Array.isArray(p) && (p as unknown[]).length > 100);
+    const find = (cc: string) => {
+      const e = (all as Array<Record<string, any>> | null)?.find((c) => c.cca2 === cc) ?? null;
+      return e ? { nome: e.name?.common ?? null, capital: e.capital?.[0] ?? null,
+        moedas: Object.keys(e.currencies ?? {}), idiomas: Object.values(e.languages ?? {}) } : null;
+    };
+    geo = { br: find("BR"), us: find("US"), pt: find("PT") };
+  }
+  if (geo.br || geo.us || geo.pt) ctx.geopolitica = geo;
+  else ctx.geopolitica_indisponivel = "restcountries/mledoze indisponíveis neste run (fail-closed)";
+
+  // wikipedia → resumos pt-BR p/ SEO de cauda longa sem queimar billing
+  const wikiOf = (w: Record<string, unknown> | null) => w ? {
+    titulo: w.title ?? null,
+    resumo: String(w.extract ?? "").slice(0, 400) || null,
+    url: (w.content_urls as Record<string, any> | undefined)?.desktop?.page ?? null,
+  } : null;
+  const wiki = { festa_do_peao_barretos: wikiOf(wikiPeao), barretos: wikiOf(wikiBarretos), uberlandia: wikiOf(wikiUber) };
+  if (wiki.festa_do_peao_barretos || wiki.barretos || wiki.uberlandia) ctx.wikipedia_resumos = wiki;
+  else ctx.wikipedia_indisponivel = "wikipedia indisponível neste run (fail-closed)";
+
+  // higiene do reservatório (best-effort)
+  try { await sb.rpc("nexus_cache_prune", { p_keep: 60 }); } catch { /* segue */ }
   return ctx;
 }
 
