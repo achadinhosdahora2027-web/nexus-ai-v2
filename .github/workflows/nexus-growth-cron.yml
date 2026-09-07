@@ -14,6 +14,7 @@ on:
     - cron: "0 */4 * * *"   # engine Google (janela 4h)
     - cron: "30 */6 * * *"  # robô Ayrshare (janela 6h)
     - cron: "0 6 * * 1"     # higiene de URLs da fila (segundas 06:00 UTC)
+    - cron: "5 */4 * * *"   # clima Open-Meteo (10min antes do cluster matrix)
     - cron: "15 */4 * * *"  # matrix agent cluster (4h, defasado 15min do Google)
   workflow_dispatch:
     inputs:
@@ -21,7 +22,7 @@ on:
         description: "Qual engine rodar"
         type: choice
         default: google
-        options: [google, social, both, hygiene, matrix]
+        options: [google, social, both, hygiene, matrix, weather]
 
 concurrency:
   group: nexus-growth-cron
@@ -146,4 +147,38 @@ jobs:
             200) echo "✔ lote concluído"; exit 0;;
             000) echo "::warning::timeout de rede — tarefas voltam por reentrega (SKIP LOCKED)"; exit 0;;
             *)   echo "::error::orquestrador respondeu $CODE"; exit 1;;
+          esac
+
+  # ==========================================================================
+  # WEATHER CONTEXT — Open-Meteo via SDK oficial `openmeteo` (keyless).
+  # Snapshots em public.nexus_weather_snapshots; o orquestrador matrix lê o
+  # mais recente por cidade (read-only) e injeta `clima` no contexto dos 223
+  # agentes. Roda 10 min ANTES do matrix para contexto fresco. Fail-closed.
+  # ==========================================================================
+  weather-context:
+    name: Weather Context (Open-Meteo → snapshots)
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '5 */4 * * *')
+      || (github.event_name == 'workflow_dispatch' && inputs.job == 'weather')
+    steps:
+      - name: Coletar clima (fail-closed)
+        env:
+          NEXUS_MATRIX_SECRET: ${{ secrets.NEXUS_MATRIX_SECRET }}
+          WEATHER_ENDPOINT: https://etbxbaaaspdcoiakifbb.supabase.co/functions/v1/nexus-weather-context
+        run: |
+          if [ -z "$NEXUS_MATRIX_SECRET" ]; then
+            echo "::warning::NEXUS_MATRIX_SECRET ausente — weather em fail-closed (skip)"
+            exit 0
+          fi
+          CODE=$(curl -sS -o /tmp/weather.json -w '%{http_code}' --max-time 300 \
+            -X POST "$WEATHER_ENDPOINT" \
+            -H "x-matrix-secret: $NEXUS_MATRIX_SECRET" \
+            -H "content-type: application/json" -d '{}' || echo "000")
+          echo "HTTP $CODE"; cat /tmp/weather.json 2>/dev/null || true; echo
+          case "$CODE" in
+            200) echo "✔ snapshots atualizados"; exit 0;;
+            000) echo "::warning::timeout de rede — próximo ciclo refaz"; exit 0;;
+            *)   echo "::error::weather respondeu $CODE"; exit 1;;
           esac

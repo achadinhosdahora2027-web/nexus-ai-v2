@@ -125,6 +125,19 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
       if (r.ok) ctx[key] = (await r.text()).match(/<loc>/g)?.length ?? 0;
     } catch { /* host fora — contexto declara ausência */ }
   }
+
+  // 3) clima (snapshots do nexus-weather-context · Open-Meteo) — read-only:
+  //    mais recente por cidade; cada item fail-closed
+  try {
+    const { data: wx } = await sb
+      .from("nexus_weather_snapshots")
+      .select("city_slug,summary,fetched_at")
+      .order("fetched_at.desc")
+      .limit(12);
+    const clima: Record<string, string> = {};
+    for (const w of wx ?? []) if (!(w.city_slug in clima)) clima[w.city_slug] = w.summary;
+    if (Object.keys(clima).length) ctx.clima = clima;
+  } catch { /* sem clima — contexto declara ausência */ }
   return ctx;
 }
 
