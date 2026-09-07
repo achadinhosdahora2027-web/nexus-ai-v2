@@ -149,16 +149,18 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
 }
 
 // ── provedores de IA (vault server-side; nenhum segredo sai daqui) ─────────
+// Cadeia com fallback: OpenAI primeiro; 401/402/429 (auth/billing) degrada o
+// provedor para o restante do run e a tarefa sobe para o próximo da fila.
 type Provider = { name: string; call(sys: string, user: string): Promise<string> };
 
-function resolveProvider(): Provider | null {
-  const openai = Deno.env.get("OPENAI_API_KEY");
-  const claude = Deno.env.get("CLAUDE_API_KEY") ?? Deno.env.get("ANTHROPIC_API_KEY");
+function resolveProviders(): Provider[] {
   const maxTokens = Number(Deno.env.get("MATRIX_MAX_TOKENS") ?? "800");
+  const list: Provider[] = [];
 
+  const openai = Deno.env.get("OPENAI_API_KEY");
   if (openai) {
     const model = Deno.env.get("MATRIX_MODEL") ?? "gpt-4o-mini";
-    return {
+    list.push({
       name: `openai:${model}`,
       async call(sys, user) {
         const r = await fetchT("https://api.openai.com/v1/chat/completions", {
@@ -173,11 +175,13 @@ function resolveProvider(): Provider | null {
         const data = await r.json();
         return data?.choices?.[0]?.message?.content ?? "";
       },
-    };
+    });
   }
+
+  const claude = Deno.env.get("CLAUDE_API_KEY") ?? Deno.env.get("ANTHROPIC_API_KEY");
   if (claude) {
-    const model = Deno.env.get("MATRIX_MODEL") ?? "claude-3-5-haiku-latest";
-    return {
+    const model = Deno.env.get("MATRIX_MODEL_CLAUDE") ?? "claude-haiku-4-5-20251001";
+    list.push({
       name: `claude:${model}`,
       async call(sys, user) {
         const r = await fetchT("https://api.anthropic.com/v1/messages", {
@@ -192,9 +196,9 @@ function resolveProvider(): Provider | null {
         const data = await r.json();
         return (data?.content ?? []).map((b: { text?: string }) => b.text ?? "").join("\n").trim();
       },
-    };
+    });
   }
-  return null;
+  return list;
 }
 
 // ── pool de concorrência limitada (lote assíncrono, mas com freio) ─────────
@@ -232,9 +236,9 @@ Deno.serve(async (req: Request) => {
   );
   const telemetry = makeTelemetry(sb);
 
-  // 2) PROVEDOR DE IA — ausente → lote inteiro 'skipped' (fail-closed, sem crash)
-  const provider = resolveProvider();
-  if (!provider) {
+  // 2) PROVEDORES DE IA — nenhum → lote inteiro 'skipped' (fail-closed, sem crash)
+  const providers = resolveProviders();
+  if (providers.length === 0) {
     const { count: stale } = await sb
       .from("nexus_agent_tasks_queue")
       .select("id", { count: "exact", head: true })
@@ -250,6 +254,7 @@ Deno.serve(async (req: Request) => {
       duration_ms: Date.now() - t0,
     });
   }
+  const deadProviders = new Set<string>(); // degradados neste run (401/402/429)
 
   // 3) CLAIM ATÔMICO DO LOTE
   const { data: tasks, error: claimErr } = await sb.rpc("nexus_matrix_claim_tasks", {
@@ -262,7 +267,7 @@ Deno.serve(async (req: Request) => {
   }
   const claimed = (tasks ?? []) as Array<{ id: number; agent_slug: string; payload: Record<string, unknown>; attempts: number }>;
   if (claimed.length === 0) {
-    return json(200, { ok: true, provider: provider.name, claimed: 0, succeeded: 0, failed: 0, skipped: 0, duration_ms: Date.now() - t0 });
+    return json(200, { ok: true, provider: providers.map((p) => p.name).join("+"), claimed: 0, succeeded: 0, failed: 0, skipped: 0, duration_ms: Date.now() - t0 });
   }
 
   // 4) CONTEXTO COMPARTILHADO DO LOTE (1 carga por run — economia de quota)
@@ -292,18 +297,45 @@ Deno.serve(async (req: Request) => {
         perTask.push({ id: task.id, slug: task.agent_slug, status: "skipped" });
         return;
       }
-      const answer = await provider.call(
-        agent.system_instruction as string,
-        `CONTEXTO DO ECOSSISTEMA (leituras do run, fail-closed):\n${JSON.stringify(ctx, null, 2)}\n\n` +
-          `TAREFA (${task.agent_slug}):\n${JSON.stringify(task.payload ?? {})}`,
-      );
+      // cadeia de provedores com fallback: 401/402/429 degrada e tenta o próximo
+      const prompt = `CONTEXTO DO ECOSSISTEMA (leituras do run, fail-closed):\n${JSON.stringify(ctx, null, 2)}\n\n` +
+        `TAREFA (${task.agent_slug}):\n${JSON.stringify(task.payload ?? {})}`;
+      let answer = "", servedBy = "";
+      let lastErr: unknown = null;
+      for (const p of providers) {
+        if (deadProviders.has(p.name)) continue;
+        try {
+          answer = await p.call(agent.system_instruction as string, prompt);
+          servedBy = p.name;
+          break;
+        } catch (err) {
+          lastErr = err;
+          const msg = String(err instanceof Error ? err.message : err);
+          // auth/billing/sem-créditos: degrada o provedor p/ o restante do run
+          if (/http (401|402|429)|credit balance|no credits|billing/i.test(msg)) {
+            deadProviders.add(p.name);
+            await telemetry.log({
+              status: "provider_degraded",
+              message: `${p.name}: ${msg.slice(0, 160)}`,
+            });
+            continue; // tenta próximo provedor nesta mesma tarefa
+          }
+          // erro transiente: este provedor segue vivo p/ as demais tarefas,
+          // mas ESTA tarefa cai para o próximo da cadeia
+          if (providers.some((q) => !deadProviders.has(q.name) && q.name !== p.name)) continue;
+          throw err;
+        }
+      }
+      if (!servedBy) {
+        throw new Error(lastErr ? `provedores esgotados: ${String(lastErr instanceof Error ? lastErr.message : lastErr).slice(0, 160)}` : "nenhum provedor disponível");
+      }
       const { error: doneErr } = await sb.rpc("nexus_matrix_complete_task", {
         p_id: task.id,
-        p_result: { provider: provider.name, output_chars: answer.length, output: answer.slice(0, 12_000) },
+        p_result: { provider: servedBy, output_chars: answer.length, output: answer.slice(0, 12_000) },
       });
       if (doneErr) throw new Error(`complete falhou: ${String(doneErr).slice(0, 120)}`);
       succeeded++;
-      perTask.push({ id: task.id, slug: task.agent_slug, status: "done", output_chars: answer.length });
+      perTask.push({ id: task.id, slug: task.agent_slug, status: "done", provider: servedBy, output_chars: answer.length });
     } catch (err) {
       failed++;
       const msg = String(err instanceof Error ? err.message : err).slice(0, 400);
@@ -322,12 +354,13 @@ Deno.serve(async (req: Request) => {
     status: failed > 0 ? (succeeded > 0 ? "partial" : "error") : "ok",
     items_total: claimed.length,
     items_sent: succeeded,
-    message: `provider=${provider.name} ok=${succeeded} fail=${failed}`,
+    message: `provider=${providers.map((p) => p.name).join("+")} degradados=${[...deadProviders].join(",") || "nenhum"} ok=${succeeded} fail=${failed}`,
     payload: { tasks: perTask },
   });
 
   return json(200, {
-    ok: true, provider: provider.name, claimed: claimed.length,
+    ok: true, provider: providers.map((p) => p.name).join("+"),
+    degraded: [...deadProviders], claimed: claimed.length,
     succeeded, failed, skipped: claimed.length - succeeded - failed,
     tasks: perTask, context: ctx, duration_ms: Date.now() - t0,
   });
