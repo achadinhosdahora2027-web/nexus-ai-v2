@@ -127,17 +127,19 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
   }
 
   // 3) clima (snapshots do nexus-weather-context · Open-Meteo) — read-only:
-  //    mais recente por cidade; cada item fail-closed
+  //    mais recente por cidade; falha autodeclarada no contexto (fail-closed)
   try {
-    const { data: wx } = await sb
+    const { data: wx, error: wxErr } = await sb
       .from("nexus_weather_snapshots")
       .select("city_slug,summary,fetched_at")
-      .order("fetched_at.desc")
+      .order("fetched_at", { ascending: false })
       .limit(12);
     const clima: Record<string, string> = {};
     for (const w of wx ?? []) if (!(w.city_slug in clima)) clima[w.city_slug] = w.summary;
     if (Object.keys(clima).length) ctx.clima = clima;
-  } catch { /* sem clima — contexto declara ausência */ }
+  } catch (e) {
+    ctx.clima_erro = String(e instanceof Error ? e.message : e).slice(0, 160);
+  }
   return ctx;
 }
 
