@@ -26,8 +26,9 @@ jobs:
             curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/zones/$Z/workers/routes" | python3 -c "import json,sys;d=json.load(sys.stdin);[print(' rota:',r.get('pattern'),'->',r.get('script')) for r in d.get('result') or []]"
           done
           echo "=== DEPLOY aquitem (www.aq + functions/go 302) ==="
-          cp -r aq/functions aq/public/functions
-          npx -y wrangler@latest pages deploy aq/public --project-name=aquitem --branch=main --commit-dirty=true 2>&1 | tail -6
+          cd aq
+          ls functions/ public/_headers public/_worker.js 2>/dev/null || true
+          npx -y wrangler@latest pages deploy public --project-name=aquitem --branch=main --commit-dirty=true 2>&1 | tail -8
           echo "=== VERIFICAÇÃO /go ==="
           sleep 5
           curl -s -o /dev/null -m 20 -D /tmp/go.h "https://www.aquitemachadinhos.com.br/go?marca=nike"
