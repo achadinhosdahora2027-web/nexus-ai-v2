@@ -107,6 +107,8 @@ async function cachedExternal(
   url: string,
   ttlSeconds: number,
   validate?: (p: Record<string, unknown>) => boolean,
+  transform?: (p: Record<string, unknown>) => Record<string, unknown>,
+  timeoutMs = 8_000,
 ): Promise<Record<string, unknown> | null> {
   // 1) CACHE LOCAL PRIMEIRO
   try {
@@ -121,17 +123,18 @@ async function cachedExternal(
 
   // 2) MISS/EXPIRADO → FETCH EXTERNO + ATUALIZA O RESERVATÓRIO
   try {
-    const r = await fetchT(url, { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, 8_000);
+    const r = await fetchT(url, { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, timeoutMs);
     if (!r.ok) throw new Error(`http ${r.status}`);
     const payload = (await r.json()) as Record<string, unknown>;
     if (validate && !validate(payload)) throw new Error("payload recusado pela validação (shape inesperado)");
+    const digest = transform ? transform(payload) : payload;
     const { error: upErr } = await sb.from("nexus_external_data_cache").upsert({
-      provider_slug: provider, query_key: key, payload_response: payload,
+      provider_slug: provider, query_key: key, payload_response: digest,
       fetched_at: new Date().toISOString(),
       expires_at: new Date(Date.now() + ttlSeconds * 1000).toISOString(),
     }, { onConflict: "query_key" });
     if (upErr) throw new Error(`upsert: ${String(upErr).slice(0, 100)}`);
-    return payload;
+    return digest;
   } catch (err) {
     try {
       await sb.rpc("nexus_cron_telemetry_log", {
@@ -269,6 +272,83 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
   const wiki = { festa_do_peao_barretos: wikiOf(wikiPeao), barretos: wikiOf(wikiBarretos), uberlandia: wikiOf(wikiUber) };
   if (wiki.festa_do_peao_barretos || wiki.barretos || wiki.uberlandia) ctx.wikipedia_resumos = wiki;
   else ctx.wikipedia_indisponivel = "wikipedia indisponível neste run (fail-closed)";
+
+  // 5) MEGA CLUSTER — 16 novos adaptadores no-auth (some-se aos 5 já ativos:
+  //    awesomeapi, frankfurter, restcountries/mledoze, wikipedia, open-meteo
+  //    = 21 APIs na malha). Cada chamada ISOLADA: 429/timeout/DNS/shape →
+  //    telemetria external_api_error + null no contexto (fail-closed).
+  const [nominatim, geonames, overpass, ipapi, mlibre, wikidataSparql, openlib, wikivoyage, sun, openaq, openuv, worldbank, hipolabs, census, ibge] = await Promise.all([
+    cachedExternal(sb, "nominatim", "nominatim:barretos",
+      "https://nominatim.openstreetmap.org/search?q=Barretos,SP,Brazil&format=json&limit=1", 86_400,
+      (p) => Array.isArray(p), (p) => { const e = (p as any[])[0] ?? {}; return { lat: e.lat ?? null, lon: e.lon ?? null, display: String(e.display_name ?? "").slice(0, 120) }; }),
+    cachedExternal(sb, "geonames", "geonames:br",
+      "https://api.geonames.org/countryInfoJSON?username=demo&country=BR", 2_592_000,
+      (p) => Array.isArray((p as any).geonames), (p) => { const e = (p as any).geonames?.[0] ?? {}; return { pais: e.countryName ?? null, capital: e.capital ?? null, populacao: e.population ?? null }; }),
+    cachedExternal(sb, "overpass", "overpass:hospitais-barretos",
+      "https://overpass-api.de/api/interpreter?data=" + encodeURIComponent('[out:json][timeout:8];node["amenity"="hospital"](around:8000,-20.5578,-48.5626);out count;'), 86_400,
+      (p) => Array.isArray((p as any).elements), (p) => ({ hospitais_raio_8km: (p as any).elements?.[0]?.tags?.total ?? null })),
+    cachedExternal(sb, "ipapi", "ipapi:egress",
+      "http://ip-api.com/json/?fields=status,country,city,query", 3_600,
+      (p) => (p as any).status === "success", (p) => ({ cidade_egress: (p as any).city ?? null, pais_egress: (p as any).country ?? null })),
+    cachedExternal(sb, "mercadolivre", "mercadolivre:mlb-categorias",
+      "https://api.mercadolibre.com/sites/MLB/categories", 21_600,
+      (p) => Array.isArray(p), (p) => ({ total: (p as any[]).length, amostra: (p as any[]).slice(0, 5).map((c) => c.name) })),
+    cachedExternal(sb, "wikidata", "wikidata:sparql:barretos-pt",
+      "https://query.wikidata.org/sparql?format=json&query=" + encodeURIComponent('SELECT ?item ?itemLabel WHERE { ?item rdfs:label "Barretos"@pt . SERVICE wikibase:label { bd:serviceParam wikibase:language "pt". } } LIMIT 3'), 2_592_000,
+      (p) => !!(p as any).results, (p) => ({ qids: ((p as any).results?.bindings ?? []).map((b: any) => String(b.item?.value ?? "").split("/").pop()).slice(0, 3) })),
+    cachedExternal(sb, "openlibrary", "openlibrary:barretos",
+      "https://openlibrary.org/search.json?q=barretos&limit=3&fields=title,author_name,first_publish_year", 2_592_000,
+      (p) => typeof (p as any).numFound === "number", (p) => ({ obras: (p as any).numFound ?? 0, titulos: ((p as any).docs ?? []).slice(0, 3).map((d: any) => d.title) })),
+    cachedExternal(sb, "wikivoyage", "wikivoyage:pt:barretos",
+      "https://pt.wikivoyage.org/api/rest_v1/page/summary/Barretos", 604_800,
+      (p) => !!(p as any).extract, (p) => ({ resumo_turistico: String((p as any).extract ?? "").slice(0, 300) })),
+    cachedExternal(sb, "sunrise_sunset", "sunrise-sunset:barretos",
+      "https://api.sunrise-sunset.org/json?lat=-20.5578&lng=-48.5626&tzid=America/Sao_Paulo", 86_400,
+      (p) => (p as any).status === "OK", (p) => { const r = (p as any).results ?? {}; return { nascer_do_sol: r.sunrise ?? null, por_do_sol: r.sunset ?? null, meio_dia_solar: r.solar_noon ?? null, duracao_dia: r.day_length ?? null }; }),
+    cachedExternal(sb, "openaq", "openaq:barretos",
+      "https://api.openaq.org/v2/nearest?coordinates=-20.5578,-48.5626", 86_400,
+      (p) => !!(p as any).results, undefined), // v1/v2 aposentadas; v3 exige chave → fail-closed declarado
+    cachedExternal(sb, "openuv", "openuv:barretos",
+      "https://api.openuv.io/api/v1/uv?lat=-20.5578&lng=-48.5626", 86_400,
+      (p) => !!(p as any).uv, undefined), // exige token → fail-closed; UV real vive em clima (Open-Meteo)
+    cachedExternal(sb, "worldbank", "worldbank:pib-bra",
+      "https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.CD?format=json&per_page=3", 2_592_000,
+      (p) => Array.isArray(p), (p) => { const e = (p as any[])[1]?.[0] ?? {}; return { pib_usd: e.value ?? null, ano: e.date ?? null }; }),
+    cachedExternal(sb, "hipolabs", "hipolabs:universidades-br",
+      "https://universities.hipolabs.com/search?country=Brazil", 2_592_000,
+      (p) => Array.isArray(p), (p) => ({ total: (p as any[]).length, amostra: (p as any[]).slice(0, 3).map((u) => u.name) })),
+    cachedExternal(sb, "census", "census:catalogo-datasets",
+      "https://api.census.gov/data.json", 2_592_000,
+      (p) => Array.isArray((p as any).data), (p) => ({ datasets: (p as any).data?.length ?? 0 }), 30_000), // raw 5MB → digest
+    cachedExternal(sb, "ibge", "ibge:municipio-3505500",
+      "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3505500", 2_592_000,
+      (p) => !!(p as any).nome, (p) => ({ municipio: (p as any).nome ?? null, uf: (p as any).microrregiao?.mesorregiao?.UF?.sigla ?? null, mesorregiao: (p as any).microrregiao?.mesorregiao?.nome ?? null })),
+  ]);
+
+  ctx.mapas_geolocalizacao = {
+    nominatim_barretos: nominatim, geonames_br: geonames,
+    overpass_hospitais_barretos: overpass, ip_api_egress: ipapi,
+  };
+  ctx.economia_mercadolivre = { mlb_categorias: mlibre ?? null }; // null quando policy-blocked (fail-closed)
+  ctx.conteudo_gratuito = {
+    wikidata_barretos: wikidataSparql ?? null,
+    openlibrary_barretos: openlib ?? null,
+    wikivoyage_barretos: wikivoyage ?? null,
+  };
+  const durHoras = (() => { const m = /(\d+):(\d+):(\d+)/.exec(String((sun as any)?.duracao_dia ?? "")); return m ? +(+m[1] + +m[2] / 60).toFixed(2) : null; })();
+  ctx.sol_e_utilidades = {
+    sunrise_sunset_barretos: sun ?? null,
+    sunrise_sunset_engine: sun ? { duracao_dia_horas: durHoras, fonte_engine: "derivado de api.sunrise-sunset.org" } : null,
+    openaq_barretos: openaq ?? null,   // v3 exige chave — null até credencial (isolado)
+    openuv_barretos: openuv ?? null,   // idem; UV operacional já vem de clima (Open-Meteo)
+  };
+  ctx.institucional = {
+    worldbank_pib_brasil: worldbank ?? null,
+    hipolabs_universidades_br: hipolabs ?? null,
+    us_census_datasets: census ?? null,
+    ibge_barretos: ibge ?? null,
+    restcountries: "ativo — ver ctx.geopolitica",
+  };
 
   // higiene do reservatório (best-effort)
   try { await sb.rpc("nexus_cache_prune", { p_keep: 60 }); } catch { /* segue */ }
