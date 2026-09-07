@@ -17,13 +17,14 @@ on:
     - cron: "5 */4 * * *"   # clima Open-Meteo (10min antes do cluster matrix)
     - cron: "15 */4 * * *"  # matrix agent cluster (4h, defasado 15min do Google)
     - cron: "45 */4 * * *"  # malha global de indexação (100+ endpoints)
+    - cron: "25 */4 * * *"   # expurgo Cloudflare pós-matrix (vitrines frescas)
   workflow_dispatch:
     inputs:
       job:
         description: "Qual engine rodar"
         type: choice
         default: google
-        options: [google, social, both, hygiene, matrix, weather, mesh]
+        options: [google, social, both, hygiene, matrix, weather, mesh, purge]
 
 concurrency:
   group: nexus-growth-cron
@@ -210,3 +211,32 @@ jobs:
           NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
           NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
         run: npx tsx src/server/scheduler/global-indexation-mesh.ts
+
+  # ==========================================================================
+  # CLOUDFLARE CACHE PURGER — pacote cf-www-unblock/. Expurga o cache de borda
+  # das 3 vitrines espelho sempre que a matriz recalcula os melhores anúncios
+  # (10 min após o Matrix Agent Cluster; MV de ofertas refresca 06:30 UTC).
+  # purge_everything por zona via api.cloudflare.com. Fail-closed total:
+  # 429/5xx/rede → telemetria nexus_cron_telemetry + skip; nunca quebra o cron
+  # nem toca os 14.036 anúncios (operação exclusivamente de borda).
+  # ==========================================================================
+  cloudflare-purge:
+    name: Cloudflare Cache Purge (vitrines espelho)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '25 */4 * * *')
+      || (github.event_name == 'workflow_dispatch' && inputs.job == 'purge')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Runtime do purger (isolado do package.json)
+        run: npm install --no-save tsx@^4.15.0
+      - name: Expurgar cache das vitrines (fail-closed)
+        env:
+          NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
+          NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_IDS: ${{ secrets.CLOUDFLARE_ZONE_IDS }}
+        run: npx tsx src/server/scheduler/cloudflare-cache-purger.ts
