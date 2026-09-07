@@ -109,6 +109,7 @@ async function cachedExternal(
   validate?: (p: Record<string, unknown>) => boolean,
   transform?: (p: Record<string, unknown>) => Record<string, unknown>,
   timeoutMs = 8_000,
+  raw = false,
 ): Promise<Record<string, unknown> | null> {
   // 1) CACHE LOCAL PRIMEIRO
   try {
@@ -125,7 +126,8 @@ async function cachedExternal(
   try {
     const r = await fetchT(url, { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, timeoutMs);
     if (!r.ok) throw new Error(`http ${r.status}`);
-    const payload = (await r.json()) as Record<string, unknown>;
+    const payload = raw ? ({ rawText: await r.text() } as Record<string, unknown>)
+                        : (await r.json()) as Record<string, unknown>;
     if (validate && !validate(payload)) throw new Error("payload recusado pela validação (shape inesperado)");
     const digest = transform ? transform(payload) : payload;
     const { error: upErr } = await sb.from("nexus_external_data_cache").upsert({
@@ -349,6 +351,122 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
     ibge_barretos: ibge ?? null,
     restcountries: "ativo — ver ctx.geopolitica",
   };
+
+  // 6) ULTRA GALAXY — 50 novos adaptadores no-auth em 7 blocos lógicos
+  //    (soma-se à malha de 21 = 71 APIs). Sentinela = endpoint válido que
+  //    hoje exige chave/está geo-bloqueado: retorna null COM telemetria e
+  //    auto-sara quando o acesso abrir. Ondas de 12 p/ educação de rede.
+  type Ultra = { provider: string; key: string; url: string; ttl: number; block: string;
+    validate?: (p: Record<string, unknown>) => boolean;
+    transform?: (p: Record<string, unknown>) => Record<string, unknown>;
+    timeoutMs?: number; raw?: boolean };
+  const U = (block: string, provider: string, key: string, url: string, ttl: number,
+    validate?: Ultra["validate"], transform?: Ultra["transform"], timeoutMs?: number, raw?: boolean): Ultra =>
+    ({ block, provider, key, url, ttl, validate, transform, timeoutMs, raw });
+  const ULTRA: Ultra[] = [
+    // ── ISCAS FINANCEIRAS ──
+    U("iscas_financeiras","coincap","coincap:top2","https://api.coincap.io/v2/assets?limit=2",1800,
+      (p)=>Array.isArray((p as any).data),(p)=>{const a=(p as any).data??[];return {btc_usd:+(a[0]?.priceUsd??0)||null,eth_usd:+(a[1]?.priceUsd??0)||null};}),
+    U("iscas_financeiras","exchangerate","exchangerate:usd-latest","https://open.er-api.com/v6/latest/USD",1800,
+      (p)=>!!(p as any).rates,(p)=>({usd_brl:(p as any).rates?.BRL??null,usd_eur:(p as any).rates?.EUR??null})),
+    U("iscas_financeiras","vatcomply","vatcomply:eur-rates","https://api.vatcomply.com/rates?base=EUR",1800,
+      (p)=>!!(p as any).rates,(p)=>({eur_usd:(p as any).rates?.USD??null,eur_brl:(p as any).rates?.BRL??null})),
+    U("iscas_financeiras","binance","binance:btcusdt","https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT",1800,
+      (p)=>!!(p as any).price,(p)=>({btc_usdt:+(p as any).price}),6_000),
+    U("iscas_financeiras","bitfinex","bitfinex:btcusd","https://api-pub.bitfinex.com/v2/ticker/tBTCUSD",1800,
+      (p)=>Array.isArray(p),(p)=>({btc_usd:(p as any[])[6]??null})),
+    U("iscas_financeiras","cryptocompare","cryptocompare:btc","https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD",1800,
+      (p)=>(p as any).USD!=null,(p)=>({btc_usd:(p as any).USD})),
+    U("iscas_financeiras","ukholidays","ukholidays:england-wales","https://www.gov.uk/bank-holidays.json",2_592_000,
+      (p)=>!!(p as any)["england-and-wales"],(p)=>{const e=(p as any)["england-and-wales"]?.events??[];return {proximo_feriado:e[0]?.title??null,data:e[0]?.date??null,total_ano:e.length};}),
+    // ── TURISMO & MOBILIDADE ──
+    U("turismo_mobilidade","aviationedge","aviationedge:flights","https://aviation-edge.com/api/public/flights?key=DEMO",86_400,undefined,undefined,6_000),
+    U("turismo_mobilidade","opensky","opensky:barretos-bbox","https://opensky-network.org/api/states/all?lamin=-20.7&lomin=-48.7&lamax=-20.4&lomax=-48.4",900,
+      (p)=>typeof (p as any).time==="number",(p)=>({aeronaves_na_area:((p as any).states??[]).length})),
+    U("turismo_mobilidade","airlabs","airlabs:ping","https://airlabs.co/api/v9/ping?api_key=DEMO",86_400,undefined,undefined,6_000),
+    U("turismo_mobilidade","airportdata","airportdata:kjfk","https://airport-data.com/api/ap_info.json?icao=KJFK",2_592_000,
+      (p)=>!!(p as any).icao,(p)=>({aeroporto:(p as any).name,icao:(p as any).icao,iata:(p as any).iata})),
+    U("turismo_mobilidade","citybikes","citybikes:redes","https://api.citybik.es/v2/networks?fields=id,name",86_400,
+      (p)=>Array.isArray((p as any).networks),(p)=>({redes_globais:(p as any).networks?.length??null})),
+    U("turismo_mobilidade","tfl","tfl:tube-status","https://api.tfl.gov.uk/Line/Mode/tube/Status",900,
+      (p)=>Array.isArray(p),(p)=>({linhas:(p as any[]).length,amostra:(p as any[]).slice(0,3).map((l)=>l.name+":"+(l.lineStatuses?.[0]?.statusSeverityDescription??"?"))})),
+    U("turismo_mobilidade","digitransit","digitransit:geocode","https://api.digitransit.fi/geocoding/v1/search?text=Helsinki&size=1",86_400,undefined,undefined,6_000),
+    // ── SEO & TEXTOS GRÁTIS ──
+    U("seo_textos","wikiquote","wikiquote:pt:festa","https://pt.wikiquote.org/api/rest_v1/page/summary/Festa",604_800,
+      (p)=>!!(p as any).extract,(p)=>({citacao_contexto:String((p as any).extract??"").slice(0,300)})),
+    U("seo_textos","wiktionary","wiktionary:pt:barretos","https://pt.wiktionary.org/api/rest_v1/page/definition/barretos",604_800,undefined,undefined,6_000),
+    U("seo_textos","dbpedia","dbpedia:abstract-barretos","https://dbpedia.org/sparql?format=json&query=SELECT%20%3Fab%20WHERE%20%7B%20%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FBarretos%3E%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2Fabstract%3E%20%3Fab%20.%20FILTER%28lang%28%3Fab%29%3D%27pt%27%29%20%7D",2_592_000,undefined,undefined,10_000),
+    U("seo_textos","europeana","europeana:search","https://api.europeana.eu/record/v2/search.json?query=barretos&rows=2",86_400,undefined,undefined,6_000),
+    U("seo_textos","loc","loc:barretos","https://www.loc.gov/search/?q=barretos&fo=json&c=2&at=results",2_592_000,
+      (p)=>Array.isArray((p as any).results),(p)=>({resultados:(p as any).results?.length??0,primeiro_titulo:(p as any).results?.[0]?.title??null})),
+    U("seo_textos","gutendex","opentextos:gutendex","https://gutendex.com/books?search=barretos",2_592_000,
+      (p)=>typeof (p as any).count==="number",(p)=>({obras:(p as any).count})),
+    U("seo_textos","dpla","dpla:items","https://api.dp.la/v2/items?q=barretos",86_400,undefined,undefined,6_000),
+    // ── ESTILO DE VIDA & PINTEREST ──
+    U("estilo_de_vida","mealdb","mealdb:feijoada","https://www.themealdb.com/api/json/v1/1/search.php?s=feijoada",86_400,
+      (p)=>Array.isArray((p as any).meals),(p)=>{const m=(p as any).meals?.[0]??{};return {receita:m.strMeal??null,categoria:m.strCategory??null,video:m.strYoutube??null};}),
+    U("estilo_de_vida","cocktaildb","cocktaildb:caipirinha","https://www.thecocktaildb.com/api/json/v1/1/search.php?s=caipirinha",86_400,
+      (p)=>Array.isArray((p as any).drinks),(p)=>{const d=(p as any).drinks?.[0]??{};return {drinque:d.strDrink??null,copo:d.strGlass??null};}),
+    U("estilo_de_vida","openfoodfacts","openfoodfacts:brigadeiro","https://world.openfoodfacts.org/cgi/search.pl?search_terms=brigadeiro&json=1&page_size=1",86_400,
+      (p)=>typeof (p as any).count==="number",(p)=>({produtos_catalogados:(p as any).count})),
+    U("estilo_de_vida","fruityvice","fruityvice:banana","https://www.fruityvice.com/api/fruit/banana",2_592_000,
+      (p)=>!!(p as any).name,(p)=>({fruta:(p as any).name,calorias_100g:(p as any).nutritions?.calories??null})),
+    U("estilo_de_vida","taco","taco:random","https://taco-randomizer.herokuapp.com/random/",86_400,undefined,undefined,6_000),
+    U("estilo_de_vida","usda","usda:black-bean","https://api.nal.usda.gov/fdc/v1/foods/search?query=black%20bean&api_key=DEMO_KEY",86_400,
+      (p)=>typeof (p as any).totalHits==="number",(p)=>({hits:(p as any).totalHits})),
+    U("estilo_de_vida","bored","bored:activity","https://bored-api.vercel.app/api/activity",86_400,undefined,undefined,6_000),
+    // ── CULTURA GEEK & ENGRAÇADOS ──
+    U("cultura_geek","pokeapi","pokeapi:25","https://pokeapi.co/api/v2/pokemon/25",2_592_000,
+      (p)=>!!(p as any).name,(p)=>({pokemon:(p as any).name,exp:(p as any).base_experience,tipos:((p as any).types??[]).map((t)=>t.type?.name)})),
+    U("cultura_geek","rickmorty","rickmorty:1","https://rickandmortyapi.com/api/character/1",2_592_000,
+      (p)=>!!(p as any).name,(p)=>({personagem:(p as any).name,especie:(p as any).species,status:(p as any).status})),
+    U("cultura_geek","swapi","swapi:people-1","https://swapi.dev/api/people/1/",2_592_000,
+      (p)=>!!(p as any).name,(p)=>({personagem:(p as any).name,nascimento:(p as any).birth_year})),
+    U("cultura_geek","tvmaze","tvmaze:show-1","https://api.tvmaze.com/shows/1",2_592_000,
+      (p)=>!!(p as any).name,(p)=>({serie:(p as any).name,nota:(p as any).rating?.average??null,generos:(p as any).genres})),
+    U("cultura_geek","ann","ann:title-4658","https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=4658",2_592_000,undefined,undefined,8_000,true),
+    U("cultura_geek","jikan","jikan:anime-1","https://api.jikan.moe/v4/anime/1",2_592_000,
+      (p)=>!!(p as any).data,(p)=>({anime:(p as any).data?.title,nota:(p as any).data?.score,episodios:(p as any).data?.episodes})),
+    U("cultura_geek","digimon","digimon:agumon","https://digimon-api.vercel.app/api/digimon/name/agumon",2_592_000,
+      (p)=>Array.isArray(p),(p)=>({digimon:(p as any[])[0]?.name??null})),
+    // ── AUTORIDADE GOVERNAMENTAL (EEAT) ──
+    U("autoridade_gov","usgs","usgs:terremotos-br-barretos","https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&limit=1&orderby=time&latitude=-20.56&longitude=-48.56&maxradiuskm=500",900,
+      (p)=>!!(p as any).metadata,(p)=>({terremotos_500km_7d:(p as any).metadata?.count??null,ultimo_local:(p as any).features?.[0]?.properties?.place??null})),
+    U("autoridade_gov","nasa","nasa:apod","https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",43_200,
+      (p)=>!!(p as any).url,(p)=>({titulo:(p as any).title,tipo:(p as any).media_type,url_midia:(p as any).url}),12_000),
+    U("autoridade_gov","co2signal","co2signal:br","https://api.co2signal.com/v1/latest?countryCode=BR",86_400,undefined,undefined,6_000),
+    U("autoridade_gov","unsdg","undata:sdg-geoareas","https://unstats.un.org/SDGAPI/v1/sdg/GeoAreas",86_400,undefined,undefined,10_000),
+    U("autoridade_gov","paris","opendataparis:catalogo","https://opendata.paris.fr/api/v2/catalog/datasets?limit=1",86_400,
+      (p)=>typeof (p as any).total_count==="number",(p)=>({datasets_abertos:(p as any).total_count})),
+    U("autoridade_gov","datagov","datagov:search","https://catalog.data.gov/api/3/action/package_search?q=barretos&rows=1",86_400,undefined,undefined,8_000),
+    U("autoridade_gov","danishbiz","danishbusiness:cvr","https://datacvr.virk.dk/virksomhed/38017514?format=json",86_400,undefined,undefined,6_000),
+    // ── UTILIDADES & AD-BLOCK EVADER ──
+    U("utilidades","dicebear","dicebear:avatar-nexus","https://api.dicebear.com/9.x/avataaars/svg?seed=nexus",2_592_000,
+      (p)=>typeof (p as any).rawText==="string",(p)=>({svg_chars:(p as any).rawText.length,template:"https://api.dicebear.com/9.x/avataaars/svg?seed={slug}"}),12_000,true),
+    U("utilidades","robohash","robohash:nexus","https://robohash.org/nexus?set=set1&size=100x100",2_592_000,
+      (p)=>typeof (p as any).rawText==="string",(p)=>({png_bytes:(p as any).rawText.length}),12_000,true),
+    U("utilidades","jsonplaceholder","jsonplaceholder:post-1","https://jsonplaceholder.typicode.com/posts/1",2_592_000,
+      (p)=>!!(p as any).title,(p)=>({post_exemplo:(p as any).title})),
+    U("utilidades","isitup","isupme:aq-com-br","https://isitup.org/aquitemachadinhos.com.br.json",1800,undefined,undefined,6_000),
+    U("utilidades","httpbin","httpbin:echo","https://httpbin.org/get",21_600,
+      (p)=>!!(p as any).headers,(p)=>({ua_confirmado:(p as any).headers?.["User-Agent"]??null,egress:(p as any).origin??null})),
+    U("utilidades","ripestat","nationalnetworks:ripe-whois","https://stat.ripe.net/data/whois/data.json?resource=23.20.0.0/8",2_592_000,
+      (p)=>!!(p as any).data,(p)=>({recurso:(p as any).data?.resources?.resource??null,primeiro_asn:(p as any).data?.asns?.[0]??null}),20_000),
+    U("utilidades","cdnjs","cdnjs:libraries","https://api.cdnjs.com/libraries?limit=2&fields=name,version",86_400,
+      (p)=>Array.isArray((p as any).results),(p)=>({bibliotecas_idx:(p as any).results?.map((r)=>r.name)??null})),
+    U("utilidades","useragentstring","uas:json","http://useragentstring.com/api/json?UA=NexusGlobalBot/2.0",86_400,undefined,undefined,6_000),
+  ];
+  const ultraGalaxy: Record<string, Record<string, unknown>> = {};
+  for (let i = 0; i < ULTRA.length; i += 12) {
+    const wave = ULTRA.slice(i, i + 12);
+    const res = await Promise.all(wave.map((a) =>
+      cachedExternal(sb, a.provider, a.key, a.url, a.ttl, a.validate, a.transform, a.timeoutMs, a.raw)));
+    wave.forEach((a, j) => {
+      (ultraGalaxy[a.block] ??= {})[a.key.split(":").pop() as string] = res[j];
+    });
+  }
+  ctx.ultra_galaxy = ultraGalaxy;
+  ctx.monetizacao = { rota_go: "/go", nota: "conteúdo/isca deve CTA para /go — PID do afiliado resolvido server-side" };
 
   // higiene do reservatório (best-effort)
   try { await sb.rpc("nexus_cache_prune", { p_keep: 60 }); } catch { /* segue */ }
