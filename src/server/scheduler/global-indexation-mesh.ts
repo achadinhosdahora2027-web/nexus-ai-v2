@@ -220,9 +220,13 @@ async function main(): Promise<void> {
   // claim atômico da malha (≤100 URLs, SKIP LOCKED, sem tocar o engine Google)
   let batch: Array<{ id: number; url: string; host: string }> = [];
   try {
-    batch = await sb("/rpc/nexus_get_next_indexation_batch", {
+    batch = (await sb("/rpc/nexus_get_next_indexation_batch", {
       method: "POST", body: JSON.stringify({ p_limit: 100 }),
-    }) ?? [];
+    }) ?? []).map((r: Record<string, unknown>) => ({
+      id: Number(r.v_id ?? r.id ?? 0),
+      url: String(r.v_url ?? r.url ?? ""),
+      host: String(r.v_host ?? r.host ?? ""),
+    })).filter((r: { url: string; host: string }) => r.url && r.host);
   } catch (err) {
     await telemetry("claim_error", String(err instanceof Error ? err.message : err).slice(0, 200));
   }
