@@ -51,20 +51,21 @@ create index if not exists idx_ngiq_sind
 -- 3. CLAIM ATÔMICO DA MALHA — até 100 URLs/run, SKIP LOCKED (sem colisão
 --    entre runs concorrentes e SEM interferir no claim do engine Google)
 -- ---------------------------------------------------------------------------
-create or replace function public.nexus_get_next_indexation_batch(
+drop function if exists public.nexus_get_next_indexation_batch(integer);
+create function public.nexus_get_next_indexation_batch(
   p_limit integer default 100)
-returns table (id bigint, url text, host text, priority integer)
+returns table (v_id bigint, v_url text, v_host text, v_priority integer)
 language plpgsql security invoker set search_path = public as $fn$
 begin
   return query
   update public.nexus_google_index_queue q
      set status_sindicacao = 'processing', updated_at = now()
    where q.id in (
-     select id from public.nexus_google_index_queue
-      where status_sindicacao = 'pending'
-        and status in ('pending_google_crawl', 'processing', 'indexed', 'url_is_indexed')
-        and (attempts < 20 or attempts is null)
-      order by priority asc nulls last, created_at asc
+     select c.id from public.nexus_google_index_queue c
+      where c.status_sindicacao = 'pending'
+        and c.status in ('pending_google_crawl', 'processing', 'indexed', 'url_is_indexed')
+        and (c.attempts < 20 or c.attempts is null)
+      order by c.priority asc nulls last, c.created_at asc
       limit greatest(1, least(coalesce(p_limit, 100), 100))
       for update skip locked)
   returning q.id, q.url, q.host, q.priority;
