@@ -1,0 +1,26 @@
+name: CF Token Audit (21.21)
+on:
+  workflow_dispatch: {}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar permissões do token CF
+        env:
+          CF: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ZONES: ${{ secrets.CLOUDFLARE_ZONE_IDS }}
+        run: |
+          echo "=== tokens/verify ==="
+          curl -s -m 20 -H "Authorization: Bearer $CF" https://api.cloudflare.com/client/v4/user/tokens/verify | head -c 400; echo
+          echo "=== GET /accounts (permissão account?) ==="
+          curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts" | python3 -c "import json,sys; d=json.load(sys.stdin); print('success:', d.get('success')); [print(' conta:', a.get('id'), a.get('name')) for a in d.get('result') or []]; errs=d.get('errors'); print('errors:', errs) if errs else None"
+          ACC=$(curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts" | python3 -c "import json,sys; d=json.load(sys.stdin); r=d.get('result') or []; print(r[0]['id'] if r else '')")
+          echo "account_id: $ACC"
+          if [ -n "$ACC" ]; then
+            echo "=== GET /pages/projects (permissão Pages?) ==="
+            curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts/$ACC/pages/projects" | head -c 600; echo
+          fi
+          echo "=== zonas ($ZONES) ==="
+          for Z in $(echo $ZONES | tr ',' ' '); do
+            curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/zones/$Z" | python3 -c "import json,sys; d=json.load(sys.stdin); r=d.get('result') or {}; print(' zona:', r.get('name'), '| success:', d.get('success'), '| errors:', d.get('errors'))"
+          done
