@@ -1,0 +1,41 @@
+name: CF Recon SEO (21.22)
+on:
+  workflow_dispatch: {}
+jobs:
+  recon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pages projects + workers + rotas
+        env:
+          CF: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ZONES: ${{ secrets.CLOUDFLARE_ZONE_IDS }}
+          ACC: 6f0b265228c514158b20be2e5ea3ec96
+        run: |
+          echo "=== PAGES PROJECTS (lista) ==="
+          curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts/$ACC/pages/projects" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+for p in d.get('result') or []:
+    print(' projeto:', p.get('name'), '| domains:', p.get('domains'), '| prod_domain:', p.get('production_domain'))
+    src=p.get('source') or {}
+    print('   source repo:', (src.get('repository') or {}).get('name') if isinstance(src,dict) else src, '| branch:', p.get('production_branch'))"
+          echo "=== AQUITEM detalhe (source + domains) ==="
+          curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts/$ACC/pages/projects/aquitem" | python3 -c "
+import json,sys
+d=json.load(sys.stdin).get('result') or {}
+print(' name:', d.get('name'), '| domains:', d.get('domains'))
+src=d.get('source')
+print(' source completo:', json.dumps(src)[:300] if src else None)
+print(' build_config:', json.dumps(d.get('build_config'))[:200])"
+          echo "=== WORKERS (scripts) ==="
+          curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+for s in d.get('result') or []: print(' worker:', s.get('id'), '| mod:', s.get('modified_on','')[:19])"
+          for Z in $(echo $ZONES | tr ',' ' '); do
+            echo "=== ROTAS de workers (zona $Z) ==="
+            curl -s -m 20 -H "Authorization: Bearer $CF" "https://api.cloudflare.com/client/v4/zones/$Z/workers/routes" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+for r in d.get('result') or []: print(' rota:', r.get('pattern'), '→', r.get('script'))"
+          done
