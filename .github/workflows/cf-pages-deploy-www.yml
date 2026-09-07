@@ -1,0 +1,19 @@
+name: CF Pages Deploy www (21.21)
+on:
+  workflow_dispatch: {}
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout aquitemachadinhos (fonte do site)
+        uses: actions/checkout@v4
+        with:
+          repository: achadinhosdahora2027-web/aquitemachadinhos
+          token: ${{ secrets.ROTATION_PAT }}
+          path: site
+      - name: Deploy public/ → CF Pages projeto aquitem (www.aquitemachadinhos.com.br)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 6f0b265228c514158b20be2e5ea3ec96
+          command: pages deploy site/public --project-name=aquitem --branch=main --commit-dirty=true
