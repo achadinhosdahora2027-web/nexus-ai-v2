@@ -37,9 +37,9 @@ async function runMultiEngineGlobalPinger() {
   console.log('================================================================================\n');
 
   const pingTargets = [
-    `https://api.indexnow.org/indexnow?url=https://www.aquitemachadinhos.com.br/&key=8469089b876439517e6c5247573c6e21`,
-    `https://api.indexnow.org/indexnow?url=https://www.nexusplataforma.ia.br/&key=8469089b876439517e6c5247573c6e21`,
-    `https://api.indexnow.org/indexnow?url=https://www.solvegrid.com.br/&key=8469089b876439517e6c5247573c6e21`
+    `https://api.indexnow.org/indexnow?url=https://www.aquitemachadinhos.com.br/&key=a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c`,
+    `https://api.indexnow.org/indexnow?url=https://www.nexusplataforma.ia.br/&key=a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c`,
+    `https://api.indexnow.org/indexnow?url=https://www.solvegrid.com.br/&key=a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c`
   ];
 
   console.log(`✓ Enviando sinal de rastreamento para ${pingTargets.length} endpoints do protocolo IndexNow...`);
