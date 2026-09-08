@@ -33,7 +33,7 @@ const INDEXNOW_ENDPOINTS = [
   "https://api.indexnow.org/indexnow",
   "https://www.bing.com/indexnow",
   "https://yandex.com/indexnow",
-  "https://search.naver.com/ping/indexnow",
+  "https://searchadvisor.naver.com/indexnow",
   "https://search.seznam.cz/indexnow",
   "https://www.qwant.com/indexnow",
 ];
