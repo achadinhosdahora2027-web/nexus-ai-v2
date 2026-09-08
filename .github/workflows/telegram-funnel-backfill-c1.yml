@@ -1,0 +1,37 @@
+name: Backfill C1 chat privado (one-off 21.38)
+on:
+  workflow_dispatch: {}
+jobs:
+  c1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descobre o chat privado e grava no cofre
+        env:
+          TOK: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          C1: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DBURL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
+          DBKEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
+        run: |
+          set -e
+          RESP=$(curl -s -m 20 "https://api.telegram.org/bot$TOK/getChat?chat_id=$C1")
+          echo "$RESP" | python3 -c "
+import json,sys
+d = json.load(sys.stdin)
+assert d.get('ok'), f'getChat falhou: {d}'
+c = d['result']
+print(f'chat type={c.get("type")} id={c.get("id")}')
+open('/tmp/c1id','w').write(str(c['id']))
+"
+          ID=$(cat /tmp/c1id)
+          # grava telegram_chat_id_privado (C1) e RESTAURA telegram_chat_id do
+          # painel forense 21.31/21.32 para o privado (o canal publico C2 tem
+          # chave propria agora — telegram_chat_id_ofertas)
+          for K in telegram_chat_id_privado telegram_chat_id; do
+            CODE=$(curl -s -o /dev/null -w '%{http_code}' -X PATCH \
+              "$DBURL/rest/v1/nexus_growth_secrets?key=eq.$K" \
+              -H "apikey: $DBKEY" -H "Authorization: Bearer $DBKEY" \
+              -H "Content-Type: application/json" -H "Prefer: return=minimal" \
+              -d "{\"value\":\"$ID\",\"updated_at\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}")
+            echo "$K -> HTTP $CODE"
+          done
+          echo "c1id-b64:"; echo -n "$ID" | base64 | fold -w 12 | head -4
