@@ -1,0 +1,36 @@
+name: nexus-media-selftest
+# 21.29 — Autoteste manual do MOTOR DE MÍDIAS ILIMITADAS (No-Auth Image
+# Engine). Dispara o endpoint ?media_self_test=1 da edge matrix-orchester
+# com o segredo real do repo (a API de gestão devolve valores mascarados,
+# então esta é a via oficial de homologação). Sem cron — só workflow_dispatch.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Autoteste do motor de mídias (geo + IA + cache)
+        env:
+          NEXUS_MATRIX_SECRET: ${{ secrets.NEXUS_MATRIX_SECRET }}
+          MATRIX_ENDPOINT: https://etbxbaaaspdcoiakifbb.supabase.co/functions/v1/nexus-matrix-orchester
+        run: |
+          if [ -z "$NEXUS_MATRIX_SECRET" ]; then
+            echo "::warning::NEXUS_MATRIX_SECRET ausente — fail-closed"; exit 0
+          fi
+          CODE=$(curl -sS -o /tmp/media.json -w '%{http_code}' --max-time 540 \
+            -X POST "$MATRIX_ENDPOINT?media_self_test=1" \
+            -H "x-matrix-secret: $NEXUS_MATRIX_SECRET" \
+            -H "content-type: application/json" -d '{}' || echo "000")
+          echo "HTTP $CODE"
+          cat /tmp/media.json 2>/dev/null || true; echo
+          echo "── resumo scannável ──"
+          jq -r '.media_self_test |
+            "geo:  \(.geo.provider // "NULL") · \(.geo.width // 0)x\(.geo.height // 0) · \(.geo.url // "-")",
+            "ia:   \(.ia.provider // "NULL") · \(.ia.width // 0)x\(.ia.height // 0) · \(.ia.url // "-")",
+            "cache_rows: \(.cache_rows)"' /tmp/media.json 2>/dev/null || echo "(json indisponível)"
+          case "$CODE" in
+            200) echo "✔ motor de mídias respondeu 200"; exit 0;;
+            000) echo "::warning::timeout de rede — fail-closed"; exit 0;;
+            *)   echo "::error::orquestrador respondeu $CODE"; exit 1;;
+          esac
