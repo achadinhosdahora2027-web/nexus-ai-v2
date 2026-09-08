@@ -21,6 +21,10 @@ jobs:
           ID=$(echo "$RESP" | jq -r '.result.id')
           TYPE=$(echo "$RESP" | jq -r '.result.type')
           echo "chat tipo=$TYPE id=$ID"
+          if [ "$TYPE" = "channel" ] || [ "$TYPE" = "group" ]; then
+            echo "::error::TELEGRAM_CHAT_ID resolve para um $TYPE publico, nao para o chat privado do dono. Mande /start ao @AquiTemOfertasBot e atualize o secret com o seu chat."
+            exit 1
+          fi
           # grava telegram_chat_id_privado (C1) e RESTAURA telegram_chat_id do
           # painel forense para o privado (C2 publico tem chave propria agora)
           for K in telegram_chat_id_privado telegram_chat_id; do
