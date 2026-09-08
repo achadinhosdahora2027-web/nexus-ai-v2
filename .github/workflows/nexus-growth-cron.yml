@@ -163,7 +163,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     if: >-
-      (github.event_name == 'schedule' && github.event.schedule == 'cron: 20 8 * * *')
+      (github.event_name == 'schedule' && github.event.schedule == '20 8 * * *')
       || (github.event_name == 'workflow_dispatch' && inputs.job == 'oraculo')
     steps:
       - name: Despachar pílula do Oráculo (fail-closed)
