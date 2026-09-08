@@ -87,7 +87,7 @@ jobs:
           AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
           NEXUS_GROWTH_DB_URL: ${{ secrets.NEXUS_GROWTH_DB_URL }}
           NEXUS_GROWTH_DB_SERVICE_KEY: ${{ secrets.NEXUS_GROWTH_DB_SERVICE_KEY }}
-          AYRSHARE_BATCH: "10"
+          AYRSHARE_BATCH: 3
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           COMMERCE_TELEGRAM_HOSTS: api.telegram.org
