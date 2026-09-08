@@ -1,0 +1,45 @@
+name: CF Pages Deploy nexus + solvegrid (21.37)
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 5 * * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: nxv2
+      - uses: actions/checkout@v4
+        with:
+          repository: achadinhosdahora2027-web/solvegrid
+          token: ${{ secrets.ROTATION_PAT }}
+          path: sg
+      - name: Deploy nexus (nexusplataforma.ia.br) + solvegrid (solvegrid.com.br)
+        env:
+          CF: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACC: 6f0b265228c514158b20be2e5ea3ec96
+        run: |
+          export CLOUDFLARE_API_TOKEN="$CF" CLOUDFLARE_ACCOUNT_ID="$ACC"
+          echo "=== DEPLOY nexus (nexus-ai-v2/public -> projeto 'nexus') ==="
+          cd nxv2
+          npx -y wrangler@latest pages deploy public --project-name=nexus --branch=main --commit-dirty=true 2>&1 | tail -6
+          cd ..
+          echo "=== DEPLOY solvegrid (solvegrid/public -> projeto 'solvegrid') ==="
+          cd sg
+          npx -y wrangler@latest pages deploy public --project-name=solvegrid --branch=main --commit-dirty=true 2>&1 | tail -6
+      - name: Verificação pós-deploy
+        run: |
+          sleep 15
+          for U in \
+            "https://nexusplataforma.ia.br/" \
+            "https://nexusplataforma.ia.br/yandex_9d0110c0a06a27ea.html" \
+            "https://nexusplataforma.ia.br/a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c.txt" \
+            "https://www.solvegrid.com.br/" \
+            "https://www.solvegrid.com.br/a120ccc82c4e2dbeeda51d4cd6d03284e2909f92f101984a2133e567b748455c.txt" \
+            "https://www.solvegrid.com.br/go?marca=nike"; do
+            curl -s -o /dev/null -m 25 -w "$U -> %{http_code}\n" "$U"
+          done
+          echo "=== sitemap nexus: contagem ==="
+          curl -s -m 25 "https://nexusplataforma.ia.br/sitemap.xml" | grep -c "<loc>" || true
