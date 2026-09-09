@@ -1667,7 +1667,8 @@ async function runPerpetualStreamListener(
 
   const t0 = Date.now();
   const st = { ws_events: 0, claimed: 0, replied: 0, isolated: 0, failed: 0,
-    micro_keyword: null as string | null, micro_capturas: 0, micro_novas: 0, reposts: 0 };
+    micro_keyword: null as string | null, micro_capturas: 0, micro_novas: 0, reposts: 0,
+    repliedReported: 0 }; // v7.5.4: renew passa DELTA (contador não infla)
 
   const windowLoop = (async () => {
     // 1) escuta reativa: Realtime (WAL) — INSERT em nexus_public_brand_mentions
@@ -1710,8 +1711,10 @@ async function runPerpetualStreamListener(
     while (Date.now() - t0 < windowMs) {
       await sleep(5_000);
       try {
+        const delta = st.replied - st.repliedReported;
         const { data: still } = await sb.rpc("nexus_stream_listener_heartbeat", {
-          p_action: "renew", p_window_ms: windowMs, p_replied: st.replied });
+          p_action: "renew", p_window_ms: windowMs, p_replied: delta });
+        if (still && delta > 0) st.repliedReported = st.replied;
         if (!still) break; // liderança perdida → handover (self-healing)
       } catch { /* heartbeat falhou — claim é atômico, segue */ }
       try {
