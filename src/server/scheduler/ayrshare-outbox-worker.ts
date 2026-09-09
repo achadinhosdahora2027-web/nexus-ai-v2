@@ -25,6 +25,7 @@
 import { sendTelegramAlert } from "./telegram-notify.js";
 
 const AYRSHARE_POST_ENDPOINT = "https://api.ayrshare.com/api/post";
+const ZERNIO_POST_ENDPOINT = "https://zernio.com/api/v1/posts";
 const REQUEST_TIMEOUT_MS = 20_000;
 const MAX_ATTEMPTS = 5;
 
@@ -213,6 +214,113 @@ async function publish(
   }
 }
 
+
+/* ==================== ZERNIO RAIL (21.38) ====================
+ * Cross-post dos itens já PUBLICADOS pelo Ayrshare para o Pinterest
+ * (conta idnandim) via API Zernio — 2ª rail de distribuição, custo zero
+ * (primeiras 2 contas grátis). Credenciais no vault nexus_growth_secrets
+ * (zernio_api_key/zernio_account_pinterest/zernio_board_pinterest +
+ * kill-switch zernio_enabled) — NUNCA em env de repo público.
+ * Dedup: nexus_zernio_pins (outbox_id PK) — cada item vira pin 1×.
+ * FAIL-CLOSED: qualquer falha é isolada; nunca afeta a rail Ayrshare.
+ * ============================================================ */
+
+async function vaultMap(keys: string[]): Promise<Record<string, string>> {
+  const rows = (await sbRequest(
+    `/nexus_growth_secrets?select=key,value&key=in.(${keys.join(",")})`,
+    { method: "GET" },
+  )) as Array<{ key: string; value: string }> | null;
+  const out: Record<string, string> = {};
+  if (Array.isArray(rows)) for (const r of rows) if (r?.key) out[r.key] = String(r.value ?? "");
+  return out;
+}
+
+async function runZernioRail(): Promise<void> {
+  try {
+    const v = await vaultMap([
+      "zernio_enabled", "zernio_api_key",
+      "zernio_account_pinterest", "zernio_board_pinterest",
+    ]);
+    if (
+      v["zernio_enabled"] !== "true" || !v["zernio_api_key"] ||
+      !v["zernio_account_pinterest"] || !v["zernio_board_pinterest"]
+    ) {
+      console.log("[zernio] rail desligada/sem credenciais no vault (fail-closed)");
+      return;
+    }
+    const since = new Date(Date.now() - 3 * 86_400_000).toISOString();
+    const rows = (await sbRequest(
+      `/nexus_social_outbox?select=id,post,media_url,public_url&status=eq.published&published_at=gte.${since}&order=published_at.desc&limit=12`,
+      { method: "GET" },
+    )) as Array<{ id: string; post: string; media_url: string | null; public_url: string | null }> | null;
+    if (!Array.isArray(rows) || rows.length === 0) return;
+    const done = (await sbRequest(`/nexus_zernio_pins?select=outbox_id&limit=200`, { method: "GET" })) as Array<{ outbox_id: string }> | null;
+    const doneSet = new Set((Array.isArray(done) ? done : []).map((d) => d.outbox_id));
+    const pend = rows
+      .filter((r) => !doneSet.has(r.id) && typeof r.media_url === "string" && /^https:\/\//.test(r.media_url))
+      .slice(0, 3); // pacing: 3 pins/run
+    if (pend.length === 0) return;
+
+    let ok = 0, fail = 0;
+    for (const r of pend) {
+      const sid = `zernio_pinterest_${r.id.replace(/-/g, "").slice(0, 10)}`;
+      const text = String(r.post ?? "").replace(/\s+/g, " ").trim().slice(0, 470);
+      const title = text.slice(0, 95);
+      const link = `${String(r.public_url ?? "https://www.solvegrid.com.br/").split("?")[0]}?sid=${sid}`;
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 25_000);
+      try {
+        const res = await fetch(ZERNIO_POST_ENDPOINT, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${v["zernio_api_key"]}`, "Content-Type": "application/json" },
+          body: JSON.stringify({
+            content: text,
+            mediaItems: [{ type: "image", url: r.media_url as string }],
+            platforms: [{
+              platform: "pinterest",
+              accountId: v["zernio_account_pinterest"],
+              platformSpecificData: { title, boardId: v["zernio_board_pinterest"], link },
+            }],
+            publishNow: true,
+          }),
+          signal: controller.signal,
+        });
+        const body = JSON.parse(await res.text().catch(() => "{}")) as {
+          post?: { _id?: string; platforms?: Array<{ platformPostId?: string; platformPostUrl?: string }> };
+        };
+        if (res.ok && body.post?._id) {
+          const pl = (body.post.platforms ?? [])[0] ?? {};
+          await sbRequest("/nexus_zernio_pins", {
+            method: "POST",
+            headers: { Prefer: "return=minimal" },
+            body: JSON.stringify({
+              outbox_id: r.id, zernio_post_id: String(body.post._id),
+              pin_id: pl.platformPostId ? String(pl.platformPostId) : null,
+              pin_url: pl.platformPostUrl ? String(pl.platformPostUrl) : null,
+              sid, status: "posted",
+            }),
+          });
+          ok += 1;
+        } else {
+          fail += 1;
+          console.warn(`[zernio] pin outbox=${r.id} HTTP ${res.status} (isolado)`);
+        }
+      } catch (e) {
+        fail += 1;
+        console.warn(`[zernio] rede isolada: ${e instanceof Error ? e.message : "erro"}`);
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+    if (ok > 0 || fail > 0) {
+      await logTelemetry(ok > 0 ? "ok" : "error", 200, pend.length, ok,
+        `zernio rail: ${ok} pins pinterest (idnandim), ${fail} falhas — dedup nexus_zernio_pins`);
+    }
+  } catch (err) {
+    console.warn(`[zernio] rail isolada (fail-closed): ${err instanceof Error ? err.message : "erro"}`);
+  }
+}
+
 export async function runAyrshareOutboxWorker(): Promise<{
   claimed: number;
   sent: number;
@@ -230,6 +338,7 @@ export async function runAyrshareOutboxWorker(): Promise<{
 
   if (rows.length === 0) {
     console.log("[ayrshare] fila vazia — nada a fazer");
+    await runZernioRail(); // 2ª rail independente: cross-post Pinterest
     return summary;
   }
 
@@ -314,6 +423,8 @@ export async function runAyrshareOutboxWorker(): Promise<{
     summary.sent,
     `publicadas=${summary.sent} reenfileiradas=${summary.requeued} falhas=${summary.failed}`,
   );
+  await runZernioRail(); // 2ª rail independente: cross-post Pinterest
+
   await sendTelegramAlert(
     [
       "🛰️ PROJETO NEXUS - RELATÓRIO DE TELEMETRIA",
