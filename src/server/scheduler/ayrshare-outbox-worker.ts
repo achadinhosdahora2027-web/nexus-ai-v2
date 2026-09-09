@@ -250,9 +250,9 @@ async function runZernioRail(): Promise<void> {
     }
     const since = new Date(Date.now() - 3 * 86_400_000).toISOString();
     const rows = (await sbRequest(
-      `/nexus_social_outbox?select=id,post,media_url,public_url&status=eq.published&published_at=gte.${since}&order=published_at.desc&limit=12`,
+      `/nexus_social_outbox?select=id,post_text,media_url,public_url&status=eq.published&published_at=gte.${since}&order=published_at.desc&limit=12`,
       { method: "GET" },
-    )) as Array<{ id: string; post: string; media_url: string | null; public_url: string | null }> | null;
+    )) as Array<{ id: string; post_text: string; media_url: string | null; public_url: string | null }> | null;
     if (!Array.isArray(rows) || rows.length === 0) return;
     const done = (await sbRequest(`/nexus_zernio_pins?select=outbox_id&limit=200`, { method: "GET" })) as Array<{ outbox_id: string }> | null;
     const doneSet = new Set((Array.isArray(done) ? done : []).map((d) => d.outbox_id));
@@ -264,7 +264,7 @@ async function runZernioRail(): Promise<void> {
     let ok = 0, fail = 0;
     for (const r of pend) {
       const sid = `zernio_pinterest_${r.id.replace(/-/g, "").slice(0, 10)}`;
-      const text = String(r.post ?? "").replace(/\s+/g, " ").trim().slice(0, 470);
+      const text = String(r.post_text ?? "").replace(/\s+/g, " ").trim().slice(0, 470);
       const title = text.slice(0, 95);
       const link = `${String(r.public_url ?? "https://www.solvegrid.com.br/").split("?")[0]}?sid=${sid}`;
       const controller = new AbortController();
