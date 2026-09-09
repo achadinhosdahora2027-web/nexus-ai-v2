@@ -1386,7 +1386,7 @@ async function runPublicBrandMentionCare(
           public_url: link,
           platforms: plats,
           status: "ready_to_post",
-          priority: 1, // v6.0: atendimento imediato — primeiro na esteira
+          priority: 9999, // v6.1.1: rail broadcast (pg_cron 4h) ordena priority DESC — 9999 = primeiro; priority 1 deixava o care por ÚLTIMO
           tag: `mention_care_${m.platform}_${lang}`,
         });
         if (insErr) throw new Error(`outbox: ${JSON.stringify(insErr).slice(0, 160)}`);
