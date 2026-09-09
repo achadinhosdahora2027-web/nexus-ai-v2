@@ -235,6 +235,16 @@ async function publish(
  * NUNCA afeta a rail Ayrshare nem o catálogo (read-only estrito).
  * ===================================================================== */
 
+async function vaultMap(keys: string[]): Promise<Record<string, string>> {
+  const rows = (await sbRequest(
+    `/nexus_growth_secrets?select=key,value&key=in.(${keys.join(",")})`,
+    { method: "GET" },
+  )) as Array<{ key: string; value: string }> | null;
+  const out: Record<string, string> = {};
+  if (Array.isArray(rows)) for (const r of rows) if (r?.key) out[r.key] = String(r.value ?? "");
+  return out;
+}
+
 type ZernioRow = { id: string; post_text: string; media_url: string | null; public_url: string | null };
 
 async function runZernioRail(): Promise<void> {
