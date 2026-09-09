@@ -1,5 +1,16 @@
+// v5.10 (21.38, CALIBRAÇÃO DE CONTEÚDO — DICIONÁRIO MESTRE DE ALTO EPC):
+//     · ctx.dicionario_mestre lido VIVO de nexus_global_target_keywords
+//       (colunas novas target_network/target_niche) — 5 termos EN alto EPC
+//       (CJ Affiliate) + 4 termos PT-SUL (target_niche='sul_br').
+//     · DIRETIVA rígida no prompt mestre dos 223 agentes: sul_br → PT-BR
+//       estrito + 3 hashtags locais + gatilhos turismo/compras Sul;
+//       internacional → business English com termos mestres EN; SID do /go
+//       carimbado como entregue (nunca reescrito).
+//     · Motor de respostas global: lookup de target_niche por keyword +
+//       diretiva regional no reply; check de idioma aceita pt/pt_br.
 // ============================================================================
-// NEXUS MATRIX AGENTS CLUSTER — Orquestrador central (Edge Function) · v5.9
+// ============================================================================
+// NEXUS MATRIX AGENTS CLUSTER — Orquestrador central (Edge Function) · v5.10
 // supabase/functions/nexus-matrix-orchester/index.ts · Etapa 21.38 · 2026-09-09
 // v5.9 (21.38, ZERNIO RAIL DUAL): 2ª rail de postagem agora dual-channel —
 //     Pinterest idnandim + canal secundário do cofre (zernio_secondary_platform
@@ -678,6 +689,24 @@ async function loadContext(sb: ReturnType<typeof createClient>): Promise<Ctx> {
       `escuta ativa indisponível neste run (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 140)}`;
   }
 
+  // 7) DICIONÁRIO MESTRE DE ALTO EPC (21.38 calibração) — termos transacionais
+  //    lidos VIVOS do cofre de keywords (target_network/target_niche) e
+  //    injetados no contexto de TODOS os agentes; a diretiva de renderização
+  //    está no prompt mestre. Bloco isolado: dicionário ausente → diretiva
+  //    se autocancela (fail-closed), nada mais cai.
+  try {
+    const { data: dict } = await sb.from("nexus_global_target_keywords")
+      .select("keyword,target_network,target_niche")
+      .eq("active", true)
+      .limit(80);
+    const d = (dict ?? []) as Array<{ keyword: string; target_network: string | null; target_niche: string | null }>;
+    ctx.dicionario_mestre = {
+      en_alto_epc: d.filter((k) => !k.target_niche && (k.target_network ?? "") !== "").map((k) => k.keyword),
+      sul_br: d.filter((k) => k.target_niche === "sul_br").map((k) => k.keyword),
+      nota: "use como termos de busca/hashtag quando o tema da tarefa for compatível — nunca force contexto incoerente",
+    };
+  } catch { ctx.dicionario_mestre_indisponivel = "dicionário indisponível neste run (fail-closed)"; }
+
   // higiene do reservatório (best-effort)
   try { await sb.rpc("nexus_cache_prune", { p_keep: 60 }); } catch { /* segue */ }
   return ctx;
@@ -1043,6 +1072,15 @@ async function runEngagementReplies(
               .select("keyword").eq("id", t.id).maybeSingle();
             kw = (krow?.keyword as string | null) ?? null;
           } catch { /* isolado — segue sem keyword */ }
+          // 21.38 calibração: nicho regional da keyword (dicionário mestre)
+          let niche: string | null = null;
+          try {
+            if (kw) {
+              const { data: nrow } = await sb.from("nexus_global_target_keywords")
+                .select("target_niche").eq("keyword", kw).maybeSingle();
+              niche = (nrow?.target_niche as string | null) ?? null;
+            }
+          } catch { /* isolado — segue sem nicho */ }
           const lang = String(t.language ?? "en").slice(0, 2) || "en";
           const live = liveFarms.filter((f: any) => Array.isArray(f.platforms) && f.platforms.length);
           const entrega = live[0]?.profile_name ?? "global";
@@ -1050,7 +1088,7 @@ async function runEngagementReplies(
           const link = `https://www.solvegrid.com.br/?sid=${sid}`;
           const { answer } = await dispatchWithFallback(freeChain,
             "You are the Nexus global reply engine. Detect the language of the captured public post and reply NATIVELY in that exact language. Reply ONLY with the final text, no quotes, no explanation.",
-            "Captured public post (platform: " + t.platform + ', keyword: "' + (kw ?? "") + '") by @' + (t.author_handle ?? "user") + ":\n«" + String(t.comment_text ?? "").slice(0, 600) + "»\n\nWrite a native reply in the post's own language (hint: " + lang + "), max 400 characters: warm, helpful, mentioning a smart way to find that deal. End with a call-to-action using this exact link: " + link + (t.recruit_c2 !== false ? "\nThen invite them to join our free daily Brazil deals channel with this exact link: https://t.me/ofertasbrasilz" : "") + "\nReply with the text only.",
+            "Captured public post (platform: " + t.platform + ', keyword: "' + (kw ?? "") + '") by @' + (t.author_handle ?? "user") + ":\n«" + String(t.comment_text ?? "").slice(0, 600) + "»\n\nWrite a native reply in the post's own language (hint: " + lang + "), max 400 characters: warm, helpful, mentioning a smart way to find that deal. End with a call-to-action using this exact link: " + link + (t.recruit_c2 !== false ? "\nThen invite them to join our free daily Brazil deals channel with this exact link: https://t.me/ofertasbrasilz" : "") + (niche === "sul_br" ? "\nREGIONAL DIRECTIVE (sul_br): reply strictly in BRAZILIAN PORTUGUESE with 3 local hashtags (e.g. #Gramado #Curitiba #OfertasSul) and tourism/shopping triggers of South Brazil." : "") + "\nReply with the text only.",
             async (p, err) => {
               await telemetry.log({ status: "provider_degraded",
                 message: `global reply ${p.name} degradado — contingência: ${String(err instanceof Error ? err.message : err).slice(0, 110)}` });
@@ -1106,7 +1144,7 @@ async function runEngagementReplies(
         }
         // conta dona em isolamento 24h → tarefa aguarda reentrega (recovery 15min)
         if (cooled.has(String(t.profile_name ?? ""))) continue;
-        const pt = t.language === "pt";
+        const pt = String(t.language ?? "").slice(0, 2) === "pt"; // 21.38: aceita pt/pt_br/pt-BR
         const sid = `solvegrid_reply_${t.profile_name ?? "social"}_${Date.now().toString(36)}`;
         const link = t.product_id
           ? `https://www.solvegrid.com.br/go?oferta=${t.product_id}&sid=${sid}`
@@ -2041,6 +2079,7 @@ Deno.serve(async (req: Request) => {
         (isSulTask
           ? `DIRETIVA HUB REGIONAL SUL (21.28): esta oferta é geo-localizada da Região Sul do Brasil. Escreva copy em PT-BR com identidade regional sulista (cidade/estado presentes no ctx.hub_sul.cidades_gatilho), calor humano e CTA local. O envio sairá prioritariamente pelas contas @ia.ofertassul (LinkedIn/Facebook/Instagram) e @ai.ofertassul (Instagram) com SID solvegrid_social_sul_*.\n\n`
           : "") +
+        `DIRETIVA DICIONÁRIO MESTRE DE ALTO EPC (21.38 calibração — regra rígida de renderização): consulte ctx.dicionario_mestre. Se a keyword/tarefa tiver target_niche "sul_br" (Gramado, Curitiba, Serra Catarinense, Vale dos Vinhedos), o texto DEVE ser gerado estritamente em PORTUGUÊS do Brasil, com 3 hashtags locais do bloco regional (ex.: #Gramado #Curitiba #OfertasSul) e gatilhos focados em turismo e compras da Região Sul. Se a campanha for internacional (Booking UK/US, NordVPN, cybersecurity, eBay), o texto DEVE ser gerado em INGLÊS DE NEGÓCIOS, utilizando os termos mestres de busca visual do bloco EN (last minute hotel deals, booking promo code active, best cybersecurity discount 2026, ebay hidden coupons, cheap luxury flights) quando coerentes com o tema. Carimbe SEMPRE o SID fornecido na tarefa no link /go exatamente como entregue — nunca o reescreva nem o omita.\n\n` +
         (media
           ? `MÍDIA HD PRONTA E VERIFICADA (21.29 No-Auth Image Engine, cache-first — use EXATAMENTE esta URL como image_url/capa do post; não invente outras):\n${JSON.stringify({ image_url: media.url, provider: media.provider, width: media.width, height: media.height })}\n\n`
           : "") +
