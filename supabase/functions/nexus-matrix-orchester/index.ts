@@ -1,6 +1,13 @@
 // ============================================================================
-// NEXUS MATRIX AGENTS CLUSTER — Orquestrador central (Edge Function) · v5.8
-// supabase/functions/nexus-matrix-orchester/index.ts · Etapa 21.32 · 2026-09-08
+// NEXUS MATRIX AGENTS CLUSTER — Orquestrador central (Edge Function) · v5.9
+// supabase/functions/nexus-matrix-orchester/index.ts · Etapa 21.38 · 2026-09-09
+// v5.9 (21.38, ZERNIO RAIL DUAL): 2ª rail de postagem agora dual-channel —
+//     Pinterest idnandim + canal secundário do cofre (zernio_secondary_platform
+//     = instagram hoje: conta oficial "AQUITÉM | Guias Locais"). O DISPATCH
+//     de mídias vive no orquestrador de mídias (ayrshare-outbox-worker.ts,
+//     job social do cron) — mantê-lo aqui duplicaria disparos. Dedup global
+//     por (outbox_id, platform) em nexus_zernio_pins; SIDs
+//     zernio_<plataforma>_* no /go; fail-closed por canal; alertas no C1.
 // v5.8 (21.38, TRIPLO FUNIL TELEGRAM — C1 privado/C2 ofertas/C3 oráculo):
 //     · runTelegramOrculoBroadcaster() — pílula diária de utilidade pública
 //       (cotação er-api + clima Open-Meteo + Wikipedia do cache local) com
