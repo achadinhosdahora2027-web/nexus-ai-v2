@@ -1256,12 +1256,15 @@ async function runPublicBrandMentionCare(
     //    rotação determinística por hora (2 keywords/ciclo de 15 min)
     const { data: kwsAll } = await sb.from("nexus_global_target_keywords")
       .select("keyword,product_category,target_niche").eq("active", true).limit(60);
-    const hourSeed = new Date().toISOString().slice(0, 13);
-    const hash = (s: string) => { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; };
-    const careKws = ((kwsAll ?? []) as Array<{ keyword: string; product_category: string | null; target_niche: string | null }>)
+    const pool = ((kwsAll ?? []) as Array<{ keyword: string; product_category: string | null; target_niche: string | null }>)
       .filter((k) => k.target_niche === "sul_br" || ["travel", "marketplace", "security"].includes(String(k.product_category)))
-      .sort((a, b) => hash(a.keyword + hourSeed) - hash(b.keyword + hourSeed))
-      .slice(0, 2);
+      .sort((a, b) => a.keyword.localeCompare(b.keyword)); // ordem estável p/ round-robin
+    // round-robin determinístico por slot de 15 min: 2 keywords/ciclo,
+    // cobertura TOTAL do pool a cada ceil(n/2) ciclos (~75 min p/ 9 keywords)
+    const slot = Math.floor(Date.now() / (15 * 60 * 1000));
+    const careKws = pool.length
+      ? [0, 1].map((i) => pool[(slot * 2 + i) % pool.length]).filter((k, i, a) => a.findIndex((x) => x.keyword === k.keyword) === i)
+      : [];
 
     // 2) varredura de COMENTÁRIOS públicos (dúvidas vivem em comments —
     //    complementar à varredura de stories/posts do Bloco 4)
@@ -1272,7 +1275,8 @@ async function runPublicBrandMentionCare(
       await Promise.allSettled([
         (async () => { // HN comments (Algolia) — UA honesto, aceito com 200
           try {
-            const r = await fetchT(`${HN_SEARCH}?query=${q}&tags=comment&hitsPerPage=5`,
+            const hnCutoff = Math.floor((Date.now() - GLOBAL_INTENT_MAX_AGE_MS) / 1000);
+            const r = await fetchT(`${HN_SEARCH}?query=${q}&tags=comment&hitsPerPage=5&numericFilters=created_at_i>${hnCutoff}`,
               { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, 8_000);
             if (!r.ok) return;
             const b = await r.json().catch(() => null) as Record<string, any> | null;
@@ -1349,11 +1353,11 @@ async function runPublicBrandMentionCare(
         const sid = `public_mention_care_${lang}_${Date.now().toString(36)}`;
         const link = `https://www.solvegrid.com.br/go?marca=${encodeURIComponent(marca)}&sid=${sid}`;
         const sys = isPt
-          ? "Você é o atendente social do Nexus. Responda dúvidas públicas sobre compras e viagem em PORTUGUÊS do Brasil de forma útil, amigável e direta. Responda APENAS com o texto final, sem aspas e sem explicações."
+          ? "Você é o atendente social do Nexus. Responda menções públicas sobre compras e viagem sobre compras e viagem em PORTUGUÊS do Brasil de forma útil, amigável e direta. Responda APENAS com o texto final, sem aspas e sem explicações."
           : "You are the Nexus social care agent. Answer public shopping/travel questions in a helpful, friendly and concise way. Reply ONLY with the final text, no quotes, no explanation.";
         const user = (isPt
-          ? `Dúvida pública de @${m.author_handle ?? "usuário"} (${m.platform}, keyword "${kw}"): «${texto}»\nEscreva uma resposta útil com dica prática, MÁXIMO 350 caracteres. Termine com o link exatamente assim: ${link}\nConvide também para o canal gratuito de ofertas: https://t.me/ofertasbrasilz${niche === "sul_br" ? "\nDIRETIVA REGIONAL (sul_br): use 3 hashtags locais (ex.: #Gramado #Curitiba #OfertasSul) e gatilhos de turismo/compras da Região Sul." : ""}\nResponda apenas com o texto.`
-          : `Public question by @${m.author_handle ?? "user"} on ${m.platform} (keyword "${kw}"): «${texto}»\nWrite a helpful reply with a practical tip, MAX 350 characters. End with this exact link: ${link}\nAlso invite them to our free daily Brazil deals channel: https://t.me/ofertasbrasilz\nReply with the text only.`);
+          ? `Menção pública de @${m.author_handle ?? "usuário"} (${m.platform}, keyword "${kw}"): «${texto}»\nEscreva uma resposta útil com dica prática, MÁXIMO 350 caracteres. Termine com o link exatamente assim: ${link}\nConvide também para o canal gratuito de ofertas: https://t.me/ofertasbrasilz${niche === "sul_br" ? "\nDIRETIVA REGIONAL (sul_br): use 3 hashtags locais (ex.: #Gramado #Curitiba #OfertasSul) e gatilhos de turismo/compras da Região Sul." : ""}\nResponda apenas com o texto.`
+          : `Public mention by @${m.author_handle ?? "user"} on ${m.platform} (keyword "${kw}"): «${texto}»\nWrite a helpful reply with a practical tip, MAX 350 characters. End with this exact link: ${link}\nAlso invite them to our free daily Brazil deals channel: https://t.me/ofertasbrasilz\nReply with the text only.`);
         const { answer } = await dispatchWithFallback(freeChain, sys, user, async (p, err) => {
           await telemetry.log({ status: "provider_degraded",
             message: `care reply ${p.name} degradado — contingência: ${String(err instanceof Error ? err.message : err).slice(0, 110)}` });
