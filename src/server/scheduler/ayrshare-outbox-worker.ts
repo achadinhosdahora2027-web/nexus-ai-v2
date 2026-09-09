@@ -26,6 +26,7 @@ import { sendTelegramAlert } from "./telegram-notify.js";
 
 const AYRSHARE_POST_ENDPOINT = "https://api.ayrshare.com/api/post";
 const ZERNIO_POST_ENDPOINT = "https://zernio.com/api/v1/posts";
+const SOCIALAPI_BASE = "https://api.social-api.ai/v1";
 const REQUEST_TIMEOUT_MS = 20_000;
 const MAX_ATTEMPTS = 5;
 
@@ -321,6 +322,118 @@ async function runZernioRail(): Promise<void> {
   }
 }
 
+
+/* ==================== SOCIALAPI RAIL (21.38) ====================
+ * 3ª rail — contas OFICIAIS do império via SocialAPI.ai:
+ *   · Instagram @aquitatem (AQUITÉM | Guias Locais)
+ *   · Página Facebook "Achadinhos da Hora - Cupons"
+ * Fluxo provado ao vivo: POST /v1/posts (draft) → POST /v1/posts/{id}/publish.
+ * Mídia: source_type=url com a media_url do outbox (upload presigned NÃO
+ * registra — contorno verificado). Cofre: socialapi_* (+kill-switch).
+ * Dedup: nexus_socialapi_posts. FAIL-CLOSED: isolada da rail Ayrshare/Zernio.
+ * ================================================================ */
+
+async function runSocialApiRail(): Promise<void> {
+  try {
+    const v = await vaultMap([
+      "socialapi_enabled", "socialapi_api_key",
+      "socialapi_account_instagram", "socialapi_account_facebook",
+    ]);
+    if (v["socialapi_enabled"] !== "true" || !v["socialapi_api_key"] ||
+        !v["socialapi_account_instagram"] || !v["socialapi_account_facebook"]) {
+      console.log("[socialapi] rail desligada/sem credenciais no vault (fail-closed)");
+      return;
+    }
+    const since = new Date(Date.now() - 3 * 86_400_000).toISOString();
+    const rows = (await sbRequest(
+      `/nexus_social_outbox?select=id,post_text,media_url,public_url&status=eq.published&published_at=gte.${since}&order=published_at.desc&limit=12`,
+      { method: "GET" },
+    )) as Array<{ id: string; post_text: string; media_url: string | null; public_url: string | null }> | null;
+    if (!Array.isArray(rows) || rows.length === 0) return;
+    const done = (await sbRequest(`/nexus_socialapi_posts?select=outbox_id&limit=200`, { method: "GET" })) as Array<{ outbox_id: string }> | null;
+    const doneSet = new Set((Array.isArray(done) ? done : []).map((d) => d.outbox_id));
+    const pend = rows
+      .filter((r) => !doneSet.has(r.id) && typeof r.media_url === "string" && /^https:\/\//.test(r.media_url))
+      .slice(0, 2); // pacing: 2 posts/run nas contas oficiais
+    if (pend.length === 0) return;
+
+    let ok = 0, fail = 0;
+    for (const r of pend) {
+      const sid = `socialapi_official_${r.id.replace(/-/g, "").slice(0, 10)}`;
+      const text = `${String(r.post_text ?? "").replace(/\s+/g, " ").trim().slice(0, 1600)}
+
+👉 ${String(r.public_url ?? "https://www.solvegrid.com.br/").split("?")[0]}?sid=${sid}`.slice(0, 2100);
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 45_000);
+      try {
+        const hdrs = { Authorization: `Bearer ${v["socialapi_api_key"]}`, "Content-Type": "application/json" };
+        // 1) cria o post (draft) com mídia por URL
+        const create = await fetch(`${SOCIALAPI_BASE}/posts`, {
+          method: "POST", headers: hdrs, signal: controller.signal,
+          body: JSON.stringify({
+            text,
+            media: [{ source_type: "url", source: r.media_url as string }],
+            targets: [
+              { account_id: v["socialapi_account_instagram"], platform: "instagram" },
+              { account_id: v["socialapi_account_facebook"], platform: "facebook" },
+            ],
+          }),
+        });
+        const created = JSON.parse(await create.text().catch(() => "{}")) as { id?: string };
+        if (!create.ok || !created.id) {
+          fail += 1;
+          console.warn(`[socialapi] criar outbox=${r.id} HTTP ${create.status} (isolado)`);
+          continue;
+        }
+        // 2) dispara a publicação
+        const pub = await fetch(`${SOCIALAPI_BASE}/posts/${created.id}/publish`, {
+          method: "POST", headers: hdrs, signal: controller.signal, body: "{}",
+        });
+        if (!pub.ok && pub.status !== 201) {
+          fail += 1;
+          console.warn(`[socialapi] publish outbox=${r.id} HTTP ${pub.status} (isolado)`);
+          continue;
+        }
+        // 3) aguarda confirmar (publicação é assíncrona)
+        let igStatus = "unknown", fbStatus = "unknown", final = "";
+        for (let i = 0; i < 4; i++) {
+          await new Promise((res) => setTimeout(res, 9_000));
+          const st = await fetch(`${SOCIALAPI_BASE}/posts/${created.id}`, { headers: hdrs, signal: controller.signal });
+          const sj = JSON.parse(await st.text().catch(() => "{}")) as {
+            status?: string; targets?: Array<{ platform?: string; status?: string }> };
+          const tg = sj.targets ?? [];
+          igStatus = String(tg.find((t) => t.platform === "instagram")?.status ?? "unknown");
+          fbStatus = String(tg.find((t) => t.platform === "facebook")?.status ?? "unknown");
+          final = String(sj.status ?? "");
+          if (final === "published" || final === "failed") break;
+        }
+        const okPost = final === "published" || igStatus === "published" || fbStatus === "published";
+        await sbRequest("/nexus_socialapi_posts", {
+          method: "POST",
+          headers: { Prefer: "return=minimal" },
+          body: JSON.stringify({
+            outbox_id: r.id, socialapi_post_id: String(created.id),
+            ig_status: igStatus, fb_status: fbStatus, sid,
+            status: okPost ? "posted" : "failed",
+          }),
+        });
+        if (okPost) ok += 1; else fail += 1;
+      } catch (e) {
+        fail += 1;
+        console.warn(`[socialapi] rede isolada: ${e instanceof Error ? e.message : "erro"}`);
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+    if (ok > 0 || fail > 0) {
+      await logTelemetry(ok > 0 ? "ok" : "error", 200, pend.length, ok,
+        `socialapi rail: ${ok} posts (IG @aquitatem + FB Achadinhos da Hora), ${fail} falhas`);
+    }
+  } catch (err) {
+    console.warn(`[socialapi] rail isolada (fail-closed): ${err instanceof Error ? err.message : "erro"}`);
+  }
+}
+
 export async function runAyrshareOutboxWorker(): Promise<{
   claimed: number;
   sent: number;
@@ -339,6 +452,7 @@ export async function runAyrshareOutboxWorker(): Promise<{
   if (rows.length === 0) {
     console.log("[ayrshare] fila vazia — nada a fazer");
     await runZernioRail(); // 2ª rail independente: cross-post Pinterest
+    await runSocialApiRail(); // 3ª rail: contas oficiais IG+FB
     return summary;
   }
 
@@ -424,6 +538,7 @@ export async function runAyrshareOutboxWorker(): Promise<{
     `publicadas=${summary.sent} reenfileiradas=${summary.requeued} falhas=${summary.failed}`,
   );
   await runZernioRail(); // 2ª rail independente: cross-post Pinterest
+  await runSocialApiRail(); // 3ª rail: contas oficiais IG+FB
 
   await sendTelegramAlert(
     [
