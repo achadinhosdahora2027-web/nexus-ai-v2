@@ -1,3 +1,11 @@
+// v6.0 (21.38, PUBLIC BRAND MENTION & SOCIAL CUSTOMER CARE SUITE):
+//     · runPublicBrandMentionCare() — escuta passiva de dúvidas transacionais
+//       em comentários públicos (HN Algolia · Lemmy), ingest roteada por
+//       source_url na fila nexus_public_brand_mentions (peso 9999), respostas
+//       úteis ≤350 chars nos elos gratuitos com /go?marca&sid=
+//       public_mention_care_<lang>_* e liveness no C1. Rota isolada ?care=1
+//       (cron GHA */15) + bloco 4.6 do fluxo principal. UA honesto de bot
+//       (NEXUS_BOT_UA — aceito com 200 pelas fontes; sem spoofing).
 // v5.10 (21.38, CALIBRAÇÃO DE CONTEÚDO — DICIONÁRIO MESTRE DE ALTO EPC):
 //     · ctx.dicionario_mestre lido VIVO de nexus_global_target_keywords
 //       (colunas novas target_network/target_niche) — 5 termos EN alto EPC
@@ -10,7 +18,7 @@
 //       diretiva regional no reply; check de idioma aceita pt/pt_br.
 // ============================================================================
 // ============================================================================
-// NEXUS MATRIX AGENTS CLUSTER — Orquestrador central (Edge Function) · v5.10
+// NEXUS MATRIX AGENTS CLUSTER — Orquestrador central (Edge Function) · v6.0
 // supabase/functions/nexus-matrix-orchester/index.ts · Etapa 21.38 · 2026-09-09
 // v5.9 (21.38, ZERNIO RAIL DUAL): 2ª rail de postagem agora dual-channel —
 //     Pinterest idnandim + canal secundário do cofre (zernio_secondary_platform
@@ -1221,6 +1229,214 @@ async function runEngagementReplies(
   return res;
 }
 
+// ══ v6.0 (21.38): PUBLIC BRAND MENTION & SOCIAL CUSTOMER CARE ═══════════════
+// Escuta passiva de DÚVIDAS transacionais em discussões públicas (comentários
+// HN Algolia · Lemmy fediverso — No-Auth APIs, UA honesto de bot) a cada 15
+// min (rota ?care=1 + job mention-care no cron GHA). Respostas úteis ≤350
+// chars nos elos gratuitos, /go com SID public_mention_care_<lang>_*, fila
+// dedicada nexus_public_brand_mentions (peso 9999, isolamento 24h em
+// 403/429/timeout, liveness no Telegram privado C1). Fail-closed total.
+const CARE_QUESTION_RE = /(how|where|anyone|recommend|suggest|best|cheap|deal|discount|coupon|promo|find|help|\?|qual|onde|como|algu[mé]m|dica|achado|barato|cupom|desconto|promo[cç][aã]o)/i;
+
+async function runPublicBrandMentionCare(
+  sb: ReturnType<typeof createClient>,
+  freeChain: Provider[],
+  telemetry: Telemetry,
+): Promise<Record<string, unknown>> {
+  const res: Record<string, unknown> = { executado: false };
+  const t0 = Date.now();
+  try {
+    if (freeChain.length === 0) {
+      await telemetry.log({ status: "mention_care_skipped",
+        message: "sem elo gratuito no vault — care adiada ao próximo ciclo (fail-closed)" });
+      return res;
+    }
+
+    // 1) dicionário de alto EPC (travel/marketplace/security + sul_br) —
+    //    rotação determinística por hora (2 keywords/ciclo de 15 min)
+    const { data: kwsAll } = await sb.from("nexus_global_target_keywords")
+      .select("keyword,product_category,target_niche").eq("active", true).limit(60);
+    const hourSeed = new Date().toISOString().slice(0, 13);
+    const hash = (s: string) => { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; };
+    const careKws = ((kwsAll ?? []) as Array<{ keyword: string; product_category: string | null; target_niche: string | null }>)
+      .filter((k) => k.target_niche === "sul_br" || ["travel", "marketplace", "security"].includes(String(k.product_category)))
+      .sort((a, b) => hash(a.keyword + hourSeed) - hash(b.keyword + hourSeed))
+      .slice(0, 2);
+
+    // 2) varredura de COMENTÁRIOS públicos (dúvidas vivem em comments —
+    //    complementar à varredura de stories/posts do Bloco 4)
+    const cap: Array<Record<string, unknown>> = [];
+    for (const k of careKws) {
+      if (Date.now() - t0 > 40_000) break; // guarda de muralha
+      const q = encodeURIComponent(k.keyword);
+      await Promise.allSettled([
+        (async () => { // HN comments (Algolia) — UA honesto, aceito com 200
+          try {
+            const r = await fetchT(`${HN_SEARCH}?query=${q}&tags=comment&hitsPerPage=5`,
+              { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, 8_000);
+            if (!r.ok) return;
+            const b = await r.json().catch(() => null) as Record<string, any> | null;
+            for (const h of ((b?.hits ?? []) as Array<Record<string, any>>)) {
+              const txt = String(h.comment_text ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+              const ago = h.created_at_i ? Date.now() - h.created_at_i * 1000 : Infinity;
+              if (!txt || txt.length < 40 || ago > GLOBAL_INTENT_MAX_AGE_MS) continue;
+              if (!CARE_QUESTION_RE.test(txt)) continue;
+              cap.push({ platform: "hackernews", comment_id: `hn:${h.objectID}`,
+                author_handle: String(h.author ?? ""), comment_text: txt.slice(0, 2000),
+                keyword: k.keyword, source_url: `https://news.ycombinator.com/item?id=${h.objectID}` });
+            }
+          } catch { /* fonte isolada — fail-closed */ }
+        })(),
+        (async () => { // Lemmy comments (fediverso)
+          try {
+            const r = await fetchT(`${LEMMY_SEARCH}?q=${q}&type_=Comments&sort=New&limit=5`,
+              { headers: { "User-Agent": NEXUS_BOT_UA, accept: "application/json" } }, 10_000);
+            if (!r.ok) return;
+            const b = await r.json().catch(() => null) as Record<string, any> | null;
+            for (const c of ((b?.comments ?? []) as Array<Record<string, any>>)) {
+              const txt = String(c.comment?.content ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+              const ago = c.comment?.published ? Date.now() - Date.parse(c.comment.published) : Infinity;
+              if (!txt || txt.length < 40 || ago > GLOBAL_INTENT_MAX_AGE_MS) continue;
+              if (!CARE_QUESTION_RE.test(txt)) continue;
+              cap.push({ platform: "lemmy", comment_id: `lemmy:${c.comment?.id}`,
+                author_handle: String(c.creator?.name ?? ""), comment_text: txt.slice(0, 2000),
+                keyword: k.keyword, source_url: String(c.comment?.ap_id ?? `https://lemmy.ml/comment/${c.comment?.id}`) });
+            }
+          } catch { /* fonte isolada — fail-closed */ }
+        })(),
+      ]);
+    }
+
+    // 3) ingest (roteamento por source_url → fila de menções, peso 9999)
+    let mencoesNovas = 0;
+    if (cap.length) {
+      const { data: ing } = await sb.rpc("nexus_mass_ingest_global_intents", { p_items: cap });
+      mencoesNovas = Number((ing as Record<string, unknown>)?.mentions ?? 0);
+    }
+
+    // 4) claim atômico (advisory locks + FOR UPDATE SKIP LOCKED; 9999 primeiro)
+    const { data: pend } = await sb.rpc("nexus_claim_public_mentions", { p_limit: 3 });
+    const pendentes = (pend ?? []) as Array<Record<string, any>>;
+    res.varredura = { keywords: careKws.map((k) => k.keyword), capturas: cap.length,
+      menções_novas: mencoesNovas, claim: pendentes.length };
+    if (!pendentes.length) { res.executado = true; res.replies = 0; return res; }
+
+    // contas vivas para as plataformas do outbox
+    const { data: farms } = await sb.from("nexus_social_farms")
+      .select("profile_name,platforms").eq("status", "active");
+    const liveFarms = ((farms ?? []) as Array<any>)
+      .filter((f) => Array.isArray(f.platforms) && f.platforms.length);
+    const plats = ((liveFarms[0]?.platforms as string[] | undefined) ?? ["instagram"]).slice(0, 2);
+
+    let replied = 0, isolated = 0, failed = 0;
+    for (const m of pendentes) {
+      if (Date.now() - t0 > 100_000) break; // guarda de muralha
+      try {
+        const kw = String(m.target_keyword ?? "");
+        const texto = String(m.mention_text ?? "").slice(0, 600);
+        // categoria/nicho da keyword → marca do /go + idioma obrigatório
+        let category: string | null = null, niche: string | null = null;
+        try {
+          const { data: krow } = await sb.from("nexus_global_target_keywords")
+            .select("product_category,target_niche").eq("keyword", kw).maybeSingle();
+          category = (krow?.product_category as string | null) ?? null;
+          niche = (krow?.target_niche as string | null) ?? null;
+        } catch { /* isolado — segue com defaults */ }
+        const isPt = niche === "sul_br" || String(m.language ?? "") === "pt" ||
+          /(qual|onde|como|algu[mé]m|dica|achadinho|cupom|desconto|barato|promo)/i.test(texto);
+        const lang = isPt ? "pt" : "en";
+        const marca = category === "security" ? "NordVPN" : category === "marketplace" ? "eBay" : "Booking";
+        const sid = `public_mention_care_${lang}_${Date.now().toString(36)}`;
+        const link = `https://www.solvegrid.com.br/go?marca=${encodeURIComponent(marca)}&sid=${sid}`;
+        const sys = isPt
+          ? "Você é o atendente social do Nexus. Responda dúvidas públicas sobre compras e viagem em PORTUGUÊS do Brasil de forma útil, amigável e direta. Responda APENAS com o texto final, sem aspas e sem explicações."
+          : "You are the Nexus social care agent. Answer public shopping/travel questions in a helpful, friendly and concise way. Reply ONLY with the final text, no quotes, no explanation.";
+        const user = (isPt
+          ? `Dúvida pública de @${m.author_handle ?? "usuário"} (${m.platform}, keyword "${kw}"): «${texto}»\nEscreva uma resposta útil com dica prática, MÁXIMO 350 caracteres. Termine com o link exatamente assim: ${link}\nConvide também para o canal gratuito de ofertas: https://t.me/ofertasbrasilz${niche === "sul_br" ? "\nDIRETIVA REGIONAL (sul_br): use 3 hashtags locais (ex.: #Gramado #Curitiba #OfertasSul) e gatilhos de turismo/compras da Região Sul." : ""}\nResponda apenas com o texto.`
+          : `Public question by @${m.author_handle ?? "user"} on ${m.platform} (keyword "${kw}"): «${texto}»\nWrite a helpful reply with a practical tip, MAX 350 characters. End with this exact link: ${link}\nAlso invite them to our free daily Brazil deals channel: https://t.me/ofertasbrasilz\nReply with the text only.`);
+        const { answer } = await dispatchWithFallback(freeChain, sys, user, async (p, err) => {
+          await telemetry.log({ status: "provider_degraded",
+            message: `care reply ${p.name} degradado — contingência: ${String(err instanceof Error ? err.message : err).slice(0, 110)}` });
+        });
+        let reply = (answer ?? "").trim();
+        reply = reply.includes("solvegrid.com.br")
+          ? reply.slice(0, 350)
+          : `${reply.slice(0, Math.max(0, 350 - link.length - 2))}\n${link}`;
+        // mídia HD obrigatória (mesmo motor do engagement — cache-first)
+        let media: MediaAsset | null = null;
+        try {
+          media = await resolveTaskMedia(sb, telemetry, freeChain,
+            { keyword: `care:${kw || m.platform}`, term: kw || "travel deals", path: "ai",
+              subject: `modern social media visual about ${kw || "travel deals"}` });
+        } catch { /* isolado — media null tratado abaixo */ }
+        if (!media) {
+          await sb.from("nexus_public_brand_mentions")
+            .update({ status: "pending_reply", error_code: "aguardando_midia_hd",
+              updated_at: new Date().toISOString() }).eq("id", m.id);
+          continue; // reentrega no próximo ciclo
+        }
+        const { error: insErr } = await sb.from("nexus_social_outbox").insert({
+          product_id: null,
+          post_text: reply.slice(0, 3000),
+          media_url: media.url,
+          public_url: link,
+          platforms: plats,
+          status: "ready_to_post",
+          priority: 1, // v6.0: atendimento imediato — primeiro na esteira
+          tag: `mention_care_${m.platform}_${lang}`,
+        });
+        if (insErr) throw new Error(`outbox: ${JSON.stringify(insErr).slice(0, 160)}`);
+        await sb.from("nexus_public_brand_mentions")
+          .update({ status: "replied", sid, reply_text: reply.slice(0, 1000),
+            processed_at: new Date().toISOString(), updated_at: new Date().toISOString() })
+          .eq("id", m.id);
+        replied += 1;
+      } catch (e) {
+        const http = httpOf(e);
+        if (http === 403 || http === 429 || http === 0) { // timeout/rede/limite → isolamento 24h
+          isolated += 1;
+          await sb.from("nexus_public_brand_mentions")
+            .update({ status: "isolated",
+              isolated_until: new Date(Date.now() + 24 * 3_600_000).toISOString(),
+              error_code: `care_${kindOf(http)}`, updated_at: new Date().toISOString() })
+            .eq("id", m.id);
+        } else {
+          failed += 1;
+          await sb.from("nexus_public_brand_mentions")
+            .update({ status: Number(m.attempts ?? 0) >= 4 ? "failed" : "pending_reply",
+              error_code: String(e instanceof Error ? e.message : e).slice(0, 120),
+              updated_at: new Date().toISOString() })
+            .eq("id", m.id);
+        }
+        await telemetry.log({ status: `mention_care_${kindOf(http)}`, http_status: http,
+          message: `menção ${m.platform}/${String(m.source_url ?? "").slice(0, 60)} isolada (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 120)}` });
+      }
+    }
+    res.executado = true; res.replies = replied; res.isoladas = isolated; res.falhas = failed;
+    await telemetry.log({
+      status: replied > 0 || (isolated + failed) === 0 ? "ok" : "partial",
+      items_total: pendentes.length, items_sent: replied,
+      message: `care pública: ${replied}/${pendentes.length} respondidas, ${isolated} isoladas 24h, ${failed} falhas (capturas ${cap.length}, novas ${mencoesNovas})`,
+    });
+    // liveness no Telegram privado C1 (só com atividade — anti-spam)
+    if (replied + isolated + failed > 0) {
+      try {
+        await sb.rpc("nexus_telegram_send_to", {
+          p_channel: "privado",
+          p_text: `🎧 ATENDIMENTO PÚBLICO (care 15min)\nRespondidas: ${replied} · Isoladas 24h: ${isolated} · Falhas: ${failed}\nCapturas: ${cap.length} · Menções novas: ${mencoesNovas}\nKeywords: ${careKws.map((k) => k.keyword).join(", ")}`,
+          p_trigger: "mention_care",
+          p_event_key: `care:${new Date().toISOString().slice(0, 13)}`,
+        });
+      } catch { /* liveness best-effort — fail-closed */ }
+    }
+    return res;
+  } catch (e) {
+    await telemetry.log({ status: "mention_care_block_error",
+      message: `care pública pulada (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 160)}` });
+    return res;
+  }
+}
+
 // fluxo estético: agentes de criação estruturam ideas de capas (alta resolução)
 const IDEA_SIG = /content-creation|creative|canva|design|idea|capa|cover|aesthetic|thumbnail/i;
 
@@ -1916,6 +2132,24 @@ Deno.serve(async (req: Request) => {
     return json(200, { ok: true, oraculo: resOr, duration_ms: Date.now() - tOr });
   }
 
+  // v6.0 (21.38): PUBLIC MENTION CARE — rota isolada ?care=1 (cron GHA */15).
+  // Qualquer falha interna é capturada AQUI: nunca alcança o fluxo principal
+  // (claim/agents/social/telegram ficam intactos).
+  if (url.searchParams.get("care") === "1") {
+    const tCare = Date.now();
+    let resCare: Record<string, unknown> = {};
+    try {
+      resCare = await runPublicBrandMentionCare(sb, freeElos, telemetry);
+    } catch (e) {
+      resCare = { ok: false, erro: String(e instanceof Error ? e.message : e).slice(0, 160) };
+      try {
+        await telemetry.log({ status: "mention_care_error",
+          message: `care isolada (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 140)}` });
+      } catch { /* best-effort */ }
+    }
+    return json(200, { ok: true, care: resCare, duration_ms: Date.now() - tCare });
+  }
+
   // 3) CLAIM ATÔMICO DO LOTE (v4/21.25: RPC endurecido com
   //    pg_try_advisory_xact_lock por task + FOR UPDATE SKIP LOCKED —
   //    transição pending→running no mesmo milissegundo, sem janela de corrida)
@@ -1967,6 +2201,7 @@ Deno.serve(async (req: Request) => {
       indisponivel: `escuta indisponível (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 120)}`,
     }));
     const engagement = await runEngagementReplies(sb, freeElos, telemetry);
+    const mentionCareEarly = await runPublicBrandMentionCare(sb, freeElos, telemetry);
     // v5.3: probe leve do Hub Sul no early-return (o contexto COMPLETO —
     // hub_sul/price_hunter/sitemaps_multilingues — só é montado quando há
     // tarefas; aqui uma checagem direta prova o cluster em produção)
@@ -2020,6 +2255,10 @@ Deno.serve(async (req: Request) => {
   //      forçadas nos elos GRATUITOS (mistral→cohere→hf), claim atômico na
   //      fila privada. Bloco INDEPENDENTE: 401/429/WAF → telemetria + pulo.
   const engagement = await runEngagementReplies(sb, freeElos, telemetry);
+
+  // 4.6) v6.0 — PUBLIC MENTION CARE: escuta de dúvidas públicas + atendimento
+  //      nos elos gratuitos (também roda isolada via ?care=1 a cada 15 min)
+  const mentionCare = await runPublicBrandMentionCare(sb, freeElos, telemetry);
 
   // 5) DESPACHO EM LOTE, ASSÍNCRONO, ISOLADO POR TAREFA (dual-key fallback)
   let succeeded = 0, failed = 0;
