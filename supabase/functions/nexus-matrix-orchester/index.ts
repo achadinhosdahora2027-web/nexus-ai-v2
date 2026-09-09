@@ -2138,8 +2138,11 @@ Deno.serve(async (req: Request) => {
   if (url.searchParams.get("care") === "1") {
     const tCare = Date.now();
     let resCare: Record<string, unknown> = {};
+    // cadeia gratuita LOCAL (mistral/groq/cohere/hf) — não depende do
+    // freeElos do fluxo principal (evita TDZ; inclui groq p/ care)
+    const careElos = providers.filter((p) => /^(mistral|groq|cohere|hf):/i.test(p.name));
     try {
-      resCare = await runPublicBrandMentionCare(sb, freeElos, telemetry);
+      resCare = await runPublicBrandMentionCare(sb, careElos, telemetry);
     } catch (e) {
       resCare = { ok: false, erro: String(e instanceof Error ? e.message : e).slice(0, 160) };
       try {
