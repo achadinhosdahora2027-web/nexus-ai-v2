@@ -1273,8 +1273,9 @@ const hashCode32 = (s: string): number => {
 // alimenta o SID forense e a diretiva regional sul_br).
 function detectLangTag(text: string, hint?: string | null, niche?: string | null): string {
   if (niche === "sul_br") return "pt";
-  const h = String(hint ?? "").toLowerCase();
-  if (/^(pt|es|fr|de|it|ru|ja|zh|ko|ar|he|hi|th|el|tr|nl|pl|sv|uk|vi|id)$/.test(h)) return h;
+  // v7.6 FIX: hint latino do ingest NÃO é confiável (regex SQL sem borda de
+  // palavra etiquetava INGLÊS como pt — provado ao vivo: tptacek/gxs EN→pt).
+  // Scripts não-latinos decidem sozinhos; latim só com marcadores fortes.
   if (/[\u3040-\u30ff]/.test(text)) return "ja";
   if (/[\uac00-\ud7af]/.test(text)) return "ko";
   if (/[\u4e00-\u9fff]/.test(text)) return "zh";
@@ -1283,11 +1284,11 @@ function detectLangTag(text: string, hint?: string | null, niche?: string | null
   if (/[\u0590-\u05ff]/.test(text)) return "he";
   if (/[\u0900-\u097f]/.test(text)) return "hi";
   if (/[\u0e00-\u0e7f]/.test(text)) return "th";
-  if (/\b(qual|onde|como|algu[mé]m|dica|achadinho|cupom|desconto|barato|promo[cç][aã]o)\b/i.test(text)) return "pt";
-  if (/\b(d[oó]nde|c[oó]mo|cup[oó]n|descuento|vuelo|alojamiento|oferta)\b/i.test(text)) return "es";
-  if (/\b(o[uù]|comment|r[eé]duction|vol pas cher|h[oô]tel|bon plan)\b/i.test(text)) return "fr";
-  if (/\b(wo|wie|g[uü]nstig|rabatt|gutschein|flug|hotel)\b/i.test(text)) return "de";
-  return "en";
+  if (/\b(qual|onde|como|algu[mé]m|dica|achadinho|cupom|desconto|barato|promo[cç][aã]o|frete gr[aá]tis)\b/i.test(text)) return "pt";
+  if (/\b(d[oó]nde|c[oó]mo|cup[oó]n|descuento|vuelo barato|alojamiento barato|oferta rel[aá]mpago)\b/i.test(text)) return "es";
+  if (/\b(r[eé]duction|vol pas cher|h[oô]tel pas cher|bon plan|code promo)\b/i.test(text)) return "fr";
+  if (/\b(g[uü]nstig|rabatt|gutschein|fl[uü]ge|schn[aä]ppchen)\b/i.test(text)) return "de";
+  return "en"; // default latino: inglês (fontes HN/Lemmy são majoritariamente EN)
 }
 
 // v7.5: pool de rotação — idiomas "sweepáveis" primeiro (HN/Lemmy), o resto
@@ -1391,7 +1392,7 @@ async function postReplyViaFarm(
       method: "POST",
       headers: { Authorization: `Bearer ${farm.api_key}`, "content-type": "application/json" },
       body: JSON.stringify({ post: reply.slice(0, 3000), platforms: plats, mediaUrls: [mediaUrl] }),
-    }, 25_000);
+    }, 40_000); // v7.6: posts com mídia vem levando >25s (aborts provados ao vivo a cada janela)
     if (r.ok) {
       const b = await r.json().catch(() => ({})) as Record<string, any>;
       const pid = String(b?.postId ?? b?.id ?? "") || null;
@@ -1400,9 +1401,13 @@ async function postReplyViaFarm(
       }
       return { ok: false, retryable: true };
     }
+    const errBody = (await r.text().catch(() => "")).slice(0, 100);
+    // v7.6: 400 pode ser específico da CONTA (clone-72e5 dá 400 em tudo) —
+    // retentável com rotação de fazenda; cap de 5 tentativas protege
+    const retryable = r.status === 400 || r.status === 403 || r.status === 429 || r.status >= 500;
     await telemetry.log({ status: "care_farm_post_http", http_status: r.status,
-      message: `fazenda ${farm.profile_name} HTTP ${r.status} — ${r.status === 403 || r.status === 429 || r.status >= 500 ? "retentativa" : "rejeitado (não retenta)"}` });
-    return { ok: false, retryable: r.status === 403 || r.status === 429 || r.status >= 500 };
+      message: `fazenda ${farm.profile_name} HTTP ${r.status} — ${retryable ? "retentativa (rotaciona conta)" : "rejeitado"} · ${errBody}` });
+    return { ok: false, retryable };
   } catch (e) {
     await telemetry.log({ status: "care_farm_post_error",
       message: `post direto isolado (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 120)}` });
@@ -1410,18 +1415,24 @@ async function postReplyViaFarm(
   }
 }
 
-// v7.5.1: reentrega das replies pendentes (care_reply_pending, attempts<5)
+// v7.5.1→v7.6: reentrega das replies pendentes (care_reply_pending, attempts<5).
+// Posts EM PARALELO (2 por janela); rejeição não-retentável (137 conteúdo
+// similar) REGENERA o texto via elo gratuito com prompt anti-template —
+// a próxima janela posta a versão nova (a menção e o sid forense preservados).
 async function retryPendingCarePosts(
   sb: ReturnType<typeof createClient>,
   telemetry: Telemetry,
+  chain: Provider[],
 ): Promise<number> {
   try {
     const { data: pend } = await sb.from("nexus_social_outbox")
-      .select("id,post_text,media_url,platforms,attempts")
+      .select("id,post_text,media_url,platforms,attempts,public_url")
       .eq("status", "care_reply_pending").lt("attempts", 5)
-      .order("created_at", { ascending: true }).limit(2); // v7.5.2: 2/janela (orçamento do muro 150s)
+      .order("created_at", { ascending: true }).limit(2);
+    const rows = (pend ?? []) as Array<Record<string, any>>;
+    if (!rows.length) return 0;
     let published = 0;
-    for (const row of ((pend ?? []) as Array<Record<string, any>>)) {
+    const results = await Promise.allSettled(rows.map(async (row) => {
       const desired = Array.isArray(row.platforms) && row.platforms.length ? row.platforms : ["instagram"];
       const post = await postReplyViaFarm(sb, telemetry, String(row.post_text ?? ""),
         String(row.media_url ?? ""), desired, `${row.id}:${row.attempts ?? 0}`);
@@ -1429,15 +1440,44 @@ async function retryPendingCarePosts(
         await sb.from("nexus_social_outbox").update({ status: "published",
           published_at: new Date().toISOString(), external_post_id: post.post_id ?? null,
           updated_at: new Date().toISOString() }).eq("id", row.id);
-        published += 1;
-      } else {
-        const at = Number(row.attempts ?? 0) + 1;
-        await sb.from("nexus_social_outbox").update({
-          attempts: at, status: at >= 5 || !post.retryable ? "failed" : "care_reply_pending",
-          last_error_code: post.retryable ? "farm_post_retry" : "farm_post_rejeitado",
-          updated_at: new Date().toISOString() }).eq("id", row.id);
+        return { ok: true };
       }
-    }
+      const at = Number(row.attempts ?? 0) + 1;
+      const exhausted = at >= 5;
+      await sb.from("nexus_social_outbox").update({
+        attempts: at, status: exhausted ? "failed" : "care_reply_pending",
+        last_error_code: post.retryable ? "farm_post_retry" : "farm_post_rejeitado",
+        updated_at: new Date().toISOString() }).eq("id", row.id);
+      // v7.6: regeneração anti-137 — texto NOVO p/ próxima janela (best-effort)
+      if (!post.retryable && chain.length && !exhausted) {
+        try {
+          const sid = (String(row.public_url ?? "").match(/sid=([a-z0-9_]+)/i) ?? [])[1] ?? "";
+          const { data: m } = await sb.from("nexus_public_brand_mentions")
+            .select("mention_text,author_handle,platform,target_keyword")
+            .eq("sid", sid).maybeSingle();
+          if (m) {
+            const link = String(row.public_url ?? "");
+            const { answer } = await dispatchWithFallback(chain,
+              "You are the Nexus global social care agent. Reply to the public post IN THE EXACT SAME LANGUAGE the user wrote in. Craft a genuinely unique reply reacting to the SPECIFIC content — never generic openers (the network rejects similar content). Reply ONLY with the final text.",
+              `Public mention by @${m.author_handle ?? "user"} on ${m.platform} (keyword "${m.target_keyword ?? ""}"): «${String(m.mention_text ?? "").slice(0, 600)}»
+Write a helpful, UNIQUE reply, MAX 350 characters. End with this exact link: ${link}
+Reply with the text only.`,
+              async (_p, _e) => { /* degradação isolada */ });
+            const fresh = (answer ?? "").trim();
+            if (fresh && fresh.length > 40) {
+              const txt = fresh.includes("solvegrid.com.br") ? fresh.slice(0, 350)
+                : `${fresh.slice(0, Math.max(0, 350 - link.length - 2))}\n${link}`;
+              await sb.from("nexus_social_outbox").update({ post_text: txt.slice(0, 3000),
+                updated_at: new Date().toISOString() }).eq("id", row.id);
+              await telemetry.log({ status: "care_reply_regenerated",
+                message: `reply ${String(row.id).slice(0, 8)} regenerada pós-rejeição (anti-137) — ${txt.length} chars` });
+            }
+          }
+        } catch { /* regeneração isolada — mantém texto atual */ }
+      }
+      return { ok: false };
+    }));
+    for (const r of results) if (r.status === "fulfilled" && r.value.ok) published += 1;
     return published;
   } catch { return 0; /* fail-closed */ }
 }
@@ -1627,7 +1667,7 @@ async function runPublicBrandMentionCare(
       menções_novas: mencoesNovas };
 
     // 3.5) v7.5.1: reentrega de replies pendentes (care_reply_pending)
-    res.reposts = await retryPendingCarePosts(sb, telemetry);
+    res.reposts = await retryPendingCarePosts(sb, telemetry, freeChain);
 
     // 4) claim + respostas (pipeline compartilhado com o stream v7.5)
     const r = await processClaimedMentions(sb, freeChain, telemetry, t0, 100_000, "care");
@@ -1667,7 +1707,8 @@ async function runPerpetualStreamListener(
 
   const t0 = Date.now();
   const st = { ws_events: 0, claimed: 0, replied: 0, isolated: 0, failed: 0,
-    micro_keyword: null as string | null, micro_capturas: 0, micro_novas: 0, reposts: 0,
+    micro_keyword: null as string | null, micro_keyword2: null as string | null,
+    micro_capturas: 0, micro_novas: 0, reposts: 0,
     repliedReported: 0 }; // v7.5.4: renew passa DELTA (contador não infla)
 
   const windowLoop = (async () => {
@@ -1690,21 +1731,37 @@ async function runPerpetualStreamListener(
       try {
         const { auto, curated } = await loadCarePools(sb);
         const microSlot = Math.floor(Date.now() / 60_000);
-        const k = auto.length ? auto[microSlot % auto.length]
-          : (curated.length ? curated[microSlot % curated.length] : null);
-        if (k) {
-          st.micro_keyword = String(k.keyword);
-          const cap = await captureForKeyword(String(k.keyword));
-          st.micro_capturas = cap.length;
-          if (cap.length) {
-            const { data: ing } = await sb.rpc("nexus_mass_ingest_global_intents", { p_items: cap });
-            st.micro_novas = Number((ing as Record<string, unknown>)?.mentions ?? 0);
-          }
+        // v7.6: DUAS keywords por janela, capturas EM PARALELO —
+        //  A) produtiva: idioma com match real nas fontes (HN=en/fr,
+        //     Lemmy=fr/es/ja/en) ou acrônimo universal (vpn) → captura máxima
+        //  B) mundial: sequencial por minuto — TODAS as keywords do planeta
+        //     passam pelo radar, sem exceção (cobertura total garantida)
+        const all = [...auto, ...curated];
+        const productive = all.filter((k) =>
+          ["en", "fr", "es", "pt", "de", "it", "ru", "ja", "zh"].includes(String(k.language_iso ?? "")) ||
+          /^[a-z]{2,4}$/.test(String(k.keyword)));
+        const picks = [
+          productive.length ? productive[microSlot % productive.length] : null,
+          all.length ? all[microSlot % all.length] : null,
+        ].filter((k, i, a) => k && a.findIndex((x) => x?.keyword === k.keyword) === i) as CareKw[];
+        const caps = await Promise.allSettled(picks.map((k) => captureForKeyword(String(k.keyword))));
+        const buffer: Array<Record<string, unknown>> = [];
+        picks.forEach((k, i) => {
+          if (caps[i].status !== "fulfilled") return;
+          const cap = (caps[i].value ?? []) as Array<Record<string, unknown>>;
+          if (i === 0 || !st.micro_keyword) st.micro_keyword = String(k.keyword);
+          else st.micro_keyword2 = String(k.keyword);
+          st.micro_capturas += cap.length;
+          buffer.push(...cap);
+        });
+        if (buffer.length) {
+          const { data: ing } = await sb.rpc("nexus_mass_ingest_global_intents", { p_items: buffer });
+          st.micro_novas = Number((ing as Record<string, unknown>)?.mentions ?? 0);
         }
       } catch { /* micro-varredura isolada — a janela segue */ }
     })();
     const bgRepost = (async () => {
-      try { st.reposts = await retryPendingCarePosts(sb, telemetry); } catch { /* isolado */ }
+      try { st.reposts = await retryPendingCarePosts(sb, telemetry, careChain); } catch { /* isolado */ }
     })();
 
     // 3) loop de janela: renova liderança + claim a cada 5s (reação ≤5s)
@@ -1733,7 +1790,7 @@ async function runPerpetualStreamListener(
       await telemetry.log({
         status: st.replied > 0 || (st.isolated + st.failed) === 0 ? "ok" : "partial",
         items_total: st.claimed, items_sent: st.replied,
-        message: `stream janela ${windowMs}ms: ws=${st.ws_events} claims=${st.claimed} replied=${st.replied} isoladas=${st.isolated} falhas=${st.failed} reposts=${st.reposts} · micro="${st.micro_keyword}" (${st.micro_capturas} capturas, ${st.micro_novas} novas)`,
+        message: `stream janela ${windowMs}ms: ws=${st.ws_events} claims=${st.claimed} replied=${st.replied} isoladas=${st.isolated} falhas=${st.failed} reposts=${st.reposts} · micro="${st.micro_keyword}"${st.micro_keyword2 ? ` + "${st.micro_keyword2}"` : ""} (${st.micro_capturas} capturas, ${st.micro_novas} novas)`,
       });
     } catch { /* telemetry best-effort */ }
     return st;
@@ -2609,6 +2666,34 @@ Deno.serve(async (req: Request) => {
       } catch { /* best-effort */ }
     }
     return json(200, { ok: true, stream: resSt, duration_ms: Date.now() - tSt });
+  }
+
+  // v7.6 (21.38): WATCHDOG do stream — rota ?watchdog=1 (GHA hourly, infra
+  // INDEPENDENTE do pg_cron). Heartbeat stale >85s → dispara janela nova
+  // (self-healing duplo: pg_cron cada 2min + GHA cada hora). &force_heal=1
+  // dispara incondicionalmente (prova ao vivo, mesma auth secreta).
+  if (url.searchParams.get("watchdog") === "1") {
+    let alive = false;
+    try {
+      const { data } = await sb.rpc("nexus_stream_listener_heartbeat", {
+        p_action: "status", p_window_ms: 85_000 });
+      alive = !!data;
+    } catch { alive = false; }
+    const forceHeal = url.searchParams.get("force_heal") === "1";
+    let healed = false;
+    if (!alive || forceHeal) {
+      try {
+        await runPerpetualStreamListener(sb, providers, telemetry, 85_000, false);
+        healed = true;
+        await telemetry.log({ status: "stream_watchdog_heal",
+          message: `watchdog: heartbeat ${alive ? "vivo (força de teste)" : "STALE"} — janela disparada (self-healing GHA)` });
+      } catch (e) {
+        await telemetry.log({ status: "stream_watchdog_error",
+          message: `watchdog heal falhou (fail-closed): ${String(e instanceof Error ? e.message : e).slice(0, 120)}` });
+      }
+    }
+    return json(200, { ok: true, stream_alive: alive, healed,
+      watchdog: "pg_cron */2 + GHA hourly (dupla proteção)", ts: new Date().toISOString() });
   }
 
   // v7.5 (21.38): EXPANSÃO MULTILÍNGUE — rota ?expand=1 (pg_cron diário
