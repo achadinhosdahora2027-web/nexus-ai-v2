@@ -20,13 +20,14 @@ on:
     - cron: "25 */4 * * *"   # expurgo Cloudflare pós-matrix (vitrines frescas)
     - cron: "20 8 * * *"     # oráculo C3 — pílula diária 05:20 Brasília (21.38)
     - cron: "*/15 * * * *"  # public mention care v6.0 — escuta de dúvidas públicas
+    - cron: "7 * * * *"     # stream watchdog v7.6 — dupla proteção 24/7 (GHA independente do pg_cron)
   workflow_dispatch:
     inputs:
       job:
         description: "Qual engine rodar"
         type: choice
         default: google
-        options: [google, social, both, hygiene, matrix, weather, mesh, purge, oraculo, care]
+        options: [google, social, both, hygiene, matrix, weather, mesh, purge, oraculo, care, watchdog]
 
 concurrency:
   group: nexus-growth-cron
@@ -194,6 +195,34 @@ jobs:
   # gratuitos com SID public_mention_care_<lang>_* no /go; fila dedicada
   # nexus_public_brand_mentions (peso 9999, isolamento 24h em 403/429/timeout).
   # ==========================================================================
+  stream-watchdog:
+    name: Stream Watchdog (self-healing 24/7)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '7 * * * *')
+      || (github.event_name == 'workflow_dispatch' && inputs.job == 'watchdog')
+    steps:
+      - name: Watchdog do stream perpétuo (fail-closed)
+        env:
+          NEXUS_MATRIX_SECRET: ${{ secrets.NEXUS_MATRIX_SECRET }}
+          MATRIX_ENDPOINT: https://etbxbaaaspdcoiakifbb.supabase.co/functions/v1/nexus-matrix-orchester
+        run: |
+          if [ -z "$NEXUS_MATRIX_SECRET" ]; then
+            echo "::warning::NEXUS_MATRIX_SECRET ausente — watchdog fail-closed"
+            exit 0
+          fi
+          CODE=$(curl -sS -o /tmp/wd.json -w '%{http_code}' --max-time 60 \
+            -X POST "$MATRIX_ENDPOINT?watchdog=1" \
+            -H "x-matrix-secret: $NEXUS_MATRIX_SECRET" \
+            -H "content-type: application/json" -d '{}' || echo "000")
+          echo "HTTP $CODE"; cat /tmp/wd.json 2>/dev/null || true; echo
+          case "$CODE" in
+            200) echo "watchdog ok"; exit 0;;
+            000) echo "::warning::timeout — watchdog tenta de novo em 1h"; exit 0;;
+            *)   echo "::error::watchdog respondeu $CODE"; exit 1;;
+          esac
+
   mention-care:
     name: Public Mention Care (escuta 15min)
     runs-on: ubuntu-latest
