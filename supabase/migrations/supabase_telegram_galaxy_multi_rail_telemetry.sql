@@ -45,12 +45,12 @@ create or replace view public.nexus_click_forensics_daily_vw as
          public.nexus_click_forensics_suborigin(sid) as suborigem,
          count(*) filter (
            where coalesce(device_type, '') <> 'bot'
-             and coalesce(user_agent, '') !~* '(bot|crawl|spider|slurp|bingpreview|lighthouse|externalagent|healthcheck|canary|pingdom|uptimerobot|headless|nexusglobalbot)'
+             and coalesce(user_agent, '') !~* '(bot|crawl|spider|slurp|bingpreview|lighthouse|externalagent|healthcheck|canary|pingdom|uptimerobot|headless|nexusglobalbot|facebookexternalhit|whatsapp|skypeuripreview)'
          ) as cliques_humanos,
          count(*) as cliques_total,
          count(*) filter (
            where coalesce(device_type, '') = 'bot'
-             or coalesce(user_agent, '') ~* '(bot|crawl|spider|slurp|bingpreview|lighthouse|externalagent|healthcheck|canary|pingdom|uptimerobot|headless|nexusglobalbot)'
+             or coalesce(user_agent, '') ~* '(bot|crawl|spider|slurp|bingpreview|lighthouse|externalagent|healthcheck|canary|pingdom|uptimerobot|headless|nexusglobalbot|facebookexternalhit|whatsapp|skypeuripreview)'
          ) as robos_higienizados,
          count(distinct nullif(country_code, '')) as paises,
          string_agg(distinct nullif(country_code, ''), ',' order by nullif(country_code, '')) as geolocalizacao
@@ -70,7 +70,7 @@ security definer
 set search_path = 'public', 'net', 'extensions'
 as $fn$
 declare
-  c_bots constant text := '(bot|crawl|spider|slurp|bingpreview|lighthouse|externalagent|healthcheck|canary|pingdom|uptimerobot|headless|nexusglobalbot)';
+  c_bots constant text := '(bot|crawl|spider|slurp|bingpreview|lighthouse|externalagent|healthcheck|canary|pingdom|uptimerobot|headless|nexusglobalbot|facebookexternalhit|whatsapp|skypeuripreview)';
   v_nl     text := chr(10);
   v_farms  int; v_ayr int; v_zpin int; v_zig int; v_zth int;
   v_soc    int; v_mv int; v_hum int; v_bots int;
@@ -183,3 +183,13 @@ revoke execute on function public.nexus_galaxy_rail_status() from public, anon, 
 revoke select on public.nexus_click_forensics_daily_vw from public, anon, authenticated;
 
 -- FIM supabase_telegram_galaxy_multi_rail_telemetry.sql
+
+-- ═══ FIX v3 (21.38 · 2026-09-09, PROVADO AO VIVO) ═════════════════════════
+-- facebookexternalhit/1.1 (crawler oficial do Facebook que gera link previews
+-- dos posts das fazendas) escapava do filtro anti-bot: 174 cliques em 6h
+-- alertados como "👤 CLIQUE HUMANO REAL" com device 'desktop' e sessão 0s.
+-- Corrigido em TODAS as camadas (gate do alerta, classificador de device,
+-- censo galaxy): regex += facebookexternalhit|whatsapp|skypeuripreview.
+-- Provas ao vivo: (1) unidade — UA crawler→bot, Chrome/iPhone→humano;
+-- (2) insert de teste com o UA → ZERO pushes; (3) censo do dia recomputado:
+-- 840 cliques 'anuncios_aquitem' → 839 robôs / 1 humano real.
