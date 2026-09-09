@@ -216,31 +216,33 @@ async function publish(
 }
 
 
-/* ==================== ZERNIO RAIL (21.38) ====================
- * Cross-post dos itens já PUBLICADOS pelo Ayrshare para o Pinterest
- * (conta idnandim) via API Zernio — 2ª rail de distribuição, custo zero
- * (primeiras 2 contas grátis). Credenciais no vault nexus_growth_secrets
- * (zernio_api_key/zernio_account_pinterest/zernio_board_pinterest +
- * kill-switch zernio_enabled) — NUNCA em env de repo público.
- * Dedup: nexus_zernio_pins (outbox_id PK) — cada item vira pin 1×.
- * FAIL-CLOSED: qualquer falha é isolada; nunca afeta a rail Ayrshare.
- * ============================================================ */
+/* ==================== ZERNIO RAIL DUAL (21.38 v5.9) ====================
+ * 2ª rail de postagem — AGORA DUAL-CHANNEL via API Zernio (custo zero,
+ * 2 primeiras contas grátis):
+ *   · Pinterest idnandim (board "Ofertas Verificadas Brasil")
+ *   · Canal secundário configurável no cofre: zernio_secondary_platform
+ *     ('instagram' | 'threads') + zernio_account_secondary — hoje o
+ *     Instagram oficial "AQUITÉM | Guias Locais".
+ * Dedup GLOBAL por par (outbox_id, platform) em nexus_zernio_pins — cada
+ * item vira 1 pin E 1 post de feed, nunca duplicado no mesmo canal.
+ * SID por canal no /go: zernio_pinterest_* / zernio_instagram_* /
+ * zernio_threads_* → Click-Stream isola a receita de cada feed.
+ * Mídia HD obrigatória (Instagram não aceita text-only): media_url do
+ * outbox (Pollinations/LoremFlickr, custo zero). Legendas persuasivas
+ * vêm do outbox (elo gratuito Mistral).
+ * FAIL-CLOSED por canal: timeout/429/token expirado → try/catch isolado,
+ * telemetria no Telegram privado C1 (trigger nexus_cron_telemetry),
+ * NUNCA afeta a rail Ayrshare nem o catálogo (read-only estrito).
+ * ===================================================================== */
 
-async function vaultMap(keys: string[]): Promise<Record<string, string>> {
-  const rows = (await sbRequest(
-    `/nexus_growth_secrets?select=key,value&key=in.(${keys.join(",")})`,
-    { method: "GET" },
-  )) as Array<{ key: string; value: string }> | null;
-  const out: Record<string, string> = {};
-  if (Array.isArray(rows)) for (const r of rows) if (r?.key) out[r.key] = String(r.value ?? "");
-  return out;
-}
+type ZernioRow = { id: string; post_text: string; media_url: string | null; public_url: string | null };
 
 async function runZernioRail(): Promise<void> {
   try {
     const v = await vaultMap([
       "zernio_enabled", "zernio_api_key",
       "zernio_account_pinterest", "zernio_board_pinterest",
+      "zernio_secondary_platform", "zernio_account_secondary",
     ]);
     if (
       v["zernio_enabled"] !== "true" || !v["zernio_api_key"] ||
@@ -249,25 +251,50 @@ async function runZernioRail(): Promise<void> {
       console.log("[zernio] rail desligada/sem credenciais no vault (fail-closed)");
       return;
     }
+    // canal secundário OPCIONAL — só aceita valores da allowlist
+    const secondary =
+      v["zernio_secondary_platform"] === "instagram" ||
+      v["zernio_secondary_platform"] === "threads"
+        ? v["zernio_secondary_platform"]
+        : "";
+    const hasSecondary = secondary !== "" && !!v["zernio_account_secondary"];
+
     const since = new Date(Date.now() - 3 * 86_400_000).toISOString();
     const rows = (await sbRequest(
       `/nexus_social_outbox?select=id,post_text,media_url,public_url&status=eq.published&published_at=gte.${since}&order=published_at.desc&limit=12`,
       { method: "GET" },
-    )) as Array<{ id: string; post_text: string; media_url: string | null; public_url: string | null }> | null;
+    )) as Array<ZernioRow> | null;
     if (!Array.isArray(rows) || rows.length === 0) return;
-    const done = (await sbRequest(`/nexus_zernio_pins?select=outbox_id&limit=200`, { method: "GET" })) as Array<{ outbox_id: string }> | null;
-    const doneSet = new Set((Array.isArray(done) ? done : []).map((d) => d.outbox_id));
-    const pend = rows
-      .filter((r) => !doneSet.has(r.id) && typeof r.media_url === "string" && /^https:\/\//.test(r.media_url))
-      .slice(0, 3); // pacing: 3 pins/run
+
+    const done = (await sbRequest(`/nexus_zernio_pins?select=outbox_id,platform&limit=300`, { method: "GET" })) as Array<{ outbox_id: string; platform: string }> | null;
+    const doneSet = new Set((Array.isArray(done) ? done : []).map((d) => `${d.outbox_id}|${d.platform}`));
+
+    // fila por (item, canal) — dedup global composite
+    type Task = { row: ZernioRow; platform: string };
+    const tasks: Task[] = [];
+    for (const r of rows) {
+      if (typeof r.media_url !== "string" || !/^https:\/\//.test(r.media_url)) continue;
+      if (!doneSet.has(`${r.id}|pinterest`)) tasks.push({ row: r, platform: "pinterest" });
+      if (hasSecondary && !doneSet.has(`${r.id}|${secondary}`)) tasks.push({ row: r, platform: secondary });
+    }
+    const pend = tasks.slice(0, 5); // pacing: até 5 publicações/run somando os canais
     if (pend.length === 0) return;
 
-    let ok = 0, fail = 0;
-    for (const r of pend) {
-      const sid = `zernio_pinterest_${r.id.replace(/-/g, "").slice(0, 10)}`;
-      const text = String(r.post_text ?? "").replace(/\s+/g, " ").trim().slice(0, 470);
-      const title = text.slice(0, 95);
-      const link = `${String(r.public_url ?? "https://www.solvegrid.com.br/").split("?")[0]}?sid=${sid}`;
+    let okPin = 0, okSec = 0, fail = 0;
+    for (const { row: r, platform } of pend) {
+      const sid = `zernio_${platform}_${r.id.replace(/-/g, "").slice(0, 10)}`;
+      const base = String(r.public_url ?? "https://www.solvegrid.com.br/").split("?")[0];
+      const link = `${base}${base.includes("?") ? "&" : "?"}sid=${sid}`;
+      const capMax = platform === "pinterest" ? 470 : platform === "threads" ? 450 : 2100;
+      const textoBase = String(r.post_text ?? "").replace(/\s+/g, " ").trim().slice(0, capMax);
+      // Instagram/Threads não têm campo de link → CTA com URL na própria legenda
+      const content = platform === "pinterest" ? textoBase : `${textoBase}\n\n👉 ${link}`;
+      const platformsPayload =
+        platform === "pinterest"
+          ? [{ platform: "pinterest", accountId: v["zernio_account_pinterest"],
+               platformSpecificData: { title: textoBase.slice(0, 95), boardId: v["zernio_board_pinterest"], link } }]
+          : [{ platform, accountId: v["zernio_account_secondary"] }];
+
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), 25_000);
       try {
@@ -275,13 +302,9 @@ async function runZernioRail(): Promise<void> {
           method: "POST",
           headers: { Authorization: `Bearer ${v["zernio_api_key"]}`, "Content-Type": "application/json" },
           body: JSON.stringify({
-            content: text,
+            content,
             mediaItems: [{ type: "image", url: r.media_url as string }],
-            platforms: [{
-              platform: "pinterest",
-              accountId: v["zernio_account_pinterest"],
-              platformSpecificData: { title, boardId: v["zernio_board_pinterest"], link },
-            }],
+            platforms: platformsPayload,
             publishNow: true,
           }),
           signal: controller.signal,
@@ -295,27 +318,28 @@ async function runZernioRail(): Promise<void> {
             method: "POST",
             headers: { Prefer: "return=minimal" },
             body: JSON.stringify({
-              outbox_id: r.id, zernio_post_id: String(body.post._id),
+              outbox_id: r.id, platform,
+              zernio_post_id: String(body.post._id),
               pin_id: pl.platformPostId ? String(pl.platformPostId) : null,
               pin_url: pl.platformPostUrl ? String(pl.platformPostUrl) : null,
               sid, status: "posted",
             }),
           });
-          ok += 1;
+          if (platform === "pinterest") okPin += 1; else okSec += 1;
         } else {
           fail += 1;
-          console.warn(`[zernio] pin outbox=${r.id} HTTP ${res.status} (isolado)`);
+          console.warn(`[zernio] ${platform} outbox=${r.id} HTTP ${res.status} (isolado — rail principal intacta)`);
         }
       } catch (e) {
         fail += 1;
-        console.warn(`[zernio] rede isolada: ${e instanceof Error ? e.message : "erro"}`);
+        console.warn(`[zernio] ${platform} rede isolada: ${e instanceof Error ? e.message : "erro"} (fail-closed)`);
       } finally {
         clearTimeout(timer);
       }
     }
-    if (ok > 0 || fail > 0) {
-      await logTelemetry(ok > 0 ? "ok" : "error", 200, pend.length, ok,
-        `zernio rail: ${ok} pins pinterest (idnandim), ${fail} falhas — dedup nexus_zernio_pins`);
+    if (okPin + okSec + fail > 0) {
+      await logTelemetry(okPin + okSec > 0 ? "ok" : "error", 200, pend.length, okPin + okSec,
+        `zernio rail dual: ${okPin} pinterest + ${okSec} ${secondary || "sec"}, ${fail} falhas — dedup (outbox_id,platform)`);
     }
   } catch (err) {
     console.warn(`[zernio] rail isolada (fail-closed): ${err instanceof Error ? err.message : "erro"}`);
