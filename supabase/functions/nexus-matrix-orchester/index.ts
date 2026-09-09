@@ -813,8 +813,10 @@ async function loadSocialListeningContext(
     const { data: kws } = await sb.from("nexus_global_target_keywords")
       .select("keyword,language_iso,product_category")
       .eq("active", true)
-      .order("last_swept_at", { ascending: true, nullsFirst: true })
-      .limit(2);
+    // 21.38 (autorizado): 2→8 keywords/run — 4× captação por varredura; a
+    // rotação por last_swept_at cobre o dicionário todo a cada 3 runs (12h).
+    .order("last_swept_at", { ascending: true, nullsFirst: true })
+    .limit(8);
     const cap: Array<Record<string, unknown>> = [];
     for (const k of kws ?? []) {
       if (Date.now() - t0 > 90_000) break; // guarda de muralha do run
@@ -985,7 +987,9 @@ async function runEngagementReplies(
         message: "sem elo gratuito (mistral/cohere/hf) no vault — replies adiados ao próximo ciclo (fail-closed)" });
       return res;
     }
-    const { data } = await sb.rpc("nexus_claim_engagement_tasks", { p_limit: 4 });
+    // 21.38 (autorizado): claim 4→16/run — processamento em passo com a
+    // captação 4× (RPC auto-curativa: 'processing' órfã volta à fila em 15min)
+    const { data } = await sb.rpc("nexus_claim_engagement_tasks", { p_limit: 16 });
     const pendentes = (data ?? []) as Array<Record<string, any>>;
     if (!pendentes.length) { res.executado = true; res.replies = 0; return res; }
 
