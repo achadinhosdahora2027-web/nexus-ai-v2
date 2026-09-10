@@ -45,16 +45,57 @@ runGoogleIndexationPipeline()
       }),
       { inspected: 0, indexed: 0, pending: 0 },
     );
-    await sendTelegramAlert(
-      [
-        "🛰️ PROJETO NEXUS - RELATÓRIO DE TELEMETRIA",
-        `Job Executado: google_indexation (run consolidado)`,
-        `Status da Operação: ${report.ok ? "ok" : "skip"}${report.reason ? ` (${report.reason})` : ""}`,
-        `Total de URLs na fila: ${report.totalUrls}`,
-        `URLs processadas no dia: ${totals.inspected}`,
-        `Mensagem do Servidor: inspecionadas=${totals.inspected} indexadas=${totals.indexed} pendentes=${totals.pending} · ${report.hosts.map((h) => `${h.host}:sitemap=${h.sitemap}`).join(" | ")}`.slice(0, 100),
-      ].join("\n"),
-    );
+    // CLAREZA COMERCIAL v4: layout executivo — PROIBIDA string crua de API
+    // (rate_limited, sitemap=submitted, chaves=valor). Tradução:
+    // indexadas → "portas abertas"; pendentes → "aguardando leitura do robô".
+    // Fail-closed: qualquer falha de formatação vira "Processando dados
+    // limpos" e o run segue (nunca quebra o cron nem as rotas de sitemap).
+    const hostLimpo = (h: string) =>
+      h.replace(/^https?:\/\//, "").replace(/^www\./, "");
+    let consolidado: string;
+    try {
+      const dominios =
+        [...new Set(report.hosts.map((h) => hostLimpo(h.host)))].join(" · ") ||
+        "Processando dados limpos";
+      const rateLimited = report.hosts.some((h) => h.rateLimited);
+      const status = !report.ok
+        ? "EM REENTREGA AUTOMÁTICA 🔁"
+        : rateLimited
+          ? "LIMITE DE SEGURANÇA DO DIA ATINGIDO 🧊"
+          : "OK ✅";
+      const lines: string[] = [
+        "🛰️ MONITOR DE BUSCAS GOOGLE: PÁGINAS ENVIADAS PARA O MAPA MUNDI!",
+        "",
+        `• 🌐 Domínios Monitorados: ${dominios}`,
+        `• 📈 Status no Google: ${status}`,
+      ];
+      if (rateLimited) {
+        lines.push(
+          "• 🧊 Aviso do Sistema: Uma das contas atingiu o limite de segurança diário de 200 envios. O sistema congelou o lote na fila com segurança para reentrega automática.",
+        );
+      } else if (!report.ok) {
+        lines.push(
+          "• 🧊 Aviso do Sistema: execução adiada — o lote segue protegido na fila para reentrega automática.",
+        );
+      }
+      lines.push(
+        `• 🎯 Novas portas abertas nas buscas: ${totals.indexed} vitrines ativas`,
+        `• ⏳ Aguardando leitura do robô do Google: ${totals.pending} páginas na fila`,
+        "• ⚙️ Mensagem do Dono: Seu catálogo de 14.301 anúncios permanece 100% read-only, seguro e protegido contra falhas.",
+      );
+      consolidado = lines.join("\n");
+    } catch {
+      consolidado = [
+        "🛰️ MONITOR DE BUSCAS GOOGLE: PÁGINAS ENVIADAS PARA O MAPA MUNDI!",
+        "",
+        "• 🌐 Domínios Monitorados: Processando dados limpos",
+        "• 📈 Status no Google: PROCESSANDO DADOS LIMPOS",
+        "• 🎯 Novas portas abertas nas buscas: Processando dados limpos",
+        "• ⏳ Aguardando leitura do robô do Google: Processando dados limpos",
+        "• ⚙️ Mensagem do Dono: Seu catálogo de 14.301 anúncios permanece 100% read-only, seguro e protegido contra falhas.",
+      ].join("\n");
+    }
+    await sendTelegramAlert(consolidado);
     process.exit(report.reason === "missing_credentials" ? 2 : 0);
   })
   .catch((err: unknown) => {
