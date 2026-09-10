@@ -1,0 +1,39 @@
+name: GA4 Recon (measurement IDs)
+on:
+  workflow_dispatch: {}
+jobs:
+  recon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Instalar google-auth-library
+        run: npm install --no-save google-auth-library@^9.14.0
+      - name: Listar propriedades GA4 + IDs de medição (data streams)
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          node -e '
+          const { GoogleAuth } = require("google-auth-library");
+          (async () => {
+            try {
+              const sa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+              const auth = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/analytics.readonly"] });
+              const client = await auth.getClient();
+              const res = await client.request({ url: "https://analyticsadmin.googleapis.com/v1beta/accountSummaries?pageSize=50" });
+              for (const acc of (res.data.accountSummaries || [])) {
+                for (const p of (acc.propertySummaries || [])) {
+                  console.log(`CONTA=${acc.displayName} PROPRIEDADE=${p.displayName} (${p.property})`);
+                  try {
+                    const ds = await client.request({ url: `https://analyticsadmin.googleapis.com/v1beta/${p.property}/dataStreams?pageSize=20` });
+                    for (const s of (ds.data.dataStreams || [])) {
+                      console.log(`  STREAM=${s.displayName} tipo=${s.type} MEASUREMENT=${(s.webStreamData && s.webStreamData.measurementId) || "-"} | ${(s.webStreamData && s.webStreamData.defaultUri) || ""}`);
+                    }
+                  } catch (e) { console.log("  streams erro:", e.message && e.message.slice(0,80)); }
+                }
+              }
+              if (!(res.data.accountSummaries||[]).length) console.log("SA_OK_SEM_PROPRIEDADES (service account sem acesso a nenhuma conta GA4)");
+            } catch (e) {
+              console.log("GA_RECON_ERRO:", (e.response && e.response.status) || "", e.message || e);
+            }
+          })();'
