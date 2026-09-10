@@ -5,13 +5,13 @@
 # 1. Google AdSense (Direct Publisher Authorization)
 google.com, pub-5604700207394147, DIRECT, f08c47fec0942fa0
 
-# 2. Adsterra Programmatic Network (ID de conta do cofre adsterra_account_ref;
-#    confirmar no painel Adsterra > Perfil se houver divergencia)
-adsterra.com, 6042199, DIRECT
+# 2. Adsterra Programmatic Network — ID de conta REAL vinculado a este host
+#    (mapa oficial v22.5: nexusplataforma.ia.br=6002104)
+adsterra.com, 6002104, DIRECT
 
-# 3. Monetag / PropellerAds (Zones 274860 e 11691043 servidas nas vitrines/go)
-#    PENDENTE: adicionar linha 'monetag.com, <ID-da-conta>, DIRECT' assim que
-#    o ID do perfil Monetag for confirmado (nao inventar ID)
+# 3. Monetag — codigos de canal oficiais do painel (v22.5)
+monetag.com, 3471486, DIRECT
+monetag.com, 3471484, DIRECT
 
 # 4. Infolinks Official Network
 infolinks.com, 3447442, DIRECT
