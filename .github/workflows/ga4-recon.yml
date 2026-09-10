@@ -7,36 +7,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - run: npm install --no-save google-auth-library@^9.14.0
-      - name: Realtime por propriedade (confirma qual está recebendo)
+      - name: E-mail da service account (para conceder Leitor no GA4)
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: |
-          node -e '
-          const { GoogleAuth } = require("google-auth-library");
-          (async () => {
-            const sa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
-            const props = [
-              ["EstudoSaude", "401283822"],
-              ["AQUI TEM ACHADINHOS", "550323385"],
-              ["Estudo Saude 2", "545733514"],
-              ["Nexus Plataforma", "550326719"],
-            ];
-            for (const [nome, pid] of props) {
-              try {
-                const auth = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/analytics.readonly"] });
-                const client = await auth.getClient();
-                const res = await client.request({
-                  method: "POST",
-                  url: `https://analyticsdata.googleapis.com/v1beta/properties/${pid}:runRealtimeReport`,
-                  data: { metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }], dimensions: [{ name: "unifiedPagePath" }] },
-                });
-                const rows = (res.data.rows || []).slice(0, 5);
-                const tot = (res.data.totals || [{}])[0] || {};
-                console.log(`REALTIME ${nome} (${pid}): activeUsers=${tot.metricValues?.[0]?.value ?? "?"} pageViews=${tot.metricValues?.[1]?.value ?? "?"}`);
-                for (const r of rows) console.log(`   ${r.dimensionValues[0].value} ← ${r.metricValues[0].value} users`);
-              } catch (e) {
-                console.log(`REALTIME ${nome} (${pid}) ERRO: ${(e.response && e.response.status) || ""} ${(e.message || "").slice(0, 110)}`);
-              }
-            }
-          })();'
+        run: echo "SA_EMAIL=$(node -e 'console.log(JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON).client_email)')"
