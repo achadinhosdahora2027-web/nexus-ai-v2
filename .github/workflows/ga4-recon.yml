@@ -7,9 +7,8 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - name: Instalar google-auth-library
-        run: npm install --no-save google-auth-library@^9.14.0
-      - name: Ativar Analytics Admin API (se a SA tiver permissão) + recon
+      - run: npm install --no-save google-auth-library@^9.14.0
+      - name: Realtime por propriedade (confirma qual está recebendo)
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: |
@@ -17,33 +16,27 @@ jobs:
           const { GoogleAuth } = require("google-auth-library");
           (async () => {
             const sa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
-            const projectId = sa.project_id;
-            console.log("SA projeto:", projectId);
-            // 1) tenta ativar a API no projeto (Service Usage API)
-            try {
-              const authEn = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/cloud-platform"] });
-              const cEn = await authEn.getClient();
-              const en = await cEn.request({ method: "POST", url: `https://serviceusage.googleapis.com/v1/projects/${projectId}/services/analyticsadmin.googleapis.com:enable` });
-              console.log("ENABLE_API:", en.status, JSON.stringify(en.data || {}).slice(0, 200));
-            } catch (e) { console.log("ENABLE_API_ERRO:", (e.response && e.response.status) || "", (e.message || "").slice(0, 140)); }
-            // 2) recon
-            try {
-              const auth = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/analytics.readonly"] });
-              const client = await auth.getClient();
-              const res = await client.request({ url: "https://analyticsadmin.googleapis.com/v1beta/accountSummaries?pageSize=50" });
-              for (const acc of (res.data.accountSummaries || [])) {
-                for (const p of (acc.propertySummaries || [])) {
-                  console.log(`CONTA=${acc.displayName} PROPRIEDADE=${p.displayName} (${p.property})`);
-                  try {
-                    const ds = await client.request({ url: `https://analyticsadmin.googleapis.com/v1beta/${p.property}/dataStreams?pageSize=20` });
-                    for (const s of (ds.data.dataStreams || [])) {
-                      console.log(`  STREAM=${s.displayName} tipo=${s.type} MEASUREMENT=${(s.webStreamData && s.webStreamData.measurementId) || "-"} | ${(s.webStreamData && s.webStreamData.defaultUri) || ""}`);
-                    }
-                  } catch (e) { console.log("  streams erro:", (e.message || "").slice(0, 100)); }
-                }
+            const props = [
+              ["EstudoSaude", "401283822"],
+              ["AQUI TEM ACHADINHOS", "550323385"],
+              ["Estudo Saude 2", "545733514"],
+              ["Nexus Plataforma", "550326719"],
+            ];
+            for (const [nome, pid] of props) {
+              try {
+                const auth = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/analytics.readonly"] });
+                const client = await auth.getClient();
+                const res = await client.request({
+                  method: "POST",
+                  url: `https://analyticsdata.googleapis.com/v1beta/properties/${pid}:runRealtimeReport`,
+                  data: { metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }], dimensions: [{ name: "unifiedPagePath" }] },
+                });
+                const rows = (res.data.rows || []).slice(0, 5);
+                const tot = (res.data.totals || [{}])[0] || {};
+                console.log(`REALTIME ${nome} (${pid}): activeUsers=${tot.metricValues?.[0]?.value ?? "?"} pageViews=${tot.metricValues?.[1]?.value ?? "?"}`);
+                for (const r of rows) console.log(`   ${r.dimensionValues[0].value} ← ${r.metricValues[0].value} users`);
+              } catch (e) {
+                console.log(`REALTIME ${nome} (${pid}) ERRO: ${(e.response && e.response.status) || ""} ${(e.message || "").slice(0, 110)}`);
               }
-              if (!(res.data.accountSummaries || []).length) console.log("SA_OK_SEM_PROPRIEDADES (SA autenticou mas não tem nenhuma conta GA4 vinculada)");
-            } catch (e) {
-              console.log("GA_RECON_ERRO:", (e.response && e.response.status) || "", (e.message || e).toString().slice(0, 160));
             }
           })();'
