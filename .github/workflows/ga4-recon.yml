@@ -9,15 +9,25 @@ jobs:
         with: { node-version: 20 }
       - name: Instalar google-auth-library
         run: npm install --no-save google-auth-library@^9.14.0
-      - name: Listar propriedades GA4 + IDs de medição (data streams)
+      - name: Ativar Analytics Admin API (se a SA tiver permissão) + recon
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: |
           node -e '
           const { GoogleAuth } = require("google-auth-library");
           (async () => {
+            const sa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+            const projectId = sa.project_id;
+            console.log("SA projeto:", projectId);
+            // 1) tenta ativar a API no projeto (Service Usage API)
             try {
-              const sa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+              const authEn = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/cloud-platform"] });
+              const cEn = await authEn.getClient();
+              const en = await cEn.request({ method: "POST", url: `https://serviceusage.googleapis.com/v1/projects/${projectId}/services/analyticsadmin.googleapis.com:enable` });
+              console.log("ENABLE_API:", en.status, JSON.stringify(en.data || {}).slice(0, 200));
+            } catch (e) { console.log("ENABLE_API_ERRO:", (e.response && e.response.status) || "", (e.message || "").slice(0, 140)); }
+            // 2) recon
+            try {
               const auth = new GoogleAuth({ credentials: sa, scopes: ["https://www.googleapis.com/auth/analytics.readonly"] });
               const client = await auth.getClient();
               const res = await client.request({ url: "https://analyticsadmin.googleapis.com/v1beta/accountSummaries?pageSize=50" });
@@ -29,11 +39,11 @@ jobs:
                     for (const s of (ds.data.dataStreams || [])) {
                       console.log(`  STREAM=${s.displayName} tipo=${s.type} MEASUREMENT=${(s.webStreamData && s.webStreamData.measurementId) || "-"} | ${(s.webStreamData && s.webStreamData.defaultUri) || ""}`);
                     }
-                  } catch (e) { console.log("  streams erro:", e.message && e.message.slice(0,80)); }
+                  } catch (e) { console.log("  streams erro:", (e.message || "").slice(0, 100)); }
                 }
               }
-              if (!(res.data.accountSummaries||[]).length) console.log("SA_OK_SEM_PROPRIEDADES (service account sem acesso a nenhuma conta GA4)");
+              if (!(res.data.accountSummaries || []).length) console.log("SA_OK_SEM_PROPRIEDADES (SA autenticou mas não tem nenhuma conta GA4 vinculada)");
             } catch (e) {
-              console.log("GA_RECON_ERRO:", (e.response && e.response.status) || "", e.message || e);
+              console.log("GA_RECON_ERRO:", (e.response && e.response.status) || "", (e.message || e).toString().slice(0, 160));
             }
           })();'
